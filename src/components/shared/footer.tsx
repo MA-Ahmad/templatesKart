@@ -8,7 +8,7 @@ import {
   Flex,
   Container
 } from '@chakra-ui/react';
-import siteConfig from '../../site-config';
+import siteConfig from '../../utils/site-config';
 
 const iconProps = {
   variant: 'ghost',
@@ -34,7 +34,6 @@ const Footer = () => {
           alignItems="center"
           w="100%"
         >
-          {/* <HStack> */}
           <Text textAlign="center" fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
             © {new Date().getFullYear()} Muhammad Ahmad{' '}
           </Text>

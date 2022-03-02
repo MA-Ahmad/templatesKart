@@ -20,7 +20,7 @@ export default function TopNav() {
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'} mx="auto">
             <HStack spacing={8} alignItems={'center'}>
               <NextLink href={'/'} passHref>
-                <Heading as="h1" fontSize={['xl', '2xl']}>
+                <Heading as="h1" fontSize={['xl', '2xl']} cursor="pointer">
                   TemplatesKart
                 </Heading>
               </NextLink>
