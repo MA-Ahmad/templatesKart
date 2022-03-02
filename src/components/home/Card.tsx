@@ -12,6 +12,7 @@ import {
   Tooltip
 } from '@chakra-ui/react';
 import { MotionBox } from 'components/shared/animations/motion';
+import NextLink from 'next/link';
 import { Tag } from 'components/shared/Tags';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
@@ -35,28 +36,43 @@ const Card = ({ project, color }: ProjectProps) => {
       whileHover={{ y: -3 }}
       _hover={{ shadow: 'md' }}
     >
-      <AspectRatio ratio={1.85 / 1} w="100%">
-        <Img w="100%" h="100%" objectFit="cover" src={project.imageUrl} fallback={<Skeleton />} />
-      </AspectRatio>
+      <NextLink href={`/projects/${project.id}`} passHref>
+        <Link>
+          <AspectRatio ratio={1.85 / 1} w="100%" cursor="pointer">
+            <Img
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              src={project.imageUrl}
+              fallback={<Skeleton />}
+            />
+          </AspectRatio>
+        </Link>
+      </NextLink>
       <VStack spacing={2} px="4" py="2" w="100%">
         <HStack justify="space-between" align="center" width="100%">
-          <Text fontSize={['xs', null, 'md']} color={color}>
-            <Link fontWeight="semibold" href={project.liveLink} isExternal>
-              {project.name}
+          <NextLink href={`/projects/${project.id}`} passHref>
+            <Link fontWeight="semibold">
+              <Text fontSize={['xs', null, 'md']} color={color}>
+                {project.name}
+              </Text>
             </Link>
-          </Text>
+          </NextLink>
+
           <HStack>
             <HStack>
               <Stats
                 label="Pages"
-                length={project.pages.length}
+                length={project.pages.filter((page) => page.id !== 'theme').length}
                 icon={<Icon as={CgFileDocument} />}
               />
             </HStack>
             <HStack>
               <Stats
                 label="Components"
-                length={project.components.length}
+                length={
+                  project.components.filter((component) => component.page_id !== 'theme').length
+                }
                 icon={<Icon as={CgComponents} />}
               />
             </HStack>
