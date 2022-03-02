@@ -6,7 +6,7 @@ import { projects } from 'data/projects';
 import AppLayout from 'components/layouts/appLayout';
 import { Project, Page, Component } from 'data/types';
 import { useLinkColor } from 'components/theme';
-import ScrollToTop from 'components/scrollToTop';
+import ScrollToTop from 'components/shared/scrollToTop';
 import { BiLinkExternal } from 'react-icons/bi';
 import fs from 'fs';
 import path from 'path';
