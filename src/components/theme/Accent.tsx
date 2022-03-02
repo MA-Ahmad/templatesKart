@@ -11,12 +11,12 @@ import {
   Container,
   useColorModeValue
 } from '@chakra-ui/react';
-import { theme, ColorKeys, useLinkColor, accentKeys } from 'components/theme';
-import { useLocalSetting } from 'components/hooks/useLocalSetting';
 import { css, Global } from '@emotion/react';
-import { getTagBackgroundDark } from 'components/theme/colors';
 import { BiBrushAlt } from 'react-icons/bi';
 import { TiTick } from 'react-icons/ti';
+import { theme, ColorKeys, useLinkColor, accentKeys } from './index';
+import { useLocalSetting } from './hooks/useLocalSetting';
+import { getTagBackgroundDark } from './colors';
 
 export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
   const color = useLinkColor();

@@ -1,8 +1,7 @@
 import { extendTheme, ThemeOverride } from '@chakra-ui/react';
-import { colors } from './colors';
 import { mergeWith } from '@chakra-ui/utils';
 import { mode } from '@chakra-ui/theme-tools';
-import { useHoverLinkColor } from './colors';
+import { useHoverLinkColor, colors } from './colors';
 import { getColor } from '@chakra-ui/theme-tools';
 
 // Re-exports
@@ -48,6 +47,18 @@ export const extendedTheme = extendTheme({
         // _hover: {
         //   color: mode("blue.600", "blue.300")(props),
         // }
+      },
+      '#nprogress': {
+        pointerEvents: 'none'
+      },
+      '#nprogress .bar': {
+        bg: useHoverLinkColor(),
+        position: 'fixed',
+        zIndex: '1031',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '2px'
       }
     })
   },
@@ -143,16 +154,26 @@ export const extendedTheme = extendTheme({
 
 export const getTagColor = (type) => {
   type = type.toLowerCase();
-  if (type === 'rails' || type === 'ruby') {
-    return 'red';
-  } else if (type === 'react') {
-    return 'cyan';
-  } else if (type === 'javascript') {
-    return 'yellow';
-  } else if (type === 'typescript' || type === 'tailwindcss') {
-    return 'blue';
-  } else if (type === 'chakraui' || type === 'css') {
-    return 'teal';
+  switch (type) {
+    case 'ruby':
+    case 'rails': {
+      return 'red';
+    }
+    case 'react': {
+      return 'cyan';
+    }
+    case 'javascript': {
+      return 'yellow';
+    }
+    case 'typescript':
+    case 'tailwindcss':
+    case 'nextjs': {
+      return 'blue';
+    }
+    case 'chakraui':
+    case 'css': {
+      return 'teal';
+    }
   }
 };
 
