@@ -18,7 +18,7 @@ import {
   Flex,
   Tooltip
 } from '@chakra-ui/react';
-import LazyImage from 'components/lazy-image';
+import LazyImage from 'components/shared/lazy-image';
 import { AiOutlineStar } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
 import { MotionBox, CardTransition } from './motion';
