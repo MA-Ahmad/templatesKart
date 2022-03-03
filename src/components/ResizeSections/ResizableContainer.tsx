@@ -57,7 +57,7 @@ export const ResizableContainer = ({
     return componentsFileList
       .filter((fileObj) => fileObj.componentName === fileName)[0]
       ?.files.sort((a, b) => {
-        if (['index.tsx', 'index.ts'].includes(a)) return -1;
+        if (['index.ts', 'index.tsx', 'index.js', 'index.jsx'].includes(a)) return -1;
 
         return 1;
       });
