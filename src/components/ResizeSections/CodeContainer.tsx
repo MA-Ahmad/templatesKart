@@ -15,7 +15,8 @@ import {
 } from '@chakra-ui/react';
 import { Project, Page, Component } from 'data/types';
 import { CodeSample } from './CodeSample';
-import { SiTypescript, SiReact } from 'react-icons/si';
+import { SiTypescript, SiReact, SiJavascript } from 'react-icons/si';
+import { IconType } from 'react-icons';
 
 type ResizableContainerProps = {
   project: Project;
@@ -34,10 +35,23 @@ export const CodeContainer = ({
     return componentsFileList
       .filter((fileObj) => fileObj.componentName === fileName)[0]
       ?.files.sort((a, b) => {
-        if (['index.ts', 'index.tsx'].includes(a)) return -1;
+        if (['index.ts', 'index.tsx', 'index.js', 'index.jsx'].includes(a)) return -1;
 
         return 1;
       });
+  };
+
+  const getFileIconColor = (name: string) => {
+    let icon_color: { icon: IconType; color: string };
+    if (name.endsWith('.ts') || name.endsWith('.js')) {
+      icon_color = name.endsWith('.ts')
+        ? { icon: SiTypescript, color: 'blue.600' }
+        : { icon: SiJavascript, color: 'yellow.400' };
+    } else {
+      icon_color = { icon: SiReact, color: 'blue.600' };
+      if (name.endsWith('.js')) icon_color['color'] = 'blue.300';
+    }
+    return icon_color;
   };
 
   return (
@@ -73,10 +87,11 @@ export const CodeContainer = ({
                 >
                   <HStack spacing={2}>
                     <Icon
-                      as={name.endsWith('.ts') ? SiTypescript : SiReact}
+                      as={getFileIconColor(name).icon}
                       w={4}
                       h={4}
-                      color="blue.600"
+                      color={getFileIconColor(name).color}
+                      bg={name.endsWith('.js') ? 'black' : 'auto'}
                     />
                     <Text fontSize={'sm'} fontWeight="normal">
                       {name}
