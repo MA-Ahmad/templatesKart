@@ -7,7 +7,7 @@ export const project: Project = {
   id: 'portfolio2',
   description:
     'My previous portfolio website to show my skills, experience, and articles I published.',
-  techStack: ['nextjs', 'chakrkaUi'],
+  techStack: ['reactjs', 'chakrkaUi'],
   imageUrl: '/assets/images/projects/portfolio2.png',
   githubRepoName: 'portfolio2',
   liveLink: 'https://ma-ahmad.github.io/portfolio2/#',
