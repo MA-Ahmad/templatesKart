@@ -2,12 +2,15 @@ import { Page } from 'data/types';
 import { components } from './components';
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineFormatPainter } from 'react-icons/ai';
+import { FaBlogger } from 'react-icons/fa';
+import { MdTimeline } from 'react-icons/md';
+import { BsBook } from 'react-icons/bs';
 
 const page_names = [
   { name: 'Home', icon: AiOutlineHome },
-  { name: 'Articles', icon: AiOutlineHome },
-  { name: 'Projects', icon: AiOutlineHome },
-  { name: 'Open Source', icon: AiOutlineHome },
+  { name: 'Articles', icon: FaBlogger },
+  { name: 'Projects', icon: MdTimeline },
+  { name: 'Open Source', icon: BsBook },
   { name: 'Theme', icon: AiOutlineFormatPainter }
 ];
 
