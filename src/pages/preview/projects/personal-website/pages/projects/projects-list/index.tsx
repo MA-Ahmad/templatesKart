@@ -17,7 +17,7 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 import { MotionBox, MotionFlex, MotionList, MotionText } from './motion';
 import { stagger, fadeInUp } from './framerAnimations';
 
-export const projects = [
+const projects = [
   {
     title: 'Project1',
     imageLight: '/assets/images/projects/mahmad.png',
