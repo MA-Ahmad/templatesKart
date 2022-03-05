@@ -56,7 +56,7 @@ const Card = ({ title, role, skills, period, logo, alt }) => {
       paddingX={4}
       paddingY={5}
       shadow="md"
-      backgroundColor={useColorModeValue('gray.400', 'gray.700')}
+      backgroundColor={useColorModeValue('gray.100', 'gray.700')}
       position="relative"
       rounded="md"
       width="100%"

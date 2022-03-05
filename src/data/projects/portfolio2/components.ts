@@ -2,6 +2,12 @@ import { Component } from 'data/types';
 
 export const components: Component[] = [
   {
+    name: 'Header',
+    type: 'card',
+    page_id: 'home',
+    filename: 'header'
+  },
+  {
     name: 'Intro Section',
     type: 'card',
     page_id: 'home',
@@ -18,6 +24,12 @@ export const components: Component[] = [
     type: 'card',
     page_id: 'home',
     filename: 'career'
+  },
+  {
+    name: 'Footer',
+    type: 'card',
+    page_id: 'home',
+    filename: 'footer'
   },
   {
     name: 'Articles',
