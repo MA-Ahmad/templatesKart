@@ -10,7 +10,7 @@ export const project: Project = {
   techStack: ['nextjs', 'chakrkaUi'],
   imageUrl: '/assets/images/projects/portfolio2.png',
   githubRepoName: 'portfolio2',
-  liveLink: 'https://ma-ahmad.github.io/portfolio2',
+  liveLink: 'https://ma-ahmad.github.io/portfolio2/#',
   pages: pages_list(),
   components: components
 };
