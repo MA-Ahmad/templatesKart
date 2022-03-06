@@ -14,6 +14,12 @@ export const components: Component[] = [
     filename: 'posts-feed'
   },
   {
+    name: 'Posts Skeleton',
+    type: 'skeleton',
+    page_id: 'home',
+    filename: 'posts-skeleton'
+  },
+  {
     name: 'Tags',
     type: 'listing',
     page_id: 'home',
