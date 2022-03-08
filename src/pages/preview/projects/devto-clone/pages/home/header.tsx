@@ -42,7 +42,6 @@ const Header = () => {
   return (
     <Box
       py="2"
-      my="16"
       boxShadow="sm"
       border="0 solid #e5e7eb"
       position="fixed"
