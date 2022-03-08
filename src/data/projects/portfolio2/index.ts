@@ -2,7 +2,7 @@ import { pages_list } from './pages';
 import { Project } from 'data/types';
 import { components } from './components';
 
-export const project: Project = {
+export const portfolio2: Project = {
   name: 'Portfolio2',
   id: 'portfolio2',
   description:

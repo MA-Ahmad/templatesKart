@@ -20,7 +20,7 @@ import { stagger, fadeInUp } from './framerAnimations';
 const projects = [
   {
     title: 'Project1',
-    imageLight: '/assets/images/projects/mahmad.png',
+    imageLight: '/assets/images/projects/my-website.png',
     site: 'https://mahmad.me',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
     techStack: ['Rails', 'React', 'Javascript']

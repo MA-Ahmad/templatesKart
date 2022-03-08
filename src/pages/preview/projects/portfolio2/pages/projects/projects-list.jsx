@@ -16,7 +16,7 @@ import {
 const projects = [
   {
     title: 'Project1',
-    image_url: '/assets/images/projects/mahmad.png',
+    image_url: '/assets/images/projects/my-website.png',
     site: 'https://mahmad.me',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
     tech: 'Rails, React, Javascript'
