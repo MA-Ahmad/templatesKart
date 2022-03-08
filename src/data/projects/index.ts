@@ -1,9 +1,10 @@
 import { myWebsite } from './my-website';
 import { blogApp } from './blogApp';
 import { portfolio2 } from './portfolio2';
-import { devTo } from './devto';
+import { devTo } from './devto-clone';
 import { notebook } from './notebook-app';
+import { airbnb } from './airbnb-clone';
 
 import { Project } from '../types';
 
-export const projects: Project[] = [myWebsite, portfolio2, devTo, notebook, blogApp];
+export const projects: Project[] = [myWebsite, portfolio2, devTo, notebook, airbnb, blogApp];
