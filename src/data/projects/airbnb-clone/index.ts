@@ -7,7 +7,7 @@ export const airbnb: Project = {
   id: 'airbnb-clone',
   description: 'Airbnb clone built with Next.js, ChakraUI.',
   techStack: ['nextjs', 'chakrkaUi'],
-  imageUrl: '/assets/images/projects/devto.png',
+  imageUrl: '/assets/images/projects/airbnb/airbnb-home.jpg',
   githubRepoName: 'chakra-airbnb',
   liveLink: 'https://chakra-airbnb.vercel.app',
   pages: pages_list(),
