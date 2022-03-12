@@ -24,7 +24,7 @@ export const ResizableFrame = ({ component, project, page }: IframeProps) => {
         ? getComponentUrl(project.id, page?.id, component.filename)
         : project.liveLink
     );
-  }, []);
+  }, [project, component, page]);
 
   const syncHeight = () => {
     const frameHeight = ref.current?.contentWindow?.document.body.offsetHeight;
@@ -35,7 +35,7 @@ export const ResizableFrame = ({ component, project, page }: IframeProps) => {
   // Reload iframe content when theme and colorMode changes
   useEffect(() => {
     component && page && ref.current?.contentWindow?.location.reload();
-  }, [colorMode]);
+  }, [colorMode, component, page]);
 
   const getHeight = () => (height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT);
 
@@ -56,7 +56,7 @@ export const ResizableFrame = ({ component, project, page }: IframeProps) => {
         height={component ? getHeight() : '1000'}
         src={exampleUrl}
         ref={ref}
-        onLoad={component && syncHeight}
+        onLoad={component && page && syncHeight}
       />
     </Resizable>
   );
