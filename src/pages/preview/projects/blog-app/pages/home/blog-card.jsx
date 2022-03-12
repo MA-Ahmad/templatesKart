@@ -57,7 +57,7 @@ const BlogCards = () => {
                     </Box>
                     <Box>
                       <Box as="span" color="gray.600" fontSize="sm">
-                        <Badge rounded="full" px="2" variantColor="teal">
+                        <Badge rounded="full" px="2" colorScheme="teal">
                           {blog.authorName}
                         </Badge>
                       </Box>

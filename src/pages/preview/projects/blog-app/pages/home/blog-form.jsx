@@ -8,8 +8,7 @@ import {
   Input,
   Stack,
   Textarea,
-  Button,
-  Heading
+  Button
 } from '@chakra-ui/react';
 
 const BlogForm = () => {
@@ -35,7 +34,14 @@ const BlogForm = () => {
                 <FormLabel htmlFor="content">Content</FormLabel>
                 <Textarea height={'20vh'} name="content" />
               </Box>
-              <Button mt={4} variantColor="teal" type="submit" float="right">
+              <Button
+                mt={4}
+                variantColor="teal"
+                type="submit"
+                float="right"
+                rounded="md"
+                onClick={(e) => e.preventDefault()}
+              >
                 Create
               </Button>
             </form>
