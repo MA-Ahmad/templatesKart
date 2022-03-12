@@ -5,7 +5,7 @@ type RadioCardProps = {
   children: React.ReactNode;
 } & UseRadioProps;
 
-const RadioCard2: React.VFC<RadioCardProps> = (props) => {
+const RadioCard: React.VFC<RadioCardProps> = (props) => {
   const { getInputProps, getCheckboxProps } = useRadio(props);
 
   const input = getInputProps();
@@ -33,4 +33,4 @@ const RadioCard2: React.VFC<RadioCardProps> = (props) => {
     </Box>
   );
 };
-export default RadioCard2;
+export default RadioCard;
