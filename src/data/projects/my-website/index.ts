@@ -1,5 +1,5 @@
 import { pages_list } from './pages';
-import { Project } from 'data/types';
+import { Project } from 'data/projects/types';
 import { components } from './components';
 
 export const myWebsite: Project = {
@@ -10,6 +10,7 @@ export const myWebsite: Project = {
   techStack: ['nextjs', 'chakrkaUi'],
   imageUrl: '/assets/images/projects/my-website.png',
   githubRepoName: 'myPortfolio',
+  themeCodeLink: 'https://github.com/MA-Ahmad/myPortfolio/tree/main/components/theme',
   liveLink: 'https://mahmad.me',
   pages: pages_list(),
   components: components

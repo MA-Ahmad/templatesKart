@@ -1,5 +1,5 @@
 import { extendTheme, ThemeOverride } from '@chakra-ui/react';
-import { mergeWith } from '@chakra-ui/utils';
+import { Dict, mergeWith } from '@chakra-ui/utils';
 import { mode } from '@chakra-ui/theme-tools';
 import { useHoverLinkColor, colors } from './colors';
 import { getColor } from '@chakra-ui/theme-tools';
@@ -22,7 +22,7 @@ export const extendedTheme = extendTheme({
     heading: 'Work Sans, system-ui, sans-serif'
   },
   styles: {
-    global: (props) => ({
+    global: (props: Dict<any>) => ({
       body: {
         color: mode('gray.700', 'whiteAlpha.900')(props),
         bg: mode('gray.50', 'gray.900')(props),
@@ -92,7 +92,7 @@ export const extendedTheme = extendTheme({
     },
     Text: {
       variants: {
-        gradient: (props) => {
+        gradient: (props: { theme: any; fromcolor: any; tocolor: any }) => {
           const { theme, fromcolor, tocolor } = props;
           const lgFrom = getColor(theme, fromcolor);
           const lgTo = getColor(theme, tocolor);
@@ -152,7 +152,7 @@ export const extendedTheme = extendTheme({
   }
 });
 
-export const getTagColor = (type) => {
+export const getTagColor = (type: string) => {
   type = type.toLowerCase();
   switch (type) {
     case 'ruby':

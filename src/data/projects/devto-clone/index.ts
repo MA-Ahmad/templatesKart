@@ -1,5 +1,5 @@
 import { pages_list } from './pages';
-import { Project } from 'data/types';
+import { Project } from 'data/projects/types';
 import { components } from './components';
 
 export const devTo: Project = {

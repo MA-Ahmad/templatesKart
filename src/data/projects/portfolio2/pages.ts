@@ -1,4 +1,4 @@
-import { Page } from 'data/types';
+import { Page } from 'data/projects/types';
 import { components } from './components';
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineFormatPainter } from 'react-icons/ai';
@@ -10,8 +10,8 @@ const page_names = [
   { name: 'Home', icon: AiOutlineHome },
   { name: 'Articles', icon: FaBlogger },
   { name: 'Projects', icon: MdTimeline },
-  { name: 'Open Source', icon: BsBook },
-  { name: 'Theme', icon: AiOutlineFormatPainter }
+  { name: 'Open Source', icon: BsBook }
+  // { name: 'Theme', icon: AiOutlineFormatPainter }
 ];
 
 export const pages_list = () => {

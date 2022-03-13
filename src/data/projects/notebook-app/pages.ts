@@ -1,4 +1,4 @@
-import { Page } from 'data/types';
+import { Page } from 'data/projects/types';
 import { components } from './components';
 import { AiOutlineHome } from 'react-icons/ai';
 import { MdTimeline } from 'react-icons/md';

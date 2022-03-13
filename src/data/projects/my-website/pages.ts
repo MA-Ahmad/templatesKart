@@ -1,4 +1,4 @@
-import { Page } from 'data/types';
+import { Page } from 'data/projects/types';
 import { components } from './components';
 import { AiOutlineHome, AiTwotoneThunderbolt } from 'react-icons/ai';
 import { FaUserCircle, FaBlogger } from 'react-icons/fa';
@@ -6,7 +6,6 @@ import { CgArrowsExchange } from 'react-icons/cg';
 import { BsCheckCircle } from 'react-icons/bs';
 import { MdTimeline } from 'react-icons/md';
 import { BsBook } from 'react-icons/bs';
-import { AiOutlineFormatPainter } from 'react-icons/ai';
 
 const page_names = [
   { name: 'Home', icon: AiOutlineHome },
@@ -16,8 +15,7 @@ const page_names = [
   { name: 'Tech Stack', icon: AiTwotoneThunderbolt },
   { name: 'Open Source', icon: BsBook },
   { name: 'Achievements', icon: BsCheckCircle },
-  { name: 'Changelog', icon: CgArrowsExchange },
-  { name: 'Theme', icon: AiOutlineFormatPainter }
+  { name: 'Changelog', icon: CgArrowsExchange }
 ];
 
 export const pages_list = () => {

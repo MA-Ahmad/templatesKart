@@ -1,4 +1,4 @@
-import { Component } from 'data/types';
+import { Component } from 'data/projects/types';
 
 export const components: Component[] = [
   {
@@ -72,12 +72,5 @@ export const components: Component[] = [
     type: 'card',
     page_id: 'changelog',
     filename: 'pr-list'
-  },
-  {
-    name: 'Code',
-    type: 'theme',
-    page_id: 'theme',
-    filename: 'theme',
-    codeLink: 'https://github.com/MA-Ahmad/myPortfolio/tree/main/components/theme'
   }
 ];

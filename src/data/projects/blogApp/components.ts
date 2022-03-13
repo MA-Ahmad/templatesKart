@@ -1,4 +1,4 @@
-import { Component } from 'data/types';
+import { Component } from 'data/projects/types';
 
 export const components: Component[] = [
   {

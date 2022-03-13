@@ -18,7 +18,7 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 import { CgComponents, CgFileDocument } from 'react-icons/cg';
 import { GITHUB_BASE_URL } from 'data/constants';
-import { Project } from 'data/types';
+import { Project } from 'data/projects/types';
 import IconBox from './IconBox';
 
 type ProjectProps = {
