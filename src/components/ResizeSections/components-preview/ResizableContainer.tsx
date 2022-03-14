@@ -72,7 +72,7 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
   });
 
   const getFiles = () => {
-    return componentData.filter((c) => c.filename === component.filename)[0].files;
+    return componentData.filter((c) => c.filename === component.filename)[0]?.files || [];
   };
 
   return (
