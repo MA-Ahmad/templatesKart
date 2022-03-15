@@ -10,7 +10,10 @@ export default function TopNav() {
         as={'header'}
         bg={useColorModeValue('white', 'gray.700')}
         px={4}
-        boxShadow={'lg'}
+        boxShadow={useColorModeValue(
+          '0 4px 6px rgba(160, 174, 192, 0.6)',
+          '0 4px 6px rgba(9, 17, 28, 0.9)'
+        )}
         position="fixed"
         width="100%"
         zIndex="55"

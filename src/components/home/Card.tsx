@@ -34,7 +34,10 @@ const Card = ({ project, color }: ProjectProps) => {
       borderRadius={'md'}
       overflow="hidden"
       whileHover={{ y: -3 }}
-      _hover={{ shadow: 'md' }}
+      boxShadow={useColorModeValue(
+        '2px 6px 8px rgba(160, 174, 192, 0.6)',
+        '2px 6px 8px rgba(9, 17, 28, 0.9)'
+      )}
     >
       <NextLink href={`/projects/${project.id}`} passHref>
         <Link>
