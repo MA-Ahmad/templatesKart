@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps<PageProps, { slug: string[] }> = asy
 
   return {
     props: {
-      component: component,
+      component: JSON.parse(JSON.stringify(component)),
       componentData: getComponentData(component.id, component.data)
     }
   };

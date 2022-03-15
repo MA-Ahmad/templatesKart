@@ -2,6 +2,7 @@ import { Box, Flex, HStack, useColorModeValue, Heading, Container } from '@chakr
 import { ColorModeSwitcher } from '../theme/ColorModeSwitcher';
 import NextLink from 'next/link';
 import { AccentPicker } from 'components/theme/Accent';
+import DropDownMenu from './menu-list';
 
 export default function TopNav() {
   return (
@@ -27,6 +28,7 @@ export default function TopNav() {
                   TemplatesKart
                 </Heading>
               </NextLink>
+              <DropDownMenu />
             </HStack>
             <Flex alignItems={'center'}>
               <AccentPicker aria-label="Accent Color Picker" />

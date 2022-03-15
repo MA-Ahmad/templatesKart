@@ -2,8 +2,8 @@ import { Box, Heading, Text, SimpleGrid } from '@chakra-ui/react';
 import RootLayout from 'components/layouts/rootLayout';
 import { useLinkColor } from 'components/theme';
 import UnderlinedText from 'components/shared/underlined-text';
-import { projects } from 'data/projects';
-import Card from 'components/home/Card';
+import Card from 'components/layouts/components-preview/card';
+import { components } from 'data/components';
 
 export default function Index() {
   const linkColor = useLinkColor();
@@ -21,9 +21,9 @@ export default function Index() {
           Copy code from live websites
         </Text>
       </Box>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={5} mt={12} mb={4}>
-        {projects.map((project, index) => (
-          <Card key={index} project={project} />
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={15} mt={12} mb={4} px={10}>
+        {components.map((component, index) => (
+          <Card key={index} component={component} />
         ))}
       </SimpleGrid>
     </RootLayout>

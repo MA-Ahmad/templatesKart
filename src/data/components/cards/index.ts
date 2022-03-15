@@ -1,15 +1,17 @@
 import { Component, ComponentContainer } from '../types';
+import { BsCardText } from 'react-icons/bs';
 
 const components_list: Component[] = [
   {
-    name: 'Portfolio Card',
     id: 'cards',
+    name: 'Portfolio Card',
     filename: 'portfolio-card'
   }
 ];
 
 export const cards: ComponentContainer = {
-  name: 'Card Components',
   id: 'cards',
+  name: 'Cards',
+  icon: BsCardText,
   data: components_list
 };

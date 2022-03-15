@@ -18,14 +18,16 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 import { CgComponents, CgFileDocument } from 'react-icons/cg';
 import { GITHUB_BASE_URL } from 'data/constants';
+import { useLinkColor } from 'components/theme';
 import { Project } from 'data/projects/types';
 import IconBox from './IconBox';
 
 type ProjectProps = {
   project: Project;
-  color: string;
 };
-const Card = ({ project, color }: ProjectProps) => {
+
+const Card = ({ project }: ProjectProps) => {
+  const color = useLinkColor();
   const cardColor = useColorModeValue('gray.100', 'gray.700');
 
   return (

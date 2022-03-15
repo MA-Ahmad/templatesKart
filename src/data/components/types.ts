@@ -1,11 +1,14 @@
+import { IconType } from 'react-icons';
+
 export interface Component {
+  id: string;
   name: string;
   filename: string;
-  id: string;
 }
 
 export interface ComponentContainer {
-  name: string;
   id: string;
+  name: string;
+  icon: IconType;
   data: Component[];
 }
