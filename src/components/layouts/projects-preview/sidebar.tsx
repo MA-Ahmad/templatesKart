@@ -102,7 +102,7 @@ export const Sidebar = (props: StackProps) => {
     <Stack as={'nav'} spacing={6} maxW={{ md: '3xs' }} w={'full'} flexShrink={0} {...props}>
       {project && (
         <Stack key={project.id}>
-          <NextLink href={`projects/${project.id}`} passHref>
+          <NextLink href={`${project.id}`} passHref>
             <Link>
               <MotionBox whileHover={{ translateX: 5 }}>
                 <Text
