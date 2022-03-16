@@ -22,8 +22,13 @@ type MenuData = {
 };
 
 const menuData: MenuData[] = [
-  { id: 1, label: 'Projects', subLabel: 'Get components from different live projects', href: '/' },
-  { id: 2, label: 'Components', subLabel: 'Get responsive components List', href: '/components' }
+  {
+    id: 1,
+    label: 'Projects',
+    subLabel: 'Get component code from projects kart',
+    href: '/'
+  },
+  { id: 2, label: 'Components', subLabel: 'Responsive components kart', href: '/components' }
 ];
 
 const DropDownMenu = () => {
@@ -34,18 +39,20 @@ const DropDownMenu = () => {
       <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
         <PopoverTrigger>
           <HStack alignItems="center" cursor="pointer">
-            <Box
-              p={2}
-              fontSize={'md'}
-              fontWeight={'bold'}
-              color={useColorModeValue('gray.600', 'gray.200')}
-              _hover={{
-                textDecoration: 'none',
-                color: useColorModeValue('gray.800', 'white')
-              }}
-            >
-              Components
-            </Box>
+            <NextLink href={'/components'} passHref={true}>
+              <Link
+                p={2}
+                fontSize={'md'}
+                fontWeight={'bold'}
+                color={useColorModeValue('gray.600', 'gray.200')}
+                _hover={{
+                  textDecoration: 'none',
+                  color: useColorModeValue('gray.800', 'white')
+                }}
+              >
+                Components
+              </Link>
+            </NextLink>
             <Icon as={isOpen ? BsChevronUp : BsChevronDown} h={4} w={4} />
           </HStack>
         </PopoverTrigger>
@@ -59,7 +66,7 @@ const DropDownMenu = () => {
           bg={useColorModeValue('white', 'gray.800')}
           p={4}
           rounded={'lg'}
-          minW={'sm'}
+          minW={'xs'}
         >
           <Stack>
             {menuData.map((data) => (
@@ -74,9 +81,8 @@ const DropDownMenu = () => {
 
 const DropDownItem = ({ label, href, subLabel }: MenuData) => {
   return (
-    <NextLink href={href!} passHref={true}>
+    <NextLink href={href!} passHref>
       <Link
-        role={'group'}
         display={'block'}
         p={2}
         rounded={'md'}

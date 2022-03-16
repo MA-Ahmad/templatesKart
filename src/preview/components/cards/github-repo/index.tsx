@@ -1,0 +1,39 @@
+import * as React from 'react';
+import { useMediaQuery, Container } from '@chakra-ui/react';
+import StackGrid from 'react-stack-grid';
+import RepositoryCard from './repo-card';
+import repositoriesList from './repos-list';
+
+const LiveData = () => {
+  const [isLargerThan720] = useMediaQuery('(min-width: 720px)');
+  const [isLargerThan982] = useMediaQuery('(min-width: 982px)');
+
+  let columnWidth = 390;
+  if (isLargerThan982) {
+    columnWidth = 390;
+  } else {
+    if (isLargerThan720) {
+      columnWidth = 300;
+    }
+  }
+
+  return (
+    <Container maxW={'7xl'} p="12">
+      <StackGrid columnWidth={!isLargerThan982 && !isLargerThan720 ? '100%' : columnWidth}>
+        {repositoriesList()?.map((repo, index) => (
+          <RepositoryCard
+            key={index}
+            title={repo.title}
+            description={repo.description}
+            language={repo.language}
+            url={repo.url}
+            stargazers_count={repo.stargazers_count}
+            forks_count={repo.forks_count}
+          />
+        ))}
+      </StackGrid>
+    </Container>
+  );
+};
+
+export default LiveData;
