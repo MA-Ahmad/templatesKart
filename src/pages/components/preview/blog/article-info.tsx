@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Index from 'preview/components/cards/article-info';
+import Index from 'preview/components/blog/article-info';
 
 const ArticleInfo = () => {
   return <Index />;

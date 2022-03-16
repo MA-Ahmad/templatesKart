@@ -21,7 +21,7 @@ export default function Index() {
           Copy code from live websites
         </Text>
       </Box>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={15} mt={12} mb={4} px={10}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={30} mt={12} mb={4} px={10}>
         {components.map((component, index) => (
           <Card key={index} component={component} />
         ))}

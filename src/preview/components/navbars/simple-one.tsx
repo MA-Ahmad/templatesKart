@@ -24,7 +24,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import { FiSun } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
-const Header = () => {
+const Navbar = () => {
   const { onOpen } = useDisclosure();
 
   return (
@@ -111,4 +111,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

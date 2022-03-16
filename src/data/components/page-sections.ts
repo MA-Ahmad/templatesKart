@@ -1,4 +1,4 @@
-import { Component, ComponentContainer } from '../types';
+import { Component, ComponentContainer } from './types';
 import { CgFormatSeparator } from 'react-icons/cg';
 
 const components_list: Component[] = [
@@ -6,6 +6,11 @@ const components_list: Component[] = [
     id: 'page-sections',
     name: 'Info Section',
     filename: 'info-section'
+  },
+  {
+    id: 'page-sections',
+    name: 'Timeline',
+    filename: 'timeline'
   }
 ];
 
