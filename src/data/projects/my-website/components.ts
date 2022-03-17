@@ -3,13 +3,13 @@ import { Component } from 'data/projects/types';
 export const components: Component[] = [
   {
     name: 'Intro Section',
-    type: 'card',
+    type: 'hero',
     page_id: 'home',
     filename: 'intro-section'
   },
   {
     name: 'Content Box',
-    type: 'card',
+    type: 'page-sections',
     page_id: 'home',
     filename: 'content-box'
   },

@@ -10,10 +10,6 @@ export const getComponentFileUrl = (componentId: string, fileName: string) => {
   return `/components/preview/${componentId}/${fileName}`;
 };
 
-// export const getComponentFileUrl = (componentId: string, fileName: string) => {
-//   return `preview/components/${componentId}/${fileName}`;
-// };
-
 export const sortFilesByIndexName = (files: string[]) => {
   return files.sort((a, b) => {
     if (['index.ts', 'index.tsx', 'index.js', 'index.jsx'].includes(a)) return -1;

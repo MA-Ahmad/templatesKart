@@ -4,12 +4,14 @@ import { useLinkColor } from 'components/theme';
 import UnderlinedText from 'components/shared/underlined-text';
 import { projects } from 'data/projects';
 import Card from 'components/home/Card';
+import { SEO } from 'components/SEO';
 
 export default function Index() {
   const linkColor = useLinkColor();
 
   return (
     <RootLayout>
+      <SEO />
       <Box textAlign="center">
         <Heading as="h1" fontSize={{ base: '3xl', md: '4xl' }} mb={5}>
           <UnderlinedText color={linkColor}>TemplatesKart</UnderlinedText>

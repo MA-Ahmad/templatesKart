@@ -3,49 +3,49 @@ import { Component } from 'data/projects/types';
 export const components: Component[] = [
   {
     name: 'Header',
-    type: 'card',
+    type: 'navbar',
     page_id: 'home',
     filename: 'header'
   },
   {
     name: 'Intro Section',
-    type: 'card',
+    type: 'page-sections',
     page_id: 'home',
     filename: 'intro-section'
   },
   {
     name: 'Skills',
-    type: 'card',
+    type: 'cards',
     page_id: 'home',
     filename: 'skills'
   },
   {
     name: 'Career',
-    type: 'card',
+    type: 'cards',
     page_id: 'home',
     filename: 'career'
   },
   {
     name: 'Footer',
-    type: 'card',
+    type: 'footer',
     page_id: 'home',
     filename: 'footer'
   },
   {
     name: 'Articles',
-    type: 'card',
+    type: 'cards',
     page_id: 'articles',
     filename: 'featured-articles'
   },
   {
     name: 'Open source',
-    type: 'card',
+    type: 'cards',
     page_id: 'open-source',
     filename: 'repos-list'
   },
   {
     name: 'Projects',
-    type: 'card',
+    type: 'cards',
     page_id: 'projects',
     filename: 'projects-list'
   }

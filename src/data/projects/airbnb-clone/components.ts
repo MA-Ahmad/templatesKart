@@ -27,7 +27,7 @@ export const components: Component[] = [
   },
   {
     name: 'Places',
-    type: 'card',
+    type: 'cards',
     page_id: 'home',
     filename: 'places'
   },

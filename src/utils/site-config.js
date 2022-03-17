@@ -1,13 +1,13 @@
-import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaDev, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 const siteConfig = {
-  copyright: `Copyright © ${new Date().getFullYear()} Muhammad Ahmad. All Rights Reserved.`,
+  copyright: `Copyright © ${new Date().getFullYear()} Templates Kart. All Rights Reserved.`,
   author: {
     name: 'Muhammad Ahmad',
     accounts: [
       {
-        url: 'https://github.com/MA-Ahmad',
+        url: 'https://github.com/MA-Ahmad/templates-kart',
         label: 'Github Account',
         type: 'gray',
         icon: <FaGithub />

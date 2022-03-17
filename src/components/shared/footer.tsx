@@ -35,7 +35,7 @@ const Footer = () => {
           w="100%"
         >
           <Text textAlign="center" fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
-            © {new Date().getFullYear()} Muhammad Ahmad{' '}
+            {siteConfig.copyright}
           </Text>
           <Box textAlign="center">
             {siteConfig.author.accounts.map((sc, index) => (

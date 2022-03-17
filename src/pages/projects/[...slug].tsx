@@ -7,6 +7,8 @@ import { Project, Page, Component } from 'data/projects/types';
 import { useLinkColor } from 'components/theme';
 import ScrollToTop from 'components/shared/scrollToTop';
 import { BiLinkExternal } from 'react-icons/bi';
+import { SEO_TITLE } from 'data/constants';
+import { SEO } from 'components/SEO';
 import fs from 'fs';
 import path from 'path';
 
@@ -31,8 +33,11 @@ const Templates: NextPage<PageProps> = ({ project, page, components, componentsF
     return url;
   };
 
+  const seoTitle = `${project.name}(${project.techStack.join(', ')}) - ${SEO_TITLE}`;
+
   return (
     <ProjectLayout>
+      <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
       <Stack mb={5}>
         <Link fontWeight="semibold" href={externalUrl()} _hover={{ color: linkColor }} isExternal>
           <HStack spacing={2} alignItems="center">

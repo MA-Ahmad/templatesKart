@@ -7,6 +7,8 @@ import { Component, ComponentContainer } from 'data/components/types';
 import { useLinkColor } from 'components/theme';
 import ScrollToTop from 'components/shared/scrollToTop';
 import { sortFilesByIndexName } from 'utils';
+import { SEO_TITLE } from 'data/constants';
+import { SEO } from 'components/SEO';
 import fs from 'fs';
 import path from 'path';
 
@@ -18,8 +20,11 @@ type PageProps = {
 const Page: NextPage<PageProps> = ({ component, componentData }) => {
   const linkColor = useLinkColor();
 
+  const seoTitle = `${component.name} - ${SEO_TITLE}`;
+
   return (
     <ComponentLayout>
+      <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
       <Stack mb={5}>
         <HStack spacing={2} alignItems="center" fontWeight="semibold" _hover={{ color: linkColor }}>
           <Heading size={'xl'}>{component.name}</Heading>
