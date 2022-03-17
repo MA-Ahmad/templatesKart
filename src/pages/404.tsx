@@ -1,0 +1,38 @@
+import { Stack, Flex, Heading, Text, Button, Box } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import RootLayout from 'components/layouts/rootLayout';
+import { useLinkColor, useHoverLinkColor } from 'components/theme';
+
+export const NotFound = () => {
+  const color = useLinkColor();
+  const hoverColor = useHoverLinkColor();
+
+  return (
+    <RootLayout>
+      <Flex align={'center'} justify={'center'} h={'calc(100vh - 16rem)'} w={'full'}>
+        <Stack spacing={2}>
+          <Heading size={'lg'} color="red.200">
+            404 Error
+          </Heading>
+          <Heading>Page not found</Heading>
+          <Text>Sorry, the page you are looking for doesn't exist or has been moved.</Text>
+          <Box>
+            <NextLink href={'/'} passHref>
+              <Button
+                as={'a'}
+                color={'white'}
+                rounded={'md'}
+                bg={color}
+                _hover={{ bg: hoverColor, color: 'white' }}
+              >
+                Take me home
+              </Button>
+            </NextLink>
+          </Box>
+        </Stack>
+      </Flex>
+    </RootLayout>
+  );
+};
+
+export default NotFound;
