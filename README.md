@@ -1,4 +1,4 @@
-# TemplatesKart
+# [TemplatesKart](https://templateskart.com)
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Chakra UI](https://chakra-ui.com/)
