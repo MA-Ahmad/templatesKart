@@ -11,7 +11,7 @@ const Card = ({ component }: { component: ComponentContainer }) => {
   return (
     <NextLink href={`/components/${component.id}`} passHref>
       <Link rounded="md">
-        <MotionBox whileHover={{ translateY: -5 }}>
+        <MotionBox whileHover={{ translateY: -5 }} transition={{ duration: 0.3 }}>
           <HStack
             p={{ base: 2, sm: 6 }}
             bg={useColorModeValue('gray.100', 'gray.800')}

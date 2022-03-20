@@ -1,6 +1,6 @@
 import { Key, ReactNode } from 'react';
 import {
-  Img,
+  Image,
   Text,
   Link,
   useColorModeValue,
@@ -35,7 +35,8 @@ const Card = ({ project }: ProjectProps) => {
       backgroundColor={cardColor}
       borderRadius={'md'}
       overflow="hidden"
-      whileHover={{ y: -3 }}
+      whileHover={{ y: -3, scale: 1.1 }}
+      transition={{ duration: 0.3 }}
       boxShadow={useColorModeValue(
         '2px 6px 8px rgba(160, 174, 192, 0.6)',
         '2px 6px 8px rgba(9, 17, 28, 0.9)'
@@ -43,8 +44,8 @@ const Card = ({ project }: ProjectProps) => {
     >
       <NextLink href={`/projects/${project.id}`} passHref>
         <Link>
-          <AspectRatio ratio={1.85 / 1} w="100%" cursor="pointer">
-            <Img
+          <AspectRatio ratio={1.85 / 1} w="100%">
+            <Image
               w="100%"
               h="100%"
               objectFit="cover"
