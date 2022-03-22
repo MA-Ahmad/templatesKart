@@ -6,7 +6,7 @@ export const notebook: Project = {
   name: 'Notebook app',
   id: 'notebook-app',
   description: 'A notebook app which will help you to crate notes for your daily work.',
-  techStack: ['nextjs', 'chakrkaUi'],
+  techStack: ['nextjs', 'chakraUi'],
   imageUrl: '/assets/images/projects/notebook.png',
   githubRepoName: 'next-notebook',
   liveLink: 'https://next-notebook.vercel.app',

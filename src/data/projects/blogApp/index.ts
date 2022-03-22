@@ -6,7 +6,7 @@ export const blogApp: Project = {
   name: 'Blog app',
   id: 'blog-app',
   description: 'A React Blog App built by using libraries like ChakraUI, Formik.',
-  techStack: ['reactjs', 'chakrkaUi'],
+  techStack: ['reactjs', 'chakraUi'],
   imageUrl: '/assets/images/projects/blog.png',
   githubRepoName: 'reactBlog',
   liveLink: 'https://ma-ahmad.github.io/reactBlog',

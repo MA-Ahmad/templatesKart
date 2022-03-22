@@ -7,7 +7,7 @@ export const myWebsite: Project = {
   id: 'my-website',
   description:
     'This is a portfolio application built by using Next.js, ChakraUi, Typescript and Dev.to api.',
-  techStack: ['nextjs', 'chakrkaUi'],
+  techStack: ['nextjs', 'chakraUi'],
   imageUrl: '/assets/images/projects/my-website.png',
   githubRepoName: 'myPortfolio',
   themeCodeLink: 'https://github.com/MA-Ahmad/myPortfolio/tree/main/components/theme',
