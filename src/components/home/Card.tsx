@@ -35,7 +35,7 @@ const Card = ({ project }: ProjectProps) => {
       backgroundColor={cardColor}
       borderRadius={'md'}
       overflow="hidden"
-      whileHover={{ y: -3, scale: 1.1 }}
+      whileHover={{ y: -3, scale: 1.08 }}
       transition={{ duration: 0.3 }}
       boxShadow={useColorModeValue(
         '2px 6px 8px rgba(160, 174, 192, 0.6)',
