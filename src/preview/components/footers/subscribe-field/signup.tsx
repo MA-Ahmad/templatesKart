@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Heading, Input, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Input, Text, useColorModeValue } from '@chakra-ui/react';
 
 export default function FooterSignup() {
   return (
@@ -18,10 +18,10 @@ export default function FooterSignup() {
             isRequired
             name="entry.1808449400"
             px="25px"
-            bg="gray.900"
             height="50px"
             rounded="50px"
-            _placeholder={{ color: 'gray.600' }}
+            bg={useColorModeValue('gray.900', 'gray.600')}
+            _placeholder={{ color: 'gray.300' }}
             placeholder="Enter your email"
             _focus={{ outline: 0 }}
             color="gray.100"

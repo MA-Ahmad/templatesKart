@@ -2,7 +2,7 @@ import { FaGithub, FaDev, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 const siteConfig = {
-  copyright: `Copyright © ${new Date().getFullYear()} Templates Kart. All Rights Reserved.`,
+  copyright: `© ${new Date().getFullYear()} Templates Kart. All Rights Reserved.`,
   author: {
     name: 'Muhammad Ahmad',
     accounts: [
