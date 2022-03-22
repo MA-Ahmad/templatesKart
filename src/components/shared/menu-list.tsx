@@ -12,7 +12,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { FaChevronDown } from 'react-icons/fa';
 
 type MenuData = {
   id: number;
@@ -35,7 +35,7 @@ const DropDownMenu = () => {
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Stack direction={'row'} spacing={4} d={{ base: 'none', sm: 'block' }}>
+    <Stack direction={'row'} spacing={4}>
       <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
         <PopoverTrigger>
           <HStack alignItems="center" cursor="pointer">
@@ -53,7 +53,13 @@ const DropDownMenu = () => {
                 Components
               </Link>
             </NextLink>
-            <Icon as={isOpen ? BsChevronUp : BsChevronDown} h={4} w={4} />
+            <Icon
+              as={FaChevronDown}
+              h={4}
+              w={4}
+              transition={'all .25s ease-in-out'}
+              transform={isOpen ? 'rotate(180deg)' : ''}
+            />
           </HStack>
         </PopoverTrigger>
 
