@@ -25,10 +25,15 @@ const menuData: MenuData[] = [
   {
     id: 1,
     label: 'Projects',
-    subLabel: 'Get component code from projects kart',
+    subLabel: 'Explore projects kart',
     href: '/'
   },
-  { id: 2, label: 'Components', subLabel: 'Responsive components kart', href: '/components' }
+  {
+    id: 2,
+    label: 'Components',
+    subLabel: 'Explore responsive components list',
+    href: '/components'
+  }
 ];
 
 const DropDownMenu = () => {

@@ -50,8 +50,32 @@ export default function TopNav() {
                       top={1}
                     />
                     <HStack d={{ base: 'none', sm: 'flex' }} spacing={2}>
-                      <Text textShadow="1px 2px #179c40">Templates</Text>
-                      <Text textShadow="1px 2px #179c40">Kart</Text>
+                      <Text textShadow="1px 2px #179c40">
+                        Templates{' '}
+                        <Box
+                          as="span"
+                          position="relative"
+                          _before={{
+                            content: '""',
+                            bg: linkColor,
+                            position: 'absolute',
+                            top: '-0.15rem',
+                            right: '-0.15rem',
+                            bottom: '-0.15rem',
+                            left: '-0.15rem',
+                            transform: 'rotate(-4deg)'
+                          }}
+                        >
+                          <Box
+                            as="span"
+                            textShadow="1px 2px #179c40"
+                            color={useColorModeValue('white', 'black')}
+                            position="relative"
+                          >
+                            Kart
+                          </Box>
+                        </Box>
+                      </Text>
                     </HStack>
                     <Icon
                       position="relative"

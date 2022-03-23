@@ -1,20 +1,17 @@
-import { Box, Heading, Text, Flex, Icon, HStack } from '@chakra-ui/react';
+import { Box, Heading, Text, Flex, Icon, HStack, useColorModeValue } from '@chakra-ui/react';
 import { useLinkColor } from 'components/theme';
 import UnderlinedText from 'components/shared/underlined-text';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { Key } from 'react';
 
-const descriptionList: {
-  Projects: string[];
-  Components: string[];
-} = {
+const descriptionList: { [key: string]: string[] } = {
   Projects: [
-    'Beautiful and responsive React components to build your application',
-    'Copy code from live websites'
+    'Project templates provide an easy solution to getting the look you want for your website without having to mess around with too much code.',
+    'Copy code from these live websites'
   ],
   Components: [
     'Beautiful and responsive React components to build your application',
-    'Copy code from live websites'
+    'Checkout these components'
   ]
 };
 
@@ -22,7 +19,7 @@ const HeadingSection = ({ title }: { title: string }) => {
   const linkColor = useLinkColor();
 
   return (
-    <Box textAlign="center">
+    <Flex textAlign="center" justify="center" align="center" flexDirection="column">
       <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} mb={4}>
         <Flex position="relative" justify="center">
           <Icon
@@ -36,8 +33,32 @@ const HeadingSection = ({ title }: { title: string }) => {
           />
           <UnderlinedText color={linkColor}>
             <HStack spacing={2}>
-              <Text textShadow="1px 2px #179c40">{title}</Text>
-              <Text textShadow="1px 2px #179c40">Kart</Text>
+              <Text textShadow="1px 2px #179c40">
+                {title} &nbsp;
+                <Box
+                  as="span"
+                  position="relative"
+                  _before={{
+                    content: '""',
+                    bg: linkColor,
+                    position: 'absolute',
+                    top: '-0.15rem',
+                    right: '-0.15rem',
+                    bottom: '-0.15rem',
+                    left: '-0.15rem',
+                    transform: 'rotate(-4deg)'
+                  }}
+                >
+                  <Box
+                    as="span"
+                    textShadow="1px 2px #179c40"
+                    color={useColorModeValue('white', 'black')}
+                    position="relative"
+                  >
+                    Kart
+                  </Box>
+                </Box>
+              </Text>
             </HStack>
           </UnderlinedText>
 
@@ -53,11 +74,17 @@ const HeadingSection = ({ title }: { title: string }) => {
         </Flex>
       </Heading>
       {descriptionList[title].map((text: string, index: Key) => (
-        <Text key={index} fontSize="lg" fontWeight="semibold" mt={2}>
+        <Text
+          key={index}
+          fontSize={{ base: 'md', sm: 'lg' }}
+          fontWeight="semibold"
+          mt={2}
+          maxW="2xl"
+        >
           {text}
         </Text>
       ))}
-    </Box>
+    </Flex>
   );
 };
 
