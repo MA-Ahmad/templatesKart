@@ -17,8 +17,8 @@ import { projects } from 'data/projects';
 import { Project } from 'data/projects/types';
 import UnderlinedText from '../../shared/underlined-text';
 import { IconType } from 'react-icons';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
+import { FaChevronRight } from 'react-icons/fa';
 
 interface NavigationLinkProps {
   href: string;
@@ -170,7 +170,7 @@ export const Sidebar = (props: StackProps) => {
                   >
                     <MotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
-                        <Icon as={AiOutlineArrowRight} w={5} h={5} />
+                        <Icon as={FaChevronRight} w={4} h={4} />
                         <Box as="span" fontSize="md" ml={3}>
                           <Text
                             textTransform={'uppercase'}

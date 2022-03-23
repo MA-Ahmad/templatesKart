@@ -11,14 +11,13 @@ import {
   Icon,
   Flex
 } from '@chakra-ui/react';
-import { useLinkColor, useHoverLinkColor } from 'components/theme';
+import { useLinkColor } from 'components/theme';
 import { MotionBox } from 'components/shared/animations/motion';
 import { projects } from 'data/projects';
 import { components } from 'data/components';
-import { Project } from 'data/projects/types';
 import { ComponentContainer } from 'data/components/types';
 import UnderlinedText from 'components/shared/underlined-text';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { FaChevronRight } from 'react-icons/fa';
 
 export const Sidebar = (props: StackProps) => {
   const [component, setComponent] = useState<ComponentContainer | null>(null);
@@ -29,6 +28,11 @@ export const Sidebar = (props: StackProps) => {
   useEffect(() => {
     setComponent(components.filter((c) => c.id === asPath.split('/')[2])[0]);
   }, [asPath]);
+
+  const navigateToComponent = (filename: string) => {
+    const divElement: HTMLElement | null = document.getElementById(filename);
+    window.scrollTo({ top: divElement!.offsetTop, behavior: 'smooth' });
+  };
 
   return (
     <Stack as={'nav'} spacing={6} maxW={{ md: '3xs' }} w={'full'} flexShrink={0} {...props}>
@@ -82,12 +86,17 @@ export const Sidebar = (props: StackProps) => {
                     bg: useColorModeValue('gray.100', 'gray.700')
                   }}
                   d="flex"
+                  cursor="pointer"
                   alignItems="center"
                   justifyContent="space-between"
+                  onClick={() => navigateToComponent(c.filename)}
                 >
-                  <Text fontSize="md" ml={3}>
-                    {c.name}
-                  </Text>
+                  <Flex alignItems="center">
+                    <Icon as={FaChevronRight} w={3} h={3} color={linkColor} />
+                    <Text fontSize="md" ml={3}>
+                      {c.name}
+                    </Text>
+                  </Flex>
                 </Box>
               </MotionBox>
             ))}
@@ -119,7 +128,7 @@ export const Sidebar = (props: StackProps) => {
                   >
                     <MotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
-                        <Icon as={AiOutlineArrowRight} w={5} h={5} />
+                        <Icon as={FaChevronRight} w={4} h={4} />
                         <Box as="span" fontSize="md" ml={3}>
                           <Text
                             textTransform={'uppercase'}
