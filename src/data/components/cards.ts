@@ -21,6 +21,11 @@ const components_list: Component[] = [
     id: 'cards',
     name: 'Career Card',
     filename: 'career-card'
+  },
+  {
+    id: 'cards',
+    name: 'Project Info Card',
+    filename: 'project-card'
   }
 ];
 
