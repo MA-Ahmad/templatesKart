@@ -1,6 +1,5 @@
-import { Box, Heading, Text, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import RootLayout from 'components/layouts/rootLayout';
-import { useLinkColor } from 'components/theme';
 import HeadingSection from 'components/shared/heading-section';
 import Card from 'components/layouts/components-preview/card';
 import { components } from 'data/components';
@@ -8,7 +7,6 @@ import { SEO_TITLE } from 'data/constants';
 import { SEO } from 'components/SEO';
 
 export default function Index() {
-  const linkColor = useLinkColor();
   const seoTitle = `Components - ${SEO_TITLE}`;
 
   return (
