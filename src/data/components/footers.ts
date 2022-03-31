@@ -9,7 +9,12 @@ const components_list: Component[] = [
   },
   {
     id: 'footers',
-    name: 'With links',
+    name: 'Fewer links',
+    filename: 'fewer-links'
+  },
+  {
+    id: 'footers',
+    name: 'Big footer',
     filename: 'detail-links'
   }
 ];
