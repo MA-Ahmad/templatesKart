@@ -6,7 +6,8 @@ import { useLinkColor } from 'components/theme';
 const ScrollToTop = () => {
   const linkColor = useLinkColor();
   const scrollToTop = () => window.scroll({ top: 0, behavior: 'smooth' });
-  const getVisible = () => document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
+  const getVisible = () =>
+    document.body.scrollTop > 300 || document.documentElement.scrollTop > 300;
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(() => getVisible());
