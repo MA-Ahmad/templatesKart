@@ -37,7 +37,7 @@ const Card = ({ project }: ProjectProps) => {
       overflow="hidden"
       whileHover={{ y: -3, scale: 1.1 }}
       _hover={{ zIndex: 5 }}
-      transition={{ duration: 0.3 }}
+      transition={'all 0.3s ease-in-out'}
       boxShadow={useColorModeValue(
         '2px 6px 8px rgba(160, 174, 192, 0.6)',
         '2px 6px 8px rgba(9, 17, 28, 0.9)'
