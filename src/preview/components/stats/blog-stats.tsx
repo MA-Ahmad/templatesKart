@@ -28,7 +28,7 @@ const statData: StatData[] = [
 const BlogStats = () => {
   return (
     <Container maxW={'7xl'} py={10} px={10}>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 3 }} spacing={5} mt={12} mb={4}>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={5} mt={12} mb={4}>
         {statData.map((data) => (
           <Box key={data.id} p={5} boxShadow="md" rounded="md" borderWidth={1}>
             <Text fontWeight="extrabold" fontSize="x-large">

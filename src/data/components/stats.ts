@@ -1,5 +1,5 @@
 import { Component, ComponentContainer } from './types';
-import { BsCardText } from 'react-icons/bs';
+import { BiStats } from 'react-icons/bi';
 
 const components_list: Component[] = [
   {
@@ -22,6 +22,6 @@ const components_list: Component[] = [
 export const stats: ComponentContainer = {
   id: 'stats',
   name: 'Stats',
-  icon: BsCardText,
+  icon: BiStats,
   data: components_list
 };
