@@ -25,13 +25,13 @@ const menuData: MenuData[] = [
   {
     id: 1,
     label: 'Projects',
-    subLabel: 'Explore projects kart',
+    subLabel: 'Explore responsive projects kart',
     href: '/'
   },
   {
     id: 2,
     label: 'Components',
-    subLabel: 'Explore responsive components list',
+    subLabel: 'Explore responsive components kart',
     href: '/components'
   }
 ];
