@@ -6,6 +6,11 @@ const components_list: Component[] = [
     id: 'forms',
     name: 'Simple Sign in',
     filename: 'simple-sign-in'
+  },
+  {
+    id: 'forms',
+    name: 'Split with image',
+    filename: 'split-with-image'
   }
 ];
 
