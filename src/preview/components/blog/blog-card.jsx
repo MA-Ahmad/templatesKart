@@ -43,7 +43,7 @@ const BlogCards = () => {
                   position="relative"
                 >
                   <Image src={'https://bit.ly/2Z4KKcF'} alt="Blog image" />
-                  <Box p="6">
+                  <Box p={{ base: 4, lg: 6 }}>
                     <Box d="flex" alignItems="baseline">
                       <Box
                         fontWeight="semibold"

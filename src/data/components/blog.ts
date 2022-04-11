@@ -9,13 +9,13 @@ const components_list: Component[] = [
   },
   {
     id: 'blog',
-    name: 'Blog cards',
-    filename: 'blog-card'
+    name: 'Posts Feed',
+    filename: 'posts-feed'
   },
   {
     id: 'blog',
-    name: 'Posts Feed',
-    filename: 'posts-feed'
+    name: 'Blog cards',
+    filename: 'blog-card'
   }
 ];
 
