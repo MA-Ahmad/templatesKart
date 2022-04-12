@@ -1,5 +1,5 @@
 import React from 'react';
-import { HStack, VStack, Text, useColorModeValue, Box, Link, Icon } from '@chakra-ui/react';
+import { HStack, VStack, Text, useColorModeValue, Flex, Link, Icon } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useLinkColor } from 'components/theme';
 import { ComponentContainer } from 'data/components/types';
@@ -13,7 +13,7 @@ const Card = ({ component }: { component: ComponentContainer }) => {
       <Link rounded="md">
         <MotionBox whileHover={{ translateY: -5 }} transition={{ duration: 0.3 }}>
           <HStack
-            p={{ base: 2, sm: 6 }}
+            p={6}
             bg={useColorModeValue('gray.100', 'gray.800')}
             rounded="md"
             boxShadow={useColorModeValue(
@@ -24,35 +24,31 @@ const Card = ({ component }: { component: ComponentContainer }) => {
             textAlign="left"
             align="start"
             spacing={4}
+            role="group"
           >
-            <Box
+            <Flex
+              justify="center"
+              alignItems="center"
               rounded="lg"
               p={2}
+              bg={useColorModeValue('gray.400', 'gray.600')}
+              _groupHover={{ bg: linkColor }}
               position="relative"
+              w={12}
+              h={12}
               overflow="hidden"
               lineHeight={0}
               boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.015)"
             >
-              <Box
-                bg={'gray.400'}
-                position="absolute"
-                top={0}
-                bottom={0}
-                left={0}
-                right={0}
-                opacity={0.25}
-              ></Box>
-              <Icon as={component.icon} w={5} h={5} />
-            </Box>
-            <VStack align="start" justify="flex-start" spacing={1} maxW="lg" h="100%">
-              <VStack spacing={0} align="start" flexGrow={1}>
-                <Text fontWeight="bold" fontSize="md" noOfLines={2} color={linkColor}>
-                  {component.name}
-                </Text>
-                <Text fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
-                  {component.data.length} Components
-                </Text>
-              </VStack>
+              <Icon as={component.icon} w={6} h={6} color="white" />
+            </Flex>
+            <VStack spacing={1} align="start" maxW="lg" h="100%">
+              <Text as="h3" fontWeight="bold" fontSize="md" noOfLines={2} color={linkColor}>
+                {component.name}
+              </Text>
+              <Text fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
+                {component.data.length} Components
+              </Text>
             </VStack>
           </HStack>
         </MotionBox>
