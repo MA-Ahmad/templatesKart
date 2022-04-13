@@ -6,6 +6,11 @@ const components_list: Component[] = [
     id: 'reviews',
     name: 'Review with images',
     filename: 'images-review'
+  },
+  {
+    id: 'reviews',
+    name: 'Simple Reviews',
+    filename: 'simple-review'
   }
 ];
 
