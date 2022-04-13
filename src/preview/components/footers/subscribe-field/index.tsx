@@ -21,7 +21,7 @@ import { ExternalFooterLink, InternalFooterLink, ExternalSocialLink } from './li
 
 const Footer = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW="7xl" py={10} px={10}>
       <SimpleGrid
         flexDirection="column-reverse"
         gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}
@@ -37,10 +37,10 @@ const Footer = () => {
           <SimpleGrid columns={[1, 1, 2, 2]}>
             <Stack mb={['10px', '10px', 0, 0]}>
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Contact us" />
+                <ExternalFooterLink href="#" text="Contact us" />
               </Text>
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Contribute" />
+                <ExternalFooterLink href="#" text="Contribute" />
               </Text>
               <Text as="span">
                 <InternalFooterLink href="#" text="Open source projects" />
@@ -111,21 +111,21 @@ const Footer = () => {
               </Text>
 
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Sponsor" />
+                <ExternalFooterLink href="#" text="Sponsor" />
               </Text>
               <Text as="span">
-                <ExternalFooterLink href={'#'} isExternal={false} text="FAQs" />
+                <ExternalFooterLink href="#" isExternal={false} text="FAQs" />
               </Text>
             </Stack>
           </SimpleGrid>
           <Text mt="20px" color="gray.500">
-            Made with 🧡 by{' '}
+            Made with 🧡 by' '
             <ChakraLink
               _focus={{ boxShadow: 'none', outline: 'none' }}
               target="_blank"
               href={siteConfig.author.github}
               fontWeight={600}
-              color={'gray.400'}
+              color="gray.400"
               bgClip="text"
               bgGradient="linear(to-l, #7928CA,#FF0080)"
               _hover={{
@@ -133,7 +133,8 @@ const Footer = () => {
               }}
             >
               Muhammad Ahmad
-            </ChakraLink>{' '}
+            </ChakraLink>
+            ' '
           </Text>
         </Box>
         <Box d={['none', 'none', 'block', 'block']}>

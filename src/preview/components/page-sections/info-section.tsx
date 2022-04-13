@@ -23,14 +23,14 @@ const iconProps = {
 
 const InfoSection = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10} mx="auto">
+    <Container maxW="7xl" py={10} px={10} mx="auto">
       <Center>
         <VStack spacing={4} px={2} alignItems={{ base: 'center', sm: 'flex-start' }}>
           <Stack justifyContent="center" alignItems="center">
             <Avatar
               boxShadow="xl"
-              size={'xl'}
-              src={'https://avatars2.githubusercontent.com/u/37842853?v=4'}
+              size="xl"
+              src="https://avatars2.githubusercontent.com/u/37842853?v=4"
             />
             <Text fontSize="sm">Muhammad Ahmad</Text>
           </Stack>
@@ -54,7 +54,6 @@ const InfoSection = () => {
                   isExternal
                   href={sc.url}
                   aria-label={sc.label}
-                  size="lg"
                   colorScheme={sc.type}
                   icon={sc.icon}
                   {...iconProps}

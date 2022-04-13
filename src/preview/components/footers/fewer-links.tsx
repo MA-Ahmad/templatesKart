@@ -44,7 +44,7 @@ const footerData = [
 
 const Footer = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10} bg="gray.300">
+    <Container maxW="7xl" py={10} px={10} bg="gray.300">
       <VStack spacing={5} alignItems="initial">
         <Flex
           flexWrap="wrap"

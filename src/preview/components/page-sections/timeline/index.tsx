@@ -34,7 +34,7 @@ const Index = () => {
   const linkColor = useLinkColor();
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <PageSlideFade>
         <VStack textAlign="start" align="start" mb={5}>
           <Box zIndex={5}>
@@ -47,14 +47,14 @@ const Index = () => {
                 <ExternalLink
                   color={linkColor}
                   url="https://www.typescriptlang.org"
-                  text={'Typescript'}
+                  text="Typescript"
                   target="_blank"
                 />{' '}
                 and{' '}
                 <ExternalLink
                   color={linkColor}
                   url="https://nextjs.org"
-                  text={'Next.js'}
+                  text="Next.js"
                   target="_blank"
                 />
               </TimelineItem>
@@ -64,7 +64,7 @@ const Index = () => {
                 <ExternalLink
                   color={linkColor}
                   url="https://mahmad.me/blog"
-                  text={'Blog'}
+                  text="Blog"
                   target="_blank"
                 />
               </TimelineItem>
@@ -73,7 +73,7 @@ const Index = () => {
                 <ExternalLink
                   color={linkColor}
                   url="https://mahmad.me/open-source"
-                  text={'20+ open-source repositories'}
+                  text="20+ open-source repositories"
                   target="_blank"
                 />
               </TimelineItem>
@@ -82,7 +82,7 @@ const Index = () => {
                 <ExternalLink
                   color={linkColor}
                   url="https://dev.to/m_ahmad"
-                  text={'Dev.to'}
+                  text="Dev.to"
                   target="_blank"
                 />
               </TimelineItem>
@@ -91,7 +91,7 @@ const Index = () => {
                 <ExternalLink
                   color={linkColor}
                   url="https://github.com/MA-Ahmad/myPortfolio"
-                  text={'source on Github'}
+                  text="source on Github"
                   target="_blank"
                 />
                 .
