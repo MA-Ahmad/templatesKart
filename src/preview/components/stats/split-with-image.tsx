@@ -31,7 +31,7 @@ const SplitWithImage = () => {
       <Flex flex={1}>
         <Image alt="Cover image" objectFit="cover" src="https://bit.ly/2k1H1t6" />
       </Flex>
-      <Flex p={8} flex={1} align="center" justify={'center'}>
+      <Flex p={8} flex={1} align="center" justify="center">
         <Flex direction="column">
           <Text fontWeight="extrabold" fontSize="x-large" mb={2}>
             <Box as="span" display="inline-block" position="relative">

@@ -50,7 +50,7 @@ const statData: StatData[] = [
 
 const StatsWithIcons = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW="7xl" py={10} px={10}>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={5} mt={6} mb={4}>
         {statData.map((data, index) => (
           <Card key={index} data={data} />
@@ -60,7 +60,7 @@ const StatsWithIcons = () => {
   );
 };
 
-const Card = ({ data }) => {
+const Card = ({ data }: { data: StatData }) => {
   return (
     <MotionBox whileHover={{ translateY: -5 }}>
       <Stack
