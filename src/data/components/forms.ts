@@ -21,6 +21,11 @@ const components_list: Component[] = [
     id: 'forms',
     name: 'Contact Us',
     filename: 'contact'
+  },
+  {
+    id: 'forms',
+    name: 'Booking A Place',
+    filename: 'booking-form'
   }
 ];
 
