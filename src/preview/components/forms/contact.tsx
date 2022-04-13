@@ -12,11 +12,6 @@ import {
   useColorModeValue,
   VStack,
   Flex,
-  Center,
-  InputGroup,
-  InputRightElement,
-  Checkbox,
-  Link,
   Text,
   Icon,
   Divider
@@ -91,20 +86,24 @@ const Contact = () => {
               <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                 <FormControl id="name">
                   <FormLabel>Name</FormLabel>
-                  <Input type="text" placeholder="Ahmad" />
+                  <Input type="text" placeholder="Ahmad" rounded="md" />
                 </FormControl>
                 <FormControl id="email">
                   <FormLabel>Email</FormLabel>
-                  <Input type="email" placeholder="test@test.com" />
+                  <Input type="email" placeholder="test@test.com" rounded="md" />
                 </FormControl>
               </Stack>
               <FormControl id="subject">
                 <FormLabel>Subject</FormLabel>
-                <Input type="text" placeholder="Are you available for freelance work?" />
+                <Input
+                  type="text"
+                  placeholder="Are you available for freelance work?"
+                  rounded="md"
+                />
               </FormControl>
               <FormControl id="message">
                 <FormLabel>Message</FormLabel>
-                <Textarea size="lg" placeholder="Enter your message" />
+                <Textarea size="lg" placeholder="Enter your message" rounded="md" />
               </FormControl>
             </VStack>
             <VStack w="100%">
