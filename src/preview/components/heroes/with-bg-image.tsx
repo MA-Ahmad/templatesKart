@@ -39,7 +39,7 @@ const Header = () => {
         <Flex
           justify="start"
           flexDirection={{ base: 'column', lg: 'row' }}
-          align-items={'center'}
+          align-items="center"
           maxWidth="42rem"
           marginX={{ base: 'auto', lg: '0' }}
         >
@@ -56,8 +56,8 @@ const Header = () => {
               bg="#fff"
               color="#000000"
               fontWeight="bold"
-              px={'2.5rem'}
-              py={'1.5rem'}
+              px="2.5rem"
+              py="1.5rem"
               width="full"
               border="2px solid #fff"
               rounded="md"
@@ -75,8 +75,8 @@ const Header = () => {
               bg="transparent"
               color="#fff"
               fontWeight="bold"
-              px={'2.5rem'}
-              py={'1.5rem'}
+              px="2.5rem"
+              py="1.5rem"
               width="full"
               border="2px solid #fff"
               rounded="md"

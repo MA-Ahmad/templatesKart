@@ -10,7 +10,7 @@ const IntroSection = () => {
   const linkColor = useLinkColor();
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <Flex direction={['column', 'column', 'row']}>
         <MotionBox
           opacity="0"
@@ -30,7 +30,7 @@ const IntroSection = () => {
         >
           <MotionBox whileHover={{ scale: 1.2 }} rounded="full" shadow="lg">
             <Avatar
-              size={'2xl'}
+              size="2xl"
               showBorder={true}
               borderColor={linkColor}
               src={'https://avatars2.githubusercontent.com/u/37842853?v=4'}
