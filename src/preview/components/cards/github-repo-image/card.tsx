@@ -78,7 +78,6 @@ const RepositoryCard = (props: RepositoryCardProps) => {
           <MotionBox variants={thumbnailVariants}>
             <AspectRatio
               ratio={1.85 / 1}
-              // maxW="400px"
               w="100%"
               borderBottomWidth="1px"
               borderColor={useColorModeValue('gray.100', 'gray.700')}
@@ -89,10 +88,10 @@ const RepositoryCard = (props: RepositoryCardProps) => {
         </Box>
 
         <VStack py={2} px={[2, 4]} spacing={1} align="start" w="100%">
-          <Flex justifyContent={'space-between'} width="100%">
+          <Flex justifyContent="space-between" width="100%">
             <Tooltip hasArrow label="Github link" placement="top">
               <HStack>
-                <Icon as={FiGithub} boxSize="0.9em" mt={'1px'} />
+                <Icon as={FiGithub} boxSize="0.9em" mt="1px" />
                 <Text
                   fontSize="sm"
                   noOfLines={1}
@@ -106,13 +105,13 @@ const RepositoryCard = (props: RepositoryCardProps) => {
               </HStack>
             </Tooltip>
             <Flex alignItems="center">
-              <Icon as={AiOutlineStar} boxSize="0.9em" mt={'1px'} />
+              <Icon as={AiOutlineStar} boxSize="0.9em" mt="1px" />
               <Box as="span" ml="1" fontSize="sm">
                 {stargazers_count}
               </Box>
             </Flex>
           </Flex>
-          <Flex justifyContent={'space-between'} width="100%">
+          <Flex justifyContent="space-between" width="100%">
             <Box>
               <HStack spacing="1">
                 {techStack!.map((tech, index) => (
@@ -127,7 +126,7 @@ const RepositoryCard = (props: RepositoryCardProps) => {
       </VStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered allowPinchZoom>
         <ModalOverlay />
-        <ModalContent bg="none" maxW={'28rem'} w="auto">
+        <ModalContent bg="none" maxW="28rem" w="auto">
           <ModalBody p={0} rounded="lg" overflow="hidden" bg="none">
             <Center>
               <Image src={cover} rounded="lg" alt="Repo image" />

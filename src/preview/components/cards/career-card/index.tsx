@@ -28,7 +28,7 @@ const Index = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <VStack spacing={4} marginBottom={6} align="left" mx={[0, 0, 6]}>
         {companies.map(({ title, role, skills, period, logo, alt }, index) => (
           <MotionBox whileHover={{ y: -5 }} key={index}>
@@ -48,7 +48,7 @@ const Index = () => {
                     w={16}
                     h={16}
                     objectFit="cover"
-                    fallbackSrc={'https://via.placeholder.com/150'}
+                    fallbackSrc="https://via.placeholder.com/150"
                     src={logo}
                     alt={alt}
                   />

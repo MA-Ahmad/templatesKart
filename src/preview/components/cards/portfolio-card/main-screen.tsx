@@ -24,19 +24,19 @@ const MainScreen = () => {
   return (
     <VStack spacing={5}>
       <motion.div whileHover={{ y: -5, scale: 1.1 }}>
-        <Box boxShadow={'xl'} _hover={{ boxShadow: 'lg' }} borderRadius="full">
+        <Box boxShadow="xl" _hover={{ boxShadow: 'lg' }} borderRadius="full">
           <Avatar
             _groupHover={{ width: '5rem', height: '5rem' }}
-            size={'xl'}
-            src={'https://avatars2.githubusercontent.com/u/37842853?v=4'}
+            size="xl"
+            src="https://avatars2.githubusercontent.com/u/37842853?v=4"
           />
         </Box>
       </motion.div>
-      <Heading fontSize={'xl'} fontFamily={'body'} textTransform="capitalize" noOfLines={2}>
+      <Heading fontSize="xl" fontFamily="body" textTransform="capitalize" noOfLines={2}>
         Muhammad Ahmad
       </Heading>
       <Text
-        color={'gray.500'}
+        color="gray.500"
         fontSize="lg"
         noOfLines={{ base: 3, md: 4 }}
         _groupHover={{ display: 'none' }}
@@ -46,7 +46,7 @@ const MainScreen = () => {
       </Text>
       <Fade in>
         <Text
-          color={'gray.500'}
+          color="gray.500"
           fontSize="lg"
           noOfLines={{ base: 3, md: 4 }}
           _groupHover={{ display: 'block' }}

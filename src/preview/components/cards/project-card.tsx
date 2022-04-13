@@ -47,7 +47,7 @@ const ProjectCard = () => {
 
   return (
     <>
-      <Container maxW={'7xl'} py={10} px={10}>
+      <Container maxW="7xl" py={10} px={10}>
         <VStack spacing={4}>
           {projectsList.map(({ id, title, desc, logo, link, technologies }) => (
             <motion.div layout onClick={toggleOpen} key={id}>
@@ -93,7 +93,7 @@ const ProjectCard = () => {
                         </Text>
                         <HStack spacing="1">
                           {technologies.map((tech) => (
-                            <Tag size="sm" colorScheme={'gray'}>
+                            <Tag size="sm" colorScheme="gray">
                               {tech}
                             </Tag>
                           ))}

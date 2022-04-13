@@ -8,16 +8,16 @@ const Card = () => {
   const bg = useColorModeValue('white', '#2f3244');
 
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW="7xl" py={10} px={10}>
       <Center>
         <Box
-          maxH={'400px'}
-          minH={'354px'}
+          maxH="400px"
+          minH="354px"
           w="345px"
-          boxShadow={'lg'}
-          rounded={'md'}
+          boxShadow="lg"
+          rounded="md"
           p={6}
-          overflow={'hidden'}
+          overflow="hidden"
           cursor="pointer"
           _hover={{ boxShadow: 'lg' }}
           bg={bg}
