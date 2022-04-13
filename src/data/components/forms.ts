@@ -11,6 +11,11 @@ const components_list: Component[] = [
     id: 'forms',
     name: 'Split with image',
     filename: 'split-with-image'
+  },
+  {
+    id: 'forms',
+    name: 'Contact Us',
+    filename: 'contact'
   }
 ];
 
