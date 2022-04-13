@@ -92,7 +92,6 @@ const Navbar = () => {
                 border="2px solid"
                 borderColor={useColorModeValue('gray.700', 'gray.100')}
                 boxShadow="4px 4px 0"
-                // boxColor="gray.700"
               >
                 <Link href="https://dev.to/m_ahmad" _hover={{ textDecoration: 'none' }} isExternal>
                   <MenuItem>
