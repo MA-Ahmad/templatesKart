@@ -40,12 +40,12 @@ const SimpleSignIn = () => {
               <VStack spacing={4} w="100%">
                 <FormControl id="email">
                   <FormLabel>Email</FormLabel>
-                  <Input type="email" />
+                  <Input rounded="md" type="email" />
                 </FormControl>
                 <FormControl id="password">
                   <FormLabel>Password</FormLabel>
                   <InputGroup size="md">
-                    <Input type={show ? 'text' : 'password'} />
+                    <Input rounded="md" type={show ? 'text' : 'password'} />
                     <InputRightElement width="4.5rem">
                       <Button
                         h="1.75rem"
@@ -65,7 +65,9 @@ const SimpleSignIn = () => {
               </VStack>
               <VStack w="100%">
                 <Stack direction="row" justify="space-between" w="100%">
-                  <Checkbox size="md">Remember me</Checkbox>
+                  <Checkbox colorScheme="green" size="md">
+                    Remember me
+                  </Checkbox>
                   <Link fontSize={{ base: 'md', sm: 'md' }}>Forgot password?</Link>
                 </Stack>
                 <Button
