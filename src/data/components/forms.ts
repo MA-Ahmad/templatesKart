@@ -9,6 +9,11 @@ const components_list: Component[] = [
   },
   {
     id: 'forms',
+    name: 'Sign in with no labels',
+    filename: 'no-labels'
+  },
+  {
+    id: 'forms',
     name: 'Split with image',
     filename: 'split-with-image'
   },
