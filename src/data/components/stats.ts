@@ -9,6 +9,11 @@ const components_list: Component[] = [
   },
   {
     id: 'stats',
+    name: 'Stats with icons',
+    filename: 'with-icons'
+  },
+  {
+    id: 'stats',
     name: 'Brand Stats',
     filename: 'brand-stats'
   },
