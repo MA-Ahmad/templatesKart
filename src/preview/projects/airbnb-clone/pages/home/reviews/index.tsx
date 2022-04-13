@@ -43,16 +43,7 @@ const Reviews = () => {
         my={{ base: '1.5rem', md: '2.5rem' }}
       >
         {Array.from(Array(3).keys()).map((id) => {
-          return (
-            <Card
-              key={id}
-              imageSrc={reviewData.imageSrc}
-              avatarSrc={reviewData.avatarSrc}
-              review={reviewData.review}
-              name={reviewData.name}
-              country={reviewData.country}
-            />
-          );
+          return <Card key={id} {...reviewData} />;
         })}
       </Flex>
     </Container>
