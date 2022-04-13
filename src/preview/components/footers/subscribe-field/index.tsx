@@ -119,7 +119,7 @@ const Footer = () => {
             </Stack>
           </SimpleGrid>
           <Text mt="20px" color="gray.500">
-            Made with 🧡 by' '
+            Made with 🧡 by{' '}
             <ChakraLink
               _focus={{ boxShadow: 'none', outline: 'none' }}
               target="_blank"
@@ -133,8 +133,7 @@ const Footer = () => {
               }}
             >
               Muhammad Ahmad
-            </ChakraLink>
-            ' '
+            </ChakraLink>{' '}
           </Text>
         </Box>
         <Box d={['none', 'none', 'block', 'block']}>
