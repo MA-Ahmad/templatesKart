@@ -4,6 +4,11 @@ import { BsCardHeading } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'heroes',
+    name: 'Product Intro',
+    filename: 'product-intro'
+  },
+  {
+    id: 'heroes',
     name: 'Show Info',
     filename: 'intro-section'
   },
