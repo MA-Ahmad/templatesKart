@@ -60,14 +60,14 @@ const Testimonials = () => {
               name="avatar"
               src={obj.image}
             />
-            <Stack direction="column" spacing={0} textAlign="center">
+            <Box textAlign="center">
               <Text fontWeight="bold" fontSize="lg">
                 {obj.name}
               </Text>
               <Text fontWeight="medium" fontSize="sm" color="gray.400">
                 {obj.position}, {obj.company}
               </Text>
-            </Stack>
+            </Box>
             <Box textAlign="center" maxW="4xl">
               <Text fontSize="md" fontWeight="medium">
                 {obj.content}
