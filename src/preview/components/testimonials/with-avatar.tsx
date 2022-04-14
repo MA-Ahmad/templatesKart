@@ -1,15 +1,4 @@
-import {
-  Container,
-  Box,
-  chakra,
-  Flex,
-  Text,
-  Stack,
-  HStack,
-  VStack,
-  Avatar,
-  Divider
-} from '@chakra-ui/react';
+import { Container, Box, chakra, Flex, Text, VStack, Avatar, Divider } from '@chakra-ui/react';
 
 interface TestimonialAttributes {
   name: string;
