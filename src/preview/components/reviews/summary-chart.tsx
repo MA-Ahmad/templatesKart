@@ -48,7 +48,7 @@ const ratingSummary = [
 const SimpleReview = () => {
   return (
     <Container maxW="5xl" py={10} px={10}>
-      <Box direction="column" mb={8}>
+      <Box mb={8}>
         <Heading as="h3" size="lg" fontWeight="bold" textAlign="left" mb={3}>
           Audience rating summary
         </Heading>
