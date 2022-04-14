@@ -15,16 +15,16 @@ const Footer = () => {
         marginX="auto"
         pb="2rem"
         mb="1.5rem"
-        px={{ base: '1rem', lg: '0' }}
+        px={10}
         borderBottom="1px solid"
         borderColor="gray.300"
       >
-        <Flex spacing={2} justify="start" flexWrap="wrap" alignItems="start">
-          <Box w={{ base: '100%', md: 1 / 4 }} mb={{ base: '1.5rem', lg: '0' }}>
+        <Flex flexWrap="wrap" alignItems="start" justify="space-between">
+          <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
             <Heading as="h5" color="gray.700" mb="0.5rem" fontSize="0.875rem" fontWeight="600">
               Company Name
             </Heading>
-            <List lineHeight="2">
+            <List lineHeight="2" justifyContent="center">
               <LinkItem text="Careers" />
               <LinkItem text="News" />
               <LinkItem text="Policies" />
@@ -32,7 +32,7 @@ const Footer = () => {
               <LinkItem text="Diversity & Belonging" />
             </List>
           </Box>
-          <Box w={{ base: '100%', md: 1 / 4 }} mb={{ base: '1.5rem', lg: '0' }}>
+          <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
             <Heading as="h5" color="gray.700" mb="0.5rem" fontSize="0.875rem" fontWeight="600">
               Discover
             </Heading>
@@ -46,7 +46,7 @@ const Footer = () => {
               <LinkItem text="Airbnbmag" />
             </List>
           </Box>
-          <Box w={{ base: '100%', md: 1 / 4 }} mb={{ base: '1.5rem', lg: '0' }}>
+          <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
             <Heading as="h5" color="gray.700" mb="0.5rem" fontSize="0.875rem" fontWeight="600">
               Hosting
             </Heading>
@@ -60,7 +60,7 @@ const Footer = () => {
               <LinkItem text="Donations" isTag={true} tagText="New" />
             </List>
           </Box>
-          <Box w={{ base: '100%', md: 1 / 4 }} mb={{ base: '1.5rem', lg: '0' }}>
+          <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
             <Flex justify="start" mb="0.5rem" alignItems="baseline">
               <Link href="#" mr="0.5rem">
                 <svg
@@ -116,7 +116,7 @@ const Footer = () => {
           </Box>
         </Flex>
       </Box>
-      <Flex maxW="64rem" mx="auto" alignItems="center" px={{ base: '1rem', lg: '0' }}>
+      <Flex maxW="64rem" mx="auto" alignItems="center" px={10}>
         <svg
           fill="#008F94"
           style={{ width: '1.25rem', height: '1.25rem' }}
