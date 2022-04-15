@@ -15,7 +15,7 @@ const BlogForm = () => {
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={6} height={'100%'}>
       <Flex alignItems="center" justifyContent="center" flexDirection="column">
-        <Box p={5} shadow="md" borderWidth="1px" rounded="md" width={['80%', '60%', '50%', '50%']}>
+        <Box p={5} shadow="md" borderWidth="1px" rounded="md" width={['100%', '70%', '50%']}>
           <Stack isInline spacing={8} align="center">
             <form style={{ width: '100%' }}>
               <Box paddingBottom={3}>
