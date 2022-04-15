@@ -69,13 +69,7 @@ const Testimonials = () => {
           Our Clients
         </chakra.h3>
       </Flex>
-      <SimpleGrid
-        columns={{ base: 1, sm: 1, md: 2 }}
-        placeItems="center"
-        spacing={1}
-        mt={12}
-        mb={4}
-      >
+      <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={1} mt={12} mb={4}>
         {testimonials.map((obj, index) => (
           <Stack key={index} direction="column" mb={5} spacing={0} alignItems="baseline">
             <Stack
