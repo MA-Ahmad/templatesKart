@@ -11,6 +11,11 @@ const components_list: Component[] = [
     id: 'testimonials',
     name: 'With Arrow head cards',
     filename: 'arrow-head-cards'
+  },
+  {
+    id: 'testimonials',
+    name: 'With Rotating cards',
+    filename: 'rotating-cards'
   }
 ];
 
