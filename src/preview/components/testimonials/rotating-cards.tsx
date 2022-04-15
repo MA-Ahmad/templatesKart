@@ -89,6 +89,7 @@ const Testimonials = () => {
                 borderWidth: '25px 30px 0 0',
                 position: 'absolute',
                 bottom: '-25px',
+                left: '40px',
                 display: 'block'
               }}
             >
