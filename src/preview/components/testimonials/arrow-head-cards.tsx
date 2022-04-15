@@ -74,21 +74,19 @@ const Testimonials = () => {
             p={6}
             pos="relative"
             bg={useColorModeValue('white', 'gray.800')}
-            role="group"
             _after={{
               content: `""`,
-              borderColor: `transparent ${useColorModeValue(
-                'white',
-                '#1a202c'
-              )} transparent transparent`,
+              w: '0',
+              h: '0',
+              borderColor: `transparent ${useColorModeValue('white', '#1a202c')} transparent`,
               borderStyle: 'solid',
-              borderWidth: '10px 10px 10px 0',
+              borderWidth: '10px 0 10px 10px',
               position: 'absolute',
               top: { base: 'unset', sm: '45%' },
               right: { base: 'unset', sm: '-10px' },
               left: { base: '48%', sm: 'unset' },
               bottom: { base: '-15px', sm: 'unset' },
-              transform: { base: 'rotate(270deg)', sm: 'rotate(180deg)' },
+              transform: { base: 'rotate(90deg)', sm: 'unset' },
               display: 'block'
             }}
           >
