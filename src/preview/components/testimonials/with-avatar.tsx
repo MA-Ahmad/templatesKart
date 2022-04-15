@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Container, Box, chakra, Flex, Text, VStack, Avatar, Divider } from '@chakra-ui/react';
 
 interface TestimonialAttributes {
@@ -40,8 +41,8 @@ const Testimonials = () => {
       </Flex>
 
       {testimonials.map((obj, index) => (
-        <>
-          <VStack spacing={3} mb={2} justify="center">
+        <Fragment key={index}>
+          <VStack spacing={3} pt={1} justify="center">
             <Avatar
               size="xl"
               showBorder={true}
@@ -64,7 +65,7 @@ const Testimonials = () => {
             </Box>
           </VStack>
           {testimonials.length - 1 !== index && <Divider my={6} />}
-        </>
+        </Fragment>
       ))}
     </Container>
   );
