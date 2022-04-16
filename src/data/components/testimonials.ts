@@ -4,7 +4,7 @@ import { BsChatSquareQuote } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'testimonials',
-    name: 'With Avatar display horizontally',
+    name: 'Display horizontally with Avatar',
     filename: 'avatar-horizontally'
   },
   {
