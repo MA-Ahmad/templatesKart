@@ -8,6 +8,7 @@ import { skeletons } from './skeletons';
 import { stats } from './stats';
 import { forms } from './forms';
 import { reviews } from './reviews';
+import { testimonials } from './testimonials';
 
 export const components = [
   cards,
@@ -19,5 +20,6 @@ export const components = [
   skeletons,
   stats,
   forms,
-  reviews
+  reviews,
+  testimonials
 ];
