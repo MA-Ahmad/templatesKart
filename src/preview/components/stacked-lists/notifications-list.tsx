@@ -15,27 +15,32 @@ import { GoPrimitiveDot } from 'react-icons/go';
 interface Notification {
   notification: string;
   dateTime: string;
+  userName: string;
   userAvatar: string;
   isOnline: boolean;
 }
 
 const notifications: Notification[] = [
   {
-    notification: `It's <span style="font-weight: 600">Mallory Hulme's</span> birthday. Wish him well!`,
+    notification: `It's <span style="font-weight: 600">Dan Abrahmov's</span> birthday. Wish him well!`,
     dateTime: '2 days ago',
+    userName: 'Dan Abrahmov',
     userAvatar: 'https://bit.ly/dan-abramov',
     isOnline: true
   },
   {
-    notification: `<span style="font-weight: 600">Maryjo Lebarree</span> liked your photo.`,
+    notification: `<span style="font-weight: 600">Kent Dodds</span> liked your photo.`,
     dateTime: 'yesterday',
-    userAvatar: 'https://bit.ly/dan-abramov',
+    userName: 'Kent Dodds',
+    userAvatar: 'https://bit.ly/kent-c-dodds',
     isOnline: true
   },
   {
-    notification: `<span style="font-weight: 600">Egan Poetz</span> registered new client as <span style="font-weight: 600">Trilia</span>.`,
+    notification: `<span style="font-weight: 600">Jena Karlis</span> registered new client as <span style="font-weight: 600">Trilia</span>.`,
     dateTime: '4 days ago',
-    userAvatar: 'https://bit.ly/dan-abramov',
+    userName: 'Jena Karlis',
+    userAvatar:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
     isOnline: false
   }
 ];
@@ -58,7 +63,7 @@ const NotificationsList = () => {
             <Flex w="100%" justify="space-between" alignItems="center">
               <Stack spacing={0} direction="row" alignItems="center">
                 <Flex p={4}>
-                  <Avatar size="md" name="Dan Abrahmov" src={notification.userAvatar} />
+                  <Avatar size="md" name={notification.userName} src={notification.userAvatar} />
                 </Flex>
                 <Flex direction="column" p={2}>
                   <Text
