@@ -1,5 +1,18 @@
-# [TemplatesKart](https://templateskart.com)
-Projects and Components list created with ChakraUI
+
+<p align="center"><a href="https://templateskart.com" target="_blank"><img src="./public/favicon.png" width="200"></a></p>
+
+<p align="center">
+  <h2 align="center">TemplatesKart</h2>
+  
+  <p align="center">
+    Projects and Components list created with ChakraUI
+  </p>
+  <p align="center">
+    <strong>Official Website: <a href="https://templateskart.com" target="_blank">TemplatesKart</a></strong>
+  </p>  
+</p>
+
+
 
 ## Overview
 
