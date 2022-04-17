@@ -5,10 +5,10 @@
   <h2 align="center">TemplatesKart</h2>
   
   <p align="center">
-    Projects and Components list created with ChakraUI
+  <strong>Projects and Components list created with ChakraUI</strong>
   </p>
   <p align="center">
-    <strong>Official Website: <a href="https://templateskart.com" target="_blank">TemplatesKart</a></strong>
+    <strong>Official Website: https://templateskart.com</strong>
   </p>  
 </p>
 
