@@ -28,3 +28,9 @@ Beautiful and responsive React components to build your application. Checkout co
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Chakra UI](https://chakra-ui.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## Inspiration & Thanks
+
+<a href="https://chakra-templates.dev" target="_blank">
+  Chakra Templates️
+</a>
