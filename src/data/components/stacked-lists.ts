@@ -11,6 +11,11 @@ const components_list: Component[] = [
     id: 'stacked-lists',
     name: 'Notifications list',
     filename: 'notifications-list'
+  },
+  {
+    id: 'stacked-lists',
+    name: 'Media Traffic with table ',
+    filename: 'media-traffic'
   }
 ];
 
