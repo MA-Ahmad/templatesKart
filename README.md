@@ -17,11 +17,11 @@
 ### [Projects Kart](https://templateskart.com)
 
 Projects kart provides an easy solution to getting the look you want for your website without having to mess around with too much code.
-Explore projects and copy code of any section that you liked.
+Explore projects and copy code of any section that you like.
 
 ### [Components Kart](https://templateskart.com/components)
 
-Beautiful and responsive React components to build your application. Checkout components list. Copy and paste component code to your application and Enjoy 🎉
+Beautiful and responsive React components to build your application. Checkout components list. Copy and paste component code to your application and enjoy 🎉
 
 ## Built with
 
