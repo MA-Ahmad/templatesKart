@@ -62,7 +62,7 @@ const articles: ArticleAttributes[] = [
 
 const Articles = () => {
   return (
-    <Container maxW="5xl" py={10} px={10} bg={useColorModeValue('gray.200', 'gray.600')}>
+    <Container maxW="5xl" py={10} px={10}>
       <Flex justify="left" mb={3}>
         <chakra.h3 fontSize="2xl" fontWeight="bold" textAlign="center">
           Articles
@@ -78,7 +78,7 @@ const Articles = () => {
               p={{ base: 2, sm: 4 }}
               gap={3}
               alignItems="center"
-              _hover={{ bg: useColorModeValue('gray.300', 'gray.700') }}
+              _hover={{ bg: useColorModeValue('gray.300', 'gray.800') }}
             >
               <Box gridColumnEnd={{ base: 'span 2', md: 'unset' }}>
                 <chakra.h3 as={Link} href={article.link} isExternal fontWeight="bold" fontSize="lg">
