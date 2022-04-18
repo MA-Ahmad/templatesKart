@@ -1,5 +1,5 @@
 {
-  "name": "templates-kart",
+  "name": "templateskart",
   "private": true,
   "scripts": {
     "dev": "next dev",
