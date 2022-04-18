@@ -7,7 +7,7 @@ const siteConfig = {
     name: 'Muhammad Ahmad',
     accounts: [
       {
-        url: 'https://github.com/MA-Ahmad/templates-kart',
+        url: 'https://github.com/MA-Ahmad/templateskart',
         label: 'Github Account',
         type: 'gray',
         icon: <FaGithub />
