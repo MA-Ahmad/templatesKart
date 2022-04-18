@@ -15,13 +15,13 @@ export const components = [
   cards,
   pageSections,
   heroes,
-  footers,
   navbars,
   blog,
-  skeletons,
   stats,
   forms,
   reviews,
   testimonials,
-  stackedLists
+  stackedLists,
+  skeletons,
+  footers
 ];
