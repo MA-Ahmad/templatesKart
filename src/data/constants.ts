@@ -12,7 +12,7 @@ export const DEV_TO_LINK = 'https://dev.to/m_ahmad';
 /**
  * SEO constants
  */
-export const SEO_TITLE = 'Templates Kart';
+export const SEO_TITLE = 'TemplatesKart';
 export const SEO_DESCRIPTION =
   'Beautiful and responsive Chakra UI React components to build your application.';
 export const SEO_KEYWORDS =
