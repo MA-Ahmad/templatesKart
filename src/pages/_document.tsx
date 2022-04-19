@@ -13,6 +13,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.png" />
 
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
