@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://templateskart.com" target="_blank">
-    <img src="./public/favicon.png" width="200">
+    <img src="./public/assets/images/home_screen.png">
   </a>
 </div>
 
