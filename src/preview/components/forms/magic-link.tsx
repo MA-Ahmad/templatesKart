@@ -39,6 +39,7 @@ const MagicLinkForm = () => {
             p={6}
             bg={useColorModeValue('white', 'gray.700')}
             rounded="lg"
+            boxShadow="lg"
           >
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>

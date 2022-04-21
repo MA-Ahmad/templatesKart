@@ -13,7 +13,7 @@ import {
 import { MotionBox } from './motion';
 import Tags from './Tags';
 
-export const companies = [
+const companies = [
   {
     title: 'Company1',
     alt: 'company1 image',
