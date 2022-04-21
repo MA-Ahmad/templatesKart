@@ -15,7 +15,7 @@ import {
   Icon,
   StackProps
 } from '@chakra-ui/react';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineHeart, AiOutlineExclamationCircle } from 'react-icons/ai';
 import { BsTelephoneX } from 'react-icons/bs';
 
 interface ProductCardProps {
@@ -26,6 +26,7 @@ interface ProductCardProps {
   updated_at: string;
   price: string;
   image: string;
+  isFeatured?: boolean;
 }
 
 const productsList: ProductCardProps[] = [
@@ -36,6 +37,7 @@ const productsList: ProductCardProps[] = [
     detail: ['2021', 'Petrol', '4500 cc', 'Automatic'],
     updated_at: '17 days ago',
     price: '$ 400k',
+    isFeatured: true,
     image:
       'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb'
   },
@@ -51,23 +53,10 @@ const productsList: ProductCardProps[] = [
   }
 ];
 
-export const companies = [
-  {
-    title: 'Company1',
-    alt: 'company1 image',
-    role: 'Senior Software Engineer',
-    skills: ['ruby', 'rails', 'typescript', 'javascript', 'react', 'aws'],
-    period: '2019 - Present',
-    logo: ''
-  }
-];
-
 const Index = () => {
-  const { colorMode } = useColorMode();
-
   return (
-    <Container maxW="7xl" p="12">
-      <VStack spacing={4} maxW={'2xl'} margin="0 auto">
+    <Container maxW="7xl" p="12" margin="0 auto">
+      <VStack spacing={4}>
         {productsList.map((product) => (
           <Stack
             spacing={{ base: 0, md: 4 }}
@@ -76,8 +65,22 @@ const Index = () => {
             borderColor="gray.400"
             p={2}
             rounded="md"
+            w={{ base: 'auto', md: '2xl' }}
           >
-            <Flex>
+            {product.isFeatured && (
+              <Flex
+                alignItems="center"
+                p={1}
+                bg="red.400"
+                pos="absolute"
+                fontSize="xs"
+                fontWeight="500"
+                color="white"
+              >
+                <Text>FEATURED</Text> &nbsp; <Icon as={AiOutlineExclamationCircle} h={4} w={4} />
+              </Flex>
+            )}
+            <Flex ml="0 !important">
               <Image
                 rounded="md"
                 w={{ base: '100%', md: '18rem' }}
