@@ -66,6 +66,8 @@ const Index = () => {
             p={2}
             rounded="md"
             w={{ base: 'auto', md: '2xl' }}
+            overflow="hidden"
+            pos="relative"
           >
             {product.isFeatured && (
               <Flex
@@ -76,6 +78,8 @@ const Index = () => {
                 fontSize="xs"
                 fontWeight="500"
                 color="white"
+                top={0}
+                left={0}
               >
                 <Text>FEATURED</Text> &nbsp; <Icon as={AiOutlineExclamationCircle} h={4} w={4} />
               </Flex>
