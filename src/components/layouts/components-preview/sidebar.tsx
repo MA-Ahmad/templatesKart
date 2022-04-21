@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import {
   Link,
   Stack,
+  HStack,
+  Tag,
   Text,
   StackProps,
   useColorModeValue,
@@ -73,7 +75,7 @@ export const Sidebar = (props: StackProps) => {
               </MotionBox>
             </Link>
           </NextLink>
-          {/* TODO:  */}
+          {/* TODO: Improve Component Sidebar UI */}
           <Stack spacing={1} mt={'1.5rem !important'}>
             {component.data.map((c) => (
               <MotionBox key={c.id} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
@@ -91,12 +93,17 @@ export const Sidebar = (props: StackProps) => {
                   justifyContent="space-between"
                   onClick={() => navigateToComponent(c.filename)}
                 >
-                  <Flex alignItems="center">
+                  <HStack spacing={3} alignItems="center">
                     <Icon as={FaChevronRight} w={3} h={3} color={linkColor} />
-                    <Text fontSize="md" ml={3}>
-                      {c.name}
-                    </Text>
-                  </Flex>
+                    <HStack spacing={2}>
+                      <Text fontSize="md">{c.name}</Text>
+                      {c.isNewComponent && (
+                        <Tag size="sm" colorScheme="red">
+                          New
+                        </Tag>
+                      )}
+                    </HStack>
+                  </HStack>
                 </Box>
               </MotionBox>
             ))}
@@ -129,7 +136,7 @@ export const Sidebar = (props: StackProps) => {
                     <MotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
                         <Icon as={FaChevronRight} w={4} h={4} />
-                        <Box as="span" fontSize="md" ml={3}>
+                        <HStack as="span" spacing={2} fontSize="md" ml={3}>
                           <Text
                             textTransform={'uppercase'}
                             fontWeight={'semibold'}
@@ -141,7 +148,12 @@ export const Sidebar = (props: StackProps) => {
                           >
                             {component.name}
                           </Text>
-                        </Box>
+                          {component.hasAnyNewComponent && (
+                            <Tag size="sm" colorScheme="red" ml={2}>
+                              <Text>New</Text>
+                            </Tag>
+                          )}
+                        </HStack>
                       </Flex>
                     </MotionBox>
                   </Link>

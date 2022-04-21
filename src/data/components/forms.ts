@@ -15,7 +15,8 @@ const components_list: Component[] = [
   {
     id: 'forms',
     name: 'Magic link',
-    filename: 'magic-link'
+    filename: 'magic-link',
+    isNewComponent: true
   },
   {
     id: 'forms',
@@ -37,6 +38,7 @@ const components_list: Component[] = [
 export const forms: ComponentContainer = {
   id: 'forms',
   name: 'Forms',
+  hasAnyNewComponent: true,
   icon: AiOutlineForm,
   data: components_list
 };

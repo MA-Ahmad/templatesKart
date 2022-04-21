@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   Box,
   Text,
+  Tag,
   HStack,
   Stack,
   IconButton,
@@ -80,6 +81,11 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
       <Stack spacing={2}>
         <Heading size={'md'} ml={1}>
           {component.name}
+          {component.isNewComponent && (
+            <Tag size="sm" colorScheme="red" ml={2}>
+              New
+            </Tag>
+          )}
         </Heading>
         <Box
           borderRadius="2xl"

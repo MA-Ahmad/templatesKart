@@ -4,11 +4,13 @@ export interface Component {
   id: string;
   name: string;
   filename: string;
+  isNewComponent?: boolean;
 }
 
 export interface ComponentContainer {
   id: string;
   name: string;
+  hasAnyNewComponent?: boolean;
   icon: IconType;
   data: Component[];
 }

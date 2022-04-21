@@ -1,5 +1,5 @@
 import React from 'react';
-import { HStack, VStack, Text, useColorModeValue, Flex, Link, Icon } from '@chakra-ui/react';
+import { HStack, VStack, Text, useColorModeValue, Flex, Link, Icon, Tag } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useLinkColor } from 'components/theme';
 import { ComponentContainer } from 'data/components/types';
@@ -43,9 +43,16 @@ const Card = ({ component }: { component: ComponentContainer }) => {
               <Icon as={component.icon} w={6} h={6} color="white" />
             </Flex>
             <VStack spacing={1} align="start" maxW="lg" h="100%">
-              <Text as="h3" fontWeight="bold" fontSize="md" noOfLines={2} color={linkColor}>
-                {component.name}
-              </Text>
+              <HStack spacing={2}>
+                <Text as="h3" fontWeight="bold" fontSize="md" noOfLines={2} color={linkColor}>
+                  {component.name}
+                </Text>
+                {component.hasAnyNewComponent && (
+                  <Tag size="sm" colorScheme="red">
+                    New
+                  </Tag>
+                )}
+              </HStack>
               <Text fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
                 {component.data.length} Components
               </Text>
