@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   Container,
-  Box,
   FormControl,
   FormLabel,
   Input,
@@ -74,53 +73,49 @@ const Contact = () => {
             </>
           ))}
         </Stack>
-        <Box
+        <VStack
+          as="form"
+          spacing={8}
           w="100%"
           bg={useColorModeValue('white', 'gray.700')}
           rounded="lg"
           boxShadow="lg"
           p={{ base: 5, sm: 10 }}
         >
-          <VStack spacing={8}>
-            <VStack spacing={4} w="100%">
-              <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
-                <FormControl id="name">
-                  <FormLabel>Name</FormLabel>
-                  <Input type="text" placeholder="Ahmad" rounded="md" />
-                </FormControl>
-                <FormControl id="email">
-                  <FormLabel>Email</FormLabel>
-                  <Input type="email" placeholder="test@test.com" rounded="md" />
-                </FormControl>
-              </Stack>
-              <FormControl id="subject">
-                <FormLabel>Subject</FormLabel>
-                <Input
-                  type="text"
-                  placeholder="Are you available for freelance work?"
-                  rounded="md"
-                />
+          <VStack spacing={4} w="100%">
+            <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
+              <FormControl id="name">
+                <FormLabel>Name</FormLabel>
+                <Input type="text" placeholder="Ahmad" rounded="md" />
               </FormControl>
-              <FormControl id="message">
-                <FormLabel>Message</FormLabel>
-                <Textarea size="lg" placeholder="Enter your message" rounded="md" />
+              <FormControl id="email">
+                <FormLabel>Email</FormLabel>
+                <Input type="email" placeholder="test@test.com" rounded="md" />
               </FormControl>
-            </VStack>
-            <VStack w="100%">
-              <Button
-                bg="green.300"
-                color="white"
-                _hover={{
-                  bg: 'green.500'
-                }}
-                rounded="md"
-                w={{ base: '100%', md: 'max-content' }}
-              >
-                Send Message
-              </Button>
-            </VStack>
+            </Stack>
+            <FormControl id="subject">
+              <FormLabel>Subject</FormLabel>
+              <Input type="text" placeholder="Are you available for freelance work?" rounded="md" />
+            </FormControl>
+            <FormControl id="message">
+              <FormLabel>Message</FormLabel>
+              <Textarea size="lg" placeholder="Enter your message" rounded="md" />
+            </FormControl>
           </VStack>
-        </Box>
+          <VStack w="100%">
+            <Button
+              bg="green.300"
+              color="white"
+              _hover={{
+                bg: 'green.500'
+              }}
+              rounded="md"
+              w={{ base: '100%', md: 'max-content' }}
+            >
+              Send Message
+            </Button>
+          </VStack>
+        </VStack>
       </Stack>
     </Container>
   );
