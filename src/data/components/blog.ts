@@ -4,6 +4,12 @@ import { FaBlogger } from 'react-icons/fa';
 const components_list: Component[] = [
   {
     id: 'blog',
+    name: 'Blog card with tag',
+    filename: 'blog-card-with-tag',
+    isNewComponent: true
+  },
+  {
+    id: 'blog',
     name: 'Article Info',
     filename: 'article-info'
   },
@@ -14,7 +20,7 @@ const components_list: Component[] = [
   },
   {
     id: 'blog',
-    name: 'Blog cards',
+    name: 'Blog card with image',
     filename: 'blog-card'
   }
 ];
@@ -22,6 +28,7 @@ const components_list: Component[] = [
 export const blog: ComponentContainer = {
   id: 'blog',
   name: 'Blog',
+  hasAnyNewComponent: true,
   icon: FaBlogger,
   data: components_list
 };
