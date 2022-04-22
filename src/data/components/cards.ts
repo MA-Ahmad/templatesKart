@@ -4,7 +4,7 @@ import { BsCardText } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'cards',
-    name: 'Product Card',
+    name: 'Product Cards',
     filename: 'product-img-card',
     isNewComponent: true
   },
@@ -30,7 +30,7 @@ const components_list: Component[] = [
   },
   {
     id: 'cards',
-    name: 'Project Info Card',
+    name: 'Project Info Cards',
     filename: 'project-card'
   }
 ];

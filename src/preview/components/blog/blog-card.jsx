@@ -42,7 +42,7 @@ const BlogCards = () => {
                   overflow="hidden"
                   position="relative"
                 >
-                  <Image src={'https://bit.ly/2Z4KKcF'} alt="Blog image" />
+                  <Image src="https://bit.ly/2Z4KKcF" alt="Blog image" />
                   <Box p={{ base: 4, lg: 6 }}>
                     <Box d="flex" alignItems="baseline">
                       <Box
