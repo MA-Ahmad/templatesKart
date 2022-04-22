@@ -11,7 +11,7 @@ function RootLayout({ children }: AppLayoutProps) {
   return (
     <Fragment>
       <TopNav />
-      <Container maxW={'1280px'} mt={'32'} py={2} mb={4}>
+      <Container maxW="1280px" mt="32" py={2} mb={4}>
         {children}
       </Container>
       <Footer />

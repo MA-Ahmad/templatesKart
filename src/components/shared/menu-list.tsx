@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FaChevronDown } from 'react-icons/fa';
+import { useLinkColor } from 'components/theme';
 
 type MenuData = {
   id: number;
@@ -24,45 +25,48 @@ type MenuData = {
 const menuData: MenuData[] = [
   {
     id: 1,
-    label: 'Projects',
-    subLabel: 'Explore responsive projects kart',
+    label: 'ProjectsKart',
+    subLabel: 'Explore responsive Projects',
     href: '/'
   },
   {
     id: 2,
-    label: 'Components',
-    subLabel: 'Explore responsive components kart',
+    label: 'ComponentsKart',
+    subLabel: 'Explore responsive Components',
     href: '/components'
   }
 ];
 
 const DropDownMenu = () => {
+  const linkColor = useLinkColor();
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+    <Stack direction="row" spacing={4}>
+      <Popover trigger="hover" placement="bottom-start" onOpen={onOpen} onClose={onClose}>
         <PopoverTrigger>
-          <HStack alignItems="center" cursor="pointer">
-            <NextLink href={'/components'} passHref={true}>
+          <HStack alignItems="center" cursor="pointer" role="group">
+            <NextLink href="/" passHref={true}>
               <Link
                 p={2}
-                fontSize={'md'}
-                fontWeight={'bold'}
+                fontSize="lg"
+                fontWeight="bold"
                 color={useColorModeValue('gray.600', 'gray.200')}
-                _hover={{
-                  textDecoration: 'none',
-                  color: useColorModeValue('gray.800', 'white')
+                _groupHover={{
+                  color: linkColor
                 }}
               >
-                Components
+                Templates
               </Link>
             </NextLink>
             <Icon
               as={FaChevronDown}
               h={4}
               w={4}
-              transition={'all .25s ease-in-out'}
+              _groupHover={{
+                color: linkColor
+              }}
+              transition="all .25s ease-in-out"
               transform={isOpen ? 'rotate(180deg)' : ''}
             />
           </HStack>
@@ -76,8 +80,8 @@ const DropDownMenu = () => {
           )}
           bg={useColorModeValue('white', 'gray.800')}
           p={4}
-          rounded={'lg'}
-          minW={'xs'}
+          rounded="lg"
+          minW="xs"
         >
           <Stack>
             {menuData.map((data) => (
@@ -94,15 +98,15 @@ const DropDownItem = ({ label, href, subLabel }: MenuData) => {
   return (
     <NextLink href={href!} passHref>
       <Link
-        display={'block'}
+        display="block"
         p={2}
-        rounded={'md'}
+        rounded="md"
         _hover={{ bg: useColorModeValue('gray.100', 'gray.900') }}
       >
-        <Stack direction={'row'} align={'center'}>
+        <Stack direction="row" align="center">
           <Box>
             <Text fontWeight={500}>{label}</Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
+            <Text fontSize="sm">{subLabel}</Text>
           </Box>
         </Stack>
       </Link>

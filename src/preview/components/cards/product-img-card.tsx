@@ -5,12 +5,9 @@ import {
   Stack,
   VStack,
   HStack,
-  Heading,
   Flex,
   Text,
   Image,
-  useColorMode,
-  useColorModeValue,
   Container,
   Icon,
   StackProps
@@ -91,7 +88,7 @@ const Index = () => {
                 h="auto"
                 objectFit="cover"
                 src={product.image}
-                alt={'product image'}
+                alt="product image"
               />
             </Flex>
             <Stack direction="column" spacing={2} w="100%" mt={{ base: '5px !important', sm: 0 }}>

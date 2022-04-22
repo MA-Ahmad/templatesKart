@@ -3,16 +3,20 @@ import React, { useEffect, useState } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 import { useLinkColor } from 'components/theme';
 
+const valuePageYOffset = 300;
+
 const ScrollToTop = () => {
   const linkColor = useLinkColor();
   const scrollToTop = () => window.scroll({ top: 0, behavior: 'smooth' });
   const getVisible = () =>
-    document.body.scrollTop > 300 || document.documentElement.scrollTop > 300;
+    document.body.scrollTop > valuePageYOffset ||
+    document.documentElement.scrollTop > valuePageYOffset;
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(() => getVisible());
     window.onscroll = () => setIsVisible(() => getVisible());
   }, []);
+
   return (
     <Box pos="fixed" bottom="30" right="4" visibility={isVisible ? 'visible' : 'hidden'}>
       <IconButton

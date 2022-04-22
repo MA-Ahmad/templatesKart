@@ -43,11 +43,11 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
       <PopoverTrigger>
         <Flex
           as="button"
-          p={'0.6rem'}
+          p="0.6rem"
           rounded="lg"
           cursor="pointer"
-          _hover={{ bg: useColorModeValue('gray.300', 'gray.800') }}
-          bg={useColorModeValue('gray.200', 'gray.600')}
+          _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
+          bg={useColorModeValue('gray.200', 'gray.700')}
           justify="center"
           mr={3}
         >
@@ -56,7 +56,7 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
       </PopoverTrigger>
       <PopoverContent
         borderRadius={12}
-        border={'1px solid'}
+        border="1px solid"
         borderColor={useColorModeValue('gray.100', 'gray.600')}
         p={2}
       >
@@ -89,7 +89,7 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
                     justify="center"
                     align="center"
                   >
-                    {accentKey === key && <Icon as={TiTick} color={'white'} />}
+                    {accentKey === key && <Icon as={TiTick} color="white" />}
                   </Flex>
                 </Flex>
               ))}
