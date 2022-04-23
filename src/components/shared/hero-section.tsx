@@ -8,7 +8,6 @@ import {
   HStack,
   Text,
   chakra,
-  Button,
   Link
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -19,23 +18,11 @@ interface HeroSection {
   subHeading: string;
   label: string;
   heroImage: string;
-  buttonLinks: { label: string; url: string }[];
+  buttonLinks?: { label: string; url: string }[];
 }
 
-const heroSection: HeroSection = {
-  heading: 'TemplatesKart',
-  subHeading: 'Production-ready hand crafted Projects and Components built on top of Chakra UI',
-  label: 'Deliver your projects faster',
-  heroImage: '/hero_image.png',
-  buttonLinks: [
-    { label: 'Projects', url: '/projects' },
-    { label: 'Components', url: '/components' }
-  ]
-};
-
-const HeroSection = () => {
+const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: HeroSection) => {
   const linkColor = useLinkColor();
-  const { label, heading, subHeading, buttonLinks } = heroSection;
 
   return (
     <Flex w="100%" direction={{ base: 'column', md: 'row' }} pos="relative">
@@ -46,6 +33,7 @@ const HeroSection = () => {
         pos="absolute"
         src="https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=334"
       />
+
       <Box w={{ base: '100%', md: '50%' }} margin="auto">
         <Stack
           zIndex={5}
@@ -71,30 +59,44 @@ const HeroSection = () => {
         >
           <Text fontSize="lg">{label}</Text>
           <VStack spacing={0} mb={6} textAlign="left">
-            <chakra.h1 fontSize="5xl" color={linkColor} lineHeight={1.2} fontWeight="bold" w="100%">
+            <chakra.h1
+              fontSize={{ base: '4xl', sm: '5xl' }}
+              color={linkColor}
+              lineHeight={1.2}
+              fontWeight="bold"
+              w="100%"
+            >
               {heading}
             </chakra.h1>
-            <Text fontSize="lg" noOfLines={2}>
+            <Text fontSize="lg" w="100%">
               {subHeading}
             </Text>
           </VStack>
           <HStack spacing={2}>
-            {buttonLinks.map((link, index) => (
+            {buttonLinks?.map((link, index) => (
               <NextLink key={index} href={link.url} passHref={true}>
-                <Button
-                  as={Link}
+                <Link
+                  d="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  fontSize="md"
+                  fontWeight="500"
+                  p={3}
+                  lineHeight={1.2}
+                  h={10}
                   w="max-content"
                   rounded="md"
+                  textDecoration="none"
+                  color="white"
                   bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
                   _hover={{
                     bgGradient: `linear(to-l, ${linkColor}, #103e68)`,
                     color: 'white'
                   }}
-                  color="white"
                   shadow="lg"
                 >
                   {link.label}
-                </Button>
+                </Link>
               </NextLink>
             ))}
           </HStack>
@@ -129,7 +131,7 @@ const HeroSection = () => {
         >
           &lt;<span>&#47;</span>&gt;
         </Box>
-        <Image src="/hero_image.png" w={{ base: '10rem', md: '25rem' }} />
+        <Image src={heroImage} w={{ base: '10rem', md: '25rem' }} />
         <Box
           pos="absolute"
           bottom={{ base: '2rem', lg: '5rem' }}
