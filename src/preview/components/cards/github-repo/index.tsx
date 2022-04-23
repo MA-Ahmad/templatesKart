@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useMediaQuery, Container } from '@chakra-ui/react';
-import StackGrid from 'react-stack-grid';
 import RepositoryCard from './repo-card';
 import repositoriesList from './repos-list';
+// Here we have used react-stack-grid package for the cards
+import StackGrid from 'react-stack-grid';
 
 const LiveData = () => {
   const [isLargerThan720] = useMediaQuery('(min-width: 720px)');

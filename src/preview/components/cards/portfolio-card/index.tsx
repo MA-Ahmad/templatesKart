@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Container, Box, HStack, useColorModeValue, Center } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import MainScreen from './main-screen';
-import { container } from './animation-variants';
 
 const Card = () => {
   const bg = useColorModeValue('white', '#2f3244');
@@ -23,9 +21,7 @@ const Card = () => {
           bg={bg}
           role="group"
         >
-          <motion.div variants={container} initial="hidden" animate="visible">
-            <MainScreen />
-          </motion.div>
+          <MainScreen />
         </Box>
       </Center>
     </Container>

@@ -12,6 +12,7 @@ import {
   Fade
 } from '@chakra-ui/react';
 import { siteConfig } from './site-config';
+// Here we have used framer-motion package for animations
 import { motion } from 'framer-motion';
 
 const iconProps = {

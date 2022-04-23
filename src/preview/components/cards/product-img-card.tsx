@@ -12,6 +12,7 @@ import {
   Icon,
   StackProps
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { AiOutlineHeart, AiOutlineExclamationCircle } from 'react-icons/ai';
 import { BsTelephoneX } from 'react-icons/bs';
 
