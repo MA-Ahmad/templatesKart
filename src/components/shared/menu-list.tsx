@@ -27,7 +27,7 @@ const menuData: MenuData[] = [
     id: 1,
     label: 'ProjectsKart',
     subLabel: 'Explore responsive Projects',
-    href: '/'
+    href: '/projects'
   },
   {
     id: 2,
