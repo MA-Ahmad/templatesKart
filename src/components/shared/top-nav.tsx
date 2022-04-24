@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
+  Link,
   Box,
   Flex,
   HStack,
@@ -15,6 +16,8 @@ import { AccentPicker } from 'components/theme/Accent';
 import DropDownMenu from './menu-list';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { useLinkColor } from 'components/theme';
+import { FaGithub } from 'react-icons/fa';
+import { GITHUB_REPO_LINK } from 'data/constants';
 
 const valuePageYOffset = 20;
 
@@ -111,10 +114,23 @@ export default function TopNav() {
               </NextLink>
               <DropDownMenu />
             </HStack>
-            <Flex alignItems="center">
+            <HStack spacing={2} alignItems="center">
+              <Link href={GITHUB_REPO_LINK} isExternal>
+                <Flex
+                  as="button"
+                  p="0.6rem"
+                  rounded="lg"
+                  cursor="pointer"
+                  _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
+                  bg={useColorModeValue('gray.200', 'gray.700')}
+                  justify="center"
+                >
+                  <Icon as={FaGithub} color={linkColor} />
+                </Flex>
+              </Link>
               <AccentPicker aria-label="Accent Color Picker" />
               <ColorModeSwitcher justifySelf="flex-end" />
-            </Flex>
+            </HStack>
           </Flex>
         </Container>
       </Box>

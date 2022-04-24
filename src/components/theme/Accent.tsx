@@ -49,7 +49,6 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
           _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
           bg={useColorModeValue('gray.200', 'gray.700')}
           justify="center"
-          mr={3}
         >
           <Icon as={BiBrushAlt} color={color} />
         </Flex>

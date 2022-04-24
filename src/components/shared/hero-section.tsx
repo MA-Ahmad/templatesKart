@@ -2,13 +2,13 @@ import {
   Flex,
   Box,
   Image,
-  useColorModeValue,
   Stack,
   VStack,
   HStack,
   Text,
   chakra,
-  Link
+  Link,
+  useColorModeValue
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useLinkColor } from 'components/theme';
@@ -74,30 +74,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
           </VStack>
           <HStack spacing={2}>
             {buttonLinks?.map((link, index) => (
-              <NextLink key={index} href={link.url} passHref={true}>
-                <Link
-                  d="inline-flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  fontSize="md"
-                  fontWeight="500"
-                  p={3}
-                  lineHeight={1.2}
-                  h={10}
-                  w="max-content"
-                  rounded="md"
-                  textDecoration="none"
-                  color="white"
-                  bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
-                  _hover={{
-                    bgGradient: `linear(to-l, ${linkColor}, #103e68)`,
-                    color: 'white'
-                  }}
-                  shadow="lg"
-                >
-                  {link.label}
-                </Link>
-              </NextLink>
+              <CustomLink key={index} link={link} linkColor={linkColor} />
             ))}
           </HStack>
         </Stack>
@@ -145,6 +122,40 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         </Box>
       </Flex>
     </Flex>
+  );
+};
+
+interface CustomLinkProps {
+  link: { label: string; url: string };
+  linkColor: string;
+}
+
+const CustomLink = ({ link, linkColor }: CustomLinkProps) => {
+  return (
+    <NextLink href={link.url} passHref={true}>
+      <Link
+        d="inline-flex"
+        alignItems="center"
+        justifyContent="center"
+        fontSize="md"
+        fontWeight="500"
+        p={3}
+        lineHeight={1.2}
+        h={10}
+        w="max-content"
+        rounded="md"
+        textDecoration="none"
+        color="white"
+        bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
+        _hover={{
+          bgGradient: `linear(to-l, ${linkColor}, #103e68)`,
+          color: 'white'
+        }}
+        shadow="lg"
+      >
+        {link.label}
+      </Link>
+    </NextLink>
   );
 };
 

@@ -44,7 +44,7 @@ const overviewData = [
   {
     id: 3,
     heading: 'Components Screen',
-    content: 'Choose component from different categories and copy code by clicking on code button.',
+    content: 'Choose component from 12+ categories and copy code by clicking on code button.',
     image: '/assets/images/layouts/components_screen.png'
   }
 ];
@@ -108,7 +108,6 @@ export default function Index() {
           height: 'full',
           width: '50%',
           filter: 'blur(20rem)',
-          // transform: 'scale(0.98)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           top: 0,
@@ -136,7 +135,7 @@ export default function Index() {
                   p={5}
                   cursor="pointer"
                   rounded="lg"
-                  color={data.id === selectedId ? 'white' : 'initial'}
+                  color={data.id === selectedId ? 'white' : 'inherit'}
                   bgGradient={
                     data.id === selectedId ? `linear(to-r, ${linkColor}, #1e4f7c)` : 'initial'
                   }
@@ -155,7 +154,6 @@ export default function Index() {
                       <Image
                         zIndex={5}
                         src={getSelectedContentImageUrl()}
-                        // w={{ base: '10rem', md: '25rem' }}
                         width={{ md: '30rem', lg: '50rem' }}
                         rounded="lg"
                       />
