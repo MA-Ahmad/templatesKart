@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  chakra,
   Container,
   HStack,
   VStack,
@@ -9,7 +10,6 @@ import {
   Link,
   Image
 } from '@chakra-ui/react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface ProjectCardProps {
   id: number;
@@ -50,7 +50,7 @@ const ProjectCard = () => {
       <Container maxW="7xl" py={10} px={10}>
         <VStack spacing={4}>
           {projectsList.map(({ id, title, desc, logo, link, technologies }) => (
-            <motion.div layout onClick={toggleOpen} key={id}>
+            <chakra.div onClick={toggleOpen} key={id}>
               <HStack
                 p={4}
                 bg={useColorModeValue('white', 'gray.800')}
@@ -78,62 +78,42 @@ const ProjectCard = () => {
                 />
                 <VStack align="start" justify="flex-start">
                   <VStack spacing={0} align="start">
-                    <motion.div layout>
-                      <HStack>
-                        <Text
-                          as={Link}
-                          href={link}
-                          fontWeight="bold"
-                          fontSize="md"
-                          noOfLines={1}
-                          onClick={(e) => e.stopPropagation()}
-                          isExternal
-                        >
-                          {title}
-                        </Text>
-                        <HStack spacing="1">
-                          {technologies.map((tech) => (
-                            <Tag size="sm" colorScheme="gray">
-                              {tech}
-                            </Tag>
-                          ))}
-                        </HStack>
+                    <HStack>
+                      <Text
+                        as={Link}
+                        href={link}
+                        fontWeight="bold"
+                        fontSize="md"
+                        noOfLines={1}
+                        onClick={(e) => e.stopPropagation()}
+                        isExternal
+                      >
+                        {title}
+                      </Text>
+                      <HStack spacing="1">
+                        {technologies.map((tech) => (
+                          <Tag size="sm" colorScheme="gray">
+                            {tech}
+                          </Tag>
+                        ))}
                       </HStack>
-                    </motion.div>
-                    <AnimatePresence>
-                      <motion.div
-                        layout
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 1 }}
-                      >
-                        {!isOpen && (
-                          <Text fontSize="sm" color={textColor} noOfLines={{ base: 2 }}>
-                            {desc}
-                          </Text>
-                        )}
-                      </motion.div>
-                    </AnimatePresence>
+                    </HStack>
 
-                    <AnimatePresence>
-                      <motion.div
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-                      >
-                        {isOpen && (
-                          <Text fontSize="sm" color={textColor}>
-                            {desc}
-                          </Text>
-                        )}
-                      </motion.div>
-                    </AnimatePresence>
+                    {!isOpen && (
+                      <Text fontSize="sm" color={textColor} noOfLines={{ base: 2 }}>
+                        {desc}
+                      </Text>
+                    )}
+
+                    {isOpen && (
+                      <Text fontSize="sm" color={textColor}>
+                        {desc}
+                      </Text>
+                    )}
                   </VStack>
                 </VStack>
               </HStack>
-            </motion.div>
+            </chakra.div>
           ))}
         </VStack>
       </Container>

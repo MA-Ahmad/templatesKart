@@ -1,5 +1,5 @@
 import { Fragment, ReactNode } from 'react';
-import { Box, Container, Flex, Stack } from '@chakra-ui/react';
+import { Container, Flex, Stack } from '@chakra-ui/react';
 import Footer from 'components/shared/footer';
 import TopNav from 'components/shared/top-nav';
 import { Sidebar } from './sidebar';

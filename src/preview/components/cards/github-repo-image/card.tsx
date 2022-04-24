@@ -18,11 +18,10 @@ import {
   Flex,
   Tooltip
 } from '@chakra-ui/react';
-import LazyImage from 'components/shared/lazy-image';
+import LazyImage from './lazy-image';
+// Here we have used react-icons package for the icons
 import { AiOutlineStar } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
-import { MotionBox } from './motion';
-import { getTagColor, useLinkColor } from 'components/theme';
 
 interface RepositoryCardProps {
   title: string;
@@ -36,7 +35,6 @@ interface RepositoryCardProps {
 const RepositoryCard = (props: RepositoryCardProps) => {
   const { title, cover, techStack, url, stargazers_count } = props;
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const linkColor = useLinkColor();
 
   const handleClick = () => {
     onOpen();
@@ -45,18 +43,6 @@ const RepositoryCard = (props: RepositoryCardProps) => {
   const handleLinkClick = (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>, link: string) => {
     window.open(link);
     e.stopPropagation();
-  };
-
-  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
-
-  const thumbnailVariants = {
-    initial: { scale: 0.9, opacity: 0 },
-    enter: { scale: 1, opacity: 1, transition },
-    exit: {
-      scale: 0.5,
-      opacity: 0,
-      transition: { ...transition }
-    }
   };
 
   return (
@@ -75,16 +61,14 @@ const RepositoryCard = (props: RepositoryCardProps) => {
         spacing={0}
       >
         <Box position="relative" w="100%">
-          <MotionBox variants={thumbnailVariants}>
-            <AspectRatio
-              ratio={1.85 / 1}
-              w="100%"
-              borderBottomWidth="1px"
-              borderColor={useColorModeValue('gray.100', 'gray.700')}
-            >
-              <LazyImage src={cover} />
-            </AspectRatio>
-          </MotionBox>
+          <AspectRatio
+            ratio={1.85 / 1}
+            w="100%"
+            borderBottomWidth="1px"
+            borderColor={useColorModeValue('gray.100', 'gray.700')}
+          >
+            <LazyImage src={cover} />
+          </AspectRatio>
         </Box>
 
         <VStack py={2} px={[2, 4]} spacing={1} align="start" w="100%">
@@ -98,7 +82,6 @@ const RepositoryCard = (props: RepositoryCardProps) => {
                   fontWeight="600"
                   align="left"
                   onClick={(e) => handleLinkClick(e, url)}
-                  color={linkColor}
                 >
                   {title}
                 </Text>
@@ -115,7 +98,7 @@ const RepositoryCard = (props: RepositoryCardProps) => {
             <Box>
               <HStack spacing="1">
                 {techStack!.map((tech, index) => (
-                  <Tag key={index} size="sm" colorScheme={getTagColor(tech)}>
+                  <Tag key={index} size="sm" colorScheme="cyan">
                     <Text fontSize={['0.55rem', 'inherit', 'inherit']}>{tech}</Text>
                   </Tag>
                 ))}

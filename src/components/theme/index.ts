@@ -138,11 +138,11 @@ export const extendedTheme = extendTheme({
             }
           },
           gradient: {
-            bgGradient: 'linear(to-br, blue.400,blue.300)',
+            bgGradient: 'linear(to-br, blue.400, blue.300)',
             bgClip: 'text',
             fontWeight: '500',
             _hover: {
-              bgGradient: 'linear(to-br, blue.500,blue.300)',
+              bgGradient: 'linear(to-br, blue.500, blue.300)',
               bgClip: 'text'
             }
           }
