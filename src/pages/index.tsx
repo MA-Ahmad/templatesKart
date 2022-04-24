@@ -15,7 +15,8 @@ import RootLayout from 'components/layouts/rootLayout';
 import { SEO } from 'components/SEO';
 import { useLinkColor } from 'components/theme';
 import { TiTick } from 'react-icons/ti';
-import HeroSection from 'components/shared/hero-section';
+import HeroSection from 'components/HomePagesSections/hero-section';
+import Header from 'components/HomePagesSections/header';
 
 const heroSectionData = {
   heading: 'TemplatesKart',
@@ -74,17 +75,7 @@ export default function Index() {
       <SEO />
       <HeroSection {...heroSectionData} />
       <Stack my={28} spacing={8}>
-        <chakra.h1
-          fontSize="5xl"
-          textAlign="center"
-          color={linkColor}
-          lineHeight={1.2}
-          fontWeight="bold"
-          w="100%"
-        >
-          Key Features
-        </chakra.h1>
-
+        <Header textAlign="center">Key Features</Header>
         <Flex justify="center" fontSize="2xl" fontWeight="600">
           <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={5}>
             {features.map((feature, index) => (
@@ -116,16 +107,7 @@ export default function Index() {
             'url("https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80")'
         }}
       >
-        <chakra.h1
-          fontSize="5xl"
-          textAlign="center"
-          color={linkColor}
-          lineHeight={1.2}
-          fontWeight="bold"
-          w="100%"
-        >
-          Overview
-        </chakra.h1>
+        <Header textAlign="center">Overview</Header>
         <Stack w="100%" direction={{ base: 'column', md: 'row' }} spacing={10} justify="center">
           <Stack direction="column" w={{ base: '100%', md: '30%' }}>
             <Divider />

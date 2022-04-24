@@ -20,6 +20,7 @@ interface MenuData {
   label: string;
   subLabel: string;
   href: string;
+  linkColor?: string;
 }
 
 interface MenuDataProps {
@@ -74,7 +75,7 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
         >
           <Stack>
             {menuData.map((data) => (
-              <DropDownItem key={data.id} {...data} />
+              <DropDownItem key={data.id} linkColor={linkColor} {...data} />
             ))}
           </Stack>
         </PopoverContent>
@@ -83,14 +84,14 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
   );
 };
 
-const DropDownItem = ({ label, href, subLabel }: MenuData) => {
+const DropDownItem = ({ label, href, subLabel, linkColor }: MenuData) => {
   return (
     <NextLink href={href!} passHref>
       <Link
         display="block"
         p={2}
         rounded="md"
-        _hover={{ bg: useColorModeValue('gray.100', 'gray.900') }}
+        _hover={{ bg: useColorModeValue('gray.100', 'gray.900'), color: linkColor }}
       >
         <Stack direction="row" align="center">
           <Box>

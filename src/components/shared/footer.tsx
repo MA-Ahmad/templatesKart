@@ -47,6 +47,7 @@ const Footer = () => {
                 aria-label={sc.label}
                 colorScheme={sc.type}
                 icon={sc.icon}
+                rounded="full"
                 {...iconProps}
               />
             ))}

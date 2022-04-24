@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useLinkColor } from 'components/theme';
+import Header from './header';
 
 interface HeroSection {
   heading: string;
@@ -60,15 +61,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         >
           <Text fontSize="lg">{label}</Text>
           <VStack spacing={0} mb={6} textAlign="left">
-            <chakra.h1
-              fontSize={{ base: '4xl', sm: '5xl' }}
-              color={linkColor}
-              lineHeight={1.2}
-              fontWeight="bold"
-              w="100%"
-            >
-              {heading}
-            </chakra.h1>
+            <Header>{heading}</Header>
             <Text fontSize="lg" w="100%">
               {subHeading}
             </Text>
@@ -86,7 +79,8 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         pos={{ base: 'absolute', md: 'relative' }}
         alignItems="center"
         justify="center"
-        bg={linkColor}
+        // bg={linkColor}
+        bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
         direction="column"
         p={{ base: 3, sm: '4rem' }}
         pl={{ base: 0, lg: '7rem' }}
