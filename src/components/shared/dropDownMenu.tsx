@@ -15,41 +15,23 @@ import NextLink from 'next/link';
 import { FaChevronDown } from 'react-icons/fa';
 import { useLinkColor } from 'components/theme';
 
-type MenuData = {
-  id: number;
-  label: string;
-  subLabel: string;
-  href: string;
-};
+interface MenuDataProps {
+  menuData: { id: number; label: string; subLabel: string; href: string }[];
+}
 
-const menuData: MenuData[] = [
-  {
-    id: 1,
-    label: 'ProjectsKart',
-    subLabel: 'Explore responsive Projects',
-    href: '/projects'
-  },
-  {
-    id: 2,
-    label: 'ComponentsKart',
-    subLabel: 'Explore responsive Components',
-    href: '/components'
-  }
-];
-
-const DropDownMenu = () => {
+const DropDownMenu = ({ menuData }: MenuDataProps) => {
   const linkColor = useLinkColor();
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Stack direction="row" spacing={4}>
+    <Stack direction="row" spacing={4} d={{ base: 'none', sm: 'flex' }}>
       <Popover trigger="hover" placement="bottom-start" onOpen={onOpen} onClose={onClose}>
         <PopoverTrigger>
           <HStack alignItems="center" cursor="pointer" role="group">
             <NextLink href="/" passHref={true}>
               <Link
                 p={2}
-                fontSize="lg"
+                fontSize={{ sm: 'md', md: 'lg' }}
                 fontWeight="bold"
                 color={useColorModeValue('gray.600', 'gray.200')}
                 _groupHover={{

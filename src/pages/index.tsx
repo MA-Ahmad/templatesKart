@@ -86,7 +86,7 @@ export default function Index() {
         </chakra.h1>
 
         <Flex justify="center" fontSize="2xl" fontWeight="600">
-          <SimpleGrid columns={{ base: 2, lg: 3 }} spacing={5}>
+          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={5}>
             {features.map((feature, index) => (
               <HStack spacing={2} key={index}>
                 <Icon as={TiTick} w={7} h={7} color={linkColor} />

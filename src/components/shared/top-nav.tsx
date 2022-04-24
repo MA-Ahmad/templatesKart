@@ -3,25 +3,46 @@ import {
   Link,
   Box,
   Flex,
+  Stack,
   HStack,
-  useColorModeValue,
   Heading,
   Container,
   Icon,
-  Text
+  Text,
+  IconButton,
+  useDisclosure,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../theme/ColorModeSwitcher';
 import NextLink from 'next/link';
 import { AccentPicker } from 'components/theme/Accent';
-import DropDownMenu from './menu-list';
+import DropDownMenu from './dropDownMenu';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { useLinkColor } from 'components/theme';
 import { FaGithub } from 'react-icons/fa';
 import { GITHUB_REPO_LINK } from 'data/constants';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const valuePageYOffset = 20;
 
+const menuData = [
+  {
+    id: 1,
+    label: 'ProjectsKart',
+    subLabel: 'Explore responsive Projects',
+    href: '/projects'
+  },
+  {
+    id: 2,
+    label: 'ComponentsKart',
+    subLabel: 'Explore responsive Components',
+    href: '/components'
+  }
+];
+
 export default function TopNav() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const linkColor = useLinkColor();
   const [isVisible, setIsVisible] = useState(false);
   const handleScroll = () => {
@@ -42,7 +63,10 @@ export default function TopNav() {
       <Box
         as="header"
         transition="all 0.3s ease-in-out"
-        bg={isVisible ? useColorModeValue('white', 'gray.800') : 'inherit'}
+        bg={{
+          base: useColorModeValue('white', 'gray.800'),
+          sm: isVisible ? useColorModeValue('white', 'gray.800') : 'inherit'
+        }}
         px={4}
         boxShadow={
           isVisible
@@ -59,7 +83,14 @@ export default function TopNav() {
       >
         <Container maxW="1280px" p={{ base: 0, md: 'inherit' }}>
           <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
-            <HStack spacing={{ base: 0, sm: 3 }} alignItems="center">
+            <HStack spacing={3} alignItems="center">
+              <IconButton
+                size="md"
+                icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+                aria-label="Open Menu"
+                d={{ base: 'inherit', sm: 'none' }}
+                onClick={isOpen ? onClose : onOpen}
+              />
               <NextLink href="/" passHref>
                 <Heading as="h1" fontSize={['lg', 'md', 'xl', '3xl']} cursor="pointer">
                   <Flex position="relative">
@@ -112,7 +143,7 @@ export default function TopNav() {
                   </Flex>
                 </Heading>
               </NextLink>
-              <DropDownMenu />
+              <DropDownMenu menuData={menuData} />
             </HStack>
             <HStack spacing={2} alignItems="center">
               <Link href={GITHUB_REPO_LINK} isExternal>
@@ -133,6 +164,30 @@ export default function TopNav() {
             </HStack>
           </Flex>
         </Container>
+
+        {isOpen ? (
+          <Box pb={4} d={{ base: 'inherit', sm: 'none' }}>
+            <Stack as="nav" spacing={1}>
+              {menuData.map((data, index) => (
+                <NextLink key={index} href={data.href} passHref>
+                  <Link
+                    px={3}
+                    py={1}
+                    lineHeight="inherit"
+                    rounded="md"
+                    _hover={{
+                      textDecoration: 'none',
+                      bg: useColorModeValue('gray.100', 'gray.900')
+                    }}
+                    onClick={() => onClose()}
+                  >
+                    {data.label}
+                  </Link>
+                </NextLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
       </Box>
     </>
   );
