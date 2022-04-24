@@ -6,7 +6,6 @@ import {
   VStack,
   HStack,
   Text,
-  chakra,
   Link,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -56,8 +55,6 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
           }}
           rounded="lg"
           pos="relative"
-          transition="all .25s ease-in-out"
-          _hover={{ transform: 'rotate(2deg)' }}
         >
           <Text fontSize="lg">{label}</Text>
           <VStack spacing={0} mb={6} textAlign="left">
@@ -79,7 +76,6 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         pos={{ base: 'absolute', md: 'relative' }}
         alignItems="center"
         justify="center"
-        // bg={linkColor}
         bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
         direction="column"
         p={{ base: 3, sm: '4rem' }}
@@ -89,8 +85,6 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
           '0 4px 6px rgba(9, 17, 28, 0.9)'
         )}
         rounded="lg"
-        transition="all .25s ease-in-out"
-        _hover={{ transform: 'rotate(-2deg)' }}
       >
         <Box
           pos="absolute"
