@@ -28,6 +28,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
     <Flex w="100%" direction={{ base: 'column', md: 'row' }} pos="relative">
       <Image
         filter="blur(20rem)"
+        zIndex="-1"
         w="50%"
         h="100%"
         pos="absolute"
