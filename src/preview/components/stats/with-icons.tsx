@@ -11,7 +11,9 @@ import {
   Container,
   Stack
 } from '@chakra-ui/react';
-import { MotionBox } from 'components/shared/animations/motion';
+// Here we have used framer-motion package for animations
+import { motion } from 'framer-motion';
+// Here we have used react-icons package for the icons
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsArrowUpShort, BsArrowDownShort } from 'react-icons/bs';
 import { AiOutlineLike, AiOutlineEye } from 'react-icons/ai';
@@ -62,7 +64,7 @@ const StatsWithIcons = () => {
 
 const Card = ({ data }: { data: StatData }) => {
   return (
-    <MotionBox whileHover={{ translateY: -5 }}>
+    <motion.div whileHover={{ translateY: -5 }}>
       <Stack
         direction="column"
         rounded="md"
@@ -118,7 +120,7 @@ const Card = ({ data }: { data: StatData }) => {
           <Link fontSize="md">View All</Link>
         </Flex>
       </Stack>
-    </MotionBox>
+    </motion.div>
   );
 };
 

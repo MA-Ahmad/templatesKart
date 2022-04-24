@@ -11,6 +11,7 @@ import {
   Checkbox,
   Link
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icon
 import { BiLockAlt } from 'react-icons/bi';
 
 const SignInForm = () => {

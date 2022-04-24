@@ -11,7 +11,6 @@ import {
   Container
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useLinkColor } from 'components/theme';
 import { MotionBox } from './motion';
 import { CommentIcon, HeartIcon } from './icons';
 
@@ -29,7 +28,7 @@ const posts = [
 ];
 
 const FeaturedArticles = () => {
-  const linkColor = useLinkColor();
+  const linkColor = 'blue.400';
   const textColor = useColorModeValue('gray.500', 'gray.200');
 
   return (

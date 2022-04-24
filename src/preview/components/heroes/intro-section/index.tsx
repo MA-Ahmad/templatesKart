@@ -2,12 +2,11 @@ import * as React from 'react';
 import { Flex, Avatar, Box, Container } from '@chakra-ui/react';
 import { MotionBox, MotionFlex } from './motion';
 import Header from './header';
-import { useLinkColor } from 'components/theme';
 
 const ANIMATION_DURATION = 0.5;
 
 const IntroSection = () => {
-  const linkColor = useLinkColor();
+  const color = 'blue.400';
 
   return (
     <Container maxW="7xl" p="12">
@@ -32,7 +31,7 @@ const IntroSection = () => {
             <Avatar
               size="2xl"
               showBorder={true}
-              borderColor={linkColor}
+              borderColor={color}
               src={'https://avatars2.githubusercontent.com/u/37842853?v=4'}
             />
           </MotionBox>
@@ -60,7 +59,7 @@ const IntroSection = () => {
         >
           <Box position="relative">
             <MotionBox whileHover={{ translateY: -5 }} width="max-content">
-              <Header underlineColor={linkColor} mt={0} cursor="pointer" width="max-content">
+              <Header underlineColor={color} mt={0} cursor="pointer" width="max-content">
                 Hey!
               </Header>
             </MotionBox>

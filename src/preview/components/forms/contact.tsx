@@ -15,6 +15,7 @@ import {
   Icon,
   Divider
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { GoLocation } from 'react-icons/go';
 import { BsPhone } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';

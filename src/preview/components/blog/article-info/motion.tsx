@@ -1,4 +1,5 @@
 import { Box, forwardRef } from '@chakra-ui/react';
+// Here we have used framer-motion package for animations
 import { motion, isValidMotionProp } from 'framer-motion';
 
 export const MotionBox = motion(

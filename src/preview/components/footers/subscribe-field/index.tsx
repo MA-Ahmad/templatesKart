@@ -16,8 +16,9 @@ import {
 } from '@chakra-ui/react';
 import { siteConfig } from './site-config';
 import FooterSignup from './signup';
-import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
 import { ExternalFooterLink, InternalFooterLink, ExternalSocialLink } from './links';
+// Here we have used react-icons package for the icons
+import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (

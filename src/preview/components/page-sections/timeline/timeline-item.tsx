@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, BoxProps, Circle, Flex, useColorModeValue } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { FiCheckCircle } from 'react-icons/fi';
 
 export interface TimelineItemProps extends BoxProps {

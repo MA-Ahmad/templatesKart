@@ -10,6 +10,7 @@ import {
   Avatar,
   Text
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icon
 import { GoPrimitiveDot } from 'react-icons/go';
 
 interface Notification {

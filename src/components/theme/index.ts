@@ -40,10 +40,10 @@ export const extendedTheme = extendTheme({
         color: mode('blue.500', 'blue.200')(props),
         transition: 'color 0.15s',
         transitionTimingFunction: 'ease-out',
-        fontWeight: '500',
-        _hover: {
-          color: useHoverLinkColor()
-        }
+        fontWeight: '500'
+        // _hover: {
+        //   color: useHoverLinkColor()
+        // }
         // _hover: {
         //   color: mode("blue.600", "blue.300")(props),
         // }

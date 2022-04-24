@@ -18,11 +18,13 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import Link from 'next/link';
+// Here we have used framer-motion package for animations
+import { motion } from 'framer-motion';
+// Here we have used react-icons package for the icons
 import { MdAdd } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { FiSun } from 'react-icons/fi';
-import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const { onOpen } = useDisclosure();

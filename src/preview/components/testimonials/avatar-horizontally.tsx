@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { Container, Text, Stack, Avatar, Divider, Icon } from '@chakra-ui/react';
+// Here we have used react-icons package for the icon
 import { ImQuotesLeft } from 'react-icons/im';
 
 interface TestimonialAttributes {

@@ -11,6 +11,7 @@ import {
   Tag,
   useColorModeValue
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { AiOutlineVideoCamera } from 'react-icons/ai';
 
 const articles = [

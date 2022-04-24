@@ -53,7 +53,7 @@ const Footer = () => {
           justifyContent="space-between"
         >
           {footerData.map((data, index) => (
-            <Flex direction="column" mb="3">
+            <Flex key={index} direction="column" mb="3">
               <Link
                 fontWeight="500"
                 href={data.href}
@@ -64,12 +64,13 @@ const Footer = () => {
               <Flex direction={{ base: 'row', md: 'column' }}>
                 {data.links.map((link, index) => (
                   <Link
-                    padding={1}
                     key={index}
+                    padding={1}
                     fontSize={{ base: 'sm', sm: 'md' }}
                     href="#"
                     mr={{ base: 1, sm: 2, md: 0 }}
                     color={useColorModeValue('gray.500', 'gray.700')}
+                    _hover={{ color: 'blue.600' }}
                   >
                     {link.label}
                   </Link>

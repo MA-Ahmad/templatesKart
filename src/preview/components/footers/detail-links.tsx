@@ -144,7 +144,12 @@ type LinkItemProps = {
 const LinkItem = ({ text, isTag = false, tagText }: LinkItemProps) => {
   return (
     <ListItem display="flex">
-      <Link fontWeight="600" href="#" color="rgba(113, 128, 150, 1)">
+      <Link
+        fontWeight="600"
+        href="#"
+        color="rgba(113, 128, 150, 1)"
+        _hover={{ color: 'green.600' }}
+      >
         {text}
       </Link>
       {isTag && (

@@ -13,6 +13,7 @@ import {
   Box,
   Center
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
 
 const iconProps = {
@@ -55,6 +56,7 @@ const InfoSection = () => {
                   href={sc.url}
                   aria-label={sc.label}
                   colorScheme={sc.type}
+                  rounded="full"
                   icon={sc.icon}
                   {...iconProps}
                 />

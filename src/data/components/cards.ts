@@ -15,11 +15,6 @@ const components_list: Component[] = [
   },
   {
     id: 'cards',
-    name: 'Github Repo Cards',
-    filename: 'github-repo'
-  },
-  {
-    id: 'cards',
     name: 'Github Repo With Image',
     filename: 'github-repo-image'
   },
@@ -27,6 +22,11 @@ const components_list: Component[] = [
     id: 'cards',
     name: 'Career Card',
     filename: 'career-card'
+  },
+  {
+    id: 'cards',
+    name: 'Github Repo Cards',
+    filename: 'github-repo'
   },
   {
     id: 'cards',
