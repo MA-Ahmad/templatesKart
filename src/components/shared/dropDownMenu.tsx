@@ -15,8 +15,15 @@ import NextLink from 'next/link';
 import { FaChevronDown } from 'react-icons/fa';
 import { useLinkColor } from 'components/theme';
 
+interface MenuData {
+  id: number;
+  label: string;
+  subLabel: string;
+  href: string;
+}
+
 interface MenuDataProps {
-  menuData: { id: number; label: string; subLabel: string; href: string }[];
+  menuData: MenuData[];
 }
 
 const DropDownMenu = ({ menuData }: MenuDataProps) => {
