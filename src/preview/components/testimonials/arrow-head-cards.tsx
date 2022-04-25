@@ -113,7 +113,7 @@ const Testimonials = () => {
                 name="avatar"
                 src={obj.image}
               />
-              <Box direction="column" textAlign="center">
+              <Box textAlign="center">
                 <Text fontWeight="bold" fontSize="md">
                   {obj.name}
                 </Text>

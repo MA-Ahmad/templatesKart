@@ -40,7 +40,6 @@ const BlogCards = () => {
         {articles.map((article, index) => (
           <Box
             key={index}
-            direction="column"
             p={{ base: 3, sm: 8 }}
             bg={useColorModeValue('gray.100', 'gray.800')}
             boxShadow={useColorModeValue(
