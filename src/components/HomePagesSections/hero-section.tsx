@@ -97,7 +97,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         >
           &lt;<span>&#47;</span>&gt;
         </Box>
-        <Image src={heroImage} w={{ base: '10rem', md: '25rem' }} />
+        <Image src={heroImage} w={{ base: '10rem', md: '25rem' }} minH="12rem" />
         <Box
           pos="absolute"
           bottom={{ base: '2rem', lg: '5rem' }}
