@@ -4,7 +4,13 @@ import { FaBlogger } from 'react-icons/fa';
 const components_list: Component[] = [
   {
     id: 'blog',
-    name: 'Blog card with tag',
+    name: 'Transparent bg',
+    filename: 'transparent-background',
+    isNewComponent: true
+  },
+  {
+    id: 'blog',
+    name: 'With tag',
     filename: 'blog-card-with-tag',
     isNewComponent: true
   },
