@@ -76,7 +76,14 @@ const BlogCards = () => {
               ))}
             </HStack>
             <VStack spacing={0} mb={5} textAlign="left">
-              <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+              <chakra.h1
+                as={Link}
+                _hover={{ color: 'blue.400' }}
+                fontSize="2xl"
+                lineHeight={1.2}
+                fontWeight="bold"
+                w="100%"
+              >
                 {article.title}
               </chakra.h1>
               <Text fontSize="md" noOfLines={2}>
@@ -87,7 +94,13 @@ const BlogCards = () => {
               <Text fontSize="sm">{article.created_at}</Text>
               <HStack spacing={2} alignItems="center">
                 <Icon as={AiOutlineVideoCamera} w={5} h={5} />
-                <Tag as={Link}>Save</Tag>
+                <Tag
+                  as={Link}
+                  color={useColorModeValue('black', 'white')}
+                  colorScheme={useColorModeValue('blackAlpha', 'whiteAlpha')}
+                >
+                  Save
+                </Tag>
               </HStack>
             </HStack>
           </Box>
