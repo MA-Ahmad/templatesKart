@@ -56,7 +56,9 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
           rounded="lg"
           pos="relative"
         >
-          <Text fontSize="lg">{label}</Text>
+          <Text fontSize="lg" fontWeight="bold">
+            {label}
+          </Text>
           <VStack spacing={0} mb={6} textAlign="left">
             <Header>{heading}</Header>
             <Text fontSize="lg" w="100%">

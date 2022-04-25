@@ -19,7 +19,7 @@ const companies = [
     role: 'Senior Software Engineer',
     skills: ['ruby', 'rails', 'typescript', 'javascript', 'react', 'aws'],
     period: '2019 - Present',
-    logo: 'https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb'
+    logo: 'https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80'
   }
 ];
 
