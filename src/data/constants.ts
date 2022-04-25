@@ -16,6 +16,6 @@ export const SEO_TITLE = 'TemplatesKart';
 export const SEO_DESCRIPTION =
   'Beautiful and responsive Chakra UI React components to build your application.';
 export const SEO_KEYWORDS =
-  'chakra ui, chakraUI, chakra-ui, chakra components, chakra ui templates, chakra templates, ui templates, web templates, web design, react templates, react ui components, react ui templates, templates kart, templateskart';
+  'chakra ui, chakraUI, chakra-ui, chakra components, chakraUI components, chakra ui templates, chakra templates, ui templates, web templates, web design, react templates, react ui components, react ui templates, templates kart, templateskart';
 export const SEO_OG_IMAGE = 'https://templateskart.com/favicon.png';
 export const SEO_TWITTER_IMAGE = 'https://templateskart.com/favicon.png';
