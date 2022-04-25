@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   SimpleGrid,
   Flex,
@@ -9,7 +9,8 @@ import {
   Text,
   chakra,
   Icon,
-  Divider
+  Divider,
+  Spinner
 } from '@chakra-ui/react';
 import RootLayout from 'components/layouts/rootLayout';
 import { SEO } from 'components/SEO';
@@ -64,10 +65,20 @@ const features: string[] = [
 
 export default function Index() {
   const linkColor = useLinkColor();
-  const [selectedId, setSelectedId] = React.useState(1);
+  const [selectedId, setSelectedId] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getSelectedContentImageUrl = () => {
     return overviewData.filter((data) => data.id === selectedId)[0].image;
+  };
+
+  const handleClick = (id: number) => {
+    setIsLoading(true);
+    setSelectedId(id);
+  };
+
+  const isSelectedTab = (id: number) => {
+    return id === selectedId;
   };
 
   return (
@@ -117,26 +128,29 @@ export default function Index() {
                   p={5}
                   cursor="pointer"
                   rounded="lg"
-                  color={data.id === selectedId ? 'white' : 'inherit'}
+                  color={isSelectedTab(data.id) ? 'white' : 'inherit'}
                   bgGradient={
-                    data.id === selectedId ? `linear(to-r, ${linkColor}, #1e4f7c)` : 'initial'
+                    isSelectedTab(data.id) ? `linear(to-r, ${linkColor}, #1e4f7c)` : 'initial'
                   }
                   _hover={{
                     bgGradient: `linear(to-l, ${linkColor}, #103e68)`,
                     color: 'white'
                   }}
-                  onClick={() => setSelectedId(data.id)}
+                  onClick={() => handleClick(data.id)}
                 >
                   <chakra.h3 fontSize="2xl" fontWeight="bold" mb={1}>
                     {data.heading}
                   </chakra.h3>
-                  {data.id === selectedId && <Text fontSize="sm">{data.content}</Text>}
-                  {data.id === selectedId && (
+                  {isSelectedTab(data.id) && <Text fontSize="sm">{data.content}</Text>}
+                  {isSelectedTab(data.id) && (
                     <Stack w="auto" mt={2} d={{ base: 'flex', md: 'none' }}>
                       <Image
                         zIndex={5}
+                        opacity={isLoading ? 0.4 : 1}
                         src={getSelectedContentImageUrl()}
+                        onLoad={() => setIsLoading(false)}
                         width={{ md: '30rem', lg: '50rem' }}
+                        transition="all 0.2s"
                         rounded="lg"
                       />
                     </Stack>
@@ -149,8 +163,11 @@ export default function Index() {
           <Stack w="auto" d={{ base: 'none', md: 'flex' }}>
             <Image
               zIndex={5}
+              opacity={isLoading ? 0.4 : 1}
               src={getSelectedContentImageUrl()}
+              onLoad={() => setIsLoading(false)}
               width={{ md: '30rem', lg: '50rem' }}
+              transition="all 0.2s"
               rounded="lg"
             />
           </Stack>
