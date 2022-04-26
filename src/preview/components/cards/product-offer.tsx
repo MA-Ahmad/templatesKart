@@ -64,7 +64,7 @@ const Index = () => {
             bg="blackAlpha.400"
             shadow="lg"
           >
-            Click to get offer
+            Click here to proceed
           </Link>
         </Stack>
       </Flex>
