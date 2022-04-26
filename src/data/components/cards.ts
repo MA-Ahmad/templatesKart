@@ -20,6 +20,12 @@ const components_list: Component[] = [
   },
   {
     id: 'cards',
+    name: 'Exclusive offer',
+    filename: 'product-offer',
+    isNewComponent: true
+  },
+  {
+    id: 'cards',
     name: 'Career Card',
     filename: 'career-card'
   },
