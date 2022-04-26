@@ -48,7 +48,13 @@ const Testimonials = () => {
       <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={3} my={2}>
         {testimonials.map((obj, index) => (
           <Flex key={index} direction="column">
-            <Box p={5} bg={useColorModeValue('white', 'black')} color="gray.500">
+            <Box
+              p={5}
+              bg={useColorModeValue('white', 'black')}
+              color="gray.500"
+              borderTopLeftRadius="lg"
+              borderTopRightRadius="lg"
+            >
               {obj.content}
             </Box>
             <Flex
@@ -56,6 +62,8 @@ const Testimonials = () => {
               alignItems="center"
               p={5}
               bg={useColorModeValue('gray.300', 'gray.800')}
+              borderBottomLeftRadius="lg"
+              borderBottomRightRadius="lg"
             >
               <HStack spacing={2}>
                 <Avatar name="avatar" src={obj.image} />
