@@ -93,7 +93,7 @@ export const Sidebar = (props: StackProps) => {
                   justifyContent="space-between"
                   onClick={() => navigateToComponent(c.filename)}
                 >
-                  <HStack spacing={3} alignItems="center">
+                  <HStack spacing={2} alignItems="center">
                     <Icon as={FaChevronRight} w={3} h={3} color={linkColor} />
                     <HStack spacing={2}>
                       <Text fontSize="md">{c.name}</Text>

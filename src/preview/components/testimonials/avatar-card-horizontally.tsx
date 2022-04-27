@@ -50,7 +50,7 @@ const Testimonials = () => {
           <Flex key={index} direction="column">
             <Box
               p={5}
-              bg={useColorModeValue('white', 'black')}
+              bg={useColorModeValue('white', 'blackAlpha.400')}
               color="gray.500"
               borderTopLeftRadius="lg"
               borderTopRightRadius="lg"
