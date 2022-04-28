@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode, PropsWithChildren } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -11,11 +11,12 @@ import {
   useColorModeValue,
   Box,
   Icon,
-  Flex
+  Flex,
+  BoxProps
 } from '@chakra-ui/react';
 import { useLinkColor } from 'components/theme';
 import { MotionBox } from 'components/shared/animations/motion';
-import { projects } from 'data/projects';
+import { fadeInUp } from 'components/shared/animations/framerAnimations';
 import { components } from 'data/components';
 import { ComponentContainer } from 'data/components/types';
 import UnderlinedText from 'components/shared/underlined-text';
@@ -42,7 +43,7 @@ export const Sidebar = (props: StackProps) => {
         <Stack key={component.id}>
           <NextLink href={`${component.id}`} passHref>
             <Link>
-              <MotionBox whileHover={{ translateX: 5 }}>
+              <CustomMotionBox whileHover={{ translateX: 5 }}>
                 <Flex alignItems="center">
                   <Flex alignItems="center">
                     <Box as="span" fontSize="md">
@@ -72,13 +73,13 @@ export const Sidebar = (props: StackProps) => {
                     <Text fontSize="sm">{component.data.length}</Text>
                   </Flex>
                 </Flex>
-              </MotionBox>
+              </CustomMotionBox>
             </Link>
           </NextLink>
           {/* TODO: Improve Component Sidebar UI */}
           <Stack spacing={1} mt={'1.5rem !important'}>
             {component.data.map((c) => (
-              <MotionBox key={c.id} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
+              <CustomMotionBox key={c.id} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
                 <Box
                   fontSize={'sm'}
                   rounded={'md'}
@@ -105,21 +106,23 @@ export const Sidebar = (props: StackProps) => {
                     </HStack>
                   </HStack>
                 </Box>
-              </MotionBox>
+              </CustomMotionBox>
             ))}
           </Stack>
         </Stack>
       )}
       <Stack>
-        <Text
-          textTransform={'uppercase'}
-          color={categoryColor}
-          fontWeight={'extrabold'}
-          fontSize={'md'}
-          letterSpacing={1}
-        >
-          <UnderlinedText color={linkColor}>Other Components</UnderlinedText>
-        </Text>
+        <CustomMotionBox>
+          <Text
+            textTransform={'uppercase'}
+            color={categoryColor}
+            fontWeight={'extrabold'}
+            fontSize={'md'}
+            letterSpacing={1}
+          >
+            <UnderlinedText color={linkColor}>Other Components</UnderlinedText>
+          </Text>
+        </CustomMotionBox>
         <Stack spacing={1} mt={'1.5rem !important'}>
           {component &&
             components
@@ -133,7 +136,7 @@ export const Sidebar = (props: StackProps) => {
                       color: linkColor
                     }}
                   >
-                    <MotionBox whileHover={{ translateX: 5 }}>
+                    <CustomMotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
                         <Icon as={FaChevronRight} w={4} h={4} />
                         <HStack as="span" spacing={2} fontSize="md" ml={3}>
@@ -155,12 +158,31 @@ export const Sidebar = (props: StackProps) => {
                           )}
                         </HStack>
                       </Flex>
-                    </MotionBox>
+                    </CustomMotionBox>
                   </Link>
                 </NextLink>
               ))}
         </Stack>
       </Stack>
     </Stack>
+  );
+};
+
+interface CustomMotionBoxProps extends BoxProps {
+  children: ReactNode;
+  whileHover?: any;
+}
+
+const CustomMotionBox = ({ children, ...props }: PropsWithChildren<CustomMotionBoxProps>) => {
+  return (
+    <MotionBox
+      initial="initial"
+      animate="animate"
+      variants={fadeInUp}
+      transition="all 0.3s ease-in-out"
+      {...props}
+    >
+      {children}
+    </MotionBox>
   );
 };

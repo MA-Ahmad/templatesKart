@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from 'react';
+import { useState, useEffect, ReactNode, PropsWithChildren } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -9,7 +9,8 @@ import {
   useColorModeValue,
   Box,
   Icon,
-  Flex
+  Flex,
+  BoxProps
 } from '@chakra-ui/react';
 import { useLinkColor, useHoverLinkColor } from 'components/theme';
 import { MotionBox } from 'components/shared/animations/motion';
@@ -19,6 +20,7 @@ import UnderlinedText from '../../shared/underlined-text';
 import { IconType } from 'react-icons';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaChevronRight } from 'react-icons/fa';
+import { fadeInUp } from 'components/shared/animations/framerAnimations';
 
 interface NavigationLinkProps {
   href: string;
@@ -43,8 +45,8 @@ const NavigationLink = ({
   return (
     <NextLink href={href} passHref>
       <Link
-        fontSize={'sm'}
-        rounded={'md'}
+        fontSize="sm"
+        rounded="md"
         px={3}
         py={1}
         bg={isActive ? linkColor : undefined}
@@ -99,27 +101,31 @@ export const Sidebar = (props: StackProps) => {
   }, [asPath]);
 
   return (
-    <Stack as={'nav'} spacing={6} maxW={{ md: '3xs' }} w={'full'} flexShrink={0} {...props}>
+    <Stack as="nav" spacing={6} maxW={{ md: '3xs' }} w={'full'} flexShrink={0} {...props}>
       {project && (
         <Stack key={project.id}>
           <NextLink href={`${project.id}`} passHref>
             <Link>
-              <MotionBox whileHover={{ translateX: 5 }}>
+              <CustomMotionBox whileHover={{ translateX: 5 }}>
                 <Text
-                  textTransform={'uppercase'}
+                  textTransform="uppercase"
                   color={categoryColor}
-                  fontWeight={'extrabold'}
-                  fontSize={'md'}
+                  fontWeight="extrabold"
+                  fontSize="md"
                   letterSpacing={1}
                 >
                   <UnderlinedText color={linkColor}>{project.name}</UnderlinedText>
                 </Text>
-              </MotionBox>
+              </CustomMotionBox>
             </Link>
           </NextLink>
-          <Stack spacing={1} mt={'1.5rem !important'}>
+          <Stack spacing={1} mt="1.5rem !important">
             {project.pages?.map((page) => (
-              <MotionBox key={page.id} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
+              <CustomMotionBox
+                key={page.id}
+                whileHover={{ translateX: 3 }}
+                _hover={{ shadow: 'sm' }}
+              >
                 <NavigationLink
                   asPath={asPath}
                   key={page.id}
@@ -129,10 +135,10 @@ export const Sidebar = (props: StackProps) => {
                 >
                   {page.name}
                 </NavigationLink>
-              </MotionBox>
+              </CustomMotionBox>
             ))}
             {project.themeCodeLink && (
-              <MotionBox whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
+              <CustomMotionBox whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
                 <NavigationLink
                   href={project.themeCodeLink}
                   icon={BiLinkExternal}
@@ -140,22 +146,24 @@ export const Sidebar = (props: StackProps) => {
                 >
                   Theme
                 </NavigationLink>
-              </MotionBox>
+              </CustomMotionBox>
             )}
           </Stack>
         </Stack>
       )}
       <Stack>
-        <Text
-          textTransform={'uppercase'}
-          color={categoryColor}
-          fontWeight={'extrabold'}
-          fontSize={'md'}
-          letterSpacing={1}
-        >
-          <UnderlinedText color={linkColor}>Other Projects</UnderlinedText>
-        </Text>
-        <Stack spacing={1} mt={'1.5rem !important'}>
+        <CustomMotionBox>
+          <Text
+            textTransform="uppercase"
+            color={categoryColor}
+            fontWeight="extrabold"
+            fontSize="md"
+            letterSpacing={1}
+          >
+            <UnderlinedText color={linkColor}>Other Projects</UnderlinedText>
+          </Text>
+        </CustomMotionBox>
+        <Stack spacing={1} mt="1.5rem !important">
           {project &&
             projects
               .filter((p) => p.id !== project.id)
@@ -168,14 +176,14 @@ export const Sidebar = (props: StackProps) => {
                       color: linkColor
                     }}
                   >
-                    <MotionBox whileHover={{ translateX: 5 }}>
+                    <CustomMotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
                         <Icon as={FaChevronRight} w={4} h={4} />
                         <Box as="span" fontSize="md" ml={3}>
                           <Text
-                            textTransform={'uppercase'}
-                            fontWeight={'semibold'}
-                            fontSize={'md'}
+                            textTransform="uppercase"
+                            fontWeight="semibold"
+                            fontSize="md"
                             letterSpacing={1}
                             _hover={{
                               color: linkColor
@@ -185,12 +193,31 @@ export const Sidebar = (props: StackProps) => {
                           </Text>
                         </Box>
                       </Flex>
-                    </MotionBox>
+                    </CustomMotionBox>
                   </Link>
                 </NextLink>
               ))}
         </Stack>
       </Stack>
     </Stack>
+  );
+};
+
+interface CustomMotionBoxProps extends BoxProps {
+  children: ReactNode;
+  whileHover?: any;
+}
+
+const CustomMotionBox = ({ children, ...props }: PropsWithChildren<CustomMotionBoxProps>) => {
+  return (
+    <MotionBox
+      initial="initial"
+      animate="animate"
+      variants={fadeInUp}
+      transition="all 0.3s ease-in-out"
+      {...props}
+    >
+      {children}
+    </MotionBox>
   );
 };

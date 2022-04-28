@@ -11,6 +11,8 @@ import { SEO_TITLE } from 'data/constants';
 import { SEO } from 'components/SEO';
 import fs from 'fs';
 import path from 'path';
+import PageLayout from 'components/layouts/pageLayout';
+import { PageSlideFade } from 'components/shared/animations/page-transitions';
 
 type PageProps = {
   project: Project;
@@ -38,32 +40,41 @@ const Templates: NextPage<PageProps> = ({ project, page, components, componentsF
   return (
     <ProjectLayout>
       <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
-      <Stack mb={5}>
-        <Link fontWeight="semibold" href={externalUrl()} _hover={{ color: linkColor }} isExternal>
-          <HStack spacing={2} alignItems="center">
-            <Heading size={'xl'}>{page ? page.name : project.name}</Heading>
-            <Icon as={BiLinkExternal} w={6} h={6} position="relative" top="0.125em" />
-          </HStack>
-        </Link>
-        {page?.description ? <Text color={'gray.600'}>{page.description}</Text> : null}
-      </Stack>
+      <PageLayout>
+        <PageSlideFade>
+          <Stack mb={5}>
+            <Link
+              fontWeight="semibold"
+              href={externalUrl()}
+              _hover={{ color: linkColor }}
+              isExternal
+            >
+              <HStack spacing={2} alignItems="center">
+                <Heading size={'xl'}>{page ? page.name : project.name}</Heading>
+                <Icon as={BiLinkExternal} w={6} h={6} position="relative" top="0.125em" />
+              </HStack>
+            </Link>
+            {page?.description ? <Text color={'gray.600'}>{page.description}</Text> : null}
+          </Stack>
 
-      <Stack spacing={12}>
-        {components?.length ? (
-          components?.map((component) => (
-            <ResizableContainer
-              key={component.filename}
-              component={component}
-              project={project}
-              page={page}
-              componentsFileList={componentsFileList}
-            />
-          ))
-        ) : (
-          <ResizableContainer project={project} page={page} componentsFileList={[]} />
-        )}
-      </Stack>
-      <ScrollToTop />
+          <Stack spacing={12}>
+            {components?.length ? (
+              components?.map((component) => (
+                <ResizableContainer
+                  key={component.filename}
+                  component={component}
+                  project={project}
+                  page={page}
+                  componentsFileList={componentsFileList}
+                />
+              ))
+            ) : (
+              <ResizableContainer project={project} page={page} componentsFileList={[]} />
+            )}
+          </Stack>
+          <ScrollToTop />
+        </PageSlideFade>
+      </PageLayout>
     </ProjectLayout>
   );
 };

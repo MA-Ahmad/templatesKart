@@ -7,7 +7,7 @@ interface AppLayoutProps {
   children: ReactNode;
 }
 
-function RootLayout({ children }: AppLayoutProps) {
+function AppLayout({ children }: AppLayoutProps) {
   return (
     <Fragment>
       <TopNav />
@@ -19,4 +19,4 @@ function RootLayout({ children }: AppLayoutProps) {
   );
 }
 
-export default RootLayout;
+export default AppLayout;

@@ -11,6 +11,8 @@ import { SEO_TITLE } from 'data/constants';
 import { SEO } from 'components/SEO';
 import fs from 'fs';
 import path from 'path';
+import PageLayout from 'components/layouts/pageLayout';
+import { PageSlideFade } from 'components/shared/animations/page-transitions';
 
 type PageProps = {
   component: ComponentContainer;
@@ -25,18 +27,27 @@ const Page: NextPage<PageProps> = ({ component, componentData }) => {
   return (
     <ComponentLayout>
       <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
-      <Stack mb={5}>
-        <HStack spacing={2} alignItems="center" fontWeight="semibold" _hover={{ color: linkColor }}>
-          <Heading size={'xl'}>{component.name}</Heading>
-        </HStack>
-      </Stack>
+      <PageLayout>
+        <PageSlideFade>
+          <Stack mb={5}>
+            <HStack
+              spacing={2}
+              alignItems="center"
+              fontWeight="semibold"
+              _hover={{ color: linkColor }}
+            >
+              <Heading size={'xl'}>{component.name}</Heading>
+            </HStack>
+          </Stack>
 
-      <Stack spacing={12}>
-        {component.data.map((c) => (
-          <ResizableContainer key={c.filename} component={c} componentData={componentData} />
-        ))}
-      </Stack>
-      <ScrollToTop />
+          <Stack spacing={12}>
+            {component.data.map((c) => (
+              <ResizableContainer key={c.filename} component={c} componentData={componentData} />
+            ))}
+          </Stack>
+          <ScrollToTop />
+        </PageSlideFade>
+      </PageLayout>
     </ComponentLayout>
   );
 };

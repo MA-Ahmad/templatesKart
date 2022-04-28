@@ -24,7 +24,7 @@ import { GITHUB_REPO_LINK } from 'data/constants';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const valuePageYOffset = 20;
+const valuePageYOffset = 10;
 
 const menuData = [
   {

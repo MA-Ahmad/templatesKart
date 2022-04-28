@@ -1,6 +1,6 @@
 import { Stack, Flex, Heading, Text, Button, Box } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import RootLayout from 'components/layouts/rootLayout';
+import AppLayout from 'components/layouts/appLayout';
 import { useLinkColor, useHoverLinkColor } from 'components/theme';
 
 export const NotFound = () => {
@@ -8,7 +8,7 @@ export const NotFound = () => {
   const hoverColor = useHoverLinkColor();
 
   return (
-    <RootLayout>
+    <AppLayout>
       <Flex align={'center'} justify={'center'} h={'calc(100vh - 16rem)'} w={'full'}>
         <Stack spacing={2}>
           <Heading size={'lg'} color="red.200">
@@ -31,7 +31,7 @@ export const NotFound = () => {
           </Box>
         </Stack>
       </Flex>
-    </RootLayout>
+    </AppLayout>
   );
 };
 
