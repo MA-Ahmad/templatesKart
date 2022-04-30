@@ -136,7 +136,7 @@ export default function Index() {
                         isSelectedTab(data.id) ? `linear(to-r, ${linkColor}, #1e4f7c)` : 'initial'
                       }
                       _hover={{
-                        bgGradient: `linear(to-l, ${linkColor}, #103e68)`,
+                        bgGradient: `linear(to-r, ${linkColor}, #1e4f7c)`,
                         color: 'white'
                       }}
                       onClick={() => handleClick(data.id)}
