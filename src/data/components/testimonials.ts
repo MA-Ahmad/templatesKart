@@ -10,6 +10,12 @@ const components_list: Component[] = [
   },
   {
     id: 'testimonials',
+    name: 'With dotted box',
+    filename: 'with-dotted-box',
+    isNewComponent: true
+  },
+  {
+    id: 'testimonials',
     name: 'Card with avatar',
     filename: 'avatar-card-horizontally',
     isNewComponent: true
