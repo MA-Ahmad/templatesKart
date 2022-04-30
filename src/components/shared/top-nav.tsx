@@ -24,7 +24,7 @@ import { GITHUB_REPO_LINK } from 'data/constants';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const valuePageYOffset = 10;
+const valuePageYOffset = 2;
 
 const menuData = [
   {
@@ -62,7 +62,7 @@ export default function TopNav() {
     <>
       <Box
         as="header"
-        transition="all 0.3s ease-in-out"
+        transition="all 0.1s ease-in-out"
         bg={{
           base: useColorModeValue('white', 'gray.800'),
           sm: isVisible ? useColorModeValue('white', 'gray.800') : 'inherit'
