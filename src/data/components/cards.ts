@@ -15,6 +15,12 @@ const components_list: Component[] = [
   },
   {
     id: 'cards',
+    name: 'Access course',
+    filename: 'access-course',
+    isNewComponent: true
+  },
+  {
+    id: 'cards',
     name: 'Github Repo With Image',
     filename: 'github-repo-image'
   },
