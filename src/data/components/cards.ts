@@ -4,6 +4,12 @@ import { BsCardText } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'cards',
+    name: 'User Card',
+    filename: 'user-card',
+    isNewComponent: true
+  },
+  {
+    id: 'cards',
     name: 'Product Cards',
     filename: 'product-img-card',
     isNewComponent: true

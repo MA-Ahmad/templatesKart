@@ -33,6 +33,7 @@ const components_list: Component[] = [
 export const stats: ComponentContainer = {
   id: 'stats',
   name: 'Stats',
+  hasAnyNewComponent: true,
   icon: BiStats,
   data: components_list
 };
