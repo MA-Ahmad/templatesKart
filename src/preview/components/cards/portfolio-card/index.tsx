@@ -6,7 +6,7 @@ const Card = () => {
   const bg = useColorModeValue('white', '#2f3244');
 
   return (
-    <Container maxW="7xl" py={10} px={10}>
+    <Container maxW="7xl" p={10}>
       <Center>
         <Box
           maxH="400px"

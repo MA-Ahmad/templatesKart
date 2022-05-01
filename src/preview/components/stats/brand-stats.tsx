@@ -32,7 +32,7 @@ const statData: StatData[] = [
 
 const BrandStats = () => {
   return (
-    <Container maxW="7xl" py={10} px={10}>
+    <Container maxW="7xl" p={10}>
       <Center>
         <Box textAlign="center">
           <Text fontWeight="extrabold" fontSize="x-large" mb={2}>

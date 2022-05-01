@@ -38,7 +38,7 @@ const places = [
 
 const Index = () => {
   return (
-    <Container maxW={'5xl'} py={10} px={10}>
+    <Container maxW={'5xl'} p={10}>
       <Heading
         as="h3"
         fontSize="1.5rem"

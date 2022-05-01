@@ -23,7 +23,7 @@ const testimonial: TestimonialAttributes = {
 
 const Testimonial = () => {
   return (
-    <Container maxW="5xl" py={10} px={10}>
+    <Container maxW="5xl" p={10}>
       <VStack
         spacing={3}
         p={{ base: 4, sm: 8 }}

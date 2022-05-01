@@ -21,7 +21,7 @@ import { ExternalFooterLink, InternalFooterLink, ExternalSocialLink } from './li
 
 const Footer = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW={'7xl'} p={10}>
       <SimpleGrid
         flexDirection="column-reverse"
         gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}

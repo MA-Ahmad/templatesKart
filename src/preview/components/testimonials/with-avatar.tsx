@@ -33,7 +33,7 @@ const testimonials: TestimonialAttributes[] = [
 
 const Testimonials = () => {
   return (
-    <Container maxW="5xl" py={10} px={10}>
+    <Container maxW="5xl" p={10}>
       <Flex justify="center" mb={8}>
         <chakra.h3 fontSize="3xl" fontWeight="bold" mb={3}>
           Testimonials
