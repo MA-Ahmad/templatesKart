@@ -12,7 +12,6 @@ type LazyImageProps = {
 
 const LazyImage = (props: LazyImageProps) => {
   const { src, width, height, size, layout, rounded } = props;
-  const placeholder = '/assets/images/placeholder.png';
 
   return (
     <Image
@@ -24,7 +23,6 @@ const LazyImage = (props: LazyImageProps) => {
       size={size}
       layout={layout}
       rounded={rounded}
-      fallbackSrc={placeholder}
     />
   );
 };
