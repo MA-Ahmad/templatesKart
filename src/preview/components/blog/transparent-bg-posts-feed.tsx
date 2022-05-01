@@ -44,32 +44,13 @@ const articles = [
 const Posts = () => {
   return (
     <Container p={10}>
-      <chakra.h1
-        p={4}
-        mb={5}
-        _hover={{ color: 'blue.400' }}
-        fontSize="3xl"
-        lineHeight={1.2}
-        fontWeight="bold"
-        w="100%"
-      >
+      <chakra.h1 p={4} mb={5} fontSize="3xl" lineHeight={1.2} fontWeight="bold" w="100%">
         Posts
       </chakra.h1>
       <VStack spacing={8} w={{ base: 'auto', md: '2xl' }}>
         {articles.map((article, index) => (
           <Fragment key={index}>
-            <Stack
-              direction="column"
-              spacing={4}
-              p={4}
-              // _hover={{
-              //   borderColor: 'blue.300',
-              //   boxShadow: useColorModeValue(
-              //     '0 4px 6px rgba(160, 174, 192, 0.6)',
-              //     '0 4px 6px rgba(9, 17, 28, 0.9)'
-              //   )
-              // }}
-            >
+            <Stack direction="column" spacing={4} p={4}>
               <HStack spacing={2} mb={1}>
                 {article.tags.map((cat) => (
                   <Tag colorScheme={useColorModeValue('blackAlpha', 'gray')} borderRadius="full">
