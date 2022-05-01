@@ -47,7 +47,7 @@ const BlogCards = () => {
             key={index}
             direction="column"
             spacing={4}
-            p={{ base: 3, sm: 4 }}
+            p={4}
             bg={useColorModeValue('gray.100', 'gray.800')}
             border="1px solid"
             borderColor="blue.100"
