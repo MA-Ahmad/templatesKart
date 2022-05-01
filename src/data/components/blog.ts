@@ -4,6 +4,12 @@ import { FaBlogger } from 'react-icons/fa';
 const components_list: Component[] = [
   {
     id: 'blog',
+    name: 'With border',
+    filename: 'with-border',
+    isNewComponent: true
+  },
+  {
+    id: 'blog',
     name: 'Transparent bg',
     filename: 'transparent-background',
     isNewComponent: true
