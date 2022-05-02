@@ -10,6 +10,12 @@ const components_list: Component[] = [
   },
   {
     id: 'heroes',
+    name: 'Left align content',
+    filename: 'left-align',
+    isNewComponent: true
+  },
+  {
+    id: 'heroes',
     name: 'Simply Centered',
     filename: 'simply-centered',
     isNewComponent: true
