@@ -15,7 +15,7 @@ import {
 
 const ProductIntro = () => {
   return (
-    <Container maxW="5xl" px={{ base: 6, md: 3 }} py={6}>
+    <Container maxW="5xl" px={{ base: 6, md: 3 }} py={10}>
       <Stack direction={{ base: 'column-reverse', md: 'row' }}>
         <Stack direction="column" spacing={6}>
           <Heading
