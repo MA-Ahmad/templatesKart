@@ -17,7 +17,7 @@ import {
 const ProductIntro = () => {
   return (
     <Container maxW="7xl" px={{ base: 6, md: 3 }} py={6}>
-      <Flex spacing={4}>
+      <Flex>
         <Stack direction="column" spacing={6}>
           <Heading as="h3" size="lg" fontWeight="bold" textAlign="left">
             The only eCommerce platform you’ll ever need.
@@ -29,8 +29,8 @@ const ProductIntro = () => {
             lineHeight="1.375"
             fontWeight="300"
           >
-            Build, customize and scale your store with no limits or license fees. Solidus is the
-            free, open-source eCommerce framework for digitally-native brands, fast-growing online
+            Build, customize and scale your store with no limits or license fees. Abc is the free,
+            open-source eCommerce framework for digitally-native brands, fast-growing online
             businesses and pragmatic developers.
           </Text>
           <HStack spacing={5}>
@@ -77,8 +77,9 @@ const ProductIntro = () => {
           <Image
             w="100%"
             h="100%"
+            minW="30rem"
             objectFit="cover"
-            src="/assets/images/projects/airbnb/airbnb-home.jpg"
+            src="https://images.unsplash.com/photo-1625948515291-69613efd103f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80"
             rounded="md"
             fallback={<Skeleton />}
           />

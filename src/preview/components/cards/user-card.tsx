@@ -73,7 +73,7 @@ const UserCard = () => {
         </Text>
         <Divider />
         <Text fontSize="md" color="gray.500">
-          Sports lover ⚽️, exercise addict and lifelong learner 👨🏻‍💻
+          Sports lover ⚽️, exercise addict 🏋 and lifelong learner 👨🏻‍💻
         </Text>
       </Stack>
     </Container>
