@@ -9,6 +9,7 @@ const OfflineData = () => {
       <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
         {repositoriesList().map((repo, index) => (
           <RepositoryCard
+            key={index}
             title={repo.title}
             description={repo.description}
             cover={repo.cover}

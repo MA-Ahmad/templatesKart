@@ -78,8 +78,8 @@ export const Sidebar = (props: StackProps) => {
           </NextLink>
           {/* TODO: Improve Component Sidebar UI */}
           <Stack spacing={1} mt={'1.5rem !important'}>
-            {component.data.map((c) => (
-              <CustomMotionBox key={c.id} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
+            {component.data.map((c, index) => (
+              <CustomMotionBox key={index} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
                 <Box
                   fontSize={'sm'}
                   rounded={'md'}

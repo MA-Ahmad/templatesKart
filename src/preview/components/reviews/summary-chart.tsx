@@ -57,10 +57,10 @@ const SimpleReview = () => {
             <HStack spacing={3}>
               <Flex alignItems="center" justify="start">
                 {Array.from(Array(4).keys()).map((id) => {
-                  return <Star fillColor="#EACA4E" />;
+                  return <Star key={id} fillColor="#EACA4E" />;
                 })}
                 {Array.from(Array(5 - 4).keys()).map((id) => {
-                  return <Star fillColor="#e2e8f0" />;
+                  return <Star key={id} fillColor="#e2e8f0" />;
                 })}
               </Flex>
               <Text fontWeight="bold" fontSize="lg">
@@ -101,8 +101,8 @@ const SimpleReview = () => {
         <Stack direction="column" spacing={5}>
           {reviewData.map((review, index) => {
             return (
-              <Box maxW="2xl">
-                <HStack key={index} spacing={3} mb={2}>
+              <Box key={index} maxW="2xl">
+                <HStack spacing={3} mb={2}>
                   <Avatar size="md" name={review.userName} src={review.avatarSrc} />
                   <Stack direction="column" spacing={2}>
                     <Text fontWeight="bold" fontSize="md">
@@ -110,10 +110,10 @@ const SimpleReview = () => {
                     </Text>
                     <Flex alignItems="center" justify="start">
                       {Array.from(Array(review.stars).keys()).map((id) => {
-                        return <Star fillColor="#EACA4E" />;
+                        return <Star key={id} fillColor="#EACA4E" />;
                       })}
                       {Array.from(Array(5 - review.stars).keys()).map((id) => {
-                        return <Star fillColor="#e2e8f0" />;
+                        return <Star key={id} fillColor="#e2e8f0" />;
                       })}
                     </Flex>
                   </Stack>

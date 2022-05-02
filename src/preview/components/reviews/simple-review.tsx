@@ -47,8 +47,8 @@ const SimpleReview = () => {
       <Stack direction="column" spacing={5} my={4}>
         {reviewData.map((review, index) => {
           return (
-            <Stack direction="column" maxW="2xl">
-              <HStack key={index} spacing={3}>
+            <Stack key={index} direction="column" maxW="2xl">
+              <HStack spacing={3}>
                 <Avatar size="md" name={review.userName} src={review.avatarSrc} />
                 <Flex direction="column">
                   <Text fontWeight="bold" fontSize="md">
@@ -61,10 +61,10 @@ const SimpleReview = () => {
               </HStack>
               <Flex my={3} alignItems="center" justify="start">
                 {Array.from(Array(review.stars).keys()).map((id) => {
-                  return <Star fillColor="#EACA4E" />;
+                  return <Star key={id} fillColor="#EACA4E" />;
                 })}
                 {Array.from(Array(5 - review.stars).keys()).map((id) => {
-                  return <Star fillColor="#e2e8f0" />;
+                  return <Star key={id} fillColor="#e2e8f0" />;
                 })}
               </Flex>
               <Text
