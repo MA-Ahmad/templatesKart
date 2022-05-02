@@ -91,8 +91,8 @@ const ProjectCard = () => {
                         {title}
                       </Text>
                       <HStack spacing="1">
-                        {technologies.map((tech) => (
-                          <Tag size="sm" colorScheme="gray">
+                        {technologies.map((tech, index) => (
+                          <Tag key={index} size="sm" colorScheme="gray">
                             {tech}
                           </Tag>
                         ))}
