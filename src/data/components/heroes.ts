@@ -4,6 +4,12 @@ import { BsCardHeading } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'heroes',
+    name: 'Simply Centered',
+    filename: 'simply-centered',
+    isNewComponent: true
+  },
+  {
+    id: 'heroes',
     name: 'Product Intro',
     filename: 'product-intro'
   },
@@ -22,6 +28,7 @@ const components_list: Component[] = [
 export const heroes: ComponentContainer = {
   id: 'heroes',
   name: 'Heroes',
+  hasAnyNewComponent: true,
   icon: BsCardHeading,
   data: components_list
 };
