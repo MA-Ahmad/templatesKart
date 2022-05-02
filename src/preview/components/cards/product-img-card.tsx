@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, Fragment } from 'react';
 import {
   chakra,
   Box,
@@ -55,8 +55,9 @@ const Index = () => {
   return (
     <Container maxW="7xl" p="12" margin="0 auto">
       <VStack spacing={4}>
-        {productsList.map((product) => (
+        {productsList.map((product, index) => (
           <Stack
+            key={index}
             spacing={{ base: 0, md: 4 }}
             direction={{ base: 'column', md: 'row' }}
             border="1px solid"
@@ -108,14 +109,14 @@ const Index = () => {
               </Box>
               <Flex alignItems="center" color="gray.500">
                 {product.detail.map((data, index) => (
-                  <>
+                  <Fragment key={index}>
                     <Text fontSize={{ base: 'sm', sm: 'md' }}>{data}</Text>
                     {product.detail.length - 1 != index && (
                       <chakra.span mx={2} fontSize={{ base: 'sm', sm: 'md' }}>
                         |
                       </chakra.span>
                     )}
-                  </>
+                  </Fragment>
                 ))}
               </Flex>
               <Stack
@@ -144,11 +145,7 @@ const Index = () => {
   );
 };
 
-interface IconButtonProps extends StackProps {
-  children: React.ReactNode;
-}
-
-const IconButton = ({ children, ...props }: PropsWithChildren<IconButtonProps>) => {
+const IconButton = ({ children, ...props }: PropsWithChildren<StackProps>) => {
   return (
     <HStack
       cursor="pointer"

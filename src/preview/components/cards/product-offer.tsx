@@ -41,8 +41,8 @@ const Index = () => {
             {data.subHeading}
           </chakra.h1>
           <List spacing={3}>
-            {data.features.map((feature) => (
-              <ListItem>
+            {data.features.map((feature, index) => (
+              <ListItem key={index}>
                 <ListIcon as={BsCheck} color="green.700" />
                 {feature}
               </ListItem>
