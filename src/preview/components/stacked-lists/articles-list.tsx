@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Fragment } from 'react';
 import {
   Container,
   Box,
@@ -71,7 +71,7 @@ const Articles = () => {
       </Flex>
       <VStack border="1px solid" borderColor="gray.400" rounded="md" overflow="hidden" spacing={0}>
         {articles.map((article, index) => (
-          <>
+          <Fragment key={index}>
             <Grid
               templateRows={{ base: 'auto auto', md: 'auto' }}
               w="100%"
@@ -117,7 +117,7 @@ const Articles = () => {
               </Stack>
             </Grid>
             {articles.length - 1 !== index && <Divider m={0} />}
-          </>
+          </Fragment>
         ))}
       </VStack>
     </Container>

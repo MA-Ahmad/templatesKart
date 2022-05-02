@@ -49,8 +49,8 @@ const ProductIntro = () => {
             </Box>
           </HStack>
           <HStack spacing={5}>
-            {['100% Free', 'Open Source'].map((text) => (
-              <HStack spacing={2}>
+            {['100% Free', 'Open Source'].map((text, index) => (
+              <HStack spacing={2} key={index}>
                 <svg
                   width="18"
                   height="18"

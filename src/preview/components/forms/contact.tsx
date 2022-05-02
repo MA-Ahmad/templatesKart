@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Fragment } from 'react';
 import {
   Container,
   FormControl,
@@ -56,7 +56,7 @@ const Contact = () => {
           justify="space-between"
         >
           {contactOptions.map((option, index) => (
-            <>
+            <Fragment key={index}>
               <Stack spacing={3} direction="column" justify="center" alignItems="center" px={3}>
                 <Icon as={option.icon} w={10} h={10} color="green.400" />
                 <Text fontSize="lg" fontWeight="semibold">
@@ -71,7 +71,7 @@ const Contact = () => {
                   <Divider orientation="vertical" />
                 </Flex>
               )}
-            </>
+            </Fragment>
           ))}
         </Stack>
         <VStack

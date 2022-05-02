@@ -29,7 +29,7 @@ const BlogCards = () => {
         {dataList.map((blog) => {
           return (
             <Box position="relative" key={blog.id}>
-              <Box as="span" fontSize="sm" position="absolute" right="5px" margin="5px" zIndex="1">
+              <Box fontSize="sm" position="absolute" right="5px" margin="5px" zIndex="1">
                 <Badge rounded="full" p="2px 8px" colorScheme="red" as="button">
                   Delete
                 </Badge>
@@ -56,22 +56,22 @@ const BlogCards = () => {
                       </Box>
                     </Box>
                     <Box>
-                      <Box as="span" color="gray.600" fontSize="sm">
+                      <Box color="gray.600" fontSize="sm">
                         <Badge rounded="full" px="2" colorScheme="teal">
                           {blog.authorName}
                         </Badge>
                       </Box>
                     </Box>
-                    <Box
+                    <Text
                       mt="1"
                       fontWeight="semibold"
-                      as="p"
+                      noOfLines={3}
                       lineHeight="tight"
                       color="gray.600"
                       fontSize="sm"
                     >
-                      <Text noOfLines={3}>{blog.content}</Text>
-                    </Box>
+                      {blog.content}
+                    </Text>
                   </Box>
                 </Box>
               </Link>

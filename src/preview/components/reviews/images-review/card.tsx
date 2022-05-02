@@ -19,7 +19,7 @@ const Card = ({ imageSrc, avatarSrc, review, name, country }: CardProps) => {
       <Image alt="header image" src={imageSrc} objectFit="cover" borderRadius="0.25rem" w="100%" />
       <Flex my={3} alignItems="center" justify="start">
         {Array.from(Array(4).keys()).map((id) => {
-          return <Star />;
+          return <Star key={id} />;
         })}
       </Flex>
       <Text

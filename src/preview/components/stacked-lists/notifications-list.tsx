@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Fragment } from 'react';
 import {
   Container,
   Flex,
@@ -60,7 +60,7 @@ const NotificationsList = () => {
         spacing={0}
       >
         {notifications.map((notification, index) => (
-          <>
+          <Fragment key={index}>
             <Flex w="100%" justify="space-between" alignItems="center">
               <Stack spacing={0} direction="row" alignItems="center">
                 <Flex p={4}>
@@ -87,7 +87,7 @@ const NotificationsList = () => {
               )}
             </Flex>
             {notifications.length - 1 !== index && <Divider m={0} />}
-          </>
+          </Fragment>
         ))}
       </VStack>
     </Container>
