@@ -11,7 +11,9 @@ import {
   HStack,
   useColorModeValue
 } from '@chakra-ui/react';
+// Here we have used framer-motion package for animations
 import { motion } from 'framer-motion';
+// Here we have used react-icons package for the icons
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BiEdit } from 'react-icons/bi';
 
@@ -33,12 +35,12 @@ const Card = ({ note }: Note) => {
       <motion.div whileHover={{ y: -10 }} layoutId={note.id}>
         <Center py={2} px={2} key={note.id}>
           <Box
-            maxH={'400px'}
+            maxH="400px"
             w="100%"
-            boxShadow={'md'}
-            rounded={'md'}
+            boxShadow="md"
+            rounded="md"
             p={6}
-            overflow={'hidden'}
+            overflow="hidden"
             cursor="pointer"
             bg={bg}
             role="group"
@@ -51,10 +53,10 @@ const Card = ({ note }: Note) => {
               >
                 <Box>
                   <Text
-                    color={'green.500'}
-                    textTransform={'uppercase'}
+                    color="green.500"
+                    textTransform="uppercase"
                     fontWeight={800}
-                    fontSize={'sm'}
+                    fontSize="sm"
                     letterSpacing={1.1}
                   >
                     Note
@@ -63,7 +65,7 @@ const Card = ({ note }: Note) => {
                 <Box _groupHover={{ display: 'block' }} display="none">
                   <HStack spacing="2">
                     <Icon
-                      color={'green.500'}
+                      color="green.500"
                       _hover={{ color: 'green.600' }}
                       _groupHover={{ display: 'block' }}
                       as={BiEdit}
@@ -71,7 +73,7 @@ const Card = ({ note }: Note) => {
                       h={4}
                     />
                     <Icon
-                      color={'green.500'}
+                      color="green.500"
                       _hover={{ color: '#ca364a' }}
                       _groupHover={{ display: 'block' }}
                       as={AiOutlineDelete}
@@ -81,11 +83,11 @@ const Card = ({ note }: Note) => {
                   </HStack>
                 </Box>
               </Flex>
-              <Heading fontSize={'xl'} fontFamily={'body'} textTransform="capitalize" noOfLines={2}>
+              <Heading fontSize="xl" fontFamily="body" textTransform="capitalize" noOfLines={2}>
                 {note.title}
               </Heading>
 
-              <Text color={'gray.500'} fontSize="md" noOfLines={{ base: 3, md: 4 }}>
+              <Text color="gray.500" fontSize="md" noOfLines={{ base: 3, md: 4 }}>
                 {note.body}
               </Text>
             </Stack>

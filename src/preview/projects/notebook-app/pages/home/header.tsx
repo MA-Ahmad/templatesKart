@@ -7,6 +7,7 @@ import {
   Spacer,
   Heading,
   Menu,
+  Link,
   MenuItem,
   MenuDivider,
   MenuButton,
@@ -17,21 +18,22 @@ import {
   useDisclosure,
   useColorModeValue
 } from '@chakra-ui/react';
-import Link from 'next/link';
+// Here we have used react-icons package for the icons
 import { MdAdd } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { FiSun } from 'react-icons/fi';
+// Here we have used framer-motion package for animations
 import { motion } from 'framer-motion';
 
 const Header = () => {
   const { onOpen } = useDisclosure();
 
   return (
-    <Container maxW={'7xl'} p={10}>
+    <Container maxW="7xl" p={10}>
       <Flex mb={'30px'} align="center">
         <HStack>
-          <Link href="#" passHref>
+          <Link href="#">
             <Box p="2">
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Heading

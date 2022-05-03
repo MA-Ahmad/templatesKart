@@ -16,12 +16,13 @@ import {
 } from '@chakra-ui/react';
 import { siteConfig } from './site-config';
 import FooterSignup from './signup';
-import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
 import { ExternalFooterLink, InternalFooterLink, ExternalSocialLink } from './links';
+// Here we have used react-icons package for the icons
+import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <Container maxW={'7xl'} p={10}>
+    <Container maxW="7xl" p={10}>
       <SimpleGrid
         flexDirection="column-reverse"
         gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}
@@ -37,10 +38,10 @@ const Footer = () => {
           <SimpleGrid columns={[1, 1, 2, 2]}>
             <Stack mb={['10px', '10px', 0, 0]}>
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Contact us" />
+                <ExternalFooterLink href="#" text="Contact us" />
               </Text>
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Contribute" />
+                <ExternalFooterLink href="#" text="Contribute" />
               </Text>
               <Text as="span">
                 <InternalFooterLink href="#" text="Open source projects" />
@@ -111,10 +112,10 @@ const Footer = () => {
               </Text>
 
               <Text as="span">
-                <ExternalFooterLink href={'#'} text="Sponsor" />
+                <ExternalFooterLink href="#" text="Sponsor" />
               </Text>
               <Text as="span">
-                <ExternalFooterLink href={'#'} isExternal={false} text="FAQs" />
+                <ExternalFooterLink href="#" isExternal={false} text="FAQs" />
               </Text>
             </Stack>
           </SimpleGrid>
@@ -125,7 +126,7 @@ const Footer = () => {
               target="_blank"
               href={siteConfig.author.github}
               fontWeight={600}
-              color={'gray.400'}
+              color="gray.400"
               bgClip="text"
               bgGradient="linear(to-l, #7928CA,#FF0080)"
               _hover={{

@@ -11,6 +11,7 @@ import {
   Image,
   useColorModeValue
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { BsHeart } from 'react-icons/bs';
 import { FaRegComment } from 'react-icons/fa';
 

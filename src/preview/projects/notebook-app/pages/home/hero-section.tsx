@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Container, Heading, Text, Flex, SlideFade } from '@chakra-ui/react';
+import { Container, Heading, Text, SlideFade } from '@chakra-ui/react';
+// Here we have used framer-motion package for animations
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
-    <Container maxW={'5xl'} py={24} mx="auto">
+    <Container maxW="5xl" py={24} mx="auto">
       <SlideFade in={true} offsetY="50vh">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Heading

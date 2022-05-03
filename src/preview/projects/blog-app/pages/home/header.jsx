@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Heading, Flex, Button, Link, useColorModeValue } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { FaGithub } from 'react-icons/fa';
 
 const Header = () => {
