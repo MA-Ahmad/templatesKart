@@ -148,6 +148,7 @@ const HeroSection = () => {
                 borderColor="gray.700"
                 justify="center"
                 p={3}
+                px={4}
                 lineHeight={1.18}
                 rounded="md"
                 boxShadow="md"
@@ -156,7 +157,7 @@ const HeroSection = () => {
                 as={Link}
               >
                 <Icon as={FaGithub} h={4} w={4} />
-                <chakra.span ml={1}> Watch Video</chakra.span>
+                <chakra.span ml={1}> Github</chakra.span>
               </Flex>
             </Stack>
           </Stack>

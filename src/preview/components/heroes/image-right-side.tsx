@@ -25,18 +25,18 @@ const HeroSection = () => {
           <HStack
             as={Link}
             p={1}
-            bg={useColorModeValue('gray.300', 'gray.700')}
             rounded="full"
             fontSize="sm"
             w="max-content"
+            bg={useColorModeValue('gray.300', 'gray.700')}
           >
             <Box
               py={1}
               px={2}
               lineHeight={1}
               rounded="full"
-              bgGradient="linear(to-l, #0ea5e9,#2563eb)"
               color="white"
+              bgGradient="linear(to-l, #0ea5e9,#2563eb)"
             >
               What's new
             </Box>
@@ -50,25 +50,26 @@ const HeroSection = () => {
             <chakra.span color="teal">in ChakraUI</chakra.span>
           </chakra.h1>
           <Text
-            color={useColorModeValue('gray.500', 'gray.400')}
             fontSize="1.2rem"
             textAlign="left"
             lineHeight="1.375"
             fontWeight="400"
+            color={useColorModeValue('gray.500', 'gray.400')}
           >
             TemplatesKart provides the best ChakraUI templates. Focus on your business, not on the
             boilerplate.
           </Text>
           <HStack spacing={{ base: 0, sm: 2 }} flexWrap="wrap">
             <Button
-              bgGradient="linear(to-l, #0ea5e9,#2563eb)"
               color="white"
-              _hover={{ bgGradient: 'linear(to-l, #0ea5e9,#2563eb)' }}
               variant="solid"
               size="lg"
               rounded="md"
               mb={{ base: 2, sm: 0 }}
               zIndex={5}
+              lineHeight={1}
+              bgGradient="linear(to-l, #0ea5e9,#2563eb)"
+              _hover={{ bgGradient: 'linear(to-l, #0ea5e9,#2563eb)' }}
             >
               <chakra.span> Explore ComponentsKart </chakra.span>
               <Icon as={MdBolt} h={4} w={4} ml={1} />
@@ -106,7 +107,7 @@ const HeroSection = () => {
 
 function DottedBox() {
   return (
-    <Box position="absolute" left="-22px" top="-30px" height="full" maxW="700px" zIndex={-1}>
+    <Box position="absolute" left="-45px" top="-30px" height="full" maxW="700px" zIndex={-1}>
       <svg
         color={useColorModeValue('rgba(55,65,81, 0.1)', 'rgba(55,65,81, 0.7)')}
         width="350"
