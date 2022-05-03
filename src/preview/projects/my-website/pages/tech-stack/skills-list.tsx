@@ -9,10 +9,10 @@ import {
   useColorModeValue,
   Container
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { AiTwotoneThunderbolt, AiOutlineCloudServer } from 'react-icons/ai';
 import { BiDesktop } from 'react-icons/bi';
 import { GiSpiderWeb } from 'react-icons/gi';
-import { useLinkColor } from 'components/theme';
 
 const tabList = [
   {
@@ -38,8 +38,6 @@ const tabList = [
 ];
 
 const SkillsList = () => {
-  const bgColor = useLinkColor();
-
   return (
     <Container maxW={'7xl'} p="0" pt={16} pb={16}>
       <Tabs variant="soft-rounded" colorScheme="blue" align="center" w="100%">
@@ -50,7 +48,7 @@ const SkillsList = () => {
               color={useColorModeValue('gray.600', 'gray.500')}
               _selected={{
                 color: 'white',
-                bg: bgColor
+                bg: 'teal'
               }}
               mr={2}
               mt={2}

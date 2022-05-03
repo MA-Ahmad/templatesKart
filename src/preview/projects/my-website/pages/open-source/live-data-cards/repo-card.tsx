@@ -10,8 +10,9 @@ import {
   Flex,
   Tooltip
 } from '@chakra-ui/react';
-import { MotionBox } from 'components/shared/animations/motion';
-import { getTagColor, useLinkColor } from 'components/theme';
+// Here we have used framer-motion package for animations
+import { motion } from 'framer-motion';
+// Here we have used react-icons package for the icons
 import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 import { FiGithub } from 'react-icons/fi';
 
@@ -25,7 +26,6 @@ interface RepositoryCardProps {
 }
 const RepositoryCard = (props: RepositoryCardProps) => {
   const { title, description, language, url, stargazers_count, forks_count } = props;
-  const linkColor = useLinkColor();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>, link: string) => {
     window.open(link);
@@ -33,7 +33,7 @@ const RepositoryCard = (props: RepositoryCardProps) => {
   };
 
   return (
-    <MotionBox whileHover={{ y: -5 }}>
+    <motion.div whileHover={{ y: -5 }}>
       <Box
         size="xl"
         py={2}
@@ -58,7 +58,7 @@ const RepositoryCard = (props: RepositoryCardProps) => {
               <Tooltip hasArrow label="Github link" placement="top">
                 <HStack cursor={'pointer'}>
                   <Icon as={FiGithub} boxSize="0.9em" mt={'1px'} />
-                  <Text fontSize="sm" noOfLines={1} fontWeight="600" align="left" color={linkColor}>
+                  <Text fontSize="sm" noOfLines={1} fontWeight="600" align="left" color="blue.400">
                     {title}
                   </Text>
                 </HStack>
@@ -99,8 +99,33 @@ const RepositoryCard = (props: RepositoryCardProps) => {
           </Box>{' '}
         </VStack>
       </Box>
-    </MotionBox>
+    </motion.div>
   );
+};
+
+const getTagColor = (type: string) => {
+  type = type.toLowerCase();
+  switch (type) {
+    case 'ruby':
+    case 'rails': {
+      return 'red';
+    }
+    case 'react': {
+      return 'cyan';
+    }
+    case 'javascript': {
+      return 'yellow';
+    }
+    case 'typescript':
+    case 'tailwindcss':
+    case 'nextjs': {
+      return 'blue';
+    }
+    case 'chakraui':
+    case 'css': {
+      return 'teal';
+    }
+  }
 };
 
 export default RepositoryCard;

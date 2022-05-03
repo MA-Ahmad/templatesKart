@@ -10,10 +10,9 @@ import {
   SimpleGrid,
   Container
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { useLinkColor } from 'components/theme';
-import { MotionBox, CardTransition } from './motion';
 import { CommentIcon, HeartIcon } from './icons';
+// Here we have used framer-motion package for animations
+import { motion } from 'framer-motion';
 
 const BASE_URL = 'https://mahmad.me';
 
@@ -37,11 +36,10 @@ const posts = [
 ];
 
 const FeaturedArticles = () => {
-  const linkColor = useLinkColor();
   const textColor = useColorModeValue('gray.500', 'gray.200');
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <VStack align="start" spacing={8} width="100%">
         <SimpleGrid columns={1} spacing={4} w="100%">
           {posts &&
@@ -57,61 +55,25 @@ const FeaturedArticles = () => {
                 },
                 i
               ) => (
-                <MotionBox whileHover={{ y: -5 }} key={i}>
-                  <CardTransition>
-                    <VStack
-                      spacing={1}
-                      p={4}
-                      _hover={{ shadow: 'md', textDecoration: 'none' }}
-                      borderWidth="1px"
-                      position="relative"
-                      rounded="md"
-                      bg={useColorModeValue('white', 'gray.800')}
-                      align="left"
-                    >
-                      <HStack justifyContent="space-between" isInline>
-                        <Heading fontSize="lg" align="left" mt={0}>
-                          <NextLink href={`${BASE_URL}/blog/${slug}`} passHref>
-                            <Text as={Link} color={linkColor}>
-                              {title}
-                            </Text>
-                          </NextLink>
-                        </Heading>
-                        <HStack spacing={2} isInline d={['none', 'flex', 'flex']}>
-                          <Flex alignItems="center">
-                            <Text
-                              fontSize="sm"
-                              noOfLines={1}
-                              fontWeight="400"
-                              align="left"
-                              color={textColor}
-                            >
-                              {positive_reactions_count}
-                            </Text>
-                            &nbsp;
-                            <HeartIcon />
-                          </Flex>
-
-                          <Flex alignItems="center">
-                            <Text
-                              fontSize="sm"
-                              noOfLines={1}
-                              fontWeight="400"
-                              align="left"
-                              color={textColor}
-                            >
-                              {comments_count}
-                            </Text>
-                            &nbsp;
-                            <CommentIcon />
-                          </Flex>
-                        </HStack>
-                      </HStack>
-                      <HStack spacing={2} isInline>
-                        <Text fontSize="sm" fontWeight="600" color={textColor}>
-                          {published_at}
+                <motion.div whileHover={{ y: -5 }} key={i}>
+                  <VStack
+                    spacing={1}
+                    p={4}
+                    _hover={{ shadow: 'md', textDecoration: 'none' }}
+                    borderWidth="1px"
+                    position="relative"
+                    rounded="md"
+                    bg={useColorModeValue('white', 'gray.800')}
+                    align="left"
+                  >
+                    <HStack justifyContent="space-between" isInline>
+                      <Heading fontSize="lg" align="left" mt={0}>
+                        <Text as={Link} href="#" color="blue.400">
+                          {title}
                         </Text>
-                        <Flex alignItems="center" d={['flex', 'none', 'none']}>
+                      </Heading>
+                      <HStack spacing={2} isInline d={['none', 'flex', 'flex']}>
+                        <Flex alignItems="center">
                           <Text
                             fontSize="sm"
                             noOfLines={1}
@@ -125,7 +87,7 @@ const FeaturedArticles = () => {
                           <HeartIcon />
                         </Flex>
 
-                        <Flex alignItems="center" d={['flex', 'none', 'none']}>
+                        <Flex alignItems="center">
                           <Text
                             fontSize="sm"
                             noOfLines={1}
@@ -139,12 +101,44 @@ const FeaturedArticles = () => {
                           <CommentIcon />
                         </Flex>
                       </HStack>
-                      <Text align="left" fontSize="md" noOfLines={1} color={textColor}>
-                        {description}
+                    </HStack>
+                    <HStack spacing={2} isInline>
+                      <Text fontSize="sm" fontWeight="600" color={textColor}>
+                        {published_at}
                       </Text>
-                    </VStack>
-                  </CardTransition>
-                </MotionBox>
+                      <Flex alignItems="center" d={['flex', 'none', 'none']}>
+                        <Text
+                          fontSize="sm"
+                          noOfLines={1}
+                          fontWeight="400"
+                          align="left"
+                          color={textColor}
+                        >
+                          {positive_reactions_count}
+                        </Text>
+                        &nbsp;
+                        <HeartIcon />
+                      </Flex>
+
+                      <Flex alignItems="center" d={['flex', 'none', 'none']}>
+                        <Text
+                          fontSize="sm"
+                          noOfLines={1}
+                          fontWeight="400"
+                          align="left"
+                          color={textColor}
+                        >
+                          {comments_count}
+                        </Text>
+                        &nbsp;
+                        <CommentIcon />
+                      </Flex>
+                    </HStack>
+                    <Text align="left" fontSize="md" noOfLines={1} color={textColor}>
+                      {description}
+                    </Text>
+                  </VStack>
+                </motion.div>
               )
             )}
         </SimpleGrid>

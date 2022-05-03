@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useMediaQuery, Container } from '@chakra-ui/react';
-import StackGrid from 'react-stack-grid';
 import RepositoryCard from './repo-card';
 import repositoriesList from './repos-list';
+// Here we have used react-stack-grid package for stack display
+import StackGrid from 'react-stack-grid';
 
 const LiveData = () => {
   const [isLargerThan720] = useMediaQuery('(min-width: 720px)');
@@ -18,7 +19,7 @@ const LiveData = () => {
   }
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <StackGrid columnWidth={!isLargerThan982 && !isLargerThan720 ? '100%' : columnWidth}>
         {repositoriesList()?.map((repo, index) => (
           <RepositoryCard

@@ -8,8 +8,6 @@ import {
   ListItem,
   useColorModeValue
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { useLinkColor } from 'components/theme';
 
 const newContent = [
   {
@@ -25,17 +23,15 @@ const newContent = [
 ];
 
 const ContentBox = () => {
-  const linkColor = useLinkColor();
-
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW="7xl" p="12">
       <Stack
         mx={[0, 0, 10]}
         padding={4}
         align="start"
         borderLeft="4px solid"
-        borderColor={linkColor}
-        color={'whatsapp'}
+        borderColor="blue.400"
+        color="whatsapp"
         _hover={{ shadow: 'lg' }}
         backgroundColor={useColorModeValue('gray.100', '#1e2533')}
         rounded="sm"
@@ -55,16 +51,14 @@ const ContentBox = () => {
         <UnorderedList textAlign="left" paddingLeft={5} m={0}>
           {newContent.map((content, index) => (
             <ListItem key={index}>
-              <NextLink href={content.link} passHref>
-                <Link color={linkColor}>
-                  {content.text}
-                  {content.showNewTag && (
-                    <Badge ml="1" colorScheme="green">
-                      New
-                    </Badge>
-                  )}
-                </Link>
-              </NextLink>
+              <Link href="#" color="blue.400">
+                {content.text}
+                {content.showNewTag && (
+                  <Badge ml="1" colorScheme="green">
+                    New
+                  </Badge>
+                )}
+              </Link>
             </ListItem>
           ))}
         </UnorderedList>
