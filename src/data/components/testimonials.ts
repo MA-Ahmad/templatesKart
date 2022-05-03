@@ -4,7 +4,7 @@ import { BsChatSquareQuote } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'testimonials',
-    name: 'With large image',
+    name: 'Image on left side',
     filename: 'large-image',
     isNewComponent: true
   },
@@ -17,14 +17,12 @@ const components_list: Component[] = [
   {
     id: 'testimonials',
     name: 'Card with avatar',
-    filename: 'avatar-card-horizontally',
-    isNewComponent: true
+    filename: 'avatar-card-horizontally'
   },
   {
     id: 'testimonials',
     name: 'Card with avatar2',
-    filename: 'avatar-card2',
-    isNewComponent: true
+    filename: 'avatar-card2'
   },
   {
     id: 'testimonials',
