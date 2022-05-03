@@ -21,7 +21,7 @@ const SimpleSignIn = () => {
   const handleClick = () => setShow(!show);
 
   return (
-    <Container maxW="7xl" py={10} px={10}>
+    <Container maxW="7xl" p={10}>
       <Center>
         <Stack spacing={4}>
           <Stack align="center">

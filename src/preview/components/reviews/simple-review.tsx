@@ -38,7 +38,7 @@ const reviewData = [
 
 const SimpleReview = () => {
   return (
-    <Container maxW="5xl" py={10} px={10}>
+    <Container maxW="5xl" p={10}>
       <Flex justify="center">
         <Heading as="h3" size="lg" fontWeight="bold" textAlign="left" mb={{ base: '4', md: '2' }}>
           Recent Reviews

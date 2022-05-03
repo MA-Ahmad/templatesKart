@@ -18,7 +18,7 @@ const notes = [
 
 const NotesList = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW={'7xl'} p={10}>
       <AnimateSharedLayout>
         <Box minH={'50vh'}>
           <SimpleGrid

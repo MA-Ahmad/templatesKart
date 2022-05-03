@@ -12,7 +12,7 @@ const reviewData = {
 
 const Reviews = () => {
   return (
-    <Container maxW={'5xl'} py={10} px={10}>
+    <Container maxW={'5xl'} p={10}>
       <Heading as="h3" size="lg" fontWeight="bold" textAlign="left" mb={{ base: '4', md: '2' }}>
         What guests are saying about homes in the United States
       </Heading>

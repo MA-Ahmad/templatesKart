@@ -4,6 +4,12 @@ import { BiStats } from 'react-icons/bi';
 const components_list: Component[] = [
   {
     id: 'stats',
+    name: 'Library Stats',
+    filename: 'library-stats',
+    isNewComponent: true
+  },
+  {
+    id: 'stats',
     name: 'Blog Stats',
     filename: 'blog-stats'
   },
@@ -27,6 +33,7 @@ const components_list: Component[] = [
 export const stats: ComponentContainer = {
   id: 'stats',
   name: 'Stats',
+  hasAnyNewComponent: true,
   icon: BiStats,
   data: components_list
 };

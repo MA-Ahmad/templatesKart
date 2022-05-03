@@ -63,7 +63,7 @@ const articles: ArticleAttributes[] = [
 
 const Articles = () => {
   return (
-    <Container maxW="5xl" py={10} px={10}>
+    <Container maxW="5xl" p={10}>
       <Flex justify="left" mb={3}>
         <chakra.h3 fontSize="2xl" fontWeight="bold" textAlign="center">
           Articles

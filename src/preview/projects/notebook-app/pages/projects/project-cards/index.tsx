@@ -5,7 +5,7 @@ import ProjectCard from './card';
 
 const Index = () => {
   return (
-    <Container maxW={'7xl'} py={10} px={10}>
+    <Container maxW={'7xl'} p={10}>
       <Box minH={'50vh'}>
         <Flex p="2" justifyContent="center">
           <Heading

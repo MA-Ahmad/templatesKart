@@ -63,6 +63,14 @@ export const extendedTheme = extendTheme({
     })
   },
   components: {
+    Tooltip: {
+      sizes: {
+        sm: {
+          fontSize: 'xs',
+          ml: '5px'
+        }
+      }
+    },
     Popover: {
       variants: {
         responsive: {

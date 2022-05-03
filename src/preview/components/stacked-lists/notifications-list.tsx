@@ -48,7 +48,7 @@ const notifications: Notification[] = [
 
 const NotificationsList = () => {
   return (
-    <Container maxW="5xl" py={10} px={10}>
+    <Container maxW="5xl" p={10}>
       <VStack
         boxShadow={useColorModeValue(
           '2px 6px 8px rgba(160, 174, 192, 0.6)',
