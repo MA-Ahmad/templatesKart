@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Stack, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Container, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 
 const SKILLS_LIST = [
   'Ruby, Ruby on Rails, Javascript, React, Python',
@@ -10,7 +10,7 @@ const SKILLS_LIST = [
 
 const Skills = () => {
   return (
-    <Container maxW={'7xl'} p={['8', '12']}>
+    <Container maxW="7xl" p={['8', '12']}>
       <Stack
         padding={4}
         borderLeft="4px solid"

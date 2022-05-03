@@ -39,7 +39,7 @@ const tabList = [
 
 const SkillsList = () => {
   return (
-    <Container maxW={'7xl'} p="0" pt={16} pb={16}>
+    <Container maxW="7xl" p="0" pt={16} pb={16}>
       <Tabs variant="soft-rounded" colorScheme="blue" align="center" w="100%">
         <TabList display="flex" flexWrap="wrap" p={4}>
           {tabList.map((tab, index) => (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Stack, Heading, Text, Tag, Link, Tooltip, IconButton } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { FiBookmark, FiGithub } from 'react-icons/fi';
 
 const articles = [

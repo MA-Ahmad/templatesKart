@@ -10,6 +10,7 @@ import {
   Container,
   HStack
 } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
 import { FiSun, FiMenu } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 
@@ -32,7 +33,7 @@ const Header = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxW={'7xl'} p={'12'}>
+    <Container maxW="7xl" p={'12'}>
       <Box w="100%" h="6px" bgGradient="linear(to-r, #6ab589, #f9f9f9,#dfb795)" />
       <Flex
         as="nav"

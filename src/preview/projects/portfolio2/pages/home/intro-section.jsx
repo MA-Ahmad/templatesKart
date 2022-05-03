@@ -3,7 +3,7 @@ import { Container, Stack, Heading, Text, HStack, Avatar } from '@chakra-ui/reac
 
 const IntroSection = () => {
   return (
-    <Container maxW={'7xl'} p={['4', '8', '12']}>
+    <Container maxW="7xl" p={['4', '8', '12']}>
       <Stack as="main" mx="auto" marginTop="3rem">
         <Stack spacing={2} marginBottom={8}>
           <Heading display="flex">Hi, I'm Ahmad </Heading>

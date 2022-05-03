@@ -33,7 +33,7 @@ const companies = [
 
 const Career = () => {
   return (
-    <Container maxW={'7xl'} p={['8', '12']}>
+    <Container maxW="7xl" p={['8', '12']}>
       <VStack spacing={2}>
         {companies.map((company, index) => (
           <Card

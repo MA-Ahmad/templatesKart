@@ -10,7 +10,7 @@ const iconProps = {
 
 const Footer = (props) => {
   return (
-    <Container maxW={'7xl'} px={[6, 12, 12]} py={16}>
+    <Container maxW="7xl" px={[6, 12, 12]} py={16}>
       <Stack
         as="footer"
         isInline
