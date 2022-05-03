@@ -5,10 +5,10 @@ import {
   HStack,
   VStack,
   Text,
-  useColorModeValue,
   Tag,
   Link,
-  Image
+  Image,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 interface ProjectCardProps {
