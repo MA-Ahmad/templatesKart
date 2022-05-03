@@ -20,8 +20,8 @@ import { MdBolt } from 'react-icons/md';
 const HeroSection = () => {
   return (
     <Container maxW="6xl" px={{ base: 6, md: 3 }} py={24}>
-      <Stack direction={{ base: 'column', md: 'row' }}>
-        <Stack direction="column" spacing={6} justifyContent="center">
+      <Stack direction={{ base: 'column', md: 'row' }} justifyContent="center">
+        <Stack direction="column" spacing={6} justifyContent="center" maxW="480px">
           <HStack
             as={Link}
             p={1}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             textAlign="left"
             lineHeight="1.375"
             fontWeight="400"
-            color={useColorModeValue('gray.500', 'gray.400')}
+            color="gray.500"
           >
             TemplatesKart provides the best ChakraUI templates. Focus on your business, not on the
             boilerplate.

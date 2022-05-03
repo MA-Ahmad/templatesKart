@@ -16,6 +16,12 @@ const components_list: Component[] = [
   },
   {
     id: 'heroes',
+    name: 'With Background image',
+    filename: 'bg-image',
+    isNewComponent: true
+  },
+  {
+    id: 'heroes',
     name: 'Simply Centered',
     filename: 'simply-centered',
     isNewComponent: true
