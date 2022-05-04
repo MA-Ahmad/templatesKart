@@ -22,6 +22,12 @@ const components_list: Component[] = [
   },
   {
     id: 'heroes',
+    name: 'Centered with logos',
+    filename: 'centered-with-logos',
+    isNewComponent: true
+  },
+  {
+    id: 'heroes',
     name: 'Simply Centered',
     filename: 'simply-centered',
     isNewComponent: true

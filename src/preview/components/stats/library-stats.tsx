@@ -38,7 +38,7 @@ const BrandStats = () => {
   return (
     <Container maxW="5xl" p={{ base: 4, sm: 10 }}>
       <Stack direction={{ base: 'column', md: 'row' }} justifyContent="space-between">
-        <Stack spacing={2}>
+        <Stack spacing={4}>
           <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold">
             Our ultimate goal
           </chakra.h1>
@@ -47,10 +47,11 @@ const BrandStats = () => {
             developers and designers. ChakraUI started back in 2019, to unify React. Since then,
             we've become a community of over 2M developers from every corner of the world.
           </Text>
-          <Text fontSize="md" color="gray.400">
-            We plan on doing all that cultivating our values:
-          </Text>
-          <Stack>
+
+          <Stack spacing={2}>
+            <Text fontSize="md" color="gray.400">
+              We plan on doing all that cultivating our values:
+            </Text>
             {planList.map((data, index) => (
               <HStack key={index} alignItems="center" spacing={1} fontSize="md">
                 <Icon as={AiFillCheckCircle} w={4} h={4} color="blue.400" />

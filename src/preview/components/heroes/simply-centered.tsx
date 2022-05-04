@@ -1,62 +1,68 @@
 import * as React from 'react';
 import {
   Container,
+  chakra,
   Heading,
   Stack,
   HStack,
   Text,
-  useColorModeValue,
   Button,
+  Box,
   Image
 } from '@chakra-ui/react';
-
-const companiesImages = [
-  'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80',
-  'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80',
-  'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80',
-  'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80',
-  'https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80',
-  'https://images.unsplash.com/photo-1611162617263-4ec3060a058e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80'
-];
+// Here we have used react-icons package for the icons
+import { FaGithub } from 'react-icons/fa';
 
 const HeroSection = () => {
   return (
-    <Container maxW="7xl" p={4}>
-      <Stack direction="column" spacing={6} alignItems="center" mt={8} mb={16}>
-        <Heading as="h1" fontSize="4xl" fontWeight="bold" textAlign="center" maxW="600px">
-          We're on a mission to make <br /> building UIs more accessible
+    <Container p={{ base: 8, sm: 14 }}>
+      <Stack direction="column" spacing={6} alignItems="center">
+        <Box py={2} px={3} bg="teal" w="max-content" color="white" rounded="md" fontSize="sm">
+          <Stack direction={{ base: 'column', sm: 'row' }}>
+            <Text fontWeight="bold">Ready, Set, Build! 🚀</Text>
+            <Text>Join the Hackathon!</Text>
+          </Stack>
+        </Box>
+        <Heading
+          as="h1"
+          fontSize={{ base: '4xl', sm: '5xl' }}
+          fontWeight="bold"
+          textAlign="center"
+          maxW="600px"
+        >
+          Create accessible React apps <chakra.span color="teal">with speed</chakra.span>
         </Heading>
-        <Text maxW="500px" fontSize="lg" textAlign="center" color="gray.500">
-          Our mission is to empower anyone to build UIs, faster. We're reducing the entry barrier,
-          making design skills accessible.
+        <Text maxW="550px" fontSize="xl" textAlign="center" color="gray.500">
+          Chakra UI is a simple, modular and accessible component library that gives you the
+          building blocks you need to build your React applications.
         </Text>
-        <HStack spacing={5}>
-          <Button colorScheme="teal" variant="solid" rounded="md" size="lg">
+        <Stack
+          direction={{ base: 'column', sm: 'row' }}
+          w={{ base: '100%', sm: 'auto' }}
+          spacing={5}
+        >
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            rounded="md"
+            size="lg"
+            height="4rem"
+            fontSize="1.2rem"
+          >
             Get Started
           </Button>
-        </HStack>
-      </Stack>
-      <Stack spacing={5} alignItems="center" mb={8}>
-        <HStack
-          spacing={{ base: 0, md: 10 }}
-          justifyContent="center"
-          maxW={{ base: '500px', md: '100%' }}
-          flexWrap="wrap"
-        >
-          {companiesImages.map((img, index) => (
-            <Image
-              key={index}
-              src={img}
-              alt="company logo"
-              w={{ base: '8rem', md: '5rem' }}
-              p={{ base: 5, md: 0 }}
-            />
-          ))}
-        </HStack>
-        <Text maxW="500px" fontSize="md" textAlign="center" color="gray.500">
-          The world's best product teams trust us to deliver an unrivaled experience for both
-          developers and users.
-        </Text>
+          <Button
+            leftIcon={<FaGithub />}
+            colorScheme="gray"
+            rounded="md"
+            size="lg"
+            variant="outline"
+            height="4rem"
+            fontSize="1.2rem"
+          >
+            Github
+          </Button>
+        </Stack>
       </Stack>
     </Container>
   );
