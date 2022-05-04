@@ -10,6 +10,12 @@ const components_list: Component[] = [
   },
   {
     id: 'cards',
+    name: 'Join community',
+    filename: 'join-community',
+    isNewComponent: true
+  },
+  {
+    id: 'cards',
     name: 'Product Cards',
     filename: 'product-img-card',
     isNewComponent: true
