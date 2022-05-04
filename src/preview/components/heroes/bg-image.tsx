@@ -77,7 +77,7 @@ const HeroSection = () => {
             bg="blue.400"
             _hover={{ bg: 'blue.600' }}
           >
-            <chakra.span> View Components </chakra.span>
+            View Components
           </Button>
           <Flex
             as={Link}

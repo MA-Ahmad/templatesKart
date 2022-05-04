@@ -22,6 +22,12 @@ const components_list: Component[] = [
   },
   {
     id: 'heroes',
+    name: 'With gradient cover',
+    filename: 'cover-gradient',
+    isNewComponent: true
+  },
+  {
+    id: 'heroes',
     name: 'Centered with logos',
     filename: 'centered-with-logos',
     isNewComponent: true
@@ -44,7 +50,7 @@ const components_list: Component[] = [
   },
   {
     id: 'heroes',
-    name: 'With background Image',
+    name: 'With image cover',
     filename: 'with-bg-image'
   }
 ];
