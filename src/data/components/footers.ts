@@ -4,6 +4,11 @@ import { CgToolbarBottom } from 'react-icons/cg';
 const components_list: Component[] = [
   {
     id: 'footers',
+    name: 'With logo left',
+    filename: 'with-logo-left'
+  },
+  {
+    id: 'footers',
     name: 'With subscribe field',
     filename: 'subscribe-field'
   },
