@@ -61,6 +61,7 @@ const Navbar = () => {
                 leftIcon={<MdAdd />}
                 bgGradient="linear(to-l, #7928CA,#FF0080)"
                 _hover={{ bgGradient: 'linear(to-r, red.500, yellow.500)' }}
+                color="white"
                 variant="solid"
                 size="sm"
                 rounded="md"
@@ -71,6 +72,7 @@ const Navbar = () => {
                 leftIcon={<AiOutlineArrowRight />}
                 bgGradient="linear(to-l, #7928CA,#FF0080)"
                 _hover={{ bgGradient: 'linear(to-r, red.500, yellow.500)' }}
+                color="white"
                 variant="solid"
                 size="sm"
                 rounded="md"
