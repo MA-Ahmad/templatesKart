@@ -8,11 +8,11 @@ import {
   Tag,
   Text,
   StackProps,
-  useColorModeValue,
   Box,
   Icon,
   Flex,
-  BoxProps
+  BoxProps,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { useLinkColor } from 'components/theme';
 import { MotionBox } from 'components/shared/animations/motion';
@@ -38,7 +38,7 @@ export const Sidebar = (props: StackProps) => {
   };
 
   return (
-    <Stack as={'nav'} spacing={6} maxW={{ md: '3xs' }} w={'full'} flexShrink={0} {...props}>
+    <Stack as="nav" spacing={6} maxW={{ md: '3xs' }} w="full" flexShrink={0} {...props}>
       {component && (
         <Stack key={component.id}>
           <NextLink href={`${component.id}`} passHref>
@@ -48,10 +48,10 @@ export const Sidebar = (props: StackProps) => {
                   <Flex alignItems="center">
                     <Box as="span" fontSize="md">
                       <Text
-                        textTransform={'uppercase'}
+                        textTransform="uppercase"
                         color={categoryColor}
                         fontWeight="extrabold"
-                        fontSize={'md'}
+                        fontSize="md"
                         letterSpacing={1}
                       >
                         <UnderlinedText color={linkColor}>{component.name}</UnderlinedText>
@@ -77,12 +77,12 @@ export const Sidebar = (props: StackProps) => {
             </Link>
           </NextLink>
           {/* TODO: Improve Component Sidebar UI */}
-          <Stack spacing={1} mt={'1.5rem !important'}>
+          <Stack spacing={1} mt="1.5rem !important">
             {component.data.map((c, index) => (
               <CustomMotionBox key={index} whileHover={{ translateX: 3 }} _hover={{ shadow: 'sm' }}>
                 <Box
-                  fontSize={'sm'}
-                  rounded={'md'}
+                  fontSize="sm"
+                  rounded="md"
                   px={3}
                   py={1}
                   _hover={{
@@ -114,16 +114,16 @@ export const Sidebar = (props: StackProps) => {
       <Stack>
         <CustomMotionBox>
           <Text
-            textTransform={'uppercase'}
+            textTransform="uppercase"
             color={categoryColor}
-            fontWeight={'extrabold'}
-            fontSize={'md'}
+            fontWeight="extrabold"
+            fontSize="md"
             letterSpacing={1}
           >
             <UnderlinedText color={linkColor}>Other Components</UnderlinedText>
           </Text>
         </CustomMotionBox>
-        <Stack spacing={1} mt={'1.5rem !important'}>
+        <Stack spacing={1} mt="1.5rem !important">
           {component &&
             components
               .filter((c) => c.id !== component.id)
@@ -141,9 +141,9 @@ export const Sidebar = (props: StackProps) => {
                         <Icon as={FaChevronRight} w={4} h={4} />
                         <HStack as="span" spacing={2} fontSize="md" ml={1}>
                           <Text
-                            textTransform={'uppercase'}
-                            fontWeight={'semibold'}
-                            fontSize={'md'}
+                            textTransform="uppercase"
+                            fontWeight="semibold"
+                            fontSize="md"
                             letterSpacing={1}
                             _hover={{
                               color: linkColor
