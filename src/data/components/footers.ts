@@ -4,8 +4,15 @@ import { CgToolbarBottom } from 'react-icons/cg';
 const components_list: Component[] = [
   {
     id: 'footers',
+    name: 'Large with logo left',
+    filename: 'large-with-logo-left',
+    isNewComponent: true
+  },
+  {
+    id: 'footers',
     name: 'With logo left',
-    filename: 'with-logo-left'
+    filename: 'with-logo-left',
+    isNewComponent: true
   },
   {
     id: 'footers',
@@ -27,6 +34,7 @@ const components_list: Component[] = [
 export const footers: ComponentContainer = {
   id: 'footers',
   name: 'Footers',
+  hasAnyNewComponent: true,
   icon: CgToolbarBottom,
   data: components_list
 };
