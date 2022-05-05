@@ -10,8 +10,8 @@ import { PageSlideFade } from 'components/shared/animations/page-transitions';
 
 const heroSectionData = {
   heading: 'ProjectsKart',
-  subHeading:
-    'Projectskart provide an easy solution to getting the look you want for your website without having to mess around with too much code',
+  content:
+    'Projectskart provide an easy solution to getting the look you want for your website without having to mess around with too much code.',
   label: '100% Open Source',
   heroImage: '/assets/images/layouts/pkart.png'
 };

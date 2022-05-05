@@ -22,7 +22,9 @@ import { PageSlideFade } from 'components/shared/animations/page-transitions';
 
 const heroSectionData = {
   heading: 'TemplatesKart',
-  subHeading: 'Production-ready hand crafted Projects and Components built on top of Chakra UI',
+  content:
+    'TemplatesKart provides the best Chakra UI templates. Production-ready hand crafted Projects and Components built on top of Chakra UI.',
+  subContent: 'Focus on your business, not on the boilerplate.',
   label: 'Deliver your projects faster',
   heroImage: '/assets/images/layouts/hero_image.png',
   buttonLinks: [

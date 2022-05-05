@@ -11,8 +11,8 @@ import { PageSlideFade } from 'components/shared/animations/page-transitions';
 
 const heroSectionData = {
   heading: 'ComponentsKart',
-  subHeading:
-    '40+ Beautiful and responsive React components help you to build your application faster and to focus more on your business logic',
+  content:
+    '40+ Beautiful and responsive React components help you to build your application faster and to focus more on your business logic.',
   label: 'Focus more on your business logic',
   heroImage: '/assets/images/layouts/ckart.png'
 };

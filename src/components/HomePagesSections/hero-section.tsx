@@ -15,13 +15,21 @@ import Header from './header';
 
 interface HeroSection {
   heading: string;
-  subHeading: string;
+  content: string;
+  subContent?: string;
   label: string;
   heroImage: string;
   buttonLinks?: { label: string; url: string }[];
 }
 
-const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: HeroSection) => {
+const HeroSection = ({
+  label,
+  heading,
+  content,
+  subContent,
+  heroImage,
+  buttonLinks
+}: HeroSection) => {
   const linkColor = useLinkColor();
 
   return (
@@ -41,7 +49,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
           w="100%"
           h="max-content"
           direction="column"
-          spacing={5}
+          spacing={4}
           p={{ base: 3, sm: '1rem', lg: '3rem' }}
           ml={{ base: 0, md: 6, lg: 20 }}
           bg={useColorModeValue('gray.100', 'gray.800')}
@@ -60,10 +68,17 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
             {label}
           </Text>
           <VStack spacing={0} mb={6} textAlign="left">
-            <Header>{heading}</Header>
+            <Header bgGradient={`linear(to-r, ${linkColor}, cyan.700)`} bgClip="text">
+              {heading}
+            </Header>
             <Text fontSize="lg" w="100%">
-              {subHeading}
+              {content}
             </Text>
+            {subContent && (
+              <Text fontSize="lg" w="100%">
+                {subContent}
+              </Text>
+            )}
           </VStack>
           <HStack spacing={2}>
             {buttonLinks?.map((link, index) => (
@@ -99,7 +114,7 @@ const HeroSection = ({ label, heading, subHeading, heroImage, buttonLinks }: Her
         >
           &lt;<span>&#47;</span>&gt;
         </Box>
-        <Image src={heroImage} w={{ base: '10rem', md: '25rem' }} minH="12rem" />
+        <Image src={heroImage} w={{ base: '10rem', md: '28rem' }} minH="14rem" />
         <Box
           pos="absolute"
           bottom={{ base: '2rem', lg: '5rem' }}
