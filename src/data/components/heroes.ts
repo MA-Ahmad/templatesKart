@@ -4,7 +4,7 @@ import { BsCardHeading } from 'react-icons/bs';
 const components_list: Component[] = [
   {
     id: 'heroes',
-    name: 'Image on right side',
+    name: 'Split with image',
     filename: 'image-right-side',
     isNewComponent: true
   },

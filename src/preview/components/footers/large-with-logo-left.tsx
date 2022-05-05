@@ -87,7 +87,7 @@ const Footer = () => {
           </Link>
         </Text>
         <Stack spacing={2} direction={{ base: 'column', md: 'row' }}>
-          <Button leftIcon={<FaGithub />} as={Link} href="#" rounded="md" color="gray.800">
+          <Button leftIcon={<FaGithub />} as={Link} href="#" rounded="md" colorScheme="gray">
             Github Discussions
           </Button>
           <Button
