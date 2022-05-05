@@ -24,7 +24,7 @@ const Index = () => {
           rounded="2xl"
         >
           <Stack pos="relative" zIndex={1} direction="column" spacing={5} textAlign="left">
-            <chakra.h1 fontSize="4xl" lineHeight={1.2} fontWeight="bold">
+            <chakra.h1 fontSize="4xl" lineHeight={1.2} fontWeight="bold" color="black">
               Explore TemplatesKart
             </chakra.h1>
             <chakra.h1 color="gray.400" fontSize="xl" maxW="600px" lineHeight={1.2}>
