@@ -35,19 +35,19 @@ const overviewData = [
   {
     id: 1,
     heading: 'Project Screen',
-    content: 'Live project view on right side and project pages on left side.',
+    content: 'Live project view with pages.',
     image: '/assets/images/layouts/project_screen.png'
   },
   {
     id: 2,
     heading: 'Project Components',
-    content: 'Check components responsiveness and copy code by clicking on code button.',
+    content: 'See page components and copy code.',
     image: '/assets/images/layouts/project_components.png'
   },
   {
     id: 3,
     heading: 'Components Screen',
-    content: 'Choose component from 12+ categories and copy code by clicking on code button.',
+    content: 'Choose any component from 12+ categories and copy code by just one click.',
     image: '/assets/images/layouts/components_screen.png'
   }
 ];
