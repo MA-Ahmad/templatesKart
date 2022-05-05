@@ -130,7 +130,7 @@ export const Sidebar = (props: StackProps) => {
               .map((component) => (
                 <NextLink key={component.id} href={`${component.id}`} passHref>
                   <Link
-                    px={3}
+                    px={2}
                     py={1}
                     _hover={{
                       color: linkColor
@@ -139,7 +139,7 @@ export const Sidebar = (props: StackProps) => {
                     <CustomMotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
                         <Icon as={FaChevronRight} w={4} h={4} />
-                        <HStack as="span" spacing={2} fontSize="md" ml={3}>
+                        <HStack as="span" spacing={2} fontSize="md" ml={1}>
                           <Text
                             textTransform={'uppercase'}
                             fontWeight={'semibold'}
@@ -152,7 +152,7 @@ export const Sidebar = (props: StackProps) => {
                             {component.name}
                           </Text>
                           {component.hasAnyNewComponent && (
-                            <Tag size="sm" colorScheme="red" ml={2}>
+                            <Tag size="sm" colorScheme="red" ml={1}>
                               <Text>New</Text>
                             </Tag>
                           )}
