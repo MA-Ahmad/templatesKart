@@ -23,7 +23,7 @@ import { BiLinkExternal } from 'react-icons/bi';
 import { AiFillEye } from 'react-icons/ai';
 import { HiCode } from 'react-icons/hi';
 import { AiOutlineMobile, AiOutlineTablet } from 'react-icons/ai';
-import { IoIosDesktop, IoIosTabletPortrait } from 'react-icons/io';
+import { IoIosDesktop } from 'react-icons/io';
 import { ResizableFrame } from './ResizableFrame';
 import { Component } from 'data/components/types';
 import RadioCard from '../RadioCard';
