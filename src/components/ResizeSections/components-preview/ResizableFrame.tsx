@@ -9,6 +9,7 @@ type IframeProps = {
 };
 
 const MIN_HEIGHT = 222;
+const MIN_WIDTH = 380;
 
 export const ResizableFrame = ({ component }: IframeProps) => {
   const ref = useRef<HTMLIFrameElement>(null);
@@ -21,22 +22,21 @@ export const ResizableFrame = ({ component }: IframeProps) => {
   }, [component]);
 
   const syncHeight = () => {
-    const frameHeight = ref.current?.contentWindow?.document.body.offsetHeight;
-
-    setHeight(frameHeight);
+    setHeight(ref.current?.contentWindow?.document.body.offsetHeight);
   };
 
-  // Reload iframe content when theme and colorMode changes
+  // Reload iframe content when component and colorMode changes
   useEffect(() => {
-    ref.current?.contentWindow?.location.reload();
+    if (ref.current?.contentWindow?.document.body.children.length)
+      ref.current?.contentWindow?.location.reload();
   }, [colorMode, component]);
 
   const getHeight = () => (height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT);
 
   return (
     <Resizable
-      bounds={'parent'}
-      minWidth={380}
+      bounds="parent"
+      minWidth={MIN_WIDTH}
       minHeight={getHeight()}
       maxHeight={getHeight()}
       style={{
@@ -45,8 +45,8 @@ export const ResizableFrame = ({ component }: IframeProps) => {
       }}
     >
       <iframe
-        loading={'lazy'}
-        width={'100%'}
+        loading="lazy"
+        width="100%"
         height={getHeight()}
         src={exampleUrl}
         ref={ref}
