@@ -17,7 +17,7 @@ const data = {
   subHeading: 'Analyze your traffic. Increase Conversions.',
   features: ['Free 3,500 monthly page views', 'No credit card required'],
   image:
-    'https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80'
+    'https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80'
 };
 
 const Index = () => {
@@ -29,7 +29,7 @@ const Index = () => {
           '0 4px 6px rgba(9, 17, 28, 0.9)'
         )}
         backgroundSize="cover"
-        backgroundImage={`url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80)`}
+        backgroundImage={`url(${data.image})`}
         p={{ base: 4, sm: 8 }}
         rounded="lg"
       >
