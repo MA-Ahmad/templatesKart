@@ -26,7 +26,7 @@ function ComponentLayout({ children }: ComponentLayoutProps) {
           <ScaleFade initialScale={0.9} in={!isOpen}>
             <Sidebar display={{ base: 'none', lg: isOpen ? 'none' : 'block' }} />
           </ScaleFade>
-          <Flex direction="column" w="full">
+          <Flex direction="column" w="full" maxW={{ lg: isOpen ? '100%' : 'calc(100% - 16rem)' }}>
             <SlideFade in={true}>{children}</SlideFade>
           </Flex>
         </Stack>
