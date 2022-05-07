@@ -4,6 +4,12 @@ import { CgBox } from 'react-icons/cg';
 const components_list: Component[] = [
   {
     id: 'navbars',
+    name: 'Simple one',
+    filename: 'simple-one',
+    isNewComponent: true
+  },
+  {
+    id: 'navbars',
     name: 'With multiple links',
     filename: 'multiple-links',
     isNewComponent: true
@@ -15,8 +21,8 @@ const components_list: Component[] = [
   },
   {
     id: 'navbars',
-    name: 'Simple one',
-    filename: 'simple-one'
+    name: 'With gradient',
+    filename: 'with-gradient'
   }
 ];
 
