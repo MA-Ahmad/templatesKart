@@ -53,7 +53,8 @@ const LineWithDot = () => {
         position="absolute"
         left="50%"
         height="calc(100% + 10px)"
-        border="1px solid rgba(0,0,0,.1)"
+        border="1px solid"
+        borderColor={useColorModeValue('gray.200', 'gray.700')}
         top="0px"
       ></chakra.span>
       <Box pos="relative" p="10px">
@@ -99,7 +100,7 @@ const Card = ({ title, categories, content, created_at }: CardProps) => {
         content: `""`,
         w: '0',
         h: '0',
-        borderColor: `transparent ${useColorModeValue('#edf2f6', '#edf2f6')} transparent`,
+        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
         borderStyle: 'solid',
         borderWidth: '15px 15px 15px 0',
         position: 'absolute',
