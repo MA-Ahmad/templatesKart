@@ -1,15 +1,5 @@
 import * as React from 'react';
-import {
-  Container,
-  chakra,
-  Heading,
-  Stack,
-  HStack,
-  Text,
-  Button,
-  Box,
-  Image
-} from '@chakra-ui/react';
+import { Container, chakra, Stack, Text, Button, Box } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaGithub } from 'react-icons/fa';
 
@@ -23,15 +13,17 @@ const HeroSection = () => {
             <Text>Join the Hackathon!</Text>
           </Stack>
         </Box>
-        <Heading
-          as="h1"
+        <chakra.h1
           fontSize={{ base: '4xl', sm: '5xl' }}
           fontWeight="bold"
           textAlign="center"
           maxW="600px"
         >
-          Create accessible React apps <chakra.span color="teal">with speed</chakra.span>
-        </Heading>
+          Create accessible React apps{' '}
+          <chakra.span color="teal" bg="linear-gradient(transparent 50%, #83e9e7 50%)">
+            with speed
+          </chakra.span>
+        </chakra.h1>
         <Text maxW="550px" fontSize="xl" textAlign="center" color="gray.500">
           Chakra UI is a simple, modular and accessible component library that gives you the
           building blocks you need to build your React applications.
@@ -43,10 +35,10 @@ const HeroSection = () => {
         >
           <Button
             colorScheme="teal"
-            variant="solid"
+            variant="outline"
             rounded="md"
             size="lg"
-            height="4rem"
+            height="3.5rem"
             fontSize="1.2rem"
           >
             Get Started
@@ -54,10 +46,10 @@ const HeroSection = () => {
           <Button
             leftIcon={<FaGithub />}
             colorScheme="gray"
+            variant="outline"
             rounded="md"
             size="lg"
-            variant="outline"
-            height="4rem"
+            height="3.5rem"
             fontSize="1.2rem"
           >
             Github
