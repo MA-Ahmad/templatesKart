@@ -54,10 +54,10 @@ const TestimonialCard = () => {
         />
         <Stack direction="column" spacing={5}>
           <Text color="gray.500">
-            Ahmad’s work is detailed and not overwhelming. He guided me step-by-step, from basics to
+            Ahmad’s work is detailed and overwhelming. He guided me step-by-step, from basics to
             advanced concepts. He ensured I understood everything before going deeper.
           </Text>
-          <Text color="gray.500">Thanks to Ahmad, I got a frontend job in Switzerland!</Text>
+          <Text color="gray.500">Thanks to Ahmad, I got a frontend job!</Text>
           <Text fontWeight="bold" fontSize="lg" align="right" mr="3rem !important">
             {testimonial.username}
           </Text>
