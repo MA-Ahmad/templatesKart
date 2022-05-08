@@ -83,7 +83,7 @@ export const Sidebar = (props: StackProps) => {
                 <Box
                   fontSize="sm"
                   rounded="md"
-                  px={3}
+                  px={2}
                   py={1}
                   _hover={{
                     bg: useColorModeValue('gray.100', 'gray.700')
@@ -96,10 +96,12 @@ export const Sidebar = (props: StackProps) => {
                 >
                   <HStack spacing={2} alignItems="center">
                     <Icon as={FaChevronRight} w={3} h={3} color={linkColor} />
-                    <HStack spacing={2}>
-                      <Text fontSize="md">{c.name}</Text>
+                    <HStack spacing={2} justifyContent="space-between">
+                      <Text fontSize="md" noOfLines={2}>
+                        {c.name}
+                      </Text>
                       {c.isNewComponent && (
-                        <Tag size="sm" colorScheme="red">
+                        <Tag size="xs" colorScheme="red">
                           New
                         </Tag>
                       )}
@@ -138,11 +140,9 @@ export const Sidebar = (props: StackProps) => {
                   >
                     <CustomMotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
-                        <Icon as={FaChevronRight} w={4} h={4} />
+                        <Icon as={FaChevronRight} w={3} h={3} />
                         <HStack as="span" spacing={2} fontSize="md" ml={1}>
                           <Text
-                            textTransform="uppercase"
-                            fontWeight="semibold"
                             fontSize="md"
                             letterSpacing={1}
                             _hover={{
@@ -152,7 +152,7 @@ export const Sidebar = (props: StackProps) => {
                             {component.name}
                           </Text>
                           {component.hasAnyNewComponent && (
-                            <Tag size="sm" colorScheme="red" ml={1}>
+                            <Tag size="xs" colorScheme="red">
                               <Text>New</Text>
                             </Tag>
                           )}

@@ -178,11 +178,10 @@ export const Sidebar = (props: StackProps) => {
                   >
                     <CustomMotionBox whileHover={{ translateX: 5 }}>
                       <Flex alignItems="center">
-                        <Icon as={FaChevronRight} w={4} h={4} />
+                        <Icon as={FaChevronRight} w={3} h={3} />
                         <Box as="span" fontSize="md" ml={1}>
                           <Text
                             textTransform="uppercase"
-                            fontWeight="semibold"
                             fontSize="md"
                             letterSpacing={1}
                             _hover={{

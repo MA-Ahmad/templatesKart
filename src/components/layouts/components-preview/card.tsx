@@ -48,7 +48,7 @@ const Card = ({ component }: { component: ComponentContainer }) => {
                   {component.name}
                 </Text>
                 {component.hasAnyNewComponent && (
-                  <Tag size="sm" colorScheme="red">
+                  <Tag size="xs" colorScheme="red">
                     New
                   </Tag>
                 )}

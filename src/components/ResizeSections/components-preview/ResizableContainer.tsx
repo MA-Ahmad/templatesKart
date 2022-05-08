@@ -79,20 +79,22 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
   return (
     <>
       <Stack spacing={2}>
-        <Heading size={'md'} ml={1}>
-          {component.name}
+        <HStack spacing={2} alignItems="center">
+          <Heading size="md" ml={1}>
+            {component.name}
+          </Heading>
           {component.isNewComponent && (
-            <Tag size="sm" colorScheme="red" ml={2}>
+            <Tag size="xs" colorScheme="red">
               New
             </Tag>
           )}
-        </Heading>
+        </HStack>
         <Box
           borderRadius="2xl"
           borderWidth={1}
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           id={component.filename}
-          height={'full'}
+          height="full"
           style={{
             scrollMarginTop: '2rem'
           }}
@@ -107,11 +109,11 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
               setTabIndex(index);
             }}
           >
-            <HStack justifyContent={'space-between'} w="100%" p={3}>
+            <HStack justifyContent="space-between" w="100%" p={3}>
               <TabList
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
                 borderRadius="md"
                 p={1}
                 bg={useColorModeValue('gray.200', 'gray.700')}
@@ -135,7 +137,7 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                   >
                     <HStack spacing={1}>
                       <Icon as={tab.icon} w={6} h={6} />
-                      <Text fontSize={'sm'}>{tab.label}</Text>
+                      <Text fontSize="sm">{tab.label}</Text>
                     </HStack>
                   </Tab>
                 ))}
@@ -144,8 +146,8 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                 {tabIndex === 0 && (
                   <Box
                     d={['none', 'none', 'flex']}
-                    alignItems={'center'}
-                    justifyContent={'center'}
+                    alignItems="center"
+                    justifyContent="center"
                     borderRadius="md"
                     p={1}
                     bg={useColorModeValue('gray.200', 'gray.700')}
@@ -160,7 +162,7 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                           <RadioCard key={value.label} {...radio}>
                             <HStack spacing={1}>
                               <Icon as={value.icon} w={6} h={6} />
-                              <Text fontSize={'sm'}>{value.label}</Text>
+                              <Text fontSize="sm">{value.label}</Text>
                             </HStack>
                           </RadioCard>
                         );
@@ -170,14 +172,14 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                 )}
                 <Link href={getComponentFileUrl(component.id, component.filename)} passHref>
                   <IconButton
-                    as={'a'}
-                    cursor={'pointer'}
+                    as="a"
+                    cursor="pointer"
                     icon={<BiLinkExternal />}
-                    size={'lg'}
+                    size="lg"
                     borderRadius="md"
                     variant="outline"
-                    aria-label={'Open in Fullscreen'}
-                    title={'Open in Fullscreen'}
+                    aria-label="Open in Fullscreen"
+                    title="Open in Fullscreen"
                     target="_blank"
                   />
                 </Link>
@@ -194,7 +196,7 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                   borderBottomRightRadius="2xl"
                   overflow="hidden"
                 >
-                  <Box w={viewWidth} bg={'transparent'}>
+                  <Box w={viewWidth} bg="transparent">
                     <ResizableFrame component={component} />
                   </Box>
                 </Center>
@@ -203,8 +205,8 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                 <TabPanel p="0">
                   <Tabs variant="unstyled">
                     <Box
-                      alignItems={'center'}
-                      p={'0.225rem'}
+                      alignItems="center"
+                      p="0.225rem"
                       bg={useColorModeValue('gray.200', 'gray.700')}
                       color={useColorModeValue('blackAlpha.500', 'whiteAlpha.600')}
                       borderColor={useColorModeValue('gray.200', 'gray.700')}
@@ -229,7 +231,7 @@ export const ResizableContainer = ({ component, componentData }: ResizableContai
                                 h={4}
                                 color="blue.600"
                               />
-                              <Text fontSize={'sm'} fontWeight="normal">
+                              <Text fontSize="sm" fontWeight="normal">
                                 {name}
                               </Text>
                             </HStack>

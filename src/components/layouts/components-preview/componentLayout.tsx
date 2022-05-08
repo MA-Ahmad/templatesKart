@@ -18,7 +18,7 @@ function ComponentLayout({ children }: ComponentLayoutProps) {
       <Container maxW="1280px" mt={28} flex="1 0 auto" py={8}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}
-          spacing={{ base: 0, lg: isOpen ? 0 : 8 }}
+          spacing={{ base: 0, lg: isOpen ? 0 : 6 }}
           pos="relative"
         >
           <SidebarButton onToggle={onToggle} isOpen={isOpen} />

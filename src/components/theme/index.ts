@@ -119,6 +119,19 @@ export const extendedTheme = extendTheme({
     Tag: {
       baseStyle: {
         rounded: 'lg'
+      },
+      sizes: {
+        xs: {
+          container: {
+            px: '0.313rem',
+            py: '0.1rem',
+            rounded: 'sm',
+            minW: 'auto',
+            fontSize: '0.8rem',
+            lineHeight: '0.9rem',
+            fontWeight: 500
+          }
+        }
       }
     },
     textarea: {

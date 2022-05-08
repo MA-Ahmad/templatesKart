@@ -33,12 +33,12 @@ const components_list: Component[] = [
   },
   {
     id: 'blog',
-    name: 'Posts Feed',
+    name: 'Posts feed',
     filename: 'posts-feed'
   },
   {
     id: 'blog',
-    name: 'Posts Feed 2',
+    name: 'Posts feed with transparent bg',
     filename: 'transparent-bg-posts-feed',
     isNewComponent: true
   },
