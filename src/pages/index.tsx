@@ -56,7 +56,7 @@ const overviewData = [
 
 const features: string[] = [
   '6 Projects',
-  '50+ Components',
+  '70+ Components',
   'Production Ready',
   'Light and Dark Mode',
   'Fully Responsive',
