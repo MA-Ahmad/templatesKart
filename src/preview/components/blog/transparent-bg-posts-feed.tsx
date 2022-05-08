@@ -53,7 +53,11 @@ const Posts = () => {
             <Stack direction="column" spacing={4} p={4}>
               <HStack spacing={2} mb={1}>
                 {article.tags.map((cat) => (
-                  <Tag colorScheme={useColorModeValue('blackAlpha', 'gray')} borderRadius="full">
+                  <Tag
+                    key={cat}
+                    colorScheme={useColorModeValue('blackAlpha', 'gray')}
+                    borderRadius="full"
+                  >
                     {cat}
                   </Tag>
                 ))}

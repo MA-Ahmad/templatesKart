@@ -61,8 +61,12 @@ const BlogCards = () => {
             rounded="lg"
           >
             <HStack spacing={2} mb={1}>
-              {article.tags.map((cat) => (
-                <Tag colorScheme={useColorModeValue('blackAlpha', 'gray')} borderRadius="full">
+              {article.tags.map((cat, index) => (
+                <Tag
+                  key={index}
+                  colorScheme={useColorModeValue('blackAlpha', 'gray')}
+                  borderRadius="full"
+                >
                   {cat}
                 </Tag>
               ))}
