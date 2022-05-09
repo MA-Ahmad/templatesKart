@@ -4,6 +4,12 @@ import { MdOutlineFeaturedPlayList } from 'react-icons/md';
 const components_list: Component[] = [
   {
     id: 'features',
+    name: 'With cards',
+    filename: 'with-cards',
+    isNewComponent: true
+  },
+  {
+    id: 'features',
     name: 'Simple 2 columns',
     filename: 'simple-2-columns',
     isNewComponent: true
