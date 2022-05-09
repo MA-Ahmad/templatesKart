@@ -11,8 +11,7 @@ const components_list: Component[] = [
   {
     id: 'heroes',
     name: 'Left align content',
-    filename: 'left-align',
-    isNewComponent: true
+    filename: 'left-align'
   },
   {
     id: 'heroes',
@@ -29,8 +28,7 @@ const components_list: Component[] = [
   {
     id: 'heroes',
     name: 'Centered with logos',
-    filename: 'centered-with-logos',
-    isNewComponent: true
+    filename: 'centered-with-logos'
   },
   {
     id: 'heroes',

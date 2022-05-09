@@ -5,8 +5,7 @@ const components_list: Component[] = [
   {
     id: 'stats',
     name: 'Library Stats',
-    filename: 'library-stats',
-    isNewComponent: true
+    filename: 'library-stats'
   },
   {
     id: 'stats',
@@ -33,7 +32,6 @@ const components_list: Component[] = [
 export const stats: ComponentContainer = {
   id: 'stats',
   name: 'Stats',
-  hasAnyNewComponent: true,
   icon: BiStats,
   data: components_list
 };

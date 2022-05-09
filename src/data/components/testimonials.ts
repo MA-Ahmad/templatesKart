@@ -5,20 +5,17 @@ const components_list: Component[] = [
   {
     id: 'testimonials',
     name: 'Card with border',
-    filename: 'card-with-border',
-    isNewComponent: true
+    filename: 'card-with-border'
   },
   {
     id: 'testimonials',
     name: 'Image on left side',
-    filename: 'large-image',
-    isNewComponent: true
+    filename: 'large-image'
   },
   {
     id: 'testimonials',
     name: 'With dotted box',
-    filename: 'with-dotted-box',
-    isNewComponent: true
+    filename: 'with-dotted-box'
   },
   {
     id: 'testimonials',
@@ -55,7 +52,6 @@ const components_list: Component[] = [
 export const testimonials: ComponentContainer = {
   id: 'testimonials',
   name: 'Testimonials',
-  hasAnyNewComponent: true,
   icon: BsChatSquareQuote,
   data: components_list
 };

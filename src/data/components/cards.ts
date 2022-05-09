@@ -5,8 +5,7 @@ const components_list: Component[] = [
   {
     id: 'cards',
     name: 'User Card',
-    filename: 'user-card',
-    isNewComponent: true
+    filename: 'user-card'
   },
   {
     id: 'cards',
@@ -17,8 +16,7 @@ const components_list: Component[] = [
   {
     id: 'cards',
     name: 'Product Cards',
-    filename: 'product-img-card',
-    isNewComponent: true
+    filename: 'product-img-card'
   },
   {
     id: 'cards',
@@ -28,8 +26,7 @@ const components_list: Component[] = [
   {
     id: 'cards',
     name: 'Course card',
-    filename: 'access-course',
-    isNewComponent: true
+    filename: 'access-course'
   },
   {
     id: 'cards',
