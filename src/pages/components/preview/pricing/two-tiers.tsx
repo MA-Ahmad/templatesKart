@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Index from 'preview/components/pricing/two-tiers';
 
-const TwoTier = () => {
+const TwoTiers = () => {
   return <Index />;
 };
 
-export default TwoTier;
+export default TwoTiers;

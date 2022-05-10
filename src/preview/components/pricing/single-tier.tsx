@@ -30,12 +30,6 @@ const PricingCard = () => {
       borderColor={useColorModeValue('gray.400', 'gray.600')}
       rounded="md"
       margin="0 auto"
-      _hover={{
-        boxShadow: useColorModeValue(
-          '0 4px 6px rgba(160, 174, 192, 0.6)',
-          '0 4px 6px rgba(9, 17, 28, 0.4)'
-        )
-      }}
       textAlign="center"
     >
       <chakra.h1 fontSize="7xl" fontWeight="400">

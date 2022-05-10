@@ -13,6 +13,12 @@ const components_list: Component[] = [
     name: 'Two tiers',
     filename: 'two-tiers',
     isNewComponent: true
+  },
+  {
+    id: 'pricing',
+    name: 'Three tiers with icons',
+    filename: 'three-tiers-with-icons',
+    isNewComponent: true
   }
 ];
 
