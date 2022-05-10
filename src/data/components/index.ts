@@ -14,6 +14,8 @@ import { features } from './features';
 import { pricing } from './pricing';
 
 export const components = [
+  pricing,
+  features,
   cards,
   pageSections,
   heroes,
@@ -25,7 +27,5 @@ export const components = [
   testimonials,
   stackedLists,
   skeletons,
-  footers,
-  features,
-  pricing
+  footers
 ];
