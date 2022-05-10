@@ -22,6 +22,12 @@ const components_list: Component[] = [
     id: 'page-sections',
     name: 'Show Features',
     filename: 'features'
+  },
+  {
+    id: 'page-sections',
+    name: 'CTA Banner',
+    filename: 'cta-banner',
+    isNewComponent: true
   }
 ];
 
