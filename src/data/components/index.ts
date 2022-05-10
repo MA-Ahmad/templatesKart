@@ -11,6 +11,7 @@ import { reviews } from './reviews';
 import { testimonials } from './testimonials';
 import { stackedLists } from './stacked-lists';
 import { features } from './features';
+import { pricing } from './pricing';
 
 export const components = [
   cards,
@@ -25,5 +26,6 @@ export const components = [
   stackedLists,
   skeletons,
   footers,
-  features
+  features,
+  pricing
 ];
