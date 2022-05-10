@@ -7,6 +7,12 @@ const components_list: Component[] = [
     name: 'Single tier',
     filename: 'single-tier',
     isNewComponent: true
+  },
+  {
+    id: 'pricing',
+    name: 'Two tiers',
+    filename: 'two-tiers',
+    isNewComponent: true
   }
 ];
 
