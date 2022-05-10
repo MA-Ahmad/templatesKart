@@ -4,9 +4,8 @@ import { CgFormatSeparator } from 'react-icons/cg';
 const components_list: Component[] = [
   {
     id: 'page-sections',
-    name: 'Small detail',
-    filename: 'small-detail',
-    isNewComponent: true
+    name: 'CTA with copy to clipboard',
+    filename: 'small-detail'
   },
   {
     id: 'page-sections',
@@ -27,6 +26,12 @@ const components_list: Component[] = [
     id: 'page-sections',
     name: 'CTA Banner',
     filename: 'cta-banner',
+    isNewComponent: true
+  },
+  {
+    id: 'page-sections',
+    name: 'Mission section',
+    filename: 'mission-section',
     isNewComponent: true
   }
 ];
