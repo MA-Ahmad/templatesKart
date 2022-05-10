@@ -33,6 +33,12 @@ const components_list: Component[] = [
     name: 'Mission section',
     filename: 'mission-section',
     isNewComponent: true
+  },
+  {
+    id: 'page-sections',
+    name: 'Overview section',
+    filename: 'overview-section',
+    isNewComponent: true
   }
 ];
 
