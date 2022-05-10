@@ -19,6 +19,7 @@ const MissionSection = () => {
         <Box mr={{ base: 0, md: 5 }} pos="relative">
           <DottedBox />
           <Image
+            boxShadow="lg"
             w="100%"
             h="100%"
             minW={{ base: 'auto', md: '30rem' }}
