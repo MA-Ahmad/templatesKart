@@ -17,7 +17,7 @@ import { AiOutlineCloudServer } from 'react-icons/ai';
 import { FaServer } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
-const packages = [
+const plansList = [
   {
     title: 'Hobby',
     price: 49,
@@ -57,8 +57,8 @@ const ThreeTiersPricing = () => {
         Simple and affordable pricing
       </chakra.h2>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={1} mt={4}>
-        {packages.map((pckg, index) => (
-          <PricingCard key={index} {...pckg} />
+        {plansList.map((plan, index) => (
+          <PricingCard key={index} {...plan} />
         ))}
       </SimpleGrid>
     </Container>

@@ -15,7 +15,7 @@ import {
 // Here we have used react-icons package for the icons
 import { BiCheck } from 'react-icons/bi';
 
-const packages = [
+const plansList = [
   {
     title: 'Android Single Site',
     subLabel: 'Build one application',
@@ -50,8 +50,8 @@ const TwoTiersPricing = () => {
         Android Pricing
       </chakra.h2>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2} mt={4}>
-        {packages.map((pckg, index) => (
-          <PricingCard key={index} {...pckg} />
+        {plansList.map((plan, index) => (
+          <PricingCard key={index} {...plan} />
         ))}
       </SimpleGrid>
     </Container>
