@@ -12,8 +12,10 @@ import { testimonials } from './testimonials';
 import { stackedLists } from './stacked-lists';
 import { features } from './features';
 import { pricing } from './pricing';
+import { milestones } from './milestones';
 
 export const components = [
+  milestones,
   pricing,
   features,
   cards,
