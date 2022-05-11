@@ -4,6 +4,12 @@ import { CgBox } from 'react-icons/cg';
 const components_list: Component[] = [
   {
     id: 'navbars',
+    name: 'Centered links',
+    filename: 'centered-links',
+    isNewComponent: true
+  },
+  {
+    id: 'navbars',
     name: 'Simple one',
     filename: 'simple-one',
     isNewComponent: true

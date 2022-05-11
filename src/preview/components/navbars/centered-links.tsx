@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Button,
   Text,
@@ -18,92 +17,55 @@ import {
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose, AiTwotoneThunderbolt } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { BiChevronDown } from 'react-icons/bi';
-import { MdTimeline } from 'react-icons/md';
-import { BsBook } from 'react-icons/bs';
-import { FiSun } from 'react-icons/fi';
-import { IconType } from 'react-icons';
+import { RiFlashlightFill } from 'react-icons/ri';
 
 const navLinks = [
   { name: 'About', path: '#' },
-  { name: 'Blog', path: '#' },
-  { name: 'Features', path: '#' }
+  { name: 'Features', path: '#' },
+  { name: 'Pricing', path: '#' }
 ];
 
 const dropdownLinks = [
   {
-    name: 'Projects',
-    path: '#',
-    icon: MdTimeline
+    name: 'Blog',
+    path: '#'
   },
   {
-    name: 'Tech Stack',
-    path: '#',
-    icon: AiTwotoneThunderbolt
+    name: 'Documentation',
+    path: '#'
   },
   {
-    name: 'Open Source',
-    path: '#',
-    icon: BsBook
+    name: 'Github Repo',
+    path: '#'
   }
 ];
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const menuProps = {
-    bg: useColorModeValue('gray.200', 'gray.700'),
-    color: useColorModeValue('blue.500', 'blue.200')
-  };
-
   return (
-    <Box px={4} boxShadow="lg" width="100%">
-      <Flex h={16} alignItems="center" justifyContent="space-between" maxW={800} mx="auto">
-        <IconButton
-          size="md"
-          icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
-          aria-label="Open Menu"
-          display={['inherit', 'inherit', 'none']}
-          onClick={isOpen ? onClose : onOpen}
-        />
+    <Box px={4} bg={useColorModeValue('white', 'gray.800')}>
+      <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
+        <Icon as={RiFlashlightFill} h={8} w={8} />
+
         <HStack spacing={8} alignItems="center">
-          <Avatar
-            href="#"
-            as={Link}
-            size="sm"
-            showBorder={true}
-            borderColor="blue.400"
-            rounded="full"
-            src="https://avatars2.githubusercontent.com/u/37842853?v=4"
-          />
-          <HStack as="nav" spacing={1} display={{ base: 'none', md: 'flex' }} alignItems="center">
+          <HStack as="nav" spacing={6} d={{ base: 'none', md: 'flex' }} alignItems="center">
             {navLinks.map((link, index) => (
               <NavLink key={index} {...link} onClose={onClose} />
             ))}
+
             {/* Dropdown Menu */}
             <Menu autoSelect={false} isLazy>
               {({ isOpen, onClose }) => (
                 <>
-                  <MenuButton
-                    as={Button}
-                    variant="ghost"
-                    size="sm"
-                    px={3}
-                    py={1}
-                    lineHeight="inherit"
-                    fontSize="1em"
-                    fontWeight="normal"
-                    rounded="md"
-                    height="auto"
-                    _hover={{ color: 'blue.400', bg: menuProps.bg }}
-                  >
-                    Links
+                  <MenuButton _hover={{ color: 'blue.400' }}>
+                    Community{' '}
                     <Icon
                       as={BiChevronDown}
                       h={5}
                       w={5}
-                      ml={1}
                       transition="all .25s ease-in-out"
                       transform={isOpen ? 'rotate(180deg)' : ''}
                     />
@@ -118,13 +80,7 @@ export default function Navbar() {
                     )}
                   >
                     {dropdownLinks.map((link, index) => (
-                      <MenuLink
-                        key={index}
-                        name={link.name}
-                        path={link.path}
-                        icon={link.icon}
-                        onClose={onClose}
-                      />
+                      <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
                     ))}
                   </MenuList>
                 </>
@@ -133,16 +89,33 @@ export default function Navbar() {
           </HStack>
         </HStack>
 
-        <IconButton aria-label="Color Switcher" icon={<FiSun />} />
+        <Button colorScheme="blue" size="md" rounded="md" d={{ base: 'none', md: 'block' }}>
+          Sign in
+        </Button>
+        <IconButton
+          size="md"
+          icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          aria-label="Open Menu"
+          d={{ base: 'inherit', md: 'none' }}
+          onClick={isOpen ? onClose : onOpen}
+        />
       </Flex>
 
       {/* Mobile Screen Links */}
       {isOpen ? (
-        <Box pb={4} display={['inherit', 'inherit', 'none']}>
+        <Box pb={4} d={{ base: 'inherit', md: 'none' }}>
           <Stack as="nav" spacing={2}>
             {navLinks.map((link, index) => (
               <NavLink key={index} {...link} onClose={onClose} />
             ))}
+            <Text fontWeight="semibold" color="gray.500">
+              Community
+            </Text>
+            <Stack pl={2} spacing={1} mt={'0 !important'}>
+              {dropdownLinks.map((link, index) => (
+                <NavLink key={index} {...link} onClose={onClose} />
+              ))}
+            </Stack>
           </Stack>
         </Box>
       ) : null}
@@ -158,22 +131,13 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ name, path, onClose }: NavLinkProps) => {
-  const link = {
-    bg: useColorModeValue('gray.200', 'gray.700'),
-    color: useColorModeValue('blue.500', 'blue.200')
-  };
-
   return (
     <Link
       href={path}
-      px={3}
-      py={1}
       lineHeight="inherit"
-      rounded="md"
       _hover={{
         textDecoration: 'none',
-        bg: link.bg,
-        color: link.color
+        color: useColorModeValue('blue.500', 'blue.200')
       }}
       onClick={() => onClose()}
     >
@@ -186,18 +150,14 @@ const NavLink = ({ name, path, onClose }: NavLinkProps) => {
 interface MenuLinkProps {
   name: string;
   path: string;
-  icon: IconType;
   onClose: () => void;
 }
 
-const MenuLink = ({ name, path, icon, onClose }: MenuLinkProps) => {
+const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
   return (
     <Link href={path} onClick={() => onClose()}>
       <MenuItem _hover={{ color: 'blue.400', bg: useColorModeValue('gray.200', 'gray.700') }}>
-        <HStack>
-          <Icon as={icon} size={18} color="blue.400" />
-          <Text>{name}</Text>
-        </HStack>
+        <Text>{name}</Text>
       </MenuItem>
     </Link>
   );
