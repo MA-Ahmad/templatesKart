@@ -57,7 +57,7 @@ const Footer = () => {
               <Link
                 fontWeight="500"
                 href={data.href}
-                color={useColorModeValue('gray.800', 'gray.900')}
+                color={useColorModeValue('gray.800', 'gray.300')}
               >
                 {data.label}
               </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
                     fontSize={{ base: 'sm', sm: 'md' }}
                     href="#"
                     mr={{ base: 1, sm: 2, md: 0 }}
-                    color={useColorModeValue('gray.500', 'gray.700')}
+                    color="gray.500"
                     _hover={{ color: 'blue.600' }}
                   >
                     {link.label}
@@ -80,7 +80,7 @@ const Footer = () => {
           ))}
         </Flex>
         <Flex alignItems="center">
-          <Text color="gray.600" fontSize="0.875rem" pl="0.5rem">
+          <Text color="gray.500" fontSize="0.875rem" pl="0.5rem">
             &copy; 2019 company, Inc. All rights reserved.
           </Text>
         </Flex>
