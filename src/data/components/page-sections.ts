@@ -14,11 +14,6 @@ const components_list: Component[] = [
   },
   {
     id: 'page-sections',
-    name: 'Timeline',
-    filename: 'timeline'
-  },
-  {
-    id: 'page-sections',
     name: 'Features section',
     filename: 'features'
   },
