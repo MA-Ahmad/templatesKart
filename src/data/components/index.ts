@@ -13,21 +13,23 @@ import { stackedLists } from './stacked-lists';
 import { features } from './features';
 import { pricing } from './pricing';
 import { milestones } from './milestones';
+import { sidebars } from './sidebars';
 
 export const components = [
-  milestones,
-  pricing,
-  features,
   cards,
-  pageSections,
   heroes,
-  navbars,
-  blog,
-  stats,
-  forms,
-  reviews,
   testimonials,
+  blog,
+  forms,
+  pageSections,
+  navbars,
+  stats,
+  footers,
+  pricing,
+  milestones,
+  reviews,
   stackedLists,
+  features,
   skeletons,
-  footers
+  sidebars
 ];
