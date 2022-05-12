@@ -7,6 +7,12 @@ const components_list: Component[] = [
     name: 'Sidebar with header',
     filename: 'sidebar-with-header',
     isNewComponent: true
+  },
+  {
+    id: 'sidebars',
+    name: 'Simple sidebar',
+    filename: 'simple-sidebar',
+    isNewComponent: true
   }
 ];
 
