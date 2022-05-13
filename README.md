@@ -23,7 +23,26 @@ Explore projects and copy code of any section that you like.
 
 ### [Components Kart](https://templateskart.com/components)
 
-Beautiful and responsive React components to build your application. Checkout components list. Copy and paste component code to your application and enjoy 🎉
+Beautiful and responsive React components to build your application. Checkout components list. Copy and paste component code to your application and enjoy your free time 🎉
+
+## Components
+
+- [x] Headers
+- [x] Heroes
+- [x] Testimonials
+- [x] Cards
+- [x] Blog
+- [x] Forms
+- [x] Page Sections
+- [x] Stats
+- [x] Milestones
+- [x] Pricing
+- [x] Footers
+- [x] Reviews
+- [x] Stacked lists
+- [x] Features
+- [x] Page shells
+- [x] Sidebars
 
 ## Built with
 
@@ -31,8 +50,13 @@ Beautiful and responsive React components to build your application. Checkout co
 - **Styling**: [Chakra UI](https://chakra-ui.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-## Inspiration & Thanks
 
-<a href="https://chakra-templates.dev" target="_blank">
-  Chakra Templates️
-</a>
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+
+
+## License
+
+See [LICENSE](LICENSE) for more information.
