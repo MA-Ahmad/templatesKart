@@ -153,6 +153,7 @@ export default function Index() {
                             zIndex={5}
                             opacity={isLoading ? 0.4 : 1}
                             src={getSelectedContentImageUrl()}
+                            alt={`${data.heading} Image`}
                             onLoad={() => setIsLoading(false)}
                             width={{ md: '30rem', lg: '50rem' }}
                             transition="all 0.2s"
@@ -170,6 +171,7 @@ export default function Index() {
                   zIndex={5}
                   opacity={isLoading ? 0.4 : 1}
                   src={getSelectedContentImageUrl()}
+                  alt="Project Image"
                   onLoad={() => setIsLoading(false)}
                   width={{ md: '30rem', lg: '50rem' }}
                   transition="all 0.2s"
