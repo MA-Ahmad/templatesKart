@@ -1,14 +1,7 @@
-import {
-  Stack,
-  IconButton,
-  Link,
-  Box,
-  Text,
-  useColorModeValue,
-  Flex,
-  Container
-} from '@chakra-ui/react';
+import { Stack, IconButton, Link, Box, Text, useColorModeValue, Container } from '@chakra-ui/react';
+import NextImage from 'next/image';
 import siteConfig from '../../utils/site-config';
+import { BUY_ME_A_COFFEE_LINK, GITHUB_BASE_URL } from 'data/constants';
 
 const iconProps = {
   variant: 'ghost',
@@ -18,41 +11,46 @@ const iconProps = {
 
 const Footer = () => {
   return (
-    <Container maxW={'1280px'}>
+    <Container maxW="1280px">
       <Stack
         as="footer"
-        isInline
-        spacing={[1, 2]}
-        p={6}
-        justifyContent="space-between"
+        spacing={3}
+        py={6}
+        justify="space-between"
         alignItems="center"
+        direction={{ base: 'column', md: 'row' }}
       >
-        <Flex
-          flexDirection={['column', 'column', 'row']}
-          flexFlow={['column-reverse', 'column-reverse']}
-          justifyContent={['center', 'space-between']}
-          alignItems="center"
-          w="100%"
-        >
-          <Text textAlign="center" fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
-            {siteConfig.copyright}
-          </Text>
-          <Box textAlign="center">
-            {siteConfig.author.accounts.map((sc, index) => (
-              <IconButton
-                key={index}
-                as={Link}
-                isExternal
-                href={sc.url}
-                aria-label={sc.label}
-                colorScheme={sc.type}
-                icon={sc.icon}
-                rounded="full"
-                {...iconProps}
-              />
-            ))}
-          </Box>
-        </Flex>
+        <Text textAlign="center" fontSize="sm" color={useColorModeValue('gray.500', 'gray.200')}>
+          Made with ❤️ for a better web by{' '}
+          <Link href={GITHUB_BASE_URL} _hover={{ textDecoration: 'underline' }} isExternal>
+            {' '}
+            Muhammad Ahmad{' '}
+          </Link>
+        </Text>
+        <Box textAlign="center">
+          {siteConfig.author.accounts.map((sc, index) => (
+            <IconButton
+              key={index}
+              as={Link}
+              isExternal
+              href={sc.url}
+              aria-label={sc.label}
+              colorScheme={sc.type}
+              icon={sc.icon}
+              rounded="full"
+              {...iconProps}
+            />
+          ))}
+        </Box>
+
+        <Link href={BUY_ME_A_COFFEE_LINK} isExternal>
+          <NextImage
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+            height={40}
+            width={142.47}
+          />
+        </Link>
       </Stack>
     </Container>
   );

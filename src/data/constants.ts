@@ -8,6 +8,7 @@ export const GITHUB_REPO_LINK = 'https://github.com/MA-Ahmad/templateskart';
 export const TWITTER_LINK = 'https://twitter.com/muhammad_ahmaad';
 export const LINKED_IN_LINK = 'https://linkedin.com/in/muhammad-ahmad20';
 export const DEV_TO_LINK = 'https://dev.to/m_ahmad';
+export const BUY_ME_A_COFFEE_LINK = 'https://www.buymeacoffee.com/m.ahmad';
 
 /**
  * SEO constants
