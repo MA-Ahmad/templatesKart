@@ -1,7 +1,7 @@
 <div align="center">
   <h2 align="center">TemplatesKart</h2>
   
-  <strong>A powerful set of fully responsive and accessible React components and projects</strong>
+  <strong>A powerful set of fully responsive and accessible ChakraUI React components and projects</strong>
   
   <strong>Official Website: https://templateskart.com</strong>
 </div>
