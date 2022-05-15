@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { useColorMode } from '@chakra-ui/react';
+import { useEffect, useRef, useState, Fragment } from 'react';
+import { useColorMode, useBreakpointValue } from '@chakra-ui/react';
 import { Component } from 'data/components/types';
 import { Resizable } from 're-resizable';
 import { getComponentFileUrl } from 'utils';
@@ -12,6 +12,7 @@ const MIN_HEIGHT = 222;
 const MIN_WIDTH = 380;
 
 export const ResizableFrame = ({ component }: IframeProps) => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   const ref = useRef<HTMLIFrameElement>(null);
   const { colorMode } = useColorMode();
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -34,24 +35,39 @@ export const ResizableFrame = ({ component }: IframeProps) => {
   const getHeight = () => (height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT);
 
   return (
-    <Resizable
-      bounds="parent"
-      minWidth={MIN_WIDTH}
-      minHeight={getHeight()}
-      maxHeight={getHeight()}
-      style={{
-        borderBottomLeftRadius: '15px',
-        borderBottomRightRadius: '15px'
-      }}
-    >
-      <iframe
-        loading="lazy"
-        width="100%"
-        height={getHeight()}
-        src={exampleUrl}
-        ref={ref}
-        onLoad={syncHeight}
-      />
-    </Resizable>
+    <Fragment>
+      {isMobile && (
+        <iframe
+          loading="lazy"
+          width="100%"
+          height={getHeight()}
+          src={exampleUrl}
+          ref={ref}
+          onLoad={syncHeight}
+        />
+      )}
+
+      {!isMobile && (
+        <Resizable
+          bounds="parent"
+          minWidth={MIN_WIDTH}
+          minHeight={getHeight()}
+          maxHeight={getHeight()}
+          style={{
+            borderBottomLeftRadius: '15px',
+            borderBottomRightRadius: '15px'
+          }}
+        >
+          <iframe
+            loading="lazy"
+            width="100%"
+            height={getHeight()}
+            src={exampleUrl}
+            ref={ref}
+            onLoad={syncHeight}
+          />
+        </Resizable>
+      )}
+    </Fragment>
   );
 };

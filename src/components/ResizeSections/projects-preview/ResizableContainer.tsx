@@ -214,7 +214,7 @@ export const ResizableContainer = ({
                   borderBottomRightRadius="2xl"
                   overflow="hidden"
                 >
-                  <Box w={viewWidth} bg={'transparent'}>
+                  <Box w={{ base: 'auto', md: viewWidth }} bg={'transparent'}>
                     <ResizableFrame project={project} page={page} component={component} />
                   </Box>
                 </Center>
