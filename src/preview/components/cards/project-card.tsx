@@ -47,7 +47,7 @@ const ProjectCard = () => {
 
   return (
     <>
-      <Container maxW="4xl" p={10}>
+      <Container maxW="4xl" p={{ base: 5, md: 10 }}>
         <VStack spacing={4}>
           {projectsList.map(({ id, title, desc, logo, link, technologies }) => (
             <chakra.div onClick={toggleOpen} key={id}>

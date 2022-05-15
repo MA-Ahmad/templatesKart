@@ -19,7 +19,7 @@ const LiveData = () => {
   }
 
   return (
-    <Container maxW="7xl" p="12">
+    <Container maxW="7xl" p={{ base: 5, md: 12 }}>
       <StackGrid columnWidth={!isLargerThan982 && !isLargerThan720 ? '100%' : columnWidth}>
         {repositoriesList()?.map((repo, index) => (
           <RepositoryCard

@@ -22,7 +22,7 @@ const data = {
 
 const Index = () => {
   return (
-    <Container maxW="5xl" p="10">
+    <Container maxW="5xl" p={{ base: 5, md: 10 }}>
       <Flex
         boxShadow={useColorModeValue(
           '0 4px 6px rgba(160, 174, 192, 0.6)',

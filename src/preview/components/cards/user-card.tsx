@@ -18,7 +18,7 @@ import { AiFillGithub } from 'react-icons/ai';
 
 const UserCard = () => {
   return (
-    <Container maxW="5xl" p="6">
+    <Container maxW="5xl" p={{ base: 5, md: 6 }}>
       <Stack
         w="17rem"
         spacing={2}

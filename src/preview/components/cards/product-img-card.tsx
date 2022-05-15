@@ -53,7 +53,7 @@ const productsList: ProductCardProps[] = [
 
 const Index = () => {
   return (
-    <Container maxW="7xl" p="12" margin="0 auto">
+    <Container maxW="7xl" p={{ base: 5, md: 12 }} margin="0 auto">
       <VStack spacing={4}>
         {productsList.map((product, index) => (
           <Stack

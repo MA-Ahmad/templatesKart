@@ -13,7 +13,7 @@ import { PropsWithChildren } from 'react';
 
 const Index = () => {
   return (
-    <Container p="10">
+    <Container p={{ base: 5, md: 10 }}>
       <Box
         borderWidth="1px"
         _hover={{ shadow: 'lg' }}

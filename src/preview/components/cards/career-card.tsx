@@ -25,7 +25,7 @@ const companies = [
 
 const Index = () => {
   return (
-    <Container maxW="4xl" p="12">
+    <Container maxW="4xl" p={{ base: 5, md: 12 }}>
       <VStack spacing={4} marginBottom={6} align="left" mx={[0, 0, 6]}>
         {companies.map(({ title, role, skills, period, logo, alt }, index) => (
           <Box
