@@ -25,7 +25,7 @@ const testimonials: TestimonialAttributes[] = [
 
 const Testimonials = () => {
   return (
-    <Container maxW="5xl" p={8}>
+    <Container maxW="5xl" p={{ base: 5, md: 8 }}>
       {testimonials.map((obj, index) => (
         <Fragment key={index}>
           <Stack

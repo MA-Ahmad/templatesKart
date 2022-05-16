@@ -9,7 +9,7 @@ const IntroSection = () => {
   const color = 'blue.400';
 
   return (
-    <Container maxW="5xl" p="12">
+    <Container maxW="5xl" p={{ base: 5, md: 12 }}>
       <Flex direction={['column', 'column', 'row']}>
         <MotionBox
           opacity="0"

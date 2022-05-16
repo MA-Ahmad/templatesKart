@@ -44,7 +44,7 @@ const testimonials: TestimonialAttributes[] = [
 
 const Testimonials = () => {
   return (
-    <Container maxW="5xl" p={10}>
+    <Container maxW="5xl" p={{ base: 5, md: 10 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={3} my={2}>
         {testimonials.map((obj, index) => (
           <Flex key={index} direction="column">

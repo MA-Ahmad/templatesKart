@@ -1,15 +1,6 @@
-import {
-  Container,
-  Text,
-  VStack,
-  Stack,
-  Box,
-  Avatar,
-  Icon,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Container, Text, VStack, Stack, Avatar, Icon, useColorModeValue } from '@chakra-ui/react';
 // Here we have used react-icons package for the icon
-import { FaQuoteRight, FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteRight } from 'react-icons/fa';
 interface TestimonialAttributes {
   username: string;
   position: string;
@@ -31,7 +22,7 @@ const testimonial: TestimonialAttributes = {
 
 const TestimonialCard = () => {
   return (
-    <Container maxW="5xl" p={14}>
+    <Container maxW="5xl" p={{ base: 10, md: 14 }}>
       <VStack
         spacing={3}
         p={4}

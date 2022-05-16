@@ -37,7 +37,7 @@ const features: IFeature[] = [
 
 const Features = () => {
   return (
-    <Container maxW="6xl" p={10}>
+    <Container maxW="6xl" p={{ base: 5, md: 10 }}>
       <chakra.h3 fontSize="4xl" fontWeight="bold" mb={3} textAlign="center">
         Features
       </chakra.h3>

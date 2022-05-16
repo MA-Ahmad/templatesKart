@@ -24,7 +24,7 @@ const dataList = [
 
 const BlogCards = () => {
   return (
-    <Container maxWidth="1200px" mx="auto" my="auto" p={10}>
+    <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
         {dataList.map((blog) => {
           return (

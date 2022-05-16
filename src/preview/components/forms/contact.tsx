@@ -40,7 +40,7 @@ const contactOptions = [
 
 const Contact = () => {
   return (
-    <Container maxW="7xl" py={10} px={8}>
+    <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
       <Stack spacing={10}>
         <Flex align="center" justify="center" direction="column">
           <Heading fontSize="4xl" mb={2}>

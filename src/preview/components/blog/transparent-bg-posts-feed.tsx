@@ -43,7 +43,7 @@ const articles = [
 
 const Posts = () => {
   return (
-    <Container p={10}>
+    <Container p={{ base: 5, md: 10 }}>
       <chakra.h1 p={4} mb={5} fontSize="3xl" lineHeight={1.2} fontWeight="bold" w="100%">
         Posts
       </chakra.h1>

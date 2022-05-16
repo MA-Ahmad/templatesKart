@@ -35,7 +35,7 @@ const testimonials: TestimonialAttributes[] = [
 
 const Testimonials = () => {
   return (
-    <Container maxW="5xl" py={10} px={20}>
+    <Container maxW="5xl" py={10} px={{ base: 5, md: 20 }}>
       {testimonials.map((obj, index) => (
         <Fragment key={index}>
           <Stack direction={{ base: 'column', sm: 'row' }} spacing={10} pt={1} justify="center">

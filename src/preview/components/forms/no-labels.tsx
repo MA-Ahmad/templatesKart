@@ -16,7 +16,7 @@ import { BiLockAlt } from 'react-icons/bi';
 
 const SignInForm = () => {
   return (
-    <Container maxW="7xl" p={10}>
+    <Container maxW="7xl" p={{ base: 5, md: 10 }}>
       <Center>
         <Stack spacing={4}>
           <Stack align="center">

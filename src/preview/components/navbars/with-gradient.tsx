@@ -30,7 +30,7 @@ const Navbar = () => {
   const { onOpen } = useDisclosure();
 
   return (
-    <Container maxW="7xl" p={10}>
+    <Container maxW="7xl" p={{ base: 5, md: 10 }}>
       <Flex mb="30px" align="center">
         <HStack>
           <Link href="#" passHref>

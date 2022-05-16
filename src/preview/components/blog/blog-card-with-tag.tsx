@@ -35,7 +35,7 @@ const articles = [
 
 const BlogCards = () => {
   return (
-    <Container maxWidth="1200px" mx="auto" my="auto" p={10}>
+    <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <VStack spacing={8} w={{ base: 'auto', md: '2xl' }} margin="0 auto">
         {articles.map((article, index) => (
           <Card key={index} {...article} />

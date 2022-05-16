@@ -4,7 +4,7 @@ import Card from './card';
 
 const Index = () => {
   return (
-    <Container maxW="4xl" px={8} py={16} mx="auto">
+    <Container maxW="4xl" px={{ base: 5, md: 8 }} py={16} mx="auto">
       <Box borderRadius="md">
         {postsData.map((post, index) => (
           <Card

@@ -35,7 +35,7 @@ const articles = [
 
 const Articles = () => {
   return (
-    <Container maxWidth="1200px" mx="auto" my="auto" p={8}>
+    <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 8 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
         {articles.map((article, index) => (
           <Card key={index} {...article} />

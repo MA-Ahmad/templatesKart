@@ -11,7 +11,7 @@ import {
 
 const BookingForm = () => {
   return (
-    <Container maxW="5xl" p={10}>
+    <Container maxW="5xl" p={{ base: 5, md: 10 }}>
       <Heading as="h3" size="lg" mb="4" fontWeight="bold" textAlign="left">
         Book unique homes and experiences
       </Heading>

@@ -32,7 +32,7 @@ const FeaturedArticles = () => {
   const textColor = useColorModeValue('gray.500', 'gray.200');
 
   return (
-    <Container maxW="4xl" p="12">
+    <Container maxW="4xl" p={{ base: 5, md: 12 }}>
       <VStack align="start" spacing={8} width="100%">
         <SimpleGrid columns={1} spacing={4} w="100%">
           {posts &&

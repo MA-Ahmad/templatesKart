@@ -22,7 +22,7 @@ import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <Container maxW="5xl" p={10}>
+    <Container maxW="5xl" p={{ base: 5, md: 10 }}>
       <SimpleGrid
         flexDirection="column-reverse"
         gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}

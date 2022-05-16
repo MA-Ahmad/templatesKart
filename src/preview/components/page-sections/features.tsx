@@ -2,7 +2,7 @@ import { Container, Box, Heading, Text, Flex, useColorModeValue } from '@chakra-
 
 export default function Home() {
   return (
-    <Container maxW={'5xl'} py={8} px={10}>
+    <Container maxW={'5xl'} py={8} px={{ base: 5, md: 10 }}>
       <Box
         maxW="64rem"
         marginX="auto"

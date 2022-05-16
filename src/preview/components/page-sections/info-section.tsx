@@ -24,7 +24,7 @@ const iconProps = {
 
 const InfoSection = () => {
   return (
-    <Container maxW="7xl" p={10} mx="auto">
+    <Container maxW="7xl" p={{ base: 5, md: 10 }} mx="auto">
       <Center>
         <VStack spacing={4} px={2} alignItems={{ base: 'center', sm: 'flex-start' }}>
           <Stack justifyContent="center" alignItems="center">
