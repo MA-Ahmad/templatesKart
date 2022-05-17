@@ -10,8 +10,7 @@ const components_list: Component[] = [
   {
     id: 'cards',
     name: 'Join community',
-    filename: 'join-community',
-    isNewComponent: true
+    filename: 'join-community'
   },
   {
     id: 'cards',
@@ -58,7 +57,6 @@ const components_list: Component[] = [
 export const cards: ComponentContainer = {
   id: 'cards',
   name: 'Cards',
-  hasAnyNewComponent: true,
   icon: BsCardText,
   data: components_list
 };

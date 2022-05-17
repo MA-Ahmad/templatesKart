@@ -5,8 +5,7 @@ const components_list: Component[] = [
   {
     id: 'heroes',
     name: 'Split with image',
-    filename: 'image-right-side',
-    isNewComponent: true
+    filename: 'image-right-side'
   },
   {
     id: 'heroes',
@@ -16,14 +15,12 @@ const components_list: Component[] = [
   {
     id: 'heroes',
     name: 'With Background image',
-    filename: 'bg-image',
-    isNewComponent: true
+    filename: 'bg-image'
   },
   {
     id: 'heroes',
     name: 'With gradient cover',
-    filename: 'cover-gradient',
-    isNewComponent: true
+    filename: 'cover-gradient'
   },
   {
     id: 'heroes',
@@ -33,8 +30,7 @@ const components_list: Component[] = [
   {
     id: 'heroes',
     name: 'Simply Centered',
-    filename: 'simply-centered',
-    isNewComponent: true
+    filename: 'simply-centered'
   },
   {
     id: 'heroes',
@@ -56,7 +52,6 @@ const components_list: Component[] = [
 export const heroes: ComponentContainer = {
   id: 'heroes',
   name: 'Heroes',
-  hasAnyNewComponent: true,
   icon: BsCardHeading,
   data: components_list
 };
