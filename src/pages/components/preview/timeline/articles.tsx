@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Index from 'preview/components/milestones/two-side-cards';
+import Index from 'preview/components/timeline/articles';
 
 const Cards = () => {
   return <Index />;

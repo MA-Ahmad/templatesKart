@@ -12,7 +12,7 @@ import { testimonials } from './testimonials';
 import { stackedLists } from './stacked-lists';
 import { features } from './features';
 import { pricing } from './pricing';
-import { milestones } from './milestones';
+import { timeline } from './timeline';
 import { sidebars } from './sidebars';
 
 export const components = [
@@ -26,7 +26,7 @@ export const components = [
   stats,
   footers,
   pricing,
-  milestones,
+  timeline,
   reviews,
   stackedLists,
   features,
