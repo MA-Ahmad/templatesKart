@@ -38,8 +38,8 @@ const milestones = [
 const Milestones = () => {
   return (
     <Container maxWidth="4xl" p={{ base: 2, sm: 10 }}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={20} textAlign="center">
-        Milestones
+      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
+        Articles
       </chakra.h3>
       {milestones.map((milestone, index) => (
         <Flex key={index} mb="10px">
