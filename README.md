@@ -27,22 +27,24 @@ Beautiful and responsive React components to build your application. Checkout co
 
 ## Components
 
+- [x] Blog
+- [x] Cards
+- [x] Features
+- [x] Footers
+- [x] Forms
 - [x] Headers
 - [x] Heroes
-- [x] Testimonials
-- [x] Cards
-- [x] Blog
-- [x] Forms
-- [x] Page Sections
-- [x] Stats
 - [x] Milestones
-- [x] Pricing
-- [x] Footers
-- [x] Reviews
-- [x] Stacked lists
-- [x] Features
+- [x] Page Sections
 - [x] Page shells
+- [x] Pagination
+- [x] Pricing
+- [x] Reviews
 - [x] Sidebars
+- [x] Stacked lists
+- [x] Stats
+- [x] Testimonials
+
 
 ## Built with
 
