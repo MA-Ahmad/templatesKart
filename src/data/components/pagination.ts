@@ -11,6 +11,11 @@ const components_list: Component[] = [
     id: 'pagination',
     name: 'Table data pagination',
     filename: 'table-data'
+  },
+  {
+    id: 'pagination',
+    name: 'With button group',
+    filename: 'button-group'
   }
 ];
 
