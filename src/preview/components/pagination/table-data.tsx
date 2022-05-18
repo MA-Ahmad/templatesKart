@@ -33,13 +33,11 @@ const Pagination = () => {
         <PaginationButton borderTopLeftRadius="md" borderBottomLeftRadius="md" isDisabled>
           <Icon as={FaChevronLeft} w={3.5} h={3.5} />
         </PaginationButton>
-        <PaginationButton px={4} isActive>
-          1
-        </PaginationButton>
-        <PaginationButton px={4}>2</PaginationButton>
-        <PaginationButton px={4}>...</PaginationButton>
-        <PaginationButton px={4}>1441</PaginationButton>
-        <PaginationButton px={4}>1442</PaginationButton>
+        <PaginationButton isActive>1</PaginationButton>
+        <PaginationButton>2</PaginationButton>
+        <PaginationButton>...</PaginationButton>
+        <PaginationButton>1441</PaginationButton>
+        <PaginationButton>1442</PaginationButton>
         <PaginationButton borderTopRightRadius="md" borderBottomRightRadius="md">
           <Icon as={FaChevronRight} w={3.5} h={3.5} />
         </PaginationButton>
@@ -62,6 +60,7 @@ const PaginationButton = ({ children, isDisabled, isActive, ...props }: Paginati
   return (
     <Flex
       p={3}
+      px={4}
       fontSize="md"
       fontWeight="500"
       lineHeight="1rem"

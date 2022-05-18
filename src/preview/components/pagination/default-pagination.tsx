@@ -30,13 +30,11 @@ const Pagination = () => {
       <PaginationButton borderTopLeftRadius="md" borderBottomLeftRadius="md">
         Previous
       </PaginationButton>
-      <PaginationButton px={4}>1</PaginationButton>
-      <PaginationButton px={4}>2</PaginationButton>
-      <PaginationButton px={4} isActive>
-        3
-      </PaginationButton>
-      <PaginationButton px={4}>4</PaginationButton>
-      <PaginationButton px={4}>5</PaginationButton>
+      <PaginationButton>1</PaginationButton>
+      <PaginationButton>2</PaginationButton>
+      <PaginationButton isActive>3</PaginationButton>
+      <PaginationButton>4</PaginationButton>
+      <PaginationButton>5</PaginationButton>
       <PaginationButton borderTopRightRadius="md" borderBottomRightRadius="md">
         Next
       </PaginationButton>
@@ -58,6 +56,7 @@ const PaginationButton = ({ children, isDisabled, isActive, ...props }: Paginati
   return (
     <Flex
       p={3}
+      px={4}
       fontSize="md"
       fontWeight="500"
       lineHeight={0.8}
