@@ -14,6 +14,7 @@ import { features } from './features';
 import { pricing } from './pricing';
 import { timeline } from './timeline';
 import { sidebars } from './sidebars';
+import { pagination } from './pagination';
 
 export const components = [
   cards,
@@ -31,5 +32,6 @@ export const components = [
   stackedLists,
   features,
   skeletons,
-  sidebars
+  sidebars,
+  pagination
 ];
