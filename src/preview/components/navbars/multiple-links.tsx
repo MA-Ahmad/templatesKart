@@ -98,15 +98,17 @@ export default function Navbar() {
                     height="auto"
                     _hover={{ color: 'blue.400', bg: menuProps.bg }}
                   >
-                    Links
-                    <Icon
-                      as={BiChevronDown}
-                      h={5}
-                      w={5}
-                      ml={1}
-                      transition="all .25s ease-in-out"
-                      transform={isOpen ? 'rotate(180deg)' : ''}
-                    />
+                    <Flex alignItems="center">
+                      <Text>Links</Text>
+                      <Icon
+                        as={BiChevronDown}
+                        h={5}
+                        w={5}
+                        ml={1}
+                        transition="all .25s ease-in-out"
+                        transform={isOpen ? 'rotate(180deg)' : ''}
+                      />
+                    </Flex>
                   </MenuButton>
                   <MenuList
                     zIndex={5}

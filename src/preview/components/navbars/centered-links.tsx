@@ -61,14 +61,17 @@ export default function Navbar() {
               {({ isOpen, onClose }) => (
                 <>
                   <MenuButton _hover={{ color: 'blue.400' }}>
-                    Community{' '}
-                    <Icon
-                      as={BiChevronDown}
-                      h={5}
-                      w={5}
-                      transition="all .25s ease-in-out"
-                      transform={isOpen ? 'rotate(180deg)' : ''}
-                    />
+                    <Flex alignItems="center">
+                      <Text>Community</Text>
+                      <Icon
+                        as={BiChevronDown}
+                        h={5}
+                        w={5}
+                        ml={1}
+                        transition="all .25s ease-in-out"
+                        transform={isOpen ? 'rotate(180deg)' : ''}
+                      />
+                    </Flex>
                   </MenuButton>
                   <MenuList
                     zIndex={5}
