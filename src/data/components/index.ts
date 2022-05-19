@@ -15,6 +15,7 @@ import { pricing } from './pricing';
 import { timeline } from './timeline';
 import { sidebars } from './sidebars';
 import { pagination } from './pagination';
+import { menu } from './menu';
 
 export const components = [
   cards,
@@ -33,5 +34,6 @@ export const components = [
   features,
   skeletons,
   sidebars,
-  pagination
+  pagination,
+  menu
 ];
