@@ -16,6 +16,11 @@ const components_list: Component[] = [
     id: 'menu',
     name: 'With icon',
     filename: 'with-icon'
+  },
+  {
+    id: 'menu',
+    name: 'With shadow',
+    filename: 'with-shadow'
   }
 ];
 
