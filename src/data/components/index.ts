@@ -27,13 +27,13 @@ export const components = [
   navbars,
   stats,
   footers,
+  menu,
+  pagination,
   pricing,
   timeline,
   reviews,
   stackedLists,
   features,
   skeletons,
-  sidebars,
-  pagination,
-  menu
+  sidebars
 ];
