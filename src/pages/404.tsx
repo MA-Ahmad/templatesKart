@@ -8,7 +8,7 @@ export const NotFound = () => {
   const hoverColor = useHoverLinkColor();
 
   return (
-    <AppLayout>
+    <AppLayout maxW="1280px" mt="32" py={2} mb={4}>
       <Flex align={'center'} justify={'center'} h={'calc(100vh - 16rem)'} w={'full'}>
         <Stack spacing={2}>
           <Heading size={'lg'} color="red.200">

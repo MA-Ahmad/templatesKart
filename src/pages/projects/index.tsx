@@ -18,7 +18,7 @@ const heroSectionData = {
 
 export default function Index() {
   return (
-    <AppLayout>
+    <AppLayout maxW="1280px" mt="32" py={2} mb={4}>
       <SEO />
       <PageLayout>
         <PageSlideFade>

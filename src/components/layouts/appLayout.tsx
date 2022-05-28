@@ -1,19 +1,17 @@
-import { Fragment, ReactNode } from 'react';
-import { Container } from '@chakra-ui/react';
+import { PropsWithChildren, Fragment, ReactNode } from 'react';
+import { Container, ContainerProps } from '@chakra-ui/react';
 import TopNav from '../shared/top-nav';
 import Footer from '../shared/footer';
 
-interface AppLayoutProps {
+interface AppLayoutProps extends ContainerProps {
   children: ReactNode;
 }
 
-function AppLayout({ children }: AppLayoutProps) {
+function AppLayout({ children, ...props }: PropsWithChildren<AppLayoutProps>) {
   return (
     <Fragment>
       <TopNav />
-      <Container maxW="1280px" mt="32" py={2} mb={4}>
-        {children}
-      </Container>
+      <Container {...props}>{children}</Container>
       <Footer />
     </Fragment>
   );

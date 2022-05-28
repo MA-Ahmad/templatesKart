@@ -21,7 +21,7 @@ export default function Index() {
   const seoTitle = `Components - ${SEO_TITLE}`;
 
   return (
-    <AppLayout>
+    <AppLayout maxW="1280px" mt="32" py={2} mb={4}>
       <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
       <PageLayout>
         <PageSlideFade>
