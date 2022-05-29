@@ -5,20 +5,17 @@ const components_list: Component[] = [
   {
     id: 'navbars',
     name: 'Centered links',
-    filename: 'centered-links',
-    isNewComponent: true
+    filename: 'centered-links'
   },
   {
     id: 'navbars',
     name: 'Simple one',
-    filename: 'simple-one',
-    isNewComponent: true
+    filename: 'simple-one'
   },
   {
     id: 'navbars',
     name: 'With multiple links',
-    filename: 'multiple-links',
-    isNewComponent: true
+    filename: 'multiple-links'
   },
   {
     id: 'navbars',
@@ -35,7 +32,6 @@ const components_list: Component[] = [
 export const navbars: ComponentContainer = {
   id: 'navbars',
   name: 'Navbars',
-  hasAnyNewComponent: true,
   icon: CgBox,
   data: components_list
 };

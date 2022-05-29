@@ -20,27 +20,23 @@ const components_list: Component[] = [
   {
     id: 'page-sections',
     name: 'CTA banner',
-    filename: 'cta-banner',
-    isNewComponent: true
+    filename: 'cta-banner'
   },
   {
     id: 'page-sections',
     name: 'Mission section',
-    filename: 'mission-section',
-    isNewComponent: true
+    filename: 'mission-section'
   },
   {
     id: 'page-sections',
     name: 'Overview section',
-    filename: 'overview-section',
-    isNewComponent: true
+    filename: 'overview-section'
   }
 ];
 
 export const pageSections: ComponentContainer = {
   id: 'page-sections',
   name: 'Page Sections',
-  hasAnyNewComponent: true,
   icon: CgFormatSeparator,
   data: components_list
 };
