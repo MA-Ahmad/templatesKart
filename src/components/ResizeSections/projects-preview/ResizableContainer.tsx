@@ -26,7 +26,7 @@ import { AiOutlineMobile, AiOutlineTablet } from 'react-icons/ai';
 import { IoIosDesktop } from 'react-icons/io';
 import { ResizableFrame } from 'components/ResizeSections/projects-preview/ResizableFrame';
 import { Project, Page, Component } from 'data/projects/types';
-import RadioCard2 from '../RadioCard';
+import RadioCard from '../RadioCard';
 import { getProjectFileUrl } from 'utils';
 import { CodeSample } from './CodeSample';
 import { SiTypescript, SiReact } from 'react-icons/si';
@@ -170,12 +170,12 @@ export const ResizableContainer = ({
                         const label = value.width;
                         const radio = getRadioProps({ value: label });
                         return (
-                          <RadioCard2 key={value.label} {...radio}>
+                          <RadioCard key={value.label} {...radio}>
                             <HStack spacing={1}>
                               <Icon as={value.icon} w={6} h={6} />
                               <Text fontSize={'sm'}>{value.label}</Text>
                             </HStack>
-                          </RadioCard2>
+                          </RadioCard>
                         );
                       })}
                     </HStack>
