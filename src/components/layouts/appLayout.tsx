@@ -1,5 +1,5 @@
 import { PropsWithChildren, Fragment, ReactNode } from 'react';
-import { Container, ContainerProps } from '@chakra-ui/react';
+import { Container, ContainerProps, Divider, useColorModeValue } from '@chakra-ui/react';
 import TopNav from '../shared/top-nav';
 import Footer from '../shared/footer';
 
@@ -12,6 +12,7 @@ function AppLayout({ children, ...props }: PropsWithChildren<AppLayoutProps>) {
     <Fragment>
       <TopNav />
       <Container {...props}>{children}</Container>
+      <Divider mt={14} borderColor={useColorModeValue('gray.900', 'gray.600')} />
       <Footer />
     </Fragment>
   );

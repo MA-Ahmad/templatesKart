@@ -1,5 +1,14 @@
 import { Fragment, ReactNode } from 'react';
-import { Container, Flex, Stack, ScaleFade, SlideFade, useDisclosure } from '@chakra-ui/react';
+import {
+  Container,
+  Flex,
+  Stack,
+  ScaleFade,
+  SlideFade,
+  Divider,
+  useDisclosure,
+  useColorModeValue
+} from '@chakra-ui/react';
 import TopNav from '../../shared/top-nav';
 import Footer from '../../shared/footer';
 import { Sidebar } from './sidebar';
@@ -27,6 +36,7 @@ function ProjectLayout({ children }: ProjectLayoutProps) {
           </Flex>
         </Stack>
       </Container>
+      <Divider mt={14} borderColor={useColorModeValue('gray.900', 'gray.600')} />
       <Footer />
     </Fragment>
   );
