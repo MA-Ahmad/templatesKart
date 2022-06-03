@@ -42,6 +42,8 @@ const ComponentsPreview = () => {
           rounded="md"
           fontWeight="bold"
           textTransform="uppercase"
+          boxShadow="md"
+          _hover={{ opacity: 0.8 }}
           as={Link}
         >
           See all components

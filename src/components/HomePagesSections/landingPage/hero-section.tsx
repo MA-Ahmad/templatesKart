@@ -165,24 +165,32 @@ const HeroSection = () => {
             flexWrap="wrap"
           >
             <NextLink href="/components" passHref>
-              <Button
+              <chakra.button
+                d="flex"
                 bgGradient={`linear(to-r, ${linkColor}, #1e4f7c)`}
                 color="white"
                 _hover={{ bgGradient: `linear(to-l, ${linkColor}, #1e4f7c)` }}
+                boxShadow="md"
                 variant="solid"
                 size="lg"
                 rounded="md"
                 fontWeight="bold"
+                lineHeight={1.2}
+                alignItems="center"
+                justifyContent="center"
+                h={12}
+                px={6}
                 mb={{ base: 2, sm: 0 }}
                 as={Link}
               >
                 Get started
-              </Button>
+              </chakra.button>
             </NextLink>
             <Flex
               border="1px solid"
               borderColor="gray.700"
               justify="center"
+              _hover={{ bg: useColorModeValue('gray.100', 'gray.800') }}
               p={3}
               px={4}
               lineHeight={1.18}
