@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
-  Container,
+  chakra,
   Box,
-  FormLabel,
-  FormControl,
   Input,
   Stack,
-  Button,
   VStack,
+  Container,
+  FormLabel,
+  FormControl,
   useColorModeValue
 } from '@chakra-ui/react';
 
@@ -39,17 +39,22 @@ const MagicLinkForm = () => {
               <FormLabel>Email address</FormLabel>
               <Input type="email" placeholder="Your email" rounded="md" />
             </FormControl>
-            <Button
+            <chakra.button
+              w="100%"
+              h={10}
+              px={6}
               bg="blue.400"
               color="white"
               _hover={{
                 bg: 'blue.500'
               }}
+              type="button"
+              fontSize="md"
               rounded="md"
-              w="100%"
+              shadow="md"
             >
               Send magic link
-            </Button>
+            </chakra.button>
           </VStack>
         </Box>
       </Stack>
