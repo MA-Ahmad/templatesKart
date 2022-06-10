@@ -4,12 +4,11 @@ import {
   Stack,
   HStack,
   Text,
-  useColorModeValue,
-  Button,
   Box,
   Flex,
   Link,
-  Icon
+  Icon,
+  useColorModeValue
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaGithub } from 'react-icons/fa';
@@ -66,10 +65,12 @@ const HeroSection = () => {
           TemplatesKart is free for everyone.
         </Text>
         <HStack spacing={{ base: 0, sm: 2 }} flexWrap="wrap">
-          <Button
+          <chakra.button
+            h={10}
+            px={6}
             color="white"
             variant="solid"
-            size="md"
+            fontSize="md"
             rounded="md"
             mb={{ base: 2, sm: 0 }}
             zIndex={5}
@@ -78,12 +79,12 @@ const HeroSection = () => {
             _hover={{ bg: 'blue.600' }}
           >
             View Components
-          </Button>
+          </chakra.button>
           <Flex
             as={Link}
             justify="center"
-            p={2}
-            px={3}
+            h={10}
+            px={6}
             lineHeight={1.18}
             rounded="md"
             fontWeight="bold"

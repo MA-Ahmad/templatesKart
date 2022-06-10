@@ -39,14 +39,15 @@ const ProductIntro = () => {
             open-source eCommerce framework for digitally-native brands, fast-growing online
             businesses and pragmatic developers.
           </Text>
-          <HStack spacing={5}>
-            <Button colorScheme="teal" variant="solid" size="md" rounded="md">
+          <HStack spacing={3}>
+            <Button colorScheme="teal" variant="solid" size="md" rounded="md" boxShadow="md">
               Get Started
             </Button>
             <Box
               border="1px solid"
               borderColor="gray.300"
               p={2}
+              px={4}
               lineHeight={1.18}
               rounded="md"
               boxShadow="md"

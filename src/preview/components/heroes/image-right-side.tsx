@@ -59,22 +59,32 @@ const HeroSection = () => {
             TemplatesKart provides the best ChakraUI templates. Focus on your business, not on the
             boilerplate.
           </Text>
-          <HStack spacing={{ base: 0, sm: 2 }} flexWrap="wrap">
-            <Button
+          <HStack
+            spacing={{ base: 0, sm: 2 }}
+            mb={{ base: '3rem !important', sm: 0 }}
+            flexWrap="wrap"
+          >
+            <chakra.button
+              w={{ base: '100%', sm: 'auto' }}
+              h={12}
+              px={6}
               color="white"
-              variant="solid"
               size="lg"
               rounded="md"
               mb={{ base: 2, sm: 0 }}
               zIndex={5}
               lineHeight={1}
               bgGradient="linear(to-l, #0ea5e9,#2563eb)"
-              _hover={{ bgGradient: 'linear(to-l, #0ea5e9,#2563eb)' }}
+              _hover={{ bgGradient: 'linear(to-l, #0ea5e9,#2563eb)', opacity: 0.9 }}
             >
               <chakra.span> Explore ComponentsKart </chakra.span>
               <Icon as={MdBolt} h={4} w={4} ml={1} />
-            </Button>
+            </chakra.button>
             <Box
+              d="flex"
+              justifyContent="center"
+              bg={useColorModeValue('white', 'gray.800')}
+              w={{ base: '100%', sm: 'auto' }}
               border="1px solid"
               borderColor="gray.300"
               p={3}
@@ -82,7 +92,7 @@ const HeroSection = () => {
               rounded="md"
               boxShadow="md"
               as={Link}
-              zIndex={5}
+              zIndex={55555555}
             >
               Watch Video
             </Box>

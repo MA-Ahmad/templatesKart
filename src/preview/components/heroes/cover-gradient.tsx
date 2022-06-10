@@ -18,13 +18,13 @@ const Index = () => {
             '0 4px 6px rgba(160, 174, 192, 0.6)',
             '0 4px 6px rgba(9, 17, 28, 0.9)'
           )}
-          bg="white"
+          bg={useColorModeValue('white', 'gray.800')}
           p={{ base: 4, sm: 8 }}
           overflow="hidden"
           rounded="2xl"
         >
           <Stack pos="relative" zIndex={1} direction="column" spacing={5} textAlign="left">
-            <chakra.h1 fontSize="4xl" lineHeight={1.2} fontWeight="bold" color="black">
+            <chakra.h1 fontSize="4xl" lineHeight={1.2} fontWeight="bold">
               Explore TemplatesKart
             </chakra.h1>
             <chakra.h1 color="gray.400" fontSize="xl" maxW="600px" lineHeight={1.2}>
@@ -34,8 +34,11 @@ const Index = () => {
             </chakra.h1>
 
             <Stack direction={{ base: 'column', md: 'row' }} spacing={3}>
-              <Button
+              <chakra.button
+                h={10}
+                px={6}
                 color="white"
+                fontSize="md"
                 variant="solid"
                 rounded="md"
                 lineHeight={1}
@@ -43,8 +46,15 @@ const Index = () => {
                 _hover={{ bg: 'blue.600' }}
               >
                 View Components
-              </Button>
-              <Button leftIcon={<FaGithub />} as={Link} href="#" rounded="md" color="gray.800">
+              </chakra.button>
+              <Button
+                leftIcon={<FaGithub />}
+                as={Link}
+                href="#"
+                rounded="md"
+                colorScheme="gray"
+                variant="solid"
+              >
                 Github Discussions
               </Button>
               <Button
@@ -53,7 +63,8 @@ const Index = () => {
                 href="#"
                 rounded="md"
                 color="white"
-                bg="purple.500"
+                variant="solid"
+                colorScheme="purple"
                 _hover={{ bg: 'purple.600' }}
               >
                 Discord community

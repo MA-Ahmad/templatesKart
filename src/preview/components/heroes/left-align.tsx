@@ -155,7 +155,9 @@ const HeroSection = () => {
               spacing={{ base: 0, sm: 2 }}
               flexWrap="wrap"
             >
-              <Button
+              <chakra.button
+                h={12}
+                px={6}
                 bgGradient="linear(to-br, #228be6, #15aabf)"
                 color="white"
                 _hover={{ bgGradient: 'linear(to-br, #228be6, #228be6)' }}
@@ -166,7 +168,7 @@ const HeroSection = () => {
                 mb={{ base: 2, sm: 0 }}
               >
                 <chakra.span> Get started </chakra.span>
-              </Button>
+              </chakra.button>
               <Flex
                 border="1px solid"
                 borderColor="gray.700"
