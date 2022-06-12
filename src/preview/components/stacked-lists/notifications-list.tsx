@@ -61,7 +61,12 @@ const NotificationsList = () => {
       >
         {notifications.map((notification, index) => (
           <Fragment key={index}>
-            <Flex w="100%" justify="space-between" alignItems="center">
+            <Flex
+              w="100%"
+              justify="space-between"
+              alignItems="center"
+              _hover={{ bg: useColorModeValue('gray.200', 'gray.700') }}
+            >
               <Stack spacing={0} direction="row" alignItems="center">
                 <Flex p={4}>
                   <Avatar size="md" name={notification.userName} src={notification.userAvatar} />

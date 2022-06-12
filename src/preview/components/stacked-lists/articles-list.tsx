@@ -79,7 +79,7 @@ const Articles = () => {
               p={{ base: 2, sm: 4 }}
               gap={3}
               alignItems="center"
-              _hover={{ bg: useColorModeValue('gray.300', 'gray.800') }}
+              _hover={{ bg: useColorModeValue('gray.200', 'gray.700') }}
             >
               <Box gridColumnEnd={{ base: 'span 2', md: 'unset' }}>
                 <chakra.h3 as={Link} href={article.link} isExternal fontWeight="bold" fontSize="lg">
