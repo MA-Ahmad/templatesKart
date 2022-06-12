@@ -121,10 +121,10 @@ const Stats = ({ label, length, icon }: StatsProps) => {
   return (
     <Tooltip hasArrow placement="top" label={label} bg="gray.300" color="black">
       <HStack>
+        {icon}
         <Text fontSize="md" noOfLines={1} fontWeight="400" align="left">
           {length}
         </Text>
-        {icon}
       </HStack>
     </Tooltip>
   );
