@@ -11,5 +11,6 @@ export const blogApp: Project = {
   githubRepoName: 'reactBlog',
   liveLink: 'https://ma-ahmad.github.io/reactBlog',
   pages: pages_list(),
-  components: components
+  components: components,
+  stars: 17
 };

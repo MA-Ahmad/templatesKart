@@ -14,7 +14,7 @@ import {
 import { MotionBox } from 'components/shared/animations/motion';
 import NextLink from 'next/link';
 import { Tag } from 'components/shared/Tags';
-import { AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineGithub, AiOutlineStar } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 import { CgComponents, CgFileDocument } from 'react-icons/cg';
 import { GITHUB_BASE_URL } from 'data/constants';
@@ -81,6 +81,13 @@ const Card = ({ project }: ProjectProps) => {
                   project.components.filter((component) => component.page_id !== 'theme').length
                 }
                 icon={<Icon as={CgComponents} />}
+              />
+            </HStack>
+            <HStack>
+              <Stats
+                label="Github stars"
+                length={project.stars}
+                icon={<Icon as={AiOutlineStar} />}
               />
             </HStack>
           </HStack>

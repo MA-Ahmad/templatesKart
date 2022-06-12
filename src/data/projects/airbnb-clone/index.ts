@@ -11,5 +11,6 @@ export const airbnb: Project = {
   githubRepoName: 'chakra-airbnb',
   liveLink: 'https://chakra-airbnb.vercel.app',
   pages: pages_list(),
-  components: components
+  components: components,
+  stars: 7
 };

@@ -11,6 +11,7 @@ export interface Project {
   techStack: string[];
   pages: Page[];
   components: Component[];
+  stars: number;
 }
 
 export interface Page {

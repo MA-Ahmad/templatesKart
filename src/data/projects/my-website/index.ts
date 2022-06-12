@@ -13,5 +13,6 @@ export const myWebsite: Project = {
   themeCodeLink: 'https://github.com/MA-Ahmad/myPortfolio/tree/main/components/theme',
   liveLink: 'https://mahmad.me',
   pages: pages_list(),
-  components: components
+  components: components,
+  stars: 126
 };

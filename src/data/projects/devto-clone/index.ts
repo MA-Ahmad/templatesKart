@@ -11,5 +11,6 @@ export const devTo: Project = {
   githubRepoName: 'dev.to-clone',
   liveLink: 'https://dev-to-clone-ab.vercel.app',
   pages: pages_list(),
-  components: components
+  components: components,
+  stars: 61
 };

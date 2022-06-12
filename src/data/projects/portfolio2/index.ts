@@ -13,5 +13,6 @@ export const portfolio2: Project = {
   githubRepoName: 'portfolio2',
   liveLink: 'https://ma-ahmad.github.io/portfolio2/#',
   pages: pages_list(),
-  components: components
+  components: components,
+  stars: 24
 };
