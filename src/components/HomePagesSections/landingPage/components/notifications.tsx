@@ -24,14 +24,14 @@ interface Notification {
 const notifications: Notification[] = [
   {
     notification: `It's <span style="font-weight: 600">Dan Abrahmov's</span> birthday. Wish him well!`,
-    dateTime: '2 days ago',
+    dateTime: 'yesterday',
     userName: 'Dan Abrahmov',
     userAvatar: 'https://bit.ly/dan-abramov',
     isOnline: true
   },
   {
     notification: `<span style="font-weight: 600">Kent Dodds</span> liked your photo.`,
-    dateTime: 'yesterday',
+    dateTime: '2 days ago',
     userName: 'Kent Dodds',
     userAvatar: 'https://bit.ly/kent-c-dodds',
     isOnline: true
@@ -61,7 +61,12 @@ const NotificationsList = () => {
       >
         {notifications.map((notification, index) => (
           <Fragment key={index}>
-            <Flex w="100%" justify="space-between" alignItems="center">
+            <Flex
+              w="100%"
+              justify="space-between"
+              alignItems="center"
+              _hover={{ bg: useColorModeValue('gray.200', 'gray.700') }}
+            >
               <Stack spacing={0} direction="row" alignItems="center">
                 <Flex p={4}>
                   <Avatar size="md" name={notification.userName} src={notification.userAvatar} />
