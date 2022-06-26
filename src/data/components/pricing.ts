@@ -5,27 +5,23 @@ const components_list: Component[] = [
   {
     id: 'pricing',
     name: 'Single tier',
-    filename: 'single-tier',
-    isNewComponent: true
+    filename: 'single-tier'
   },
   {
     id: 'pricing',
     name: 'Two tiers',
-    filename: 'two-tiers',
-    isNewComponent: true
+    filename: 'two-tiers'
   },
   {
     id: 'pricing',
     name: 'Three tiers with icons',
-    filename: 'three-tiers-with-icons',
-    isNewComponent: true
+    filename: 'three-tiers-with-icons'
   }
 ];
 
 export const pricing: ComponentContainer = {
   id: 'pricing',
   name: 'Pricing',
-  hasAnyNewComponent: true,
   icon: IoMdPricetags,
   data: components_list
 };

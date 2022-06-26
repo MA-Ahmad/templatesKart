@@ -5,27 +5,23 @@ const components_list: Component[] = [
   {
     id: 'timeline',
     name: 'Milestones',
-    filename: 'milestones',
-    isNewComponent: true
+    filename: 'milestones'
   },
   {
     id: 'timeline',
     name: 'Articles',
-    filename: 'articles',
-    isNewComponent: true
+    filename: 'articles'
   },
   {
     id: 'timeline',
     name: 'With icons',
-    filename: 'with-icons',
-    isNewComponent: true
+    filename: 'with-icons'
   }
 ];
 
 export const timeline: ComponentContainer = {
   id: 'timeline',
   name: 'timeline',
-  hasAnyNewComponent: true,
   icon: GoMilestone,
   data: components_list
 };
