@@ -25,7 +25,11 @@ function ProjectLayout({ children }: ProjectLayoutProps) {
     <Fragment>
       <TopNav />
       <Container maxW="1280px" mt={28} flex="1 0 auto" py={8}>
-        <Stack direction={{ base: 'column', lg: 'row' }} spacing={{ base: 0, lg: isOpen ? 0 : 8 }}>
+        <Stack
+          direction={{ base: 'column', lg: 'row' }}
+          justifyContent="space-between"
+          spacing={{ base: 0, lg: isOpen ? 0 : 8 }}
+        >
           <SidebarButton onToggle={onToggle} isOpen={isOpen} />
 
           <ScaleFade initialScale={0.9} in={!isOpen}>
