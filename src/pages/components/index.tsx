@@ -86,8 +86,6 @@ export default function Index() {
 }
 
 const VerticalIcon = ({ view }) => {
-  const color = view === 1 ? '#ffffff' : useColorModeValue('#000000', '#ffffff');
-
   return (
     <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect
@@ -96,25 +94,23 @@ const VerticalIcon = ({ view }) => {
         rx="2"
         fill={view === 1 ? '#3985d0' : useColorModeValue('#a0aebf', '#4a5567')}
       />
-      <rect x="3" y="3" width="18" height="10" fill={color} />
-      <path d="M3 16H19" stroke={color} stroke-width="2" />
-      <path d="M3 19.5H15" stroke={color} />
+      <rect x="3" y="3" width="18" height="10" fill="#ffffff" />
+      <path d="M3 16H19" stroke="#ffffff" stroke-width="2" />
+      <path d="M3 19.5H15" stroke="#ffffff" />
     </svg>
   );
 };
 
 const HorizontalIcon = ({ view }) => {
-  const color = view === 2 ? '#ffffff' : useColorModeValue('#000000', '#ffffff');
-
   return (
     <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M22 0H2C0.89543 0 0 0.89543 0 2V19C0 20.1046 0.89543 21 2 21H22C23.1046 21 24 20.1046 24 19V2C24 0.89543 23.1046 0 22 0Z"
         fill={view === 2 ? '#3985d0' : useColorModeValue('#a0aebf', '#4a5567')}
       />
-      <rect x="2" y="6" width="12" height="10" fill={color} />
-      <line x1="15.5" y1="8" x2="23.5" y2="8" stroke={color} stroke-width="2" />
-      <line x1="16" y1="13.5" x2="22" y2="13.5" stroke={color} />
+      <rect x="2" y="6" width="12" height="10" fill="#ffffff" />
+      <line x1="15.5" y1="8" x2="23.5" y2="8" stroke="#ffffff" stroke-width="2" />
+      <line x1="16" y1="13.5" x2="22" y2="13.5" stroke="#ffffff" />
     </svg>
   );
 };
