@@ -33,7 +33,7 @@ export default function Index() {
           <Stack my={20} spacing={12}>
             <Header textAlign="center">Components</Header>
             <Stack px={10} direction="row" w="100%" justifyContent="flex-end">
-              <Tooltip hasArrow label="Vertical view" placement="top">
+              <Tooltip hasArrow label="Large cards" placement="top">
                 <Flex
                   p={3}
                   alignItems="center"
@@ -46,7 +46,7 @@ export default function Index() {
                   <VerticalIcon view={viewTypeId} />
                 </Flex>
               </Tooltip>
-              <Tooltip hasArrow label="Horizontal view" placement="top">
+              <Tooltip hasArrow label="Small cards" placement="top">
                 <Flex
                   p={3}
                   alignItems="center"
