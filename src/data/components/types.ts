@@ -12,5 +12,6 @@ export interface ComponentContainer {
   name: string;
   hasAnyNewComponent?: boolean;
   icon: IconType;
+  svgIcon?: JSX.Element;
   data: Component[];
 }
