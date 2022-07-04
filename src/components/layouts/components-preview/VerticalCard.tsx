@@ -20,12 +20,12 @@ const Card = ({ component }: { component: ComponentContainer }) => {
 
   return (
     <NextLink href={`/components/${component.id}`} passHref>
-      <Link rounded="md">
+      <Link rounded="lg">
         <MotionBox whileHover={{ translateY: -5 }} transition={{ duration: 0.3 }}>
           <Stack
             direction="column"
             padding={2}
-            rounded="md"
+            rounded="lg"
             _hover={{ bg: useColorModeValue('gray.100', 'gray.800') }}
             role="group"
           >
