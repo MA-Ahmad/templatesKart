@@ -9,7 +9,7 @@ export const educative: Project = {
   techStack: ['nextjs', 'chakraUi'],
   imageUrl: '/assets/images/projects/educative.png',
   githubRepoName: 'educative',
-  liveLink: 'http://educative.vercel.app/',
+  liveLink: 'https://educative.vercel.app/',
   pages: pages_list(),
   components: components,
   stars: 3
