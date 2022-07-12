@@ -1,8 +1,12 @@
 import { Page } from 'data/projects/types';
 import { components } from './components';
 import { AiOutlineHome } from 'react-icons/ai';
+import { MdOutlinePlayLesson } from 'react-icons/md';
 
-const page_names = [{ name: 'Home', icon: AiOutlineHome }];
+const page_names = [
+  { name: 'Home', icon: AiOutlineHome },
+  { name: 'Course', icon: MdOutlinePlayLesson }
+];
 
 export const pages_list = () => {
   let pages: Page[] = [];
