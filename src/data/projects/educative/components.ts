@@ -6,13 +6,13 @@ export const components: Component[] = [
     type: 'header',
     page_id: 'home',
     filename: 'header'
+  },
+  {
+    name: 'Course card',
+    type: 'card',
+    page_id: 'home',
+    filename: 'course-card'
   }
-  // {
-  //   name: 'Course card',
-  //   type: 'card',
-  //   page_id: 'home',
-  //   filename: 'course-card'
-  // },
   // {
   //   name: 'Preview course',
   //   type: 'card',
