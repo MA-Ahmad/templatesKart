@@ -59,11 +59,8 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
         borderColor={useColorModeValue('gray.100', 'gray.600')}
         p={2}
       >
-        <Container py={5}>
-          <Heading as="h4" fontSize={{ base: '3xl', md: 'md' }}>
-            Primary Color
-          </Heading>
-          <SimpleGrid columns={{ base: 3, md: 4, lg: 5 }} spacing={2} mt={4}>
+        <Container py={2}>
+          <SimpleGrid columns={{ base: 3, md: 4, lg: 5 }} spacing={2}>
             {accentKeys
               .filter((key) => key !== 'defaultAccent')
               .map((key, index) => (
