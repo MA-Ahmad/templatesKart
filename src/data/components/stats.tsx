@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { BiStats } from 'react-icons/bi';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -30,6 +31,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="158"
@@ -63,9 +66,9 @@ const Icon = () => {
         stroke="black"
         stroke-width="0.1"
       />
-      <path d="M40 44.4082H14V49.4592H40V44.4082Z" fill="#3769B4" />
-      <path d="M86 44.4082H60V49.4592H86V44.4082Z" fill="#3769B4" />
-      <path d="M132 44.4082H106V49.4592H132V44.4082Z" fill="#3769B4" />
+      <path d="M40 44.4082H14V49.4592H40V44.4082Z" fill={color} />
+      <path d="M86 44.4082H60V49.4592H86V44.4082Z" fill={color} />
+      <path d="M132 44.4082H106V49.4592H132V44.4082Z" fill={color} />
       <path d="M14 54H35" stroke="#A8A9AB" stroke-width="3" />
       <path d="M106 54H127" stroke="#A8A9AB" stroke-width="3" />
       <path d="M60 54H81" stroke="#A8A9AB" stroke-width="3" />

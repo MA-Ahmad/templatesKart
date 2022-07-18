@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { BsCardText } from 'react-icons/bs';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -55,6 +56,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="121"
@@ -78,7 +81,7 @@ const Icon = () => {
       />
       <path d="M9.3446 77.0856L86.3478 77.6036" stroke="#CDCCCF" stroke-width="3" />
       <path d="M8.87769 88.5198L23.1748 88.4983L37.677 88.4765" stroke="#CDCCCF" stroke-width="4" />
-      <line x1="9.3446" y1="63.6405" x2="65.5009" y2="63.6405" stroke="#3769B4" stroke-width="4" />
+      <line x1="9.3446" y1="63.6405" x2="65.5009" y2="63.6405" stroke={color} stroke-width="4" />
       <g clip-path="url(#clip0_0_1)">
         <path d="M10.4215 8.30138L111.579 51.6986" stroke="#A8A9AB" />
         <path d="M111.366 8.48889L10.6335 51.5111" stroke="#A8A9AB" />

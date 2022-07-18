@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { MdOutlineRateReview } from 'react-icons/md';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -20,6 +21,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="153"
@@ -31,8 +34,8 @@ const Icon = () => {
       <g filter="url(#filter0_d_31_415)">
         <rect x="4" width="145" height="99" rx="5" fill="white" />
       </g>
-      <line x1="48" y1="17.5" x2="102" y2="17.5" stroke="#3769B4" stroke-width="3" />
-      <ellipse cx="53.5814" cy="33" rx="5.5814" ry="5" fill="#D9D9D9" />
+      <line x1="48" y1="17.5" x2="102" y2="17.5" stroke={color} stroke-width="3" />
+      <ellipse cx="53.5814" cy="33" rx="5.5814" ry="5" fill={color} />
       <line x1="64.7442" y1="32" x2="92.6512" y2="32" stroke="#A8A9AB" stroke-width="2" />
       <path d="M64.7442 35.5H77.5814" stroke="#D9D9D9" />
       <path
@@ -59,7 +62,7 @@ const Icon = () => {
       <line x1="48" y1="48.5" x2="92.6512" y2="48.5" stroke="#D9D9D9" />
       <path
         d="M53.814 66C57.0249 66 59.6279 63.7614 59.6279 61C59.6279 58.2386 57.0249 56 53.814 56C50.603 56 48 58.2386 48 61C48 63.7614 50.603 66 53.814 66Z"
-        fill="#D9D9D9"
+        fill={color}
       />
       <path d="M65.4419 60H94.5116" stroke="#A8A9AB" stroke-width="2" />
       <path d="M65.4419 63.5H78.814" stroke="#D9D9D9" />

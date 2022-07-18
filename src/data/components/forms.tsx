@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { AiOutlineForm } from 'react-icons/ai';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -35,6 +36,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="151"
@@ -47,12 +50,12 @@ const Icon = () => {
         <rect x="4" width="143" height="99" rx="5" fill="white" />
       </g>
       <path d="M26 23H124" stroke="#D9D9D9" stroke-width="3" />
-      <path d="M49 15H101" stroke="#3769B4" stroke-width="3" />
+      <path d="M49 15H101" stroke={color} stroke-width="3" />
       <path d="M39 29H111" stroke="#D9D9D9" stroke-width="3" />
       <rect x="26" y="41" width="44" height="6" fill="#D9D9D9" />
       <path d="M124 41H80V47H124V41Z" fill="#D9D9D9" />
       <rect x="26" y="49" width="98" height="25" fill="#D9D9D9" />
-      <path d="M93 80H57V85H93V80Z" fill="#3769B4" />
+      <path d="M93 80H57V85H93V80Z" fill={color} />
       <defs>
         <filter
           id="filter0_d_21_181"

@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { BsCardHeading } from 'react-icons/bs';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -50,6 +51,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="155"
@@ -63,8 +66,8 @@ const Icon = () => {
           <g filter="url(#filter1_d_13_37)">
             <path d="M151 0H4V99H151V0Z" fill="white" />
           </g>
-          <path d="M117 14H131.397H146" stroke="#3769B4" stroke-width="4" />
-          <path d="M86 14H100.397H115" stroke="#3769B4" stroke-width="4" />
+          <path d="M117 14H131.397H146" stroke={color} stroke-width="4" />
+          <path d="M86 14H100.397H115" stroke={color} stroke-width="4" />
           <path
             d="M74.2975 28.2808V28H74V28.2808H74.2975ZM145.703 28.2808H146V28H145.703V28.2808ZM145.703 68.7192V69H146V68.7192H145.703ZM74.2975 68.7192H74V69H74.2975V68.7192ZM74.2975 28.5616H145.703V28H74.2975V28.5616ZM145.405 28.2808V68.7192H146V28.2808H145.405ZM145.703 68.4384H74.2975V69H145.703V68.4384ZM74.595 68.7192V28.2808H74V68.7192H74.595Z"
             fill="#A8A9AB"
@@ -80,10 +83,10 @@ const Icon = () => {
             stroke-width="4"
           />
           <path d="M65.0913 81.5307H114.994" stroke="#CDCCCF" stroke-width="4" />
-          <path d="M55 14H69.3967H84" stroke="#3769B4" stroke-width="4" />
+          <path d="M55 14H69.3967H84" stroke={color} stroke-width="4" />
           <rect x="10" y="61" width="37" height="8" fill="#D9D9D9" />
-          <ellipse cx="15" cy="14.5" rx="5" ry="4.5" fill="#D9D9D9" />
-          <line x1="15" y1="65" x2="43" y2="65" stroke="#3769B4" stroke-width="2" />
+          <ellipse cx="15" cy="14.5" rx="5" ry="4.5" fill={color} />
+          <line x1="15" y1="65" x2="43" y2="65" stroke={color} stroke-width="2" />
           <path d="M10.3627 38.6405H69.4746" stroke="#CDCCCF" stroke-width="3" />
           <path d="M10.3627 43.6405H69.4746" stroke="#CDCCCF" stroke-width="3" />
         </g>

@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { CgBox } from 'react-icons/cg';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -30,6 +31,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="153"
@@ -42,11 +45,11 @@ const Icon = () => {
         <rect x="4" width="145" height="99" rx="5" fill="white" />
       </g>
       <path d="M90 13.1327L104 13.1327" stroke="#A8A9AB" stroke-width="3" />
-      <path d="M144 10.102H118V15.1531H144V10.102Z" fill="#3769B4" />
+      <path d="M144 10.102H118V15.1531H144V10.102Z" fill={color} />
       <path d="M72 13.1327H86" stroke="#A8A9AB" stroke-width="3" />
       <path d="M54 13.1327H68" stroke="#A8A9AB" stroke-width="3" />
       <line x1="4" y1="21.9" x2="149" y2="21.9" stroke="black" stroke-width="0.2" />
-      <circle cx="14.5" cy="11.5" r="5.5" fill="#3769B4" />
+      <circle cx="14.5" cy="11.5" r="5.5" fill={color} />
       <defs>
         <filter
           id="filter0_d_22_211"

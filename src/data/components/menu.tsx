@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { BsFillMenuButtonFill } from 'react-icons/bs';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -25,6 +26,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="153"
@@ -36,7 +39,7 @@ const Icon = () => {
       <g filter="url(#filter0_d_29_327)">
         <rect x="4" width="145" height="99" rx="5" fill="white" />
       </g>
-      <rect x="50" y="30" width="30" height="6" fill="#3769B4" />
+      <rect x="50" y="30" width="30" height="6" fill={color} />
       <rect
         x="67.05"
         y="37.05"

@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { SiElasticstack } from 'react-icons/si';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -20,6 +21,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="153"
@@ -31,7 +34,7 @@ const Icon = () => {
       <g filter="url(#filter0_d_28_306)">
         <rect x="4" width="145" height="99" rx="5" fill="white" />
       </g>
-      <line x1="14" y1="46.5" x2="48" y2="46.5" stroke="#3769B4" stroke-width="3" />
+      <line x1="14" y1="46.5" x2="48" y2="46.5" stroke={color} stroke-width="3" />
       <rect
         x="73.05"
         y="40.05"
@@ -53,8 +56,8 @@ const Icon = () => {
         d="M77.6464 46.8536C77.4512 46.6583 77.4512 46.3417 77.6464 46.1464L80.8284 42.9645C81.0237 42.7692 81.3403 42.7692 81.5355 42.9645C81.7308 43.1597 81.7308 43.4763 81.5355 43.6716L78.7071 46.5L81.5355 49.3284C81.7308 49.5237 81.7308 49.8403 81.5355 50.0355C81.3403 50.2308 81.0237 50.2308 80.8284 50.0355L77.6464 46.8536ZM79 47H78V46H79V47Z"
         fill="#A8A9AB"
       />
-      <line x1="93" y1="46.5" x2="98" y2="46.5" stroke="black" />
-      <path d="M109 46.5H114" stroke="black" />
+      <line x1="93" y1="46.5" x2="98" y2="46.5" stroke={color} />
+      <path d="M109 46.5H114" stroke={color} />
       <defs>
         <filter
           id="filter0_d_28_306"

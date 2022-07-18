@@ -1,5 +1,6 @@
 import { Component, ComponentContainer } from './types';
 import { MdOutlineFeaturedPlayList } from 'react-icons/md';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
@@ -17,6 +18,8 @@ const components_list: Component[] = [
 ];
 
 const Icon = () => {
+  const color = useColorModeValue('var(--colors-accent-400)', 'var(--colors-accent-500)');
+
   return (
     <svg
       width="153"
@@ -28,7 +31,7 @@ const Icon = () => {
       <g filter="url(#filter0_d_32_462)">
         <rect x="4" width="145" height="99" rx="5" fill="white" />
       </g>
-      <path d="M50 21.5H104" stroke="#3769B4" stroke-width="3" />
+      <path d="M50 21.5H104" stroke={color} stroke-width="3" />
       <rect
         x="17.05"
         y="39.05"
@@ -76,9 +79,9 @@ const Icon = () => {
         fill="#A8A9AB"
       />
       <line x1="57" y1="26" x2="97" y2="26" stroke="#D9D9D9" stroke-width="2" />
-      <rect x="29" y="36.5" width="10" height="5" fill="#3769B4" />
-      <path d="M82 36.5H72V41.5H82V36.5Z" fill="#3769B4" />
-      <path d="M125 36.5H115V41.5H125V36.5Z" fill="#3769B4" />
+      <rect x="29" y="36.5" width="10" height="5" fill={color} />
+      <path d="M82 36.5H72V41.5H82V36.5Z" fill={color} />
+      <path d="M125 36.5H115V41.5H125V36.5Z" fill={color} />
       <defs>
         <filter
           id="filter0_d_32_462"
