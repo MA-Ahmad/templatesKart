@@ -38,6 +38,11 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
     return useColorModeValue(`${key}.700`, `${key}.200`);
   };
 
+  const tickMarker = (key: string) => {
+    if ((accentKey === 'defaultAccent' && key === 'blue') || accentKey === key)
+      return <Icon as={TiTick} color="white" />;
+  };
+
   return (
     <Popover placement="bottom-end" variant="responsive">
       <PopoverTrigger>
@@ -85,7 +90,7 @@ export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
                     justify="center"
                     align="center"
                   >
-                    {accentKey === key && <Icon as={TiTick} color="white" />}
+                    {tickMarker(key)}
                   </Flex>
                 </Flex>
               ))}
