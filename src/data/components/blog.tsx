@@ -6,26 +6,22 @@ const components_list: Component[] = [
   {
     id: 'blog',
     name: 'Newsletters',
-    filename: 'timeline-newsletter',
-    isNewComponent: true
+    filename: 'timeline-newsletter'
   },
   {
     id: 'blog',
     name: 'With border',
-    filename: 'with-border',
-    isNewComponent: true
+    filename: 'with-border'
   },
   {
     id: 'blog',
     name: 'Transparent bg',
-    filename: 'transparent-background',
-    isNewComponent: true
+    filename: 'transparent-background'
   },
   {
     id: 'blog',
     name: 'With tag',
-    filename: 'blog-card-with-tag',
-    isNewComponent: true
+    filename: 'blog-card-with-tag'
   },
   {
     id: 'blog',
@@ -40,8 +36,7 @@ const components_list: Component[] = [
   {
     id: 'blog',
     name: 'Posts feed with transparent bg',
-    filename: 'transparent-bg-posts-feed',
-    isNewComponent: true
+    filename: 'transparent-bg-posts-feed'
   },
   {
     id: 'blog',
@@ -118,7 +113,6 @@ const Icon = () => {
 export const blog: ComponentContainer = {
   id: 'blog',
   name: 'Blog',
-  hasAnyNewComponent: true,
   icon: FaBlogger,
   svgIcon: <Icon />,
   data: components_list

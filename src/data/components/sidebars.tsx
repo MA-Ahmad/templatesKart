@@ -6,14 +6,12 @@ const components_list: Component[] = [
   {
     id: 'sidebars',
     name: 'Sidebar with header',
-    filename: 'sidebar-with-header',
-    isNewComponent: true
+    filename: 'sidebar-with-header'
   },
   {
     id: 'sidebars',
     name: 'Simple sidebar',
-    filename: 'simple-sidebar',
-    isNewComponent: true
+    filename: 'simple-sidebar'
   }
 ];
 
@@ -74,7 +72,6 @@ const Icon = () => {
 export const sidebars: ComponentContainer = {
   id: 'sidebars',
   name: 'Sidebars',
-  hasAnyNewComponent: true,
   icon: BsLayoutSidebarInset,
   svgIcon: <Icon />,
   data: components_list

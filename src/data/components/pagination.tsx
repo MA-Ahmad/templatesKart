@@ -95,7 +95,6 @@ const Icon = () => {
 export const pagination: ComponentContainer = {
   id: 'pagination',
   name: 'Pagination',
-  hasAnyNewComponent: true,
   icon: SiElasticstack,
   svgIcon: <Icon />,
   data: components_list

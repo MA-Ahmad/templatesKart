@@ -6,14 +6,12 @@ const components_list: Component[] = [
   {
     id: 'features',
     name: 'With cards',
-    filename: 'with-cards',
-    isNewComponent: true
+    filename: 'with-cards'
   },
   {
     id: 'features',
     name: 'Simple 2 columns',
-    filename: 'simple-2-columns',
-    isNewComponent: true
+    filename: 'simple-2-columns'
   }
 ];
 
@@ -119,7 +117,6 @@ const Icon = () => {
 export const features: ComponentContainer = {
   id: 'features',
   name: 'Features',
-  hasAnyNewComponent: true,
   icon: MdOutlineFeaturedPlayList,
   svgIcon: <Icon />,
   data: components_list

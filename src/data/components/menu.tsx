@@ -92,7 +92,6 @@ const Icon = () => {
 export const menu: ComponentContainer = {
   id: 'menu',
   name: 'Menu',
-  hasAnyNewComponent: true,
   icon: BsFillMenuButtonFill,
   svgIcon: <Icon />,
   data: components_list
