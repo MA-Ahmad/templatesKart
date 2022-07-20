@@ -21,6 +21,7 @@ import PageLayout from 'components/layouts/pageLayout';
 import { PageSlideFade } from 'components/shared/animations/page-transitions';
 import HeroSection from 'components/HomePagesSections/landingPage/hero-section';
 import ComponentsPreview from 'components/HomePagesSections/landingPage/components-preview';
+import SettingsDrawerWrapper from 'components/settings/SettingsDrawer';
 
 const features: string[] = [
   '6 Projects',
@@ -89,6 +90,7 @@ export default function Index() {
           </Stack>
 
           <OverviewSection />
+          <SettingsDrawerWrapper />
         </PageSlideFade>
       </PageLayout>
     </AppLayout>

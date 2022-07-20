@@ -13,6 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import PageLayout from 'components/layouts/pageLayout';
 import { PageSlideFade } from 'components/shared/animations/page-transitions';
+import SettingsDrawerWrapper from 'components/settings/SettingsDrawer';
 
 type PageProps = {
   project: Project;
@@ -73,6 +74,7 @@ const Templates: NextPage<PageProps> = ({ project, page, components, componentsF
             )}
           </Stack>
           <ScrollToTop />
+          <SettingsDrawerWrapper />
         </PageSlideFade>
       </PageLayout>
     </ProjectLayout>
