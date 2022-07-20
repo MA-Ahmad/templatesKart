@@ -25,6 +25,11 @@ export function getTagBackgroundDark(accentKey: ColorKeys, theme: ThemeOverride)
   return accentKey && transparentize((theme.colors as any)[accentKey][200], 0.1)(theme);
 }
 
+export function getPresetBackground(accentKey: ColorKeys, theme: ThemeOverride) {
+  const opacity = useColorModeValue(0.3, 0.4);
+  return accentKey && transparentize((theme.colors as any)[accentKey][100], opacity)(theme);
+}
+
 export const colors = {
   ...defaultTheme.colors,
   gray: {

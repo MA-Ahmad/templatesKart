@@ -4,18 +4,17 @@ import {
   Box,
   Flex,
   Stack,
-  HStack,
-  Heading,
-  Container,
   Icon,
   Text,
+  HStack,
+  Tooltip,
+  Heading,
+  Container,
   IconButton,
   useDisclosure,
   useColorModeValue
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../theme/ColorModeSwitcher';
 import NextLink from 'next/link';
-import { AccentPicker } from 'components/theme/Accent';
 import DropDownMenu from './dropDownMenu';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { useLinkColor } from 'components/theme';
@@ -146,21 +145,21 @@ export default function TopNav() {
               <DropDownMenu menuData={menuData} />
             </HStack>
             <HStack spacing={2} alignItems="center">
-              <Link href={GITHUB_REPO_LINK} isExternal>
-                <Flex
-                  as="button"
-                  p="0.6rem"
-                  rounded="lg"
-                  cursor="pointer"
-                  _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
-                  bg={useColorModeValue('gray.200', 'gray.700')}
-                  justify="center"
-                >
-                  <Icon as={FaGithub} color={linkColor} />
-                </Flex>
-              </Link>
-              <AccentPicker aria-label="Accent Color Picker" />
-              <ColorModeSwitcher justifySelf="flex-end" />
+              <Tooltip label="Github Code" placement="left" aria-label="Github code">
+                <Link href={GITHUB_REPO_LINK} isExternal>
+                  <Flex
+                    as="button"
+                    p="0.6rem"
+                    rounded="lg"
+                    cursor="pointer"
+                    _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
+                    bg={useColorModeValue('gray.200', 'gray.700')}
+                    justify="center"
+                  >
+                    <Icon as={FaGithub} color={linkColor} />
+                  </Flex>
+                </Link>
+              </Tooltip>
             </HStack>
           </Flex>
         </Container>

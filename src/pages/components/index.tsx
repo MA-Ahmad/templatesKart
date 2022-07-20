@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SimpleGrid, Stack, Flex, Tooltip, useColorModeValue } from '@chakra-ui/react';
+import { SimpleGrid, Stack } from '@chakra-ui/react';
 import AppLayout from 'components/layouts/appLayout';
 import SCard from 'components/layouts/components-preview/SmallCard';
 import LCard from 'components/layouts/components-preview/LargeCard';
@@ -10,8 +10,8 @@ import HeroSection from 'components/HomePagesSections/hero-section';
 import Header from 'components/HomePagesSections/header';
 import PageLayout from 'components/layouts/pageLayout';
 import { PageSlideFade } from 'components/shared/animations/page-transitions';
-import { useLinkColor } from 'preview/projects/my-website/pages/theme';
 import ToggleView from 'components/layouts/components-preview/toggleView';
+import SettingsDrawerWrapper from 'components/settings/SettingsDrawer';
 
 const heroSectionData = {
   heading: 'ComponentsKart',
@@ -52,6 +52,7 @@ export default function Index() {
               )}
             </SimpleGrid>
           </Stack>
+          <SettingsDrawerWrapper />
         </PageSlideFade>
       </PageLayout>
     </AppLayout>

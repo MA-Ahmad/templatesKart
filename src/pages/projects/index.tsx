@@ -7,6 +7,7 @@ import HeroSection from 'components/HomePagesSections/hero-section';
 import Header from 'components/HomePagesSections/header';
 import PageLayout from 'components/layouts/pageLayout';
 import { PageSlideFade } from 'components/shared/animations/page-transitions';
+import SettingsDrawerWrapper from 'components/settings/SettingsDrawer';
 
 const heroSectionData = {
   heading: 'ProjectsKart',
@@ -31,6 +32,7 @@ export default function Index() {
               ))}
             </SimpleGrid>
           </Stack>
+          <SettingsDrawerWrapper />
         </PageSlideFade>
       </PageLayout>
     </AppLayout>
