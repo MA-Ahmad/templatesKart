@@ -1,5 +1,6 @@
 import { ThemeOverride, useColorModeValue, theme as defaultTheme } from '@chakra-ui/react';
 import { transparentize } from '@chakra-ui/theme-tools';
+
 export const linkColors = {
   light: 'accent.400',
   dark: 'accent.500',

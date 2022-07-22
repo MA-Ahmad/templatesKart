@@ -32,7 +32,7 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_31_432)">
-        <rect x="4" width="145" height="99" rx="5" fill="white" />
+        <rect x="4" width="145" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
       <rect
         x="20.05"
@@ -40,17 +40,17 @@ const Icon = () => {
         width="113.9"
         height="16.9"
         rx="1.95"
-        fill="white"
+        fill={useColorModeValue('#fff', '#D9D9D9')}
         stroke="black"
         stroke-width="0.1"
       />
       <circle cx="29" cy="29" r="5" fill={color} />
       <line x1="40" y1="28" x2="79" y2="28" stroke="#A8A9AB" stroke-width="2" />
-      <line x1="40" y1="31.5" x2="66" y2="31.5" stroke="#D9D9D9" />
+      <line x1="40" y1="31.5" x2="66" y2="31.5" stroke="#A8A9AB" />
       <circle cx="129" cy="29" r="1" fill={color} />
       <path
         d="M131.95 43H21.95C20.873 43 20 43.873 20 44.95V57.95C20 59.027 20.873 59.9 21.95 59.9H131.95C133.027 59.9 133.9 59.027 133.9 57.95V44.95C133.9 43.873 133.027 43 131.95 43Z"
-        fill="white"
+        fill={useColorModeValue('#fff', '#D9D9D9')}
         stroke="black"
         stroke-width="0.1"
       />
@@ -59,14 +59,14 @@ const Icon = () => {
         fill={color}
       />
       <path d="M39.95 50.95H78.95" stroke="#A8A9AB" stroke-width="2" />
-      <path d="M39.95 54.45H65.95" stroke="#D9D9D9" />
+      <path d="M39.95 54.45H65.95" stroke="#A8A9AB" />
       <path
         d="M128.95 52.95C129.502 52.95 129.95 52.5023 129.95 51.95C129.95 51.3977 129.502 50.95 128.95 50.95C128.398 50.95 127.95 51.3977 127.95 51.95C127.95 52.5023 128.398 52.95 128.95 52.95Z"
         fill={color}
       />
       <path
         d="M132 66.05H22C20.923 66.05 20.05 66.923 20.05 68V81C20.05 82.077 20.923 82.95 22 82.95H132C133.077 82.95 133.95 82.077 133.95 81V68C133.95 66.923 133.077 66.05 132 66.05Z"
-        fill="white"
+        fill={useColorModeValue('#fff', '#D9D9D9')}
         stroke="black"
         stroke-width="0.1"
       />
@@ -75,7 +75,7 @@ const Icon = () => {
         fill={color}
       />
       <path d="M40 74H79" stroke="#A8A9AB" stroke-width="2" />
-      <path d="M40 77.5H66" stroke="#D9D9D9" />
+      <path d="M40 77.5H66" stroke="#A8A9AB" />
       <path
         d="M129 76C129.552 76 130 75.5523 130 75C130 74.4477 129.552 74 129 74C128.448 74 128 74.4477 128 75C128 75.5523 128.448 76 129 76Z"
         fill={color}

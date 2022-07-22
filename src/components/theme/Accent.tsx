@@ -1,22 +1,21 @@
 import React from 'react';
 import {
-  IconButtonProps,
   Icon,
   Flex,
   Popover,
+  Container,
+  SimpleGrid,
   PopoverTrigger,
   PopoverContent,
-  SimpleGrid,
-  Heading,
-  Container,
+  IconButtonProps,
   useColorModeValue
 } from '@chakra-ui/react';
 import { css, Global } from '@emotion/react';
 import { BiBrushAlt } from 'react-icons/bi';
 import { TiTick } from 'react-icons/ti';
-import { theme, ColorKeys, useLinkColor, accentKeys } from './index';
-import { useLocalSetting } from './hooks/useLocalSetting';
 import { getTagBackgroundDark } from './colors';
+import { useLocalSetting } from './hooks/useLocalSetting';
+import { theme, ColorKeys, useLinkColor, accentKeys } from './index';
 
 export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
   const color = useLinkColor();

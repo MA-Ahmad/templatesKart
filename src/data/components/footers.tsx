@@ -42,7 +42,7 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_24_278)">
-        <rect x="4" width="145" height="99" rx="5" fill="white" />
+        <rect x="4" width="145" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
       <line x1="4" y1="85.95" x2="149" y2="85.95" stroke="black" stroke-width="0.1" />
       <rect x="12" y="92" width="32" height="2" fill={color} />

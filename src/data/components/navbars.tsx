@@ -42,7 +42,7 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_22_211)">
-        <rect x="4" width="145" height="99" rx="5" fill="white" />
+        <rect x="4" width="145" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
       <path d="M90 13.1327L104 13.1327" stroke="#A8A9AB" stroke-width="3" />
       <path d="M144 10.102H118V15.1531H144V10.102Z" fill={color} />

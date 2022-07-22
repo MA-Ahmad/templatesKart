@@ -36,7 +36,7 @@ const Card = ({ component }: { component: ComponentContainer }) => {
               p={2}
               pt={7}
               pb={5}
-              bg={useColorModeValue('gray.200', 'gray.600')}
+              bg={useColorModeValue('gray.200', 'gray.700')}
               _groupHover={{ border: '1px solid', borderColor: linkColor }}
               position="relative"
               h="10rem"

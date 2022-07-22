@@ -57,7 +57,7 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_20_136)">
-        <rect x="4" width="147" height="99" rx="5" fill="white" />
+        <rect x="4" width="147" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
       <ellipse cx="32.5" cy="37.5" rx="7.5" ry="6.5" fill={color} />
       <path d="M44 34H74" stroke="#A8A9AB" stroke-width="2" />

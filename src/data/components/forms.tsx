@@ -47,7 +47,7 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_21_181)">
-        <rect x="4" width="143" height="99" rx="5" fill="white" />
+        <rect x="4" width="143" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
       <path d="M26 23H124" stroke="#D9D9D9" stroke-width="3" />
       <path d="M49 15H101" stroke={color} stroke-width="3" />

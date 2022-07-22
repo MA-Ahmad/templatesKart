@@ -67,8 +67,15 @@ const Icon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_0_1)">
-        <rect x="4" width="113" height="99" rx="5" fill="white" />
-        <rect x="4.5" y="0.5" width="112" height="98" rx="4.5" stroke="white" />
+        <rect x="4" width="113" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
+        <rect
+          x="4.5"
+          y="0.5"
+          width="112"
+          height="98"
+          rx="4.5"
+          stroke={useColorModeValue('#fff', '#171923')}
+        />
       </g>
       <path d="M82.642 88.5307H111.996" stroke="#CDCCCF" stroke-width="4" />
       <line

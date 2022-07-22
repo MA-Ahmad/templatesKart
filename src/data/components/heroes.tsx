@@ -64,7 +64,7 @@ const Icon = () => {
       <g filter="url(#filter0_d_13_37)">
         <g clip-path="url(#clip0_13_37)">
           <g filter="url(#filter1_d_13_37)">
-            <path d="M151 0H4V99H151V0Z" fill="white" />
+            <path d="M151 0H4V99H151V0Z" fill={useColorModeValue('#fff', '#171923')} />
           </g>
           <path d="M117 14H131.397H146" stroke={color} stroke-width="4" />
           <path d="M86 14H100.397H115" stroke={color} stroke-width="4" />
