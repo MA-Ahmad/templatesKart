@@ -44,7 +44,14 @@ const Icon = () => {
       <g filter="url(#filter0_d_24_278)">
         <rect x="4" width="145" height="99" rx="5" fill={useColorModeValue('#fff', '#171923')} />
       </g>
-      <line x1="4" y1="85.95" x2="149" y2="85.95" stroke="black" stroke-width="0.1" />
+      <line
+        x1="4"
+        y1="85.95"
+        x2="149"
+        y2="85.95"
+        stroke={useColorModeValue('#171923', '#CBD5E0')}
+        stroke-width="0.1"
+      />
       <rect x="12" y="92" width="32" height="2" fill={color} />
       <path d="M138.728 92H108V94H138.728V92Z" fill={color} />
       <path d="M135.967 70H106V72H135.967V70Z" fill="#D9D9D9" />

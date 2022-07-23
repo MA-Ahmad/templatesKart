@@ -48,7 +48,14 @@ const Icon = () => {
       <path d="M144 10.102H118V15.1531H144V10.102Z" fill={color} />
       <path d="M72 13.1327H86" stroke="#A8A9AB" stroke-width="3" />
       <path d="M54 13.1327H68" stroke="#A8A9AB" stroke-width="3" />
-      <line x1="4" y1="21.9" x2="149" y2="21.9" stroke="black" stroke-width="0.2" />
+      <line
+        x1="4"
+        y1="21.9"
+        x2="149"
+        y2="21.9"
+        stroke={useColorModeValue('#171923', '#CBD5E0')}
+        stroke-width="0.2"
+      />
       <circle cx="14.5" cy="11.5" r="5.5" fill={color} />
       <defs>
         <filter
