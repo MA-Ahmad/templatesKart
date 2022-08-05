@@ -12,5 +12,5 @@ export const devTo: Project = {
   liveLink: 'https://dev-to-clone-ab.vercel.app',
   pages: pages_list(),
   components: components,
-  stars: 61
+  stars: 64
 };
