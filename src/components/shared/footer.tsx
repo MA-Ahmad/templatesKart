@@ -103,7 +103,13 @@ const Footer = () => {
 
 const CustomLink = ({ children, ...props }: LinkProps) => {
   return (
-    <Link fontSize="md" fontWeight="light" _hover={{ textDecoration: 'underline' }} {...props}>
+    <Link
+      fontSize="md"
+      w="max-content"
+      fontWeight="light"
+      _hover={{ textDecoration: 'underline' }}
+      {...props}
+    >
       {children}
     </Link>
   );
