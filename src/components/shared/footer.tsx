@@ -25,8 +25,8 @@ const iconProps = {
 
 const Footer = () => {
   return (
-    <Container maxW="1280px" p={{ base: 5, md: 10 }}>
-      <SimpleGrid columns={[1, 2, 4, 4]} spacingX="50px" my={3} pb={5}>
+    <Container maxW="1280px" pt={10} pb={5} px={{ base: 5, md: 10 }}>
+      <SimpleGrid columns={[1, 2, 4, 4]} spacingX="50px" pb={6}>
         <Stack mb={['20px', '20px', 0, 0]}>
           <Text as={Link} href="/components" fontSize="lg" fontWeight="bold">
             Components
@@ -66,7 +66,7 @@ const Footer = () => {
             ))}
           </Box>
         </Stack>
-        <Stack mb={['20px', '20px', 0, 0]}>
+        <Stack>
           <Text as={Link} href="/components" fontSize="lg" fontWeight="bold">
             Support
           </Text>
@@ -84,7 +84,12 @@ const Footer = () => {
       <Divider my={4} />
 
       <Stack direction={{ base: 'column', md: 'row' }} spacing={3} justifyContent="center">
-        <Text textAlign="center" fontSize="md" color={useColorModeValue('gray.500', 'gray.200')}>
+        <Text
+          textAlign="center"
+          fontSize="md"
+          color={useColorModeValue('gray.500', 'gray.200')}
+          pt={1}
+        >
           Made with ❤️ for a better web by{' '}
           <Link href={GITHUB_BASE_URL} _hover={{ textDecoration: 'underline' }} isExternal>
             {' '}
