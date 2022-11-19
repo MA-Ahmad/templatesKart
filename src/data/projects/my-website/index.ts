@@ -14,5 +14,5 @@ export const myWebsite: Project = {
   liveLink: 'https://mahmad.me',
   pages: pages_list(),
   components: components,
-  stars: 149
+  stars: 150
 };
