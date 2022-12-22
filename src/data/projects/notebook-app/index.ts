@@ -12,5 +12,5 @@ export const notebook: Project = {
   liveLink: 'https://ma-ahmad.github.io/notebook',
   pages: pages_list(),
   components: components,
-  stars: 22
+  stars: 24
 };

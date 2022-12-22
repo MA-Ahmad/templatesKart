@@ -14,5 +14,5 @@ export const portfolio2: Project = {
   liveLink: 'https://ma-ahmad.github.io/portfolio2/#',
   pages: pages_list(),
   components: components,
-  stars: 26
+  stars: 28
 };
