@@ -1,6 +1,6 @@
 import { Container, Box, HStack, Skeleton, Stack } from '@chakra-ui/react';
 
-const SkeletonCards = () => {
+const PulseCards = () => {
   return (
     <Container maxW="4xl" px={8} py={16} mx="auto">
       <Stack spacing={3} mt="3">
@@ -48,4 +48,4 @@ const SkeletonCards = () => {
   );
 };
 
-export default SkeletonCards;
+export default PulseCards;

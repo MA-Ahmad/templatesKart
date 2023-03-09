@@ -4,7 +4,7 @@ import { pageSections } from './page-sections';
 import { footers } from './footers';
 import { navbars } from './navbars';
 import { blog } from './blog';
-import { skeletons } from './skeletons';
+import { pulse } from './pulse';
 import { stats } from './stats';
 import { forms } from './forms';
 import { reviews } from './reviews';
@@ -34,6 +34,6 @@ export const components = [
   reviews,
   stackedLists,
   features,
-  skeletons,
+  pulse,
   sidebars
 ];

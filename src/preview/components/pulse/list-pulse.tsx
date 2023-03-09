@@ -14,17 +14,17 @@ const ListHeading = () => {
   );
 };
 
-const skeletonBoxes = Array.from(Array(3).keys());
+const pulseBoxes = Array.from(Array(3).keys());
 
 const ListingSkeleton = () => {
   return (
     <Container maxW="md" px={4} py={8} mx="auto">
       <Box as="section" bg="white" borderRadius="md" border="1px solid #E2E4E6" width="100%">
         <ListHeading />
-        {skeletonBoxes.map((id, index) => {
+        {pulseBoxes.map((id, index) => {
           return (
             <Box
-              borderBottom={skeletonBoxes.length - 1 === index ? 'none' : '1px solid #E2E4E6'}
+              borderBottom={pulseBoxes.length - 1 === index ? 'none' : '1px solid #E2E4E6'}
               width="100%"
               p="3"
               key={index}

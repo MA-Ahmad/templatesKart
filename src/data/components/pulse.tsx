@@ -4,14 +4,14 @@ import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const components_list: Component[] = [
   {
-    id: 'skeletons',
-    name: 'Posts feed skeleton',
-    filename: 'posts-skeleton'
+    id: 'pulse',
+    name: 'Posts Feed',
+    filename: 'posts-pulse'
   },
   {
-    id: 'skeletons',
-    name: 'List Skeleton',
-    filename: 'list-skeleton'
+    id: 'pulse',
+    name: 'Simple List',
+    filename: 'list-pulse'
   }
 ];
 
@@ -78,9 +78,9 @@ const Icon = () => {
   );
 };
 
-export const skeletons: ComponentContainer = {
-  id: 'skeletons',
-  name: 'Skeletons',
+export const pulse: ComponentContainer = {
+  id: 'pulse',
+  name: 'Pulse Loading',
   icon: RiCheckboxBlankLine,
   svgIcon: <Icon />,
   data: components_list
