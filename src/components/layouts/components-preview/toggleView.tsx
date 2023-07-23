@@ -9,8 +9,8 @@ interface ToggleViewProps {
 }
 
 const viewTypes = [
-  { id: 1, icon: <LargeIcon />, label: 'Large cards' },
-  { id: 2, icon: <SmallIcon />, label: 'Small cards' }
+  { id: 1, icon: <LargeIcon />, label: 'Blocks' },
+  { id: 2, icon: <SmallIcon />, label: 'List' }
 ];
 
 const ToggleView = ({ viewTypeId, setViewTypeId }: ToggleViewProps) => {
