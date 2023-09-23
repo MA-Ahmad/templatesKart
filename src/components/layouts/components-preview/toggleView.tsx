@@ -19,7 +19,7 @@ const ToggleView = ({ viewTypeId, setViewTypeId }: ToggleViewProps) => {
   return (
     <Stack px={{ base: 0, sm: 10 }} direction="row" w="100%" justifyContent="flex-end">
       {viewTypes.map((type) => (
-        <Tooltip hasArrow label={type.label} placement="top">
+        <Tooltip key={type.id} hasArrow label={type.label} placement="top">
           <Flex
             p={3}
             w={10}
