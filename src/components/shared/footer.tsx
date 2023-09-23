@@ -38,7 +38,7 @@ const Footer = () => {
         </Stack>
 
         <Stack mb={['20px', '20px', 0, 0]}>
-          <Text as={Link} href="/components" fontSize="lg" fontWeight="bold">
+          <Text as={Link} href="/projects" fontSize="lg" fontWeight="bold">
             Projects
           </Text>
           {projects.slice(0, 4).map((project) => (
