@@ -102,7 +102,7 @@ export default function Index() {
               alt="Homepage Image"
               objectFit="cover"
               width="60vh"
-              src="http://pos-new-system.herokuapp.com/static/media/EmptyNotesList.2ec57340.svg"
+              src="https://plus.unsplash.com/premium_photo-1685136482569-a59b03025108?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </Stack>
         </Box>
