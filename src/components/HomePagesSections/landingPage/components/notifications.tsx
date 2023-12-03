@@ -11,7 +11,7 @@ import {
   Text
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icon
-import { GoPrimitiveDot } from 'react-icons/go';
+import { BsDot } from 'react-icons/bs';
 
 interface Notification {
   notification: string;
@@ -84,7 +84,7 @@ const NotificationsList = () => {
               </Stack>
               {notification.isOnline && (
                 <Flex p={4}>
-                  <Icon as={GoPrimitiveDot} w={5} h={5} color="blue.400" />
+                  <Icon as={BsDot} w={10} h={10} color="blue.400" />
                 </Flex>
               )}
             </Flex>
