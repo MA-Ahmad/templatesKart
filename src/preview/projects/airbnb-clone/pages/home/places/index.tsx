@@ -52,7 +52,7 @@ const Index = () => {
       <Flex
         as="section"
         alignItems="start"
-        justify="between"
+        justifyContent="between"
         flexWrap="wrap"
         my={{ base: '1.5rem', lg: '2rem' }}
       >

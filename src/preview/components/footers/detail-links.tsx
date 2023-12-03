@@ -19,7 +19,7 @@ const Footer = () => {
         borderBottom="1px solid"
         borderColor="gray.300"
       >
-        <Flex flexWrap="wrap" alignItems="start" justify="space-between">
+        <Flex flexWrap="wrap" alignItems="start" justifyContent="space-between">
           <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
             <Heading as="h5" color="gray.700" mb="0.5rem" fontSize="0.875rem" fontWeight="600">
               Company Name
@@ -61,7 +61,7 @@ const Footer = () => {
             </List>
           </Box>
           <Box w={{ base: '100%', sm: '50%', md: 'max-content' }} mb={{ base: '1.5rem', lg: '0' }}>
-            <Flex justify="start" mb="0.5rem" alignItems="baseline">
+            <Flex justifyContent="start" mb="0.5rem" alignItems="baseline">
               <Link href="#" mr="0.5rem">
                 <svg
                   style={{ width: '1rem', height: '1rem' }}

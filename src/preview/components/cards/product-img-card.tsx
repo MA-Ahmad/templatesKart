@@ -94,7 +94,7 @@ const Index = () => {
               />
             </Flex>
             <Stack direction="column" spacing={2} w="100%" mt={{ base: '5px !important', sm: 0 }}>
-              <Flex justify="space-between">
+              <Flex justifyContent="space-between">
                 <chakra.h3 fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
                   {product.title}
                 </chakra.h3>
@@ -121,7 +121,7 @@ const Index = () => {
               </Flex>
               <Stack
                 direction={{ base: 'column-reverse', sm: 'row' }}
-                justify="space-between"
+                justifyContent="space-between"
                 alignItems={{ base: 'flex-start', sm: 'center' }}
               >
                 <Text fontSize="sm" mt={{ base: 1, sm: 0 }}>

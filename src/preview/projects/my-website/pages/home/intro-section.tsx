@@ -23,7 +23,7 @@ const IntroSection = () => {
           m={['auto', 'initial']}
           w={['90%', '85%', '80%']}
           maxW="800px"
-          justify="center"
+          justifyContent="center"
           direction="column"
         >
           <Box position="relative">

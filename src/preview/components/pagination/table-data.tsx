@@ -10,7 +10,7 @@ const PaginationContainer = () => {
       maxWidth="7xl"
       w="full"
       h="218px"
-      justify="space-between"
+      justifyContent="space-between"
       alignItems="center"
       p={{ base: 5, sm: 10 }}
     >
@@ -24,7 +24,7 @@ const Pagination = () => {
   return (
     <Flex
       direction={{ base: 'column', md: 'row' }}
-      justify="space-between"
+      justifyContent="space-between"
       alignItems="center"
       w="full"
     >

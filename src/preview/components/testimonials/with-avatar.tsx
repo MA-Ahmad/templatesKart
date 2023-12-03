@@ -34,7 +34,7 @@ const testimonials: TestimonialAttributes[] = [
 const Testimonials = () => {
   return (
     <Container maxW="5xl" p={{ base: 5, md: 10 }}>
-      <Flex justify="center" mb={8}>
+      <Flex justifyContent="center" mb={8}>
         <chakra.h3 fontSize="3xl" fontWeight="bold" mb={3}>
           Testimonials
         </chakra.h3>
@@ -42,7 +42,7 @@ const Testimonials = () => {
 
       {testimonials.map((obj, index) => (
         <Fragment key={index}>
-          <VStack spacing={3} pt={1} justify="center">
+          <VStack spacing={3} pt={1} justifyContent="center">
             <Avatar
               size="xl"
               showBorder={true}

@@ -85,7 +85,7 @@ const ProductCard = () => {
               />
             </Flex>
             <Stack direction="column" spacing={2} w="100%" mt="5px !important">
-              <Flex justify="space-between">
+              <Flex justifyContent="space-between">
                 <chakra.h3 fontSize="lg" fontWeight="bold">
                   {product.title}
                 </chakra.h3>
@@ -110,7 +110,11 @@ const ProductCard = () => {
                   </Fragment>
                 ))}
               </Flex>
-              <Stack direction="column-reverse" justify="space-between" alignItems="flex-start">
+              <Stack
+                direction="column-reverse"
+                justifyContent="space-between"
+                alignItems="flex-start"
+              >
                 <Text fontSize="sm" mt={1}>
                   Updated {product.updated_at}
                 </Text>

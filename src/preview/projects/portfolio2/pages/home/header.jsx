@@ -38,7 +38,7 @@ const Header = (props) => {
       <Flex
         as="nav"
         align="center"
-        justify="space-between"
+        justifyContent="space-between"
         wrap="wrap"
         padding="1.5rem"
         px={[0, '1.5rem', '1.5rem']}

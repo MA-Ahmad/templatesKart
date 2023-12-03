@@ -87,7 +87,7 @@ const BlogCards = () => {
             </Box>
             <Box>
               <Avatar size="sm" title="Author" mb={2} src={article.userAvatar} />
-              <Stack justify="space-between" direction={{ base: 'column', sm: 'row' }}>
+              <Stack justifyContent="space-between" direction={{ base: 'column', sm: 'row' }}>
                 <Box>
                   <Text fontSize="sm" fontWeight="bold">
                     {article.username}

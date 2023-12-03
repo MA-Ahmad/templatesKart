@@ -189,7 +189,7 @@ const HeroSection = () => {
             <Flex
               border="1px solid"
               borderColor="gray.700"
-              justify="center"
+              justifyContent="center"
               _hover={{ bg: useColorModeValue('gray.100', 'gray.800') }}
               p={3}
               px={4}

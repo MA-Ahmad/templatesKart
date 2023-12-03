@@ -43,7 +43,7 @@ const IntroSection = () => {
           w={['90%', '85%', '80%']}
           maxW="800px"
           opacity="0"
-          justify="center"
+          justifyContent="center"
           direction="column"
           initial={{
             opacity: 0,

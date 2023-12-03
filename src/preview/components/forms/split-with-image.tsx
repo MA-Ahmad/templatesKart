@@ -20,7 +20,7 @@ const SplitWithImage = () => {
       <Flex flex={1}>
         <Image alt="Cover image" objectFit="cover" src="https://bit.ly/2k1H1t6" />
       </Flex>
-      <Flex p={8} flex={1} align="center" justify="center">
+      <Flex p={8} flex={1} align="center" justifyContent="center">
         <Stack spacing={4}>
           <Stack align="center">
             <Heading fontSize="2xl">Sign in to your account</Heading>
@@ -46,7 +46,7 @@ const SplitWithImage = () => {
               </FormControl>
             </VStack>
             <VStack w="100%">
-              <Stack direction="row" justify="space-between" w="100%">
+              <Stack direction="row" justifyContent="space-between" w="100%">
                 <Checkbox colorScheme="green" size="md">
                   Remember me
                 </Checkbox>

@@ -55,7 +55,7 @@ const SimpleReview = () => {
         <Stack spacing={3}>
           <Box>
             <HStack spacing={3}>
-              <Flex alignItems="center" justify="start">
+              <Flex alignItems="center" justifyContent="start">
                 {Array.from(Array(4).keys()).map((id) => {
                   return <Star key={id} fillColor="#EACA4E" />;
                 })}
@@ -108,7 +108,7 @@ const SimpleReview = () => {
                     <Text fontWeight="bold" fontSize="md">
                       {review.userName}
                     </Text>
-                    <Flex alignItems="center" justify="start">
+                    <Flex alignItems="center" justifyContent="start">
                       {Array.from(Array(review.stars).keys()).map((id) => {
                         return <Star key={id} fillColor="#EACA4E" />;
                       })}

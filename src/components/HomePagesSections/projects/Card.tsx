@@ -57,7 +57,7 @@ const Card = ({ project }: ProjectProps) => {
         </Link>
       </NextLink>
       <VStack spacing={2} px="4" py="2" w="100%">
-        <HStack justify="space-between" align="center" width="100%">
+        <HStack justifyContent="space-between" align="center" width="100%">
           <NextLink href={`/projects/${project.id}`} passHref>
             <Link fontWeight="semibold">
               <Text fontSize={['xs', null, 'md']} color={color}>
@@ -92,7 +92,7 @@ const Card = ({ project }: ProjectProps) => {
             </HStack>
           </HStack>
         </HStack>
-        <HStack spacing="1" width="100%" justify="space-between">
+        <HStack spacing="1" width="100%" justifyContent="space-between">
           <HStack spacing={1}>
             <IconBox
               link={`${GITHUB_BASE_URL}/${project.githubRepoName}`}

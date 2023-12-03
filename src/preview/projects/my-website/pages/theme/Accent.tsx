@@ -48,7 +48,7 @@ const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
           cursor="pointer"
           _hover={{ bg: useColorModeValue('gray.300', 'gray.800') }}
           bg={useColorModeValue('gray.200', 'gray.600')}
-          justify="center"
+          justifyContent="center"
           mr={3}
         >
           <Icon as={BiBrushAlt} color={color} />
@@ -76,7 +76,7 @@ const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
                   height={8}
                   rounded="full"
                   cursor="pointer"
-                  justify="center"
+                  justifyContent="center"
                   align="center"
                   onMouseDown={() => update(key)}
                 >
@@ -86,7 +86,7 @@ const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
                     rounded="full"
                     bg={getColor(key)}
                     _hover={{ bg: getHoverColor(key) }}
-                    justify="center"
+                    justifyContent="center"
                     align="center"
                   >
                     {accentKey === key && <Icon as={TiTick} color={'white'} />}

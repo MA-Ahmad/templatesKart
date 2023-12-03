@@ -64,7 +64,7 @@ const SimpleSignIn = () => {
               </FormControl>
             </VStack>
             <VStack w="100%">
-              <Stack direction="row" justify="space-between" w="100%">
+              <Stack direction="row" justifyContent="space-between" w="100%">
                 <Checkbox colorScheme="green" size="md">
                   Remember me
                 </Checkbox>

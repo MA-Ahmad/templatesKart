@@ -38,7 +38,12 @@ const Testimonials = () => {
     <Container maxW="5xl" py={10} px={{ base: 5, md: 20 }}>
       {testimonials.map((obj, index) => (
         <Fragment key={index}>
-          <Stack direction={{ base: 'column', sm: 'row' }} spacing={10} pt={1} justify="center">
+          <Stack
+            direction={{ base: 'column', sm: 'row' }}
+            spacing={10}
+            pt={1}
+            justifyContent="center"
+          >
             <Avatar
               size="2xl"
               showBorder={true}

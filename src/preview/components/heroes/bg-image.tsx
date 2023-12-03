@@ -82,7 +82,7 @@ const HeroSection = () => {
           </chakra.button>
           <Flex
             as={Link}
-            justify="center"
+            justifyContent="center"
             h={10}
             px={6}
             lineHeight={1.18}

@@ -24,7 +24,7 @@ export default function Home() {
         <Flex
           as="section"
           alignItems="start"
-          justify="between"
+          justifyContent="between"
           flexDirection={{ base: 'column', md: 'row' }}
           my={{ base: '1.5rem', md: '2.5rem' }}
           borderBottom="1px solid"

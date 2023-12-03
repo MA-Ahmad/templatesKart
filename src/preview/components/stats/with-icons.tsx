@@ -81,7 +81,7 @@ const Card = ({ data }: { data: StatData }) => {
       >
         <HStack py={6} px={5} spacing={4} bg={useColorModeValue('gray.100', 'gray.800')} w="100%">
           <Flex
-            justify="center"
+            justifyContent="center"
             alignItems="center"
             rounded="lg"
             p={2}

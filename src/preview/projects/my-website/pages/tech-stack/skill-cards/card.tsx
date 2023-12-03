@@ -62,7 +62,7 @@ const Card = ({ name, image, link, description }: CardProps) => {
               <Image src={image} height={26} width={26} layout="fixed" rounded="md" />
             )}
           </Box>
-          <VStack align="start" justify="flex-start" spacing={1} maxW="lg" h="100%">
+          <VStack align="start" justifyContent="flex-start" spacing={1} maxW="lg" h="100%">
             <VStack spacing={0} align="start" flexGrow={1}>
               <Text fontWeight="bold" fontSize="md" noOfLines={2} color="blue.400">
                 {name}

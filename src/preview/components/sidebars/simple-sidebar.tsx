@@ -50,7 +50,7 @@ export default function Index() {
           borderBottomWidth="1px"
           borderColor={useColorModeValue('inherit', 'gray.700')}
           bg={useColorModeValue('white', 'gray.800')}
-          justify={{ base: 'space-between', md: 'flex-end' }}
+          justifyContent={{ base: 'space-between', md: 'flex-end' }}
           boxShadow="lg"
           h="14"
         >
@@ -83,7 +83,7 @@ export default function Index() {
                   Manage your inventory and sale effeciently.
                 </Text>
               </Box>
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justify="center">
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justifyContent="center">
                 <Button
                   rounded="full"
                   bg="blue.400"
@@ -128,7 +128,7 @@ const SidebarContent = ({ ...props }: BoxProps) => (
     w="60"
     {...props}
   >
-    <VStack h="full" w="full" alignItems="flex-start" justify="space-between">
+    <VStack h="full" w="full" alignItems="flex-start" justifyContent="space-between">
       <Box w="full">
         <Flex px="4" py="5" align="center">
           <Icon as={RiFlashlightFill} h={8} w={8} />
@@ -155,7 +155,7 @@ const SidebarContent = ({ ...props }: BoxProps) => (
         </Flex>
       </Box>
 
-      <Flex px="4" py="5" mt={10} justify="center" alignItems="center">
+      <Flex px="4" py="5" mt={10} justifyContent="center" alignItems="center">
         <Menu>
           <MenuButton
             as={Button}

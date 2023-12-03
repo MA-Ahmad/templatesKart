@@ -54,7 +54,7 @@ const Card = (props) => {
 
       {/* Course name and Price  */}
       <Stack spacing={2}>
-        <Stack direction="row" justify="space-between" alignItems="center" height="2.6rem">
+        <Stack direction="row" justifyContent="space-between" alignItems="center" height="2.6rem">
           <Text fontWeight="medium" fontSize="sm" color={textColor} noOfLines={2}>
             {name}
           </Text>

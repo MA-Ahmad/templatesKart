@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
       <Stack spacing={10}>
-        <Flex align="center" justify="center" direction="column">
+        <Flex align="center" justifyContent="center" direction="column">
           <Heading fontSize="4xl" mb={2}>
             Contact Us
           </Heading>
@@ -53,11 +53,17 @@ const Contact = () => {
         <Stack
           spacing={{ base: 6, md: 0 }}
           direction={{ base: 'column', md: 'row' }}
-          justify="space-between"
+          justifyContent="space-between"
         >
           {contactOptions.map((option, index) => (
             <Fragment key={index}>
-              <Stack spacing={3} direction="column" justify="center" alignItems="center" px={3}>
+              <Stack
+                spacing={3}
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                px={3}
+              >
                 <Icon as={option.icon} w={10} h={10} color="green.400" />
                 <Text fontSize="lg" fontWeight="semibold">
                   {option.label}

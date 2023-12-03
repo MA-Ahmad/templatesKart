@@ -37,7 +37,7 @@ const Header = () => {
           Book a trip. Host travels. All on Airbnb.
         </Heading>
         <Flex
-          justify="start"
+          justifyContent="start"
           flexDirection={{ base: 'column', lg: 'row' }}
           align-items="center"
           maxWidth="42rem"

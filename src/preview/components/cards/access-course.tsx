@@ -42,7 +42,7 @@ const Index = () => {
             </Text>
           </Box>
           <Stack
-            justify="space-between"
+            justifyContent="space-between"
             direction={{ base: 'column', sm: 'row' }}
             spacing={{ base: 2, sm: 0 }}
           >

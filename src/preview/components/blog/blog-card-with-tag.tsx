@@ -105,7 +105,7 @@ const Card = ({ title, content, tag, categories, created_at }: CardProps) => {
           {content}
         </Text>
       </VStack>
-      <HStack justify="space-between">
+      <HStack justifyContent="space-between">
         <Text fontSize="sm">{created_at}</Text>
         <HStack spacing={2} alignItems="center">
           <Icon as={AiOutlineVideoCamera} w={5} h={5} />

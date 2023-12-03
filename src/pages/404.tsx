@@ -9,7 +9,7 @@ export const NotFound = () => {
 
   return (
     <AppLayout maxW="1280px" mt="32" py={2} mb={4}>
-      <Flex align={'center'} justify={'center'} h={'calc(100vh - 16rem)'} w={'full'}>
+      <Flex align={'center'} justifyContent={'center'} h={'calc(100vh - 16rem)'} w={'full'}>
         <Stack spacing={2}>
           <Heading size={'lg'} color="red.200">
             404 Error

@@ -57,7 +57,7 @@ const MainScreen = () => {
         </Text>
       </Fade>
       <Divider />
-      <Flex alignItems="center" justify="center" w="100%">
+      <Flex alignItems="center" justifyContent="center" w="100%">
         <Box textAlign="center">
           {siteConfig.author.accounts.map((sc, index) => (
             <IconButton

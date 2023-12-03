@@ -63,7 +63,7 @@ const NotificationsList = () => {
           <Fragment key={index}>
             <Flex
               w="100%"
-              justify="space-between"
+              justifyContent="space-between"
               alignItems="center"
               _hover={{ bg: useColorModeValue('gray.200', 'gray.700') }}
             >

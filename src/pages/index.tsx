@@ -77,7 +77,7 @@ export default function Index() {
             <Header textAlign="center" mb={5}>
               Key Features
             </Header>
-            <Flex justify="center" fontSize="2xl" fontWeight="600">
+            <Flex justifyContent="center" fontSize="2xl" fontWeight="600">
               <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={5}>
                 {features.map((feature, index) => (
                   <HStack spacing={2} key={index}>
@@ -160,7 +160,12 @@ const OverviewSection = () => {
       }}
     >
       <Header textAlign="center">Overview</Header>
-      <Stack w="100%" direction={{ base: 'column', md: 'row' }} spacing={10} justify="center">
+      <Stack
+        w="100%"
+        direction={{ base: 'column', md: 'row' }}
+        spacing={10}
+        justifyContent="center"
+      >
         <Stack direction="column" w={{ base: '100%', md: '30%' }}>
           <Divider />
           {overviewData.map((data, index) => (

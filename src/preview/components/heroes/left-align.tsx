@@ -172,7 +172,7 @@ const HeroSection = () => {
               <Flex
                 border="1px solid"
                 borderColor="gray.700"
-                justify="center"
+                justifyContent="center"
                 p={3}
                 px={4}
                 lineHeight={1.18}

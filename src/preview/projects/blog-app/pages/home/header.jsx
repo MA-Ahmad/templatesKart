@@ -12,7 +12,7 @@ const Header = () => {
       <Flex
         as="nav"
         align="center"
-        justify="space-between"
+        justifyContent="space-between"
         wrap="wrap"
         padding="1.5rem"
         bg="teal.500"

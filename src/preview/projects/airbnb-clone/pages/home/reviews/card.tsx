@@ -17,7 +17,7 @@ const Card = ({ imageSrc, avatarSrc, review, name, country }: CardProps) => {
       mb={{ base: '6', md: '0' }}
     >
       <Image alt="header image" src={imageSrc} objectFit="cover" borderRadius="0.25rem" w="100%" />
-      <Flex my={3} alignItems="center" justify="start">
+      <Flex my={3} alignItems="center" justifyContent="start">
         <Star />
         <Star />
         <Star />
@@ -33,7 +33,7 @@ const Card = ({ imageSrc, avatarSrc, review, name, country }: CardProps) => {
         {review}
       </Text>
 
-      <Flex my={4} alignItems="center" justify="start">
+      <Flex my={4} alignItems="center" justifyContent="start">
         <Avatar size="md" name="avatar" src={avatarSrc} />
         <Flex pl="4" fontSize="sm" flexDirection="column" alignItems="start">
           <Text fontWeight="bold">{name}</Text>

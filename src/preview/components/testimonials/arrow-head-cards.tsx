@@ -64,7 +64,7 @@ const testimonials: TestimonialAttributes[] = [
 const Testimonials = () => {
   return (
     <Container maxW="5xl" py={10} px={6} bg={useColorModeValue('gray.200', 'gray.600')}>
-      <Flex justify="center" mb={8}>
+      <Flex justifyContent="center" mb={8}>
         <chakra.h3 fontSize="3xl" fontWeight="bold" mb={3} textAlign="center">
           What people are saying about Us
         </chakra.h3>
@@ -76,7 +76,7 @@ const Testimonials = () => {
             direction={{ base: 'column', sm: 'row' }}
             spacing={2}
             mb={5}
-            justify="center"
+            justifyContent="center"
           >
             <Stack
               maxW="345px"
@@ -105,7 +105,13 @@ const Testimonials = () => {
                 {obj.content}
               </Text>
             </Stack>
-            <Stack direction="column" spacing={2} p={2} justify="flex-end" alignItems="center">
+            <Stack
+              direction="column"
+              spacing={2}
+              p={2}
+              justifyContent="flex-end"
+              alignItems="center"
+            >
               <Avatar
                 size="lg"
                 showBorder={true}

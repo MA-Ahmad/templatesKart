@@ -27,7 +27,7 @@ const Pagination = () => {
       aria-label="Pagination"
       spacing={2}
       w="full"
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       mt={{ base: 3, md: 0 }}
     >

@@ -59,7 +59,7 @@ export default function Header() {
         </Flex>
 
         {/* Logo */}
-        <Flex flex={{ base: 1, md: 'inherit' }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 1, md: 'inherit' }} justifyContent={{ base: 'center', md: 'start' }}>
           <Text
             as={Link}
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
@@ -86,7 +86,7 @@ export default function Header() {
         <Stack direction="row" spacing={2} alignItems="center">
           <Stack
             flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
+            justifyContent={'flex-end'}
             alignItems="center"
             direction={'row'}
             spacing={3}

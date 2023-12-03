@@ -5,7 +5,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const PaginationContainer = () => {
   return (
-    <Container d="flex" w="full" h="100px" justify="space-between" alignItems="center">
+    <Container d="flex" w="full" h="100px" justifyContent="space-between" alignItems="center">
       <Pagination />
     </Container>
   );
@@ -14,7 +14,7 @@ const PaginationContainer = () => {
 // Ideally, only the Pagination component should be used. The PaginationContainer component is used to style the preview.
 const Pagination = () => {
   return (
-    <Flex direction="column" justify="space-between" alignItems="center" w="full">
+    <Flex direction="column" justifyContent="space-between" alignItems="center" w="full">
       <Flex as="nav" aria-label="Pagination" alignItems="center" mt={3}>
         <PaginationButton borderTopLeftRadius="md" borderBottomLeftRadius="md" isDisabled>
           <Icon as={FaChevronLeft} w={3.5} h={3.5} />

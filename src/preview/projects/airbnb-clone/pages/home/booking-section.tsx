@@ -17,7 +17,11 @@ const BookingSection = () => {
       </Heading>
       <Box mb={{ base: '2.5rem', lg: '4rem' }}>
         <form>
-          <Flex justify="start" alignItems="start" flexDirection={{ base: 'column', lg: 'row' }}>
+          <Flex
+            justifyContent="start"
+            alignItems="start"
+            flexDirection={{ base: 'column', lg: 'row' }}
+          >
             <FormControl
               id="where"
               width={{ base: '100%', lg: 1 / 3 }}

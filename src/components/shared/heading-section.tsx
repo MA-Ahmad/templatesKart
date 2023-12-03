@@ -19,9 +19,9 @@ const HeadingSection = ({ title }: { title: string }) => {
   const linkColor = useLinkColor();
 
   return (
-    <Flex textAlign="center" justify="center" align="center" flexDirection="column">
+    <Flex textAlign="center" justifyContent="center" align="center" flexDirection="column">
       <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} mb={4}>
-        <Flex position="relative" justify="center">
+        <Flex position="relative" justifyContent="center">
           <Icon
             position="relative"
             as={GoChevronLeft}

@@ -39,7 +39,7 @@ const reviewData = [
 const SimpleReview = () => {
   return (
     <Container maxW="5xl" p={{ base: 5, md: 10 }}>
-      <Flex justify="center">
+      <Flex justifyContent="center">
         <Heading as="h3" size="lg" fontWeight="bold" textAlign="left" mb={{ base: '4', md: '2' }}>
           Recent Reviews
         </Heading>
@@ -59,7 +59,7 @@ const SimpleReview = () => {
                   </Text>
                 </Flex>
               </HStack>
-              <Flex my={3} alignItems="center" justify="start">
+              <Flex my={3} alignItems="center" justifyContent="start">
                 {Array.from(Array(review.stars).keys()).map((id) => {
                   return <Star key={id} fillColor="#EACA4E" />;
                 })}

@@ -58,7 +58,7 @@ const Testimonials = () => {
               {obj.content}
             </Box>
             <Flex
-              justify="space-between"
+              justifyContent="space-between"
               alignItems="center"
               p={5}
               bg={useColorModeValue('gray.300', 'gray.800')}

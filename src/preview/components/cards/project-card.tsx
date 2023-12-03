@@ -76,7 +76,7 @@ const ProjectCard = () => {
                   alt="cover image"
                   fallbackSrc="https://via.placeholder.com/150"
                 />
-                <VStack align="start" justify="flex-start">
+                <VStack align="start" justifyContent="flex-start">
                   <VStack spacing={0} align="start">
                     <HStack>
                       <Text

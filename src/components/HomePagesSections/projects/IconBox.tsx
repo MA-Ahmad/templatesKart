@@ -16,7 +16,7 @@ const IconBox = ({ link, icon }: IconBoxProps) => {
         cursor="pointer"
         _hover={{ bg: useColorModeValue('gray.300', 'gray.800') }}
         bg={useColorModeValue('gray.200', 'gray.600')}
-        justify="center"
+        justifyContent="center"
       >
         {icon}
       </Flex>

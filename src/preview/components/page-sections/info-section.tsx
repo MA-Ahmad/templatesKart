@@ -46,7 +46,7 @@ const InfoSection = () => {
           </Heading>
           <Text textAlign="center">Passionate about Tech. Lover of web and opensource.</Text>
           <Divider />
-          <Flex alignItems="center" justify="center" w="100%">
+          <Flex alignItems="center" justifyContent="center" w="100%">
             <Box textAlign="center">
               {accounts.map((sc, index) => (
                 <IconButton

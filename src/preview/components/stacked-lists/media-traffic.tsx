@@ -43,7 +43,7 @@ const MediaTraffic = () => {
   return (
     <Container maxW="3xl" py={10} px={4}>
       <Box border="1px solid" borderColor="gray.400" rounded="md" boxShadow="lg" overflow="hidden">
-        <Flex justify="left" p={5}>
+        <Flex justifyContent="left" p={5}>
           <chakra.h3 fontSize="xl" fontWeight="bold" textAlign="center">
             Social Media Traffic
           </chakra.h3>

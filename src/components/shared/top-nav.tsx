@@ -154,7 +154,7 @@ export default function TopNav() {
                     cursor="pointer"
                     _hover={{ bg: useColorModeValue('gray.300', 'gray.600') }}
                     bg={useColorModeValue('gray.200', 'gray.700')}
-                    justify="center"
+                    justifyContent="center"
                   >
                     <Icon as={FaGithub} color={linkColor} />
                   </Flex>

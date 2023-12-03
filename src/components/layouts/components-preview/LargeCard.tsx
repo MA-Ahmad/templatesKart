@@ -30,7 +30,7 @@ const Card = ({ component }: { component: ComponentContainer }) => {
             role="group"
           >
             <Flex
-              justify="center"
+              justifyContent="center"
               alignItems="center"
               rounded="lg"
               p={2}

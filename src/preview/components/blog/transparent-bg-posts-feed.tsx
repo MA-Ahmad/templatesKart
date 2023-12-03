@@ -82,7 +82,7 @@ const Posts = () => {
                   <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
                   <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
                 </AvatarGroup>
-                <Stack justify="space-between" direction={{ base: 'column', sm: 'row' }}>
+                <Stack justifyContent="space-between" direction={{ base: 'column', sm: 'row' }}>
                   <Box>
                     <Text fontSize="sm" fontWeight="bold">
                       {article.usernames}

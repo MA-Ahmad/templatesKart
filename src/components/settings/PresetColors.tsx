@@ -63,7 +63,7 @@ const PresetColors: React.FC<IconButtonProps> = () => {
             bg={showBg(key)}
             rounded="xl"
             cursor="pointer"
-            justify="center"
+            justifyContent="center"
             align="center"
             onMouseDown={() => update(key)}
             role="group"
@@ -74,7 +74,7 @@ const PresetColors: React.FC<IconButtonProps> = () => {
               rounded="full"
               bg={getColor(key)}
               _groupHover={{ bg: handleGroupHover(key) }}
-              justify="center"
+              justifyContent="center"
               align="center"
             >
               {tickMarker(key)}

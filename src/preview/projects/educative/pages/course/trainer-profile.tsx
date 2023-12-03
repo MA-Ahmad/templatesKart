@@ -107,7 +107,7 @@ export default function TrainerProfile() {
             {userProfile.desciption}
           </Text>
 
-          <Flex align="center" justify="center" direction="row" flexWrap="wrap">
+          <Flex align="center" justifyContent="center" direction="row" flexWrap="wrap">
             <Badge
               px={2}
               py={1}

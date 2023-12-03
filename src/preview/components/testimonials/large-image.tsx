@@ -34,7 +34,7 @@ const Testimonials = () => {
             spacing={{ base: 0, sm: 10 }}
             p={{ base: 4, sm: 10 }}
             rounded="lg"
-            justify="center"
+            justifyContent="center"
           >
             <Box width="30rem" pos="relative" d={{ base: 'none', sm: 'block' }}>
               <Image

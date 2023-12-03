@@ -34,7 +34,7 @@ const Testimonial = () => {
             spacing={0}
             p={8}
             rounded="lg"
-            justify="center"
+            justifyContent="center"
           >
             <Stack direction="column" spacing={4} textAlign="left" maxW="4xl">
               <Icon as={ImQuotesLeft} w={10} h={10} color="gray.700" />

@@ -96,7 +96,7 @@ const Header = () => {
               >
                 <Link href="https://dev.to/m_ahmad" _hover={{ textDecoration: 'none' }} isExternal>
                   <MenuItem>
-                    <VStack justify="start" alignItems="left">
+                    <VStack justifyContent="start" alignItems="left">
                       <Text fontWeight="500">Muhammad Ahmad</Text>
                       <Text size="sm" color="gray.500" mt="0 !important">
                         @m_ahmad

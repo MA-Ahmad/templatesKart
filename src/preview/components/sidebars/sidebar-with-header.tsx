@@ -39,7 +39,7 @@ export default function Index() {
         <Flex
           as="header"
           align="center"
-          justify={{ base: 'space-between', md: 'flex-end' }}
+          justifyContent={{ base: 'space-between', md: 'flex-end' }}
           w="full"
           px="4"
           borderBottomWidth="1px"
@@ -84,7 +84,7 @@ export default function Index() {
                   Manage your inventory and sale effeciently.
                 </Text>
               </Box>
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justify="center">
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justifyContent="center">
                 <Button
                   rounded="full"
                   bg="blue.400"
