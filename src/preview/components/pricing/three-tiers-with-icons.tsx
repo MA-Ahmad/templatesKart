@@ -88,7 +88,7 @@ const PricingCard = ({ title, price, icon, features }: PricingCardProps) => {
         <chakra.h2 fontSize="2xl" fontWeight="bold">
           {title}
         </chakra.h2>
-        <Text fontSize="7xl" fontWeight="bold">
+        <Box fontSize="7xl" fontWeight="bold">
           <Text as="sup" fontSize="3xl" fontWeight="normal" top="-1em">
             $
           </Text>
