@@ -48,7 +48,6 @@ export const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twitterImage} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="google-adsense-account" content="ca-pub-5819337994400159" />
     </Head>
   );
 };
