@@ -116,7 +116,16 @@ const Card = ({ data }: { data: StatData }) => {
             </HStack>
           </VStack>
         </HStack>
-        <Flex py={3} px={5} d="none" _groupHover={{ d: 'flex' }}>
+
+        <Flex
+          visibility="hidden"
+          opacity={0}
+          height={0}
+          alignItems="center"
+          px={5}
+          _groupHover={{ visibility: 'visible', opacity: 1, height: '40px' }}
+          transition="opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, height 0.3s ease-in-out"
+        >
           <Link fontSize="md">View All</Link>
         </Flex>
       </Stack>
